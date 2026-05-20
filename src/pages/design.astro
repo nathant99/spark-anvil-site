@@ -1,0 +1,152 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps } from '~/data/apps.generated';
+
+// Sample 24 mascots for the parade — prefer Wave 1+2+3 implementing
+const mascotSample = apps
+  .filter(a => a.mascotPath)
+  .sort((a, b) => Number(b.implementing) - Number(a.implementing))
+  .slice(0, 24);
+
+// Sample 24 icons for the icon grid
+const iconSample = apps
+  .filter(a => a.iconPath)
+  .sort((a, b) => Number(b.implementing) - Number(a.implementing))
+  .slice(0, 24);
+
+const palette = [
+  { name: 'Forge Orange', hex: '#E8652B', use: 'Primary CTAs, key UI' },
+  { name: 'Anvil Charcoal', hex: '#2D2D2D', use: 'Text, icons, grounding' },
+  { name: 'Spark Gold', hex: '#FFBE2E', use: 'Highlights, accents' },
+  { name: 'Warm White', hex: '#FAF8F5', use: 'Backgrounds' },
+  { name: 'Slate Blue', hex: '#4A6FA5', use: 'Links, secondary' },
+];
+---
+
+<BaseLayout
+  title="Design"
+  description="The Spark & Anvil visual system — chunky-cartoon flat-vector aesthetic, brand palette, and portfolio mascot lineup."
+>
+  <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
+      The visual system
+    </h1>
+    <p class="text-xl text-anvil/70 leading-relaxed">
+      Every Spark &amp; Anvil app shares a deliberately-chosen visual register —
+      chunky-cartoon flat-vector, bold dark outlines, flat saturated fills.
+      Familiar across the portfolio so kids feel at home anywhere they land.
+    </p>
+  </section>
+
+  <!-- Brand palette -->
+  <section class="max-w-4xl mx-auto px-6 pb-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Brand palette</h2>
+    <div class="grid gap-3 md:grid-cols-5">
+      {palette.map(p => (
+        <div class="overflow-hidden rounded-xl border border-anvil/10">
+          <div class="h-24" style={`background-color: ${p.hex}`}></div>
+          <div class="p-3 bg-white">
+            <div class="font-brand font-bold text-sm text-anvil">{p.name}</div>
+            <code class="text-xs text-anvil/60">{p.hex}</code>
+            <p class="text-xs text-anvil/50 mt-1">{p.use}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Aesthetic principles -->
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">The chunky-cartoon register</h2>
+      <ul class="space-y-3 text-anvil/80 leading-relaxed">
+        <li><strong>Bold uniform outline</strong> — <code class="text-anvil">#2A1F1A</code> at consistent weight on every shape boundary. Reads as intentional ink, not anti-aliased lines.</li>
+        <li><strong>Flat saturated fills</strong> — no gradients, no noise, no 3D shading. Every region is one color.</li>
+        <li><strong>Toca-Boca / Animal-Crossing reference</strong> — chunky proportions, warm rounded forms, kid-readable at a glance.</li>
+        <li><strong>No sparkle, no glow</strong> — visual effects undermine the "made by careful humans" trust signal we want with parents.</li>
+        <li><strong>Per-app hero color</strong> — each app picks a single accent from the palette below. Coherence across the portfolio + personality per app.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Mascot showcase -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil">The mascot lineup</h2>
+      <span class="text-sm text-anvil/50">{mascotSample.length} of {apps.filter(a => a.mascotPath).length}</span>
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4">
+      {mascotSample.map(app => (
+        <a href={`/apps/${app.slug}`} class="group flex flex-col items-center">
+          <div
+            class="w-full aspect-square rounded-2xl overflow-hidden flex items-center justify-center border-2 border-warm group-hover:scale-105 transition-transform"
+            style={`background-color: ${app.heroColor}`}
+          >
+            <img
+              src={app.mascotPath!}
+              alt={`${app.name} mascot`}
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+          <span class="mt-2 text-xs font-brand font-bold text-anvil text-center group-hover:text-forge transition-colors">{app.name}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Icon grid -->
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-end justify-between mb-8">
+        <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil">Icon system</h2>
+        <span class="text-sm text-anvil/50">{iconSample.length} of {apps.filter(a => a.iconPath).length}</span>
+      </div>
+      <p class="text-anvil/70 mb-8 max-w-prose">
+        Every app icon is rendered through the same chunky-cartoon style template. The
+        icon clearly signals the app&apos;s subject area while remaining visually consistent
+        across the portfolio — so a parent who liked one Spark &amp; Anvil app can recognize
+        another instantly.
+      </p>
+      <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+        {iconSample.map(app => (
+          <a href={`/apps/${app.slug}`} class="group">
+            <img
+              src={app.iconPath!}
+              alt={`${app.name} icon`}
+              class="w-full aspect-square rounded-2xl shadow-sm group-hover:shadow-lg group-hover:-translate-y-1 transition-all"
+              loading="lazy"
+            />
+            <span class="block mt-1 text-xs text-center text-anvil/60 group-hover:text-forge truncate">{app.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ForgeKit -->
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Powered by ForgeKit</h2>
+    <p class="text-anvil/80 leading-relaxed mb-4">
+      ForgeKit is the open-source Swift Package Manager framework underneath every Spark &amp; Anvil
+      app. 50+ modules covering accessibility, COPPA, on-device AI integration, persistence,
+      celebration, gamification, and the avatar system.
+    </p>
+    <p class="text-anvil/80 leading-relaxed">
+      The visual coherence above is partly a result of design choices and partly enforced
+      by ForgeKit primitives — same color palette tokens, same component library, same
+      celebration vocabulary across every app the user touches.
+    </p>
+  </section>
+
+  <!-- Press kit CTA -->
+  <section class="bg-anvil text-warm py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-brand font-bold text-3xl mb-4">Press &amp; brand assets</h2>
+      <p class="text-warm/80 max-w-prose mx-auto mb-6">
+        Logos, brand colors, mascot art, and the design system reference. Downloadable bundle for press, partners, and reviewers.
+      </p>
+      <a href="/press" class="btn-primary">Press kit →</a>
+    </div>
+  </section>
+</BaseLayout>

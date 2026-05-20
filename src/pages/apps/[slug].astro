@@ -58,21 +58,36 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
   <!-- Mascot (if available) -->
   {app.mascotPath && (
     <section class="bg-anvil/5 py-16">
-      <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <img
-          src={app.mascotPath}
-          alt={`${app.name} mascot`}
-          class="w-full max-w-xs mx-auto"
-          loading="lazy"
-        />
-        <div>
-          <h2 class="font-brand font-bold text-3xl text-anvil mb-3">Meet your mentor</h2>
-          <p class="text-anvil/80 leading-relaxed">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-3">Meet your mentor</h2>
+          <p class="text-anvil/80 leading-relaxed max-w-2xl mx-auto">
             Every Spark &amp; Anvil app has a friendly mentor character that demonstrates,
             praises, and patiently scaffolds learning. On-device AI personalizes the
             mentor&apos;s responses to your kid&apos;s progress — never connecting to a server,
             never collecting data.
           </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
+          {['demonstrating', 'praising', 'thinking', 'working', 'encouraging'].map(pose => (
+            <figure class="text-center">
+              <div
+                class="aspect-square rounded-2xl overflow-hidden flex items-center justify-center"
+                style={`background-color: ${app.heroColor}20`}
+              >
+                <img
+                  src={`/apps/${app.slug}/mascots/${pose}.webp`}
+                  alt={`${app.name} mascot ${pose}`}
+                  class="w-full h-full object-contain p-2"
+                  loading="lazy"
+                  onerror="this.parentElement.parentElement.style.display='none'"
+                />
+              </div>
+              <figcaption class="mt-2 text-xs uppercase tracking-wider text-anvil/60 font-medium">
+                {pose}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>
