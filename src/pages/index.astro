@@ -2,7 +2,16 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import AppCard from '~/components/AppCard.astro';
 import { site, trustSignals, verticals } from '~/data/site';
-import { featured } from '~/data/featured-apps';
+import { apps, verticalCounts } from '~/data/apps.generated';
+
+// Featured apps: prioritize Wave 1+2+3 implementing + most-asset-complete
+const featuredSlugs = ['curiosityquest', 'cubesensei', 'quillspell', 'mindforge', 'focusforge', 'bioforge'];
+const featured = featuredSlugs
+  .map(slug => apps.find(a => a.slug === slug))
+  .filter((a): a is NonNullable<typeof a> => Boolean(a));
+
+// Mascot parade: any app with a mascot, dedupe + sample
+const mascotApps = apps.filter(a => a.mascotPath).slice(0, 12);
 ---
 
 <BaseLayout>
@@ -21,7 +30,6 @@ import { featured } from '~/data/featured-apps';
       No ads, no in-app purchases, no tracking. Built with Swift 6 and SwiftUI, running on-device AI.
     </p>
 
-    <!-- Trust signals -->
     <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
       {trustSignals.map(label => (
         <span class="trust-pill">{label}</span>
@@ -29,13 +37,52 @@ import { featured } from '~/data/featured-apps';
     </div>
 
     <div class="flex flex-wrap items-center justify-center gap-4">
-      <a href="/apps" class="btn-primary">Browse {site.appCount} apps</a>
+      <a href="/apps" class="btn-primary">Browse {apps.length} apps</a>
       <a href="/for-parents" class="btn-secondary">For parents</a>
     </div>
   </section>
 
+  <!-- Mascot parade -->
+  {mascotApps.length > 0 && (
+    <section class="bg-anvil/5 py-16 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 mb-8 text-center">
+        <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil mb-2">
+          Meet your mentors
+        </h2>
+        <p class="text-anvil/70 max-w-xl mx-auto">
+          Every Spark &amp; Anvil app comes with a friendly mentor character that demonstrates, praises, and patiently guides your kid through new skills.
+        </p>
+      </div>
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {mascotApps.map(app => (
+            <a
+              href={`/apps/${app.slug}`}
+              class="group flex flex-col items-center"
+            >
+              <div
+                class="w-24 h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center overflow-hidden border-4 border-warm shadow-md group-hover:scale-110 transition-transform"
+                style={`background-color: ${app.heroColor}`}
+              >
+                <img
+                  src={app.mascotPath!}
+                  alt={`${app.name} mascot`}
+                  class="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <span class="mt-2 text-xs font-brand font-bold text-anvil text-center group-hover:text-forge transition-colors">
+                {app.name}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- Why Spark & Anvil -->
-  <section class="bg-anvil/5 py-20">
+  <section class="py-20">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-12 text-center">
         Why Spark &amp; Anvil
@@ -59,7 +106,7 @@ import { featured } from '~/data/featured-apps';
           <div class="text-5xl mb-3">🌟</div>
           <h3 class="font-brand font-bold text-xl mb-3">Range</h3>
           <p class="text-anvil/70 leading-relaxed">
-            {site.appCount} apps across STEM, STEAM, Academics, DIR/FEDC, and Special Interest verticals — for the kid who&apos;s obsessed with rockets AND the one who&apos;s obsessed with sonnets.
+            {apps.length} apps across STEM, STEAM, Academics, DIR/FEDC, and Special Interest verticals — for the kid who&apos;s obsessed with rockets AND the one who&apos;s obsessed with sonnets.
           </p>
         </div>
       </div>
@@ -67,18 +114,20 @@ import { featured } from '~/data/featured-apps';
   </section>
 
   <!-- Featured apps -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="flex items-end justify-between mb-10">
-      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil">Featured apps</h2>
-      <a href="/apps" class="text-forge font-bold text-sm hover:underline">See all {site.appCount} →</a>
-    </div>
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {featured.map(app => <AppCard {...app} />)}
+  <section class="bg-anvil/5 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-end justify-between mb-10">
+        <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil">Featured apps</h2>
+        <a href="/apps" class="text-forge font-bold text-sm hover:underline">See all {apps.length} →</a>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {featured.map(app => <AppCard {...app} />)}
+      </div>
     </div>
   </section>
 
   <!-- Verticals -->
-  <section class="bg-anvil/5 py-20">
+  <section class="py-20">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-4 text-center">
         Five learning verticals
@@ -92,7 +141,9 @@ import { featured } from '~/data/featured-apps';
             href={`/apps?vertical=${v.id}`}
             class="block p-5 bg-white rounded-xl border border-anvil/10 hover:border-forge hover:shadow-md transition-all"
           >
-            <h3 class="font-brand font-bold text-lg text-forge mb-2">{v.name}</h3>
+            <h3 class="font-brand font-bold text-lg text-forge mb-2">
+              {v.name} <span class="text-anvil/50 text-sm font-normal">({verticalCounts[v.id]})</span>
+            </h3>
             <p class="text-sm text-anvil/70 leading-relaxed">{v.description}</p>
           </a>
         ))}
@@ -101,16 +152,18 @@ import { featured } from '~/data/featured-apps';
   </section>
 
   <!-- Parent CTA -->
-  <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-    <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-4">
-      Apps your kid can actually use.<br />Privacy you can actually verify.
-    </h2>
-    <p class="text-lg text-anvil/70 mb-8 max-w-2xl mx-auto">
-      Read our full privacy commitment and the parent-friendly summary of how we handle data.
-    </p>
-    <div class="flex flex-wrap items-center justify-center gap-4">
-      <a href="/for-parents" class="btn-primary">For parents</a>
-      <a href="/for-educators" class="btn-secondary">For educators</a>
+  <section class="bg-anvil/5 py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-4">
+        Apps your kid can actually use.<br />Privacy you can actually verify.
+      </h2>
+      <p class="text-lg text-anvil/70 mb-8 max-w-2xl mx-auto">
+        Read our full privacy commitment and the parent-friendly summary of how we handle data.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="/for-parents" class="btn-primary">For parents</a>
+        <a href="/for-educators" class="btn-secondary">For educators</a>
+      </div>
     </div>
   </section>
 </BaseLayout>

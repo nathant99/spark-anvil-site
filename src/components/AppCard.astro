@@ -5,26 +5,45 @@ interface Props {
   tagline: string;
   vertical: string;
   heroColor: string;
+  iconPath?: string | null;
+  mascotPath?: string | null;
+  implementing?: boolean;
 }
 
-const { slug, name, tagline, vertical, heroColor } = Astro.props;
+const { slug, name, tagline, vertical, heroColor, iconPath, mascotPath, implementing = true } = Astro.props;
 ---
 
 <a
   href={`/apps/${slug}`}
-  class="group block rounded-2xl overflow-hidden border border-anvil/10 bg-white hover:shadow-lg hover:-translate-y-1 transition-all"
+  class="group block rounded-2xl overflow-hidden border border-anvil/10 bg-white hover:shadow-lg hover:-translate-y-1 transition-all relative"
 >
   <div
-    class="h-32 flex items-center justify-center"
+    class="h-32 flex items-center justify-center relative overflow-hidden"
     style={`background-color: ${heroColor}`}
   >
-    <img
-      src={`/apps/${slug}/icon.png`}
-      alt={`${name} icon`}
-      class="w-20 h-20 rounded-2xl shadow-md"
-      loading="lazy"
-      onerror="this.style.display='none'"
-    />
+    {iconPath && (
+      <img
+        src={iconPath}
+        alt={`${name} icon`}
+        class="w-20 h-20 rounded-2xl shadow-md relative z-10"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      />
+    )}
+    {!iconPath && (
+      <div class="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-white/70 text-xs font-bold">
+        {name.slice(0, 2).toUpperCase()}
+      </div>
+    )}
+    {mascotPath && (
+      <img
+        src={mascotPath}
+        alt={`${name} mascot`}
+        class="absolute -bottom-2 -right-2 w-16 h-16 object-contain"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      />
+    )}
   </div>
   <div class="p-5">
     <div class="flex items-center justify-between mb-2">
@@ -36,5 +55,8 @@ const { slug, name, tagline, vertical, heroColor } = Astro.props;
       </span>
     </div>
     <p class="text-sm text-anvil/70 leading-relaxed">{tagline}</p>
+    {!implementing && (
+      <span class="inline-block mt-3 text-xs text-anvil/40 italic">Coming soon</span>
+    )}
   </div>
 </a>
