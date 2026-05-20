@@ -1,0 +1,23 @@
+{
+  "name": "spark-anvil-site",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Spark & Anvil company website — educational iOS apps for ages 9–14.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "build-apps-data": "node scripts/build-apps-data.mjs"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^4.16.18",
+    "tailwindcss": "^3.4.17"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

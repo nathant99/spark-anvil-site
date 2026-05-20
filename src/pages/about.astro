@@ -1,0 +1,54 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { site } from '~/data/site';
+---
+
+<BaseLayout
+  title="About"
+  description={`About ${site.name} — the studio behind ${site.appCount} educational iOS apps for kids ages ${site.ages}.`}
+>
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-12">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-6">
+      About Spark &amp; Anvil
+    </h1>
+    <p class="text-xl text-anvil/70 leading-relaxed">
+      We build educational iOS apps for kids ages {site.ages}. {site.appCount} apps across
+      STEM, STEAM, Academics, DIR/FEDC, and Special Interest verticals. All Swift 6 + SwiftUI,
+      all on-device AI, all built with care.
+    </p>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-6 pb-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">The name</h2>
+    <p class="text-anvil/80 leading-relaxed mb-4">
+      A spark is the moment of ignition — the &quot;aha&quot; when an idea takes hold.
+      An anvil is the patient surface where raw material gets shaped through effort and craft.
+    </p>
+    <p class="text-anvil/80 leading-relaxed">
+      Together they describe how we think about learning: not as passive consumption,
+      but as ideas forged through curiosity, repetition, and real work. Every app in the portfolio
+      is built on that philosophy.
+    </p>
+  </section>
+
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-4">How we work</h2>
+      <ul class="space-y-3 text-anvil/80 leading-relaxed">
+        <li><strong>iOS-native</strong>. Swift 6 with strict concurrency, SwiftUI for UI, SpriteKit for gameplay, SwiftData for storage, FoundationModels for on-device AI.</li>
+        <li><strong>Open-source ForgeKit</strong>. A shared Swift Package Manager framework (50+ modules) powers the portfolio. Every app inherits the same accessibility, COPPA, and craftsmanship baseline.</li>
+        <li><strong>One codebase per app</strong>. Each app is a focused, single-purpose tool — not bloated by trying to be everything at once.</li>
+        <li><strong>No cross-platform compromises</strong>. We&apos;re iOS-only by choice. The platform&apos;s capabilities are part of the product.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Contact</h2>
+    <p class="text-anvil/80 leading-relaxed">
+      Questions, ideas, partnerships, or press: <a href={`mailto:${site.email}`}>{site.email}</a>.
+      <br />
+      Press kit and brand assets: <a href="/press">spark-and-anvil.com/press</a>.
+    </p>
+  </section>
+</BaseLayout>

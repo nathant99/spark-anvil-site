@@ -1,0 +1,53 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import AppCard from '~/components/AppCard.astro';
+import { site, verticals } from '~/data/site';
+import { featured } from '~/data/featured-apps';
+---
+
+<BaseLayout
+  title="All Apps"
+  description={`Browse all ${site.appCount} Spark & Anvil iOS apps across STEM, STEAM, Academics, DIR/FEDC, and Special Interest verticals.`}
+>
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
+      All apps
+    </h1>
+    <p class="text-xl text-anvil/70 max-w-2xl">
+      {site.appCount} educational iOS apps across five verticals. Browse by interest area below.
+    </p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="flex flex-wrap gap-2 mb-10">
+      {verticals.map(v => (
+        <a
+          href={`/apps?vertical=${v.id}`}
+          class="px-4 py-2 bg-white border border-anvil/15 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
+        >
+          {v.name}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-20">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Featured apps</h2>
+    <p class="text-anvil/70 mb-8 max-w-2xl">
+      The most asset-complete apps in the portfolio. Per-app detail pages for the remaining
+      apps will populate as their assets and content are finalized.
+    </p>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {featured.map(app => <AppCard {...app} />)}
+    </div>
+  </section>
+
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-anvil/70 max-w-xl mx-auto">
+        Full per-app catalog incoming. Each app gets its own page with feature highlights,
+        mascot showcase, curriculum mapping, and per-app privacy commitment.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

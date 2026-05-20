@@ -1,0 +1,116 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import AppCard from '~/components/AppCard.astro';
+import { site, trustSignals, verticals } from '~/data/site';
+import { featured } from '~/data/featured-apps';
+---
+
+<BaseLayout>
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-24 text-center">
+    <img
+      src="/brand/lockup.png"
+      alt={site.name}
+      class="h-20 md:h-28 w-auto mx-auto mb-8"
+    />
+    <h1 class="font-brand font-bold text-4xl md:text-6xl leading-tight text-anvil mb-4">
+      Educational iOS apps,<br />forged for curiosity.
+    </h1>
+    <p class="text-lg md:text-xl text-anvil/70 max-w-2xl mx-auto mb-8 leading-relaxed">
+      Spark &amp; Anvil makes thoughtfully-crafted iOS apps for kids ages {site.ages}.
+      No ads, no in-app purchases, no tracking. Built with Swift 6 and SwiftUI, running on-device AI.
+    </p>
+
+    <!-- Trust signals -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+      {trustSignals.map(label => (
+        <span class="trust-pill">{label}</span>
+      ))}
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="/apps" class="btn-primary">Browse {site.appCount} apps</a>
+      <a href="/for-parents" class="btn-secondary">For parents</a>
+    </div>
+  </section>
+
+  <!-- Why Spark & Anvil -->
+  <section class="bg-anvil/5 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-12 text-center">
+        Why Spark &amp; Anvil
+      </h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <div class="text-5xl mb-3">⚒️</div>
+          <h3 class="font-brand font-bold text-xl mb-3">Craft</h3>
+          <p class="text-anvil/70 leading-relaxed">
+            Swift 6, SwiftUI, on-device AI via FoundationModels. Native iOS apps that feel like the platform — not web shells, not cross-platform compromises.
+          </p>
+        </div>
+        <div>
+          <div class="text-5xl mb-3">🛡️</div>
+          <h3 class="font-brand font-bold text-xl mb-3">Safety</h3>
+          <p class="text-anvil/70 leading-relaxed">
+            No tracking. No ads. No in-app purchases. No third-party SDKs. All data stays on-device. COPPA compliant under the 2026 FTC amendments.
+          </p>
+        </div>
+        <div>
+          <div class="text-5xl mb-3">🌟</div>
+          <h3 class="font-brand font-bold text-xl mb-3">Range</h3>
+          <p class="text-anvil/70 leading-relaxed">
+            {site.appCount} apps across STEM, STEAM, Academics, DIR/FEDC, and Special Interest verticals — for the kid who&apos;s obsessed with rockets AND the one who&apos;s obsessed with sonnets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured apps -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10">
+      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil">Featured apps</h2>
+      <a href="/apps" class="text-forge font-bold text-sm hover:underline">See all {site.appCount} →</a>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {featured.map(app => <AppCard {...app} />)}
+    </div>
+  </section>
+
+  <!-- Verticals -->
+  <section class="bg-anvil/5 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-4 text-center">
+        Five learning verticals
+      </h2>
+      <p class="text-anvil/70 text-center max-w-2xl mx-auto mb-12">
+        Every app maps to one of five learning areas. Browse the portfolio by what interests your kid most.
+      </p>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+        {verticals.map(v => (
+          <a
+            href={`/apps?vertical=${v.id}`}
+            class="block p-5 bg-white rounded-xl border border-anvil/10 hover:border-forge hover:shadow-md transition-all"
+          >
+            <h3 class="font-brand font-bold text-lg text-forge mb-2">{v.name}</h3>
+            <p class="text-sm text-anvil/70 leading-relaxed">{v.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Parent CTA -->
+  <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-4">
+      Apps your kid can actually use.<br />Privacy you can actually verify.
+    </h2>
+    <p class="text-lg text-anvil/70 mb-8 max-w-2xl mx-auto">
+      Read our full privacy commitment and the parent-friendly summary of how we handle data.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="/for-parents" class="btn-primary">For parents</a>
+      <a href="/for-educators" class="btn-secondary">For educators</a>
+    </div>
+  </section>
+</BaseLayout>

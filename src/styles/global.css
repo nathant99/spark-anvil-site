@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-warm text-anvil font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-brand;
+  }
+  a {
+    @apply text-slate hover:text-slate-light transition-colors;
+  }
+  ::selection {
+    @apply bg-spark text-anvil;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-6 py-3 bg-forge text-white font-brand font-bold rounded-lg
+           hover:bg-forge-light transition-colors shadow-sm;
+  }
+  .btn-secondary {
+    @apply inline-block px-6 py-3 border-2 border-anvil text-anvil font-brand font-bold rounded-lg
+           hover:bg-anvil hover:text-warm transition-colors;
+  }
+  .trust-pill {
+    @apply inline-flex items-center gap-1 px-3 py-1 bg-anvil/5 text-anvil
+           text-sm font-medium rounded-full border border-anvil/10;
+  }
+  .container-prose {
+    @apply max-w-prose mx-auto px-6;
+  }
+}

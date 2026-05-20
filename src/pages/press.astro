@@ -1,0 +1,56 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { site } from '~/data/site';
+---
+
+<BaseLayout
+  title="Press"
+  description={`Press resources for ${site.name} — fact sheet, brand assets, and contact.`}
+>
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-12">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-6">Press</h1>
+    <p class="text-xl text-anvil/70 leading-relaxed">
+      Fact sheet, brand assets, and contact for journalists, podcasters, educators, and
+      partners writing about Spark &amp; Anvil.
+    </p>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-6 pb-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Fact sheet</h2>
+    <dl class="space-y-3">
+      <div class="flex gap-3"><dt class="font-bold w-32">Founded</dt><dd>2025</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-32">Headquarters</dt><dd>Remote (US)</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-32">Apps</dt><dd>{site.appCount} (Wave 1+2+3 implementing: 36 active)</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-32">Target ages</dt><dd>{site.ages}</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-32">Platforms</dt><dd>iOS, iPadOS, macOS (Mac Catalyst), visionOS (select titles)</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-32">Tech stack</dt><dd>Swift 6, SwiftUI, SwiftData, FoundationModels, SpriteKit</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-32">Verticals</dt><dd>STEM, STEAM, Academics, DIR/FEDC, Special Interest</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-32">Privacy</dt><dd>No ads, no in-app purchases, no tracking, on-device data only, COPPA compliant</dd></div>
+    </dl>
+  </section>
+
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Brand assets</h2>
+      <ul class="space-y-3">
+        <li><a href="/brand/logomark.png" download class="text-forge font-bold">Logomark (PNG, 1024×1024)</a></li>
+        <li><a href="/brand/lockup.png" download class="text-forge font-bold">Full lockup (PNG, 1024×1024)</a></li>
+        <li class="text-anvil/50 text-sm">More variants and SVG versions coming soon.</li>
+      </ul>
+      <p class="text-anvil/70 mt-6 leading-relaxed">
+        Brand colors: Forge Orange <code class="text-forge">#E8652B</code>,
+        Anvil Charcoal <code class="text-anvil">#2D2D2D</code>,
+        Spark Gold <code class="text-spark">#FFBE2E</code>.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Contact</h2>
+    <p class="text-anvil/80 leading-relaxed">
+      Press inquiries: <a href={`mailto:${site.press}`}>{site.press}</a>.
+      <br />
+      General: <a href={`mailto:${site.email}`}>{site.email}</a>.
+    </p>
+  </section>
+</BaseLayout>

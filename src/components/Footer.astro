@@ -1,0 +1,40 @@
+---
+import { site } from '~/data/site';
+---
+
+<footer class="border-t border-anvil/10 bg-warm mt-24">
+  <div class="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-4">
+    <div class="md:col-span-2">
+      <img src="/brand/logomark.png" alt={site.name} class="h-12 w-12 mb-3" />
+      <p class="text-sm text-anvil/70 max-w-xs">
+        {site.description}
+      </p>
+    </div>
+    <div>
+      <h3 class="font-brand font-bold text-sm mb-3">Apps</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/apps">All apps</a></li>
+        <li><a href="/apps?vertical=stem">STEM</a></li>
+        <li><a href="/apps?vertical=steam">STEAM</a></li>
+        <li><a href="/apps?vertical=academics">Academics</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-brand font-bold text-sm mb-3">Company</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/about">About</a></li>
+        <li><a href="/for-parents">For Parents</a></li>
+        <li><a href="/for-educators">For Educators</a></li>
+        <li><a href="/press">Press</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-anvil/10">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4 text-xs text-anvil/60">
+      <span>© {new Date().getFullYear()} {site.name}. Made with care for ages {site.ages}.</span>
+      <span>No ads · No tracking · COPPA compliant</span>
+    </div>
+  </div>
+</footer>

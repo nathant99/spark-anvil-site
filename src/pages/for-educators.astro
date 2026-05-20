@@ -1,0 +1,69 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+
+const standards = [
+  { code: 'CCSS', name: 'Common Core State Standards', subjects: 'ELA, Math', appCount: 30 },
+  { code: 'NGSS', name: 'Next Generation Science Standards', subjects: 'Science', appCount: 22 },
+  { code: 'NCAS', name: 'National Core Arts Standards', subjects: 'Music, dance, theater, visual arts', appCount: 12 },
+  { code: 'C3', name: 'College, Career, and Civic Life Framework', subjects: 'Social studies, civics', appCount: 8 },
+  { code: 'ISTE', name: 'ISTE Standards for Students', subjects: 'Digital literacy, computer science', appCount: 6 },
+];
+---
+
+<BaseLayout
+  title="For Educators"
+  description="Standards-aligned, classroom-ready iOS apps for ages 9–14. Common Core, NGSS, NCAS, C3, and ISTE mapped."
+>
+  <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
+      Standards-aligned. Classroom-ready.
+    </h1>
+    <p class="text-xl text-anvil/70 leading-relaxed">
+      Every Spark &amp; Anvil app maps to recognized educational standards. No ads, no in-app
+      purchases, no tracking — appropriate for school deployment.
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 pb-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Curriculum mapping</h2>
+    <div class="grid gap-4">
+      {standards.map(s => (
+        <div class="flex items-center justify-between p-5 bg-white rounded-xl border border-anvil/10">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="px-2 py-0.5 bg-spark/30 text-anvil text-xs font-bold rounded">{s.code}</span>
+              <h3 class="font-brand font-bold text-anvil">{s.name}</h3>
+            </div>
+            <p class="text-sm text-anvil/60">{s.subjects}</p>
+          </div>
+          <span class="text-2xl font-brand font-bold text-forge">{s.appCount}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">School privacy &amp; compliance</h2>
+      <ul class="space-y-3 text-anvil/80 leading-relaxed">
+        <li><strong>COPPA</strong> — Compliant under 2026 FTC amendments (effective April 22, 2026). No collection of personal information from children under 13.</li>
+        <li><strong>FERPA</strong> — Apps don&apos;t store educational records on third-party servers. Student progress stays on the device.</li>
+        <li><strong>State laws</strong> — Aligned with CA AB 1584, IL SOPPA, NJ SOPIPA, NY Ed Law 2-d, TX HB 4, MA 603 CMR 23, FL House Bill 2003, VA Code §22.1-280.2:1.</li>
+        <li><strong>No third-party SDKs</strong> — No Facebook, Google, AppsFlyer, or other tracking frameworks embedded in any app.</li>
+        <li><strong>Ad-free</strong> — Zero advertising, ever. Apple Kids Category eligible.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Classroom integration</h2>
+    <p class="text-anvil/80 leading-relaxed mb-4">
+      Each app includes a per-app teacher dashboard with progress reports mapped to its
+      relevant curriculum standard. Reports are device-local and exportable by the student
+      or via parent/guardian.
+    </p>
+    <p class="text-anvil/80 leading-relaxed">
+      Volume licensing for schools: contact <a href="mailto:educators@spark-and-anvil.com">educators@spark-and-anvil.com</a>.
+    </p>
+  </section>
+</BaseLayout>
