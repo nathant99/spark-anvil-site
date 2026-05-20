@@ -2,7 +2,7 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import AppCard from '~/components/AppCard.astro';
 import { site, verticals } from '~/data/site';
-import { featured } from '~/data/featured-apps';
+import { apps, verticalCounts } from '~/data/apps.generated';
 ---
 
 <BaseLayout
@@ -13,41 +13,84 @@ import { featured } from '~/data/featured-apps';
     <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
       All apps
     </h1>
-    <p class="text-xl text-anvil/70 max-w-2xl">
-      {site.appCount} educational iOS apps across five verticals. Browse by interest area below.
+    <p class="text-xl text-anvil/70 max-w-2xl mb-6">
+      {apps.length} apps currently in active implementation (Waves 1+2+3). {site.appCount - apps.length} more in
+      planning. Browse by vertical below.
     </p>
   </section>
 
-  <section class="max-w-6xl mx-auto px-6 pb-16">
-    <div class="flex flex-wrap gap-2 mb-10">
+  <section class="max-w-6xl mx-auto px-6 pb-12">
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="vertical-filter px-4 py-2 bg-anvil text-warm border border-anvil rounded-full text-sm font-bold"
+        data-vertical="all"
+      >
+        All ({apps.length})
+      </button>
       {verticals.map(v => (
-        <a
-          href={`/apps?vertical=${v.id}`}
-          class="px-4 py-2 bg-white border border-anvil/15 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
+        <button
+          class="vertical-filter px-4 py-2 bg-white border border-anvil/15 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
+          data-vertical={v.id}
         >
-          {v.name}
-        </a>
+          {v.name} ({verticalCounts[v.id] ?? 0})
+        </button>
       ))}
     </div>
   </section>
 
   <section class="max-w-6xl mx-auto px-6 pb-20">
-    <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Featured apps</h2>
-    <p class="text-anvil/70 mb-8 max-w-2xl">
-      The most asset-complete apps in the portfolio. Per-app detail pages for the remaining
-      apps will populate as their assets and content are finalized.
-    </p>
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {featured.map(app => <AppCard {...app} />)}
+    <div id="app-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {apps.map(app => (
+        <div class="app-card-wrap" data-vertical={app.vertical}>
+          <AppCard {...app} />
+        </div>
+      ))}
     </div>
   </section>
 
-  <section class="bg-anvil/5 py-16">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="text-anvil/70 max-w-xl mx-auto">
-        Full per-app catalog incoming. Each app gets its own page with feature highlights,
-        mascot showcase, curriculum mapping, and per-app privacy commitment.
+  <section class="bg-anvil/5 py-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-anvil/70">
+        Wave 4+ apps and the full {site.appCount}-app catalog will populate as their content
+        and assets are finalized. Want to be notified when a specific app ships?
+        <a href="mailto:hello@spark-and-anvil.com" class="font-bold text-forge hover:underline">Email us</a>.
       </p>
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.vertical-filter');
+  const cards = document.querySelectorAll<HTMLDivElement>('.app-card-wrap');
+
+  // Read vertical from URL on load
+  const urlVertical = new URLSearchParams(window.location.search).get('vertical') ?? 'all';
+  applyFilter(urlVertical);
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const v = btn.dataset.vertical ?? 'all';
+      applyFilter(v);
+      const u = new URL(window.location.href);
+      if (v === 'all') u.searchParams.delete('vertical');
+      else u.searchParams.set('vertical', v);
+      history.replaceState({}, '', u);
+    });
+  });
+
+  function applyFilter(v: string) {
+    buttons.forEach(b => {
+      const active = b.dataset.vertical === v;
+      b.classList.toggle('bg-anvil', active);
+      b.classList.toggle('text-warm', active);
+      b.classList.toggle('border-anvil', active);
+      b.classList.toggle('font-bold', active);
+      b.classList.toggle('bg-white', !active);
+      b.classList.toggle('border-anvil/15', !active);
+    });
+    cards.forEach(card => {
+      const matches = v === 'all' || card.dataset.vertical === v;
+      card.style.display = matches ? '' : 'none';
+    });
+  }
+</script>

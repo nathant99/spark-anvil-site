@@ -1,0 +1,152 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps, type AppData } from '~/data/apps.generated';
+import { verticals } from '~/data/site';
+
+export async function getStaticPaths() {
+  return apps.map(app => ({
+    params: { slug: app.slug },
+    props: { app },
+  }));
+}
+
+interface Props {
+  app: AppData;
+}
+
+const { app } = Astro.props;
+const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.vertical;
+---
+
+<BaseLayout
+  title={app.name}
+  description={app.tagline}
+  ogImage={app.iconPath ?? '/brand/lockup.png'}
+>
+  <!-- Hero -->
+  <section
+    class="py-16 md:py-24"
+    style={`background-color: ${app.heroColor}; color: white;`}
+  >
+    <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <a href="/apps" class="inline-block text-sm font-bold text-white/80 hover:text-white mb-4">
+          ← All apps
+        </a>
+        <p class="text-sm uppercase tracking-wider text-white/70 font-medium mb-2">
+          {verticalName}
+        </p>
+        <h1 class="font-brand font-bold text-5xl md:text-6xl mb-4">{app.name}</h1>
+        <p class="text-xl text-white/90 leading-relaxed">{app.tagline}</p>
+      </div>
+      <div class="flex items-center justify-center">
+        {app.iconPath ? (
+          <img
+            src={app.iconPath}
+            alt={`${app.name} app icon`}
+            class="w-48 h-48 md:w-64 md:h-64 rounded-3xl shadow-2xl"
+          />
+        ) : (
+          <div class="w-48 h-48 md:w-64 md:h-64 rounded-3xl bg-white/20 flex items-center justify-center text-white/50 text-sm">
+            Icon coming soon
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Mascot (if available) -->
+  {app.mascotPath && (
+    <section class="bg-anvil/5 py-16">
+      <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <img
+          src={app.mascotPath}
+          alt={`${app.name} mascot`}
+          class="w-full max-w-xs mx-auto"
+          loading="lazy"
+        />
+        <div>
+          <h2 class="font-brand font-bold text-3xl text-anvil mb-3">Meet your mentor</h2>
+          <p class="text-anvil/80 leading-relaxed">
+            Every Spark &amp; Anvil app has a friendly mentor character that demonstrates,
+            praises, and patiently scaffolds learning. On-device AI personalizes the
+            mentor&apos;s responses to your kid&apos;s progress — never connecting to a server,
+            never collecting data.
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- What's inside -->
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-3xl text-anvil mb-8">What&apos;s inside</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-5 bg-white rounded-xl border border-anvil/10">
+        <div class="text-3xl mb-2">🎯</div>
+        <h3 class="font-brand font-bold mb-2">Learning goal</h3>
+        <p class="text-sm text-anvil/70">{app.tagline}</p>
+      </div>
+      <div class="p-5 bg-white rounded-xl border border-anvil/10">
+        <div class="text-3xl mb-2">📚</div>
+        <h3 class="font-brand font-bold mb-2">Question kits</h3>
+        <p class="text-sm text-anvil/70">
+          16 curriculum-aligned kits × 25 questions = 400 questions per app, mapped to recognized standards.
+        </p>
+      </div>
+      <div class="p-5 bg-white rounded-xl border border-anvil/10">
+        <div class="text-3xl mb-2">🤖</div>
+        <h3 class="font-brand font-bold mb-2">On-device AI mentor</h3>
+        <p class="text-sm text-anvil/70">
+          FoundationModels-powered hints, feedback, and adaptive difficulty — all running locally.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-3xl text-anvil mb-6">
+        How {app.name} handles your kid&apos;s data
+      </h2>
+      <ul class="space-y-3 text-anvil/80 leading-relaxed">
+        <li>✅ All progress, settings, and AI-generated content stays on the device</li>
+        <li>✅ No analytics, no tracking, no third-party SDKs</li>
+        <li>✅ No ads, no in-app purchases — you pay once</li>
+        <li>✅ COPPA compliant under the 2026 FTC amendments</li>
+        <li>✅ Parental controls + session limits + content filters built in</li>
+      </ul>
+      <p class="mt-6">
+        <a href="/for-parents" class="text-forge font-bold hover:underline">Full parent privacy guide →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Built with ForgeKit -->
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <div class="flex items-center gap-4 mb-4">
+      <span class="px-3 py-1 bg-forge/10 text-forge text-xs font-bold rounded-full uppercase tracking-wider">
+        Built with ForgeKit
+      </span>
+    </div>
+    <p class="text-anvil/80 leading-relaxed max-w-prose">
+      {app.name} runs on ForgeKit — the open-source Swift Package Manager framework that
+      powers every Spark &amp; Anvil app. ForgeKit ensures consistent accessibility,
+      COPPA compliance, and design language across the portfolio, so your kid&apos;s
+      progress and preferences feel coherent across every app they touch.
+    </p>
+  </section>
+
+  <!-- Coming to App Store CTA -->
+  <section class="bg-anvil text-warm py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-brand font-bold text-3xl mb-4">Coming to the App Store</h2>
+      <p class="text-warm/80 max-w-prose mx-auto mb-6">
+        {app.name} is in active development. Email us to hear when it ships — no marketing,
+        no spam, just a one-shot launch announcement.
+      </p>
+      <a href="mailto:hello@spark-and-anvil.com" class="btn-primary">Email me at launch</a>
+    </div>
+  </section>
+</BaseLayout>
