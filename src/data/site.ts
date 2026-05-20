@@ -4,7 +4,7 @@ export const site = {
   description:
     'Spark & Anvil makes thoughtfully-crafted educational iOS apps for kids ages 9–14. No ads, no in-app purchases, no tracking. Built with Swift 6 and SwiftUI, running on-device AI.',
   url: 'https://spark-and-anvil.com',
-  ogImage: '/brand/lockup.png',
+  ogImage: '/brand/og-image.png',
   email: 'hello@spark-and-anvil.com',
   press: 'press@spark-and-anvil.com',
   ages: '9–14',

@@ -45,6 +45,12 @@ const canonicalUrl = new URL(Astro.url.pathname, site.url).toString();
 
     <meta name="generator" content={Astro.generator} />
 
+    <!-- Plausible Analytics (privacy-first, no cookies, COPPA-safe) -->
+    <!-- Activates only in production, behind env flag. -->
+    {import.meta.env.PROD && (
+      <script defer data-domain="spark-and-anvil.com" src="https://plausible.io/js/script.js"></script>
+    )}
+
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
