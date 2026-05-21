@@ -1272,23 +1272,6 @@ export const apps: AppData[] = [
     "hasUserGuide": true
   },
   {
-    "slug": "etymonrealm",
-    "name": "EtymonRealm",
-    "tagline": "Per `Docs/ANALYSIS_ETYMONREALM_VS_QUILLSPELL.md` (2026-05-19), EtymonRealm's Phase 1 scope overlapped near-totally with QuillSpell's existing morphology track:.",
-    "vertical": "academics",
-    "heroColor": "#4A6FA5",
-    "iconPath": null,
-    "mascotPath": null,
-    "implementing": false,
-    "standards": [
-      "CCSS ELA",
-      "C3 Social Studies",
-      "ISTE"
-    ],
-    "hasM9Accessories": false,
-    "wave": null
-  },
-  {
     "slug": "farmquest",
     "name": "FarmQuest",
     "tagline": "Run a farm from soil to shelf \u2014 manage crops, raise animals, process food, market products, and balance sustainability with profitability across four seasons of scientific farming and agribusiness. Ages 9-14.",
@@ -4415,7 +4398,7 @@ export const appsBySlug: Record<string, AppData> = Object.fromEntries(
 export const verticalCounts = {
   "stem": 40,
   "steam": 19,
-  "academics": 24,
+  "academics": 23,
   "dir-fedc": 16,
   "special-interest": 37
 };
