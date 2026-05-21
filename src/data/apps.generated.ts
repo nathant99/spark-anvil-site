@@ -1,4 +1,10 @@
-// AUTO-GENERATED — do not edit by hand.
+// SEMI-MANAGED — hand-curated data file. DO NOT run scripts/build-apps-data.mjs
+// against this file directly; that script ships a slim 36-app schema that will
+// OVERWRITE the rich data here (longTagline, features, implementing, wave,
+// hasUserGuide, hasM9Accessories, standards, iconHeroPath, etc.) and reduce
+// 136 apps → 36. Until build-apps-data.mjs is extended to produce the rich
+// schema with merge-preserving updates, edit this file via targeted Python
+// scripts that read+modify+write specific fields.
 
 export interface AppFeature {
   name: string;
@@ -65,7 +71,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/adventurehub/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",

@@ -1,12 +1,25 @@
 // build-apps-data.mjs
 //
-// Sources per-app website content from the labsmith research hub + individual app repos.
-// Writes the consolidated dataset to src/data/apps.generated.ts which the per-app
-// dynamic route (src/pages/apps/[slug].astro) consumes at build time.
+// ⚠️ DESTRUCTIVE — DO NOT RUN AGAINST PRODUCTION apps.generated.ts ⚠️
+//
+// This script ships a SLIM 36-app schema with only 7 fields per app (slug, name,
+// tagline, vertical, heroColor, iconPath, mascotPath). Running it against the
+// current apps.generated.ts will WIPE the rich schema (136 apps, fields like
+// longTagline, features, implementing, wave, hasUserGuide, hasM9Accessories,
+// standards, iconHeroPath) and reduce the data file to 36 apps.
+//
+// Until this script is extended to (a) cover all 136 apps in WAVE_IMPLEMENTING+
+// non-implementing lists and (b) produce + preserve the rich schema fields,
+// edit apps.generated.ts via targeted Python read+modify+write scripts. See
+// labsmith Docs/WORK_QUEUE_INBOUND_HANDOFFS_2026-05-20.md Round 21 for the
+// safe in-place mutation pattern.
+//
+// To regenerate from scratch safely (when the script is fixed): commit
+// apps.generated.ts first; run with --check; only --write after diff review.
 //
 // Usage:
-//   node scripts/build-apps-data.mjs           # writes src/data/apps.generated.ts
 //   node scripts/build-apps-data.mjs --check   # validates without writing
+//   node scripts/build-apps-data.mjs           # ⚠️ overwrites apps.generated.ts
 
 import { readFileSync, writeFileSync, existsSync, readdirSync, statSync, copyFileSync, mkdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
