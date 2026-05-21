@@ -93,6 +93,40 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
     </section>
   )}
 
+  <!-- Status + standards strip -->
+  <section class="max-w-4xl mx-auto px-6 py-12">
+    <div class="flex flex-wrap items-center gap-3">
+      {app.wave && (
+        <span class="px-3 py-1 bg-forge/10 text-forge text-xs font-bold rounded-full uppercase tracking-wider">
+          Wave {app.wave} implementing
+        </span>
+      )}
+      {!app.implementing && (
+        <span class="px-3 py-1 bg-anvil/10 text-anvil/60 text-xs font-bold rounded-full uppercase tracking-wider">
+          In planning
+        </span>
+      )}
+      {app.hasM9Accessories && (
+        <span class="px-3 py-1 bg-spark/30 text-anvil text-xs font-bold rounded-full">
+          8 themed avatar accessories
+        </span>
+      )}
+      <span class="px-3 py-1 bg-anvil/5 text-anvil/70 text-xs font-medium rounded-full">
+        Swift 6 · SwiftUI · FoundationModels
+      </span>
+      {app.standards.map(s => (
+        <span class="px-3 py-1 bg-anvil/5 text-anvil/70 text-xs font-medium rounded-full">
+          {s}
+        </span>
+      ))}
+      <span class="ml-auto inline-flex items-center gap-2 text-xs text-anvil/60">
+        Hero color:
+        <span class="w-4 h-4 rounded border border-anvil/20" style={`background-color: ${app.heroColor}`}></span>
+        <code class="text-xs">{app.heroColor}</code>
+      </span>
+    </div>
+  </section>
+
   <!-- What's inside -->
   <section class="max-w-4xl mx-auto px-6 py-16">
     <h2 class="font-brand font-bold text-3xl text-anvil mb-8">What&apos;s inside</h2>
