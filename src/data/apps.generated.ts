@@ -4128,7 +4128,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/wonderforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/wonderforge/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
