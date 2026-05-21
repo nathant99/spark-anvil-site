@@ -1,0 +1,23 @@
+Spark & Anvil — Fact Sheet
+
+Founded:        2025
+Headquarters:   Remote (US)
+Apps:           134 portfolio apps (36 in active implementation: Waves 1+2+3)
+Target ages:    9-14
+Platforms:      iOS 26+, iPadOS, macOS (Mac Catalyst), visionOS (select titles)
+Tech stack:     Swift 6, SwiftUI, SwiftData, FoundationModels, SpriteKit
+Verticals:      STEM, STEAM, Academics, DIR/FEDC, Special Interest
+Privacy:        No ads, no in-app purchases, no tracking, on-device data only, COPPA compliant
+
+Press contact:  press@spark-and-anvil.com
+General:        hello@spark-and-anvil.com
+Website:        https://spark-and-anvil.com
+GitHub:         https://github.com/nathant99/spark-anvil-site
+
+Brand assets included in this bundle:
+  - logomark.png (1024x1024) — square logo for icons + social
+  - lockup.png (1024x1024) — wordmark + icon horizontal lockup
+  - og-image.png (1200x630) — social share image
+  - favicon set — 16/32/48/192/512 PNG variants + ICO
+  - palette.txt — color reference
+  - fact-sheet.txt — this file
