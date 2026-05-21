@@ -25,6 +25,7 @@ export const nav = [
   { href: '/apps', label: 'Apps' },
   { href: '/for-parents', label: 'For Parents' },
   { href: '/for-educators', label: 'For Educators' },
+  { href: '/mascots', label: 'Mascots' },
   { href: '/design', label: 'Design' },
   { href: '/about', label: 'About' },
   { href: '/press', label: 'Press' },
