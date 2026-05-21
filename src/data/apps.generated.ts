@@ -28,7 +28,7 @@ export const apps: AppData[] = [
   {
     "slug": "activeforge",
     "name": "ActiveForge",
-    "tagline": "Build physical fitness, motor skills, and dance proficiency through camera-based movement tracking, choreography challenges, and sport skill progressions \u2014 aligning to both SHAPE America PE standards ",
+    "tagline": "Build physical fitness, motor skills, and dance proficiency through camera-based movement tracking, choreography challenges, and sport skill progressions \u2014 aligning to both SHAPE America PE standards and NCAS Dance standards. Ages 9-14.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/activeforge/icon-sm.webp",
@@ -72,7 +72,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "hasUserGuide": true
   },
   {
     "slug": "aiforge",
@@ -115,7 +116,7 @@ export const apps: AppData[] = [
   {
     "slug": "beatforge",
     "name": "BeatForge",
-    "tagline": "Music creation sandbox inside an RPG world where kids ages 10-14 build compositions using visual \"sound blocks\" that snap together on a sequencer canvas",
+    "tagline": "Music creation sandbox inside an RPG world where kids ages 10-14 build compositions using visual \"sound blocks\" that snap together on a sequencer canvas. The game world dynamically transforms based on the music created, and blocks gradually reveal standard notation as mastery increases via a peel-back mechanic.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/beatforge/icon-sm.webp",
@@ -153,7 +154,7 @@ export const apps: AppData[] = [
   {
     "slug": "bioforge",
     "name": "BioForge",
-    "tagline": "Players learn anatomy and biomechanics through the lens of sports -- understanding how muscles generate force, how joints create leverage, how the cardiovascular system fuels performance, and how trai",
+    "tagline": "Players learn anatomy and biomechanics through the lens of sports -- understanding how muscles generate force, how joints create leverage, how the cardiovascular system fuels performance, and how training improves the body. Each sport unlocks new body systems and biomechanical principles. The only sports-science-meets-anatomy app on any platform.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/bioforge/icon-sm.webp",
@@ -187,7 +188,7 @@ export const apps: AppData[] = [
   {
     "slug": "biomeforge",
     "name": "BiomeForge",
-    "tagline": "Design aquariums, terrariums, and vivariums -- master ecology, food webs, and ecosystem balance at micro scale",
+    "tagline": "Design aquariums, terrariums, and vivariums -- master ecology, food webs, and ecosystem balance at micro scale. Players select species, tune habitat parameters (temperature, pH, humidity, light), simulate food webs and nitrogen cycles, and observe population dynamics unfold in real time. Every organism matters.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": null,
@@ -198,7 +199,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "hasUserGuide": true
   },
   {
     "slug": "bodyforge",
@@ -228,7 +230,7 @@ export const apps: AppData[] = [
   {
     "slug": "bridgeforge",
     "name": "BridgeForge",
-    "tagline": "Project-based learning simulation with multi-week real-world challenges integrating math, science, social studies, and ELA",
+    "tagline": "Project-based learning simulation with multi-week real-world challenges integrating math, science, social studies, and ELA. First student-facing PBL app following the Gold Standard PBL cycle (PBLWorks/Buck Institute). Students solve authentic real-world problems that require competency across multiple subjects, building visible bridges on a subject connection map.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/bridgeforge/icon-sm.webp",
@@ -262,7 +264,7 @@ export const apps: AppData[] = [
   {
     "slug": "cardforge",
     "name": "CardForge",
-    "tagline": "Learn card games from basics to mastery, then amaze friends with step-by-step magic trick tutorials \u2014 a complete card skills academy with AI coaching for ages 9-14",
+    "tagline": "Learn card games from basics to mastery, then amaze friends with step-by-step magic trick tutorials \u2014 a complete card skills academy with AI coaching for ages 9-14. The only app that combines interactive card game teaching with magic trick instruction for children.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/cardforge/icon-sm.webp",
@@ -299,7 +301,7 @@ export const apps: AppData[] = [
   {
     "slug": "chanceforge",
     "name": "ChanceForge",
-    "tagline": "Run a virtual casino, investigate insurance company math, predict sports outcomes, and solve medical diagnosis puzzles \u2014 mastering probability and statistics through real-world contexts where the math",
+    "tagline": "Run a virtual casino, investigate insurance company math, predict sports outcomes, and solve medical diagnosis puzzles \u2014 mastering probability and statistics through real-world contexts where the math determines who wins and who loses.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": null,
@@ -375,7 +377,7 @@ export const apps: AppData[] = [
   {
     "slug": "chronoquest",
     "name": "ChronoQuest",
-    "tagline": "Players use a Chrono Device to visit historical eras, witness pivotal events firsthand, interact with historical figures, and complete missions that require understanding each era's culture, technolog",
+    "tagline": "Players use a Chrono Device to visit historical eras, witness pivotal events firsthand, interact with historical figures, and complete missions that require understanding each era's culture, technology, and conflicts. Unlike passive timelines, players live through history's defining moments -- facing branching decisions with real consequences.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/chronoquest/icon-sm.webp",
@@ -488,7 +490,7 @@ export const apps: AppData[] = [
   {
     "slug": "cityforge",
     "name": "CityForge",
-    "tagline": "Players design buildings and plan cities that must satisfy structural physics, environmental constraints, and citizen needs",
+    "tagline": "Players design buildings and plan cities that must satisfy structural physics, environmental constraints, and citizen needs. Start with single buildings (understanding loads, materials, foundations), progress to neighborhoods and full cities with infrastructure, zoning, and sustainability challenges. The only STEM-focused architecture and urban planning app on iOS for ages 9-14.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/cityforge/icon-sm.webp",
@@ -525,7 +527,7 @@ export const apps: AppData[] = [
   {
     "slug": "civicforge",
     "name": "CivicForge",
-    "tagline": "Players are newly elected to their town's Youth Council, making real decisions about budgets, zoning, public services, and community issues",
+    "tagline": "Players are newly elected to their town's Youth Council, making real decisions about budgets, zoning, public services, and community issues. Every vote has consequences \u2014 build parks or fix potholes, fund the library or hire firefighters. Where iCivics teaches federal government through web-based quizzes, CivicForge teaches local government through iPhone-native simulation.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/civicforge/icon-sm.webp",
@@ -563,7 +565,7 @@ export const apps: AppData[] = [
   {
     "slug": "claimcraft",
     "name": "ClaimCraft",
-    "tagline": "Visual argument mapping game where players build claim-evidence-reasoning chains and compete in debate duels",
+    "tagline": "Visual argument mapping game where players build claim-evidence-reasoning chains and compete in debate duels. Logical fallacies are attack moves to identify and counter. AI generates counterarguments and evaluates argument quality.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/claimcraft/icon-sm.webp",
@@ -601,7 +603,7 @@ export const apps: AppData[] = [
   {
     "slug": "climatequest",
     "name": "ClimateQuest",
-    "tagline": "Navigate a living Earth system where greenhouse gases, ocean currents, ice sheets, and ecosystems interconnect \u2014 make policy decisions and observe centuries of consequences through interactive climate",
+    "tagline": "Navigate a living Earth system where greenhouse gases, ocean currents, ice sheets, and ecosystems interconnect \u2014 make policy decisions and observe centuries of consequences through interactive climate models. Ages 9-14.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": null,
@@ -638,7 +640,7 @@ export const apps: AppData[] = [
   {
     "slug": "coderealm",
     "name": "CodeRealm",
-    "tagline": "Kids ages 10-14 program a companion robot using visual blocks that gradually \"peel back\" to reveal real Swift code as mastery increases",
+    "tagline": "Kids ages 10-14 program a companion robot using visual blocks that gradually \"peel back\" to reveal real Swift code as mastery increases. The block editor drives a SpriteKit game world where the robot navigates levels, solves puzzles, and defeats enemies through player-authored programs.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/coderealm/icon-sm.webp",
@@ -676,7 +678,7 @@ export const apps: AppData[] = [
   {
     "slug": "cosmosforge",
     "name": "CosmosForge",
-    "tagline": "Travel 13.8 billion years back to the Big Bang, watch the first stars ignite, witness galaxies collide, peer inside black holes, and hunt for exoplanets \u2014 an astrophysics odyssey through scales of spa",
+    "tagline": "Travel 13.8 billion years back to the Big Bang, watch the first stars ignite, witness galaxies collide, peer inside black holes, and hunt for exoplanets \u2014 an astrophysics odyssey through scales of space and time that dwarf human imagination.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": null,
@@ -713,7 +715,7 @@ export const apps: AppData[] = [
   {
     "slug": "craftforge",
     "name": "CraftForge",
-    "tagline": "Virtual miniature painting and model-building that teaches color theory, brush techniques, and material science at micro scale",
+    "tagline": "Virtual miniature painting and model-building that teaches color theory, brush techniques, and material science at micro scale. Players learn complementary/analogous/triadic color schemes, practice basecoating, washing, drybrushing, highlighting, and blending techniques, and explore the chemistry of acrylic, enamel, and oil paints.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": null,
@@ -725,7 +727,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "hasUserGuide": true
   },
   {
     "slug": "creaturecare",
@@ -817,7 +820,8 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": true,
     "wave": null,
-    "iconHeroPath": "/apps/curiosityquest/icon.webp"
+    "iconHeroPath": "/apps/curiosityquest/icon.webp",
+    "hasUserGuide": true
   },
   {
     "slug": "dancequest",
@@ -860,7 +864,7 @@ export const apps: AppData[] = [
   {
     "slug": "dataforge",
     "name": "DataForge",
-    "tagline": "Visual, block-based data science environment where players collect, clean, analyze, and visualize real-world datasets",
+    "tagline": "Visual, block-based data science environment where players collect, clean, analyze, and visualize real-world datasets. No coding required \u2014 drag-and-drop data pipeline builder.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/dataforge/icon-sm.webp",
@@ -924,7 +928,7 @@ export const apps: AppData[] = [
   {
     "slug": "depthquest",
     "name": "DepthQuest",
-    "tagline": "Players pilot a research submarine through ocean zones (sunlight, twilight, midnight, abyssal, hadal), discovering marine species, studying coral reef health, mapping the ocean floor, and answering ma",
+    "tagline": "Players pilot a research submarine through ocean zones (sunlight, twilight, midnight, abyssal, hadal), discovering marine species, studying coral reef health, mapping the ocean floor, and answering marine science challenges. The only gamified ocean exploration RPG on iOS for ages 9-14.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/depthquest/icon-sm.webp",
@@ -999,7 +1003,7 @@ export const apps: AppData[] = [
   {
     "slug": "discretequest",
     "name": "DiscreteQuest",
-    "tagline": "Exploration game teaching graph theory, combinatorics, and number theory through real-world mysteries",
+    "tagline": "Exploration game teaching graph theory, combinatorics, and number theory through real-world mysteries. Includes AMC 8/MATHCOUNTS competition timer mode. First gamified discrete math app for ages 9-14.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/discretequest/icon-sm.webp",
@@ -1037,7 +1041,7 @@ export const apps: AppData[] = [
   {
     "slug": "ecosphere",
     "name": "EcoSphere",
-    "tagline": "Interactive climate and earth systems simulator where players manage interconnected ecosystems across geological time scales",
+    "tagline": "Interactive climate and earth systems simulator where players manage interconnected ecosystems across geological time scales. Balance atmosphere, hydrosphere, geosphere, and biosphere while answering questions that unlock simulation controls. Every decision cascades through Earth's systems \u2014 pump CO2 and watch ice caps shrink, plant forests and track carbon sequestration in real time.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/ecosphere/icon-sm.webp",
@@ -1075,7 +1079,7 @@ export const apps: AppData[] = [
   {
     "slug": "effectsforge",
     "name": "EffectsForge",
-    "tagline": "Learn the science and art behind movie special effects \u2014 prosthetics chemistry, Foley sound physics, forced perspective optics, stop-motion animation, and lighting design \u2014 then produce your own short",
+    "tagline": "Learn the science and art behind movie special effects \u2014 prosthetics chemistry, Foley sound physics, forced perspective optics, stop-motion animation, and lighting design \u2014 then produce your own short films.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/effectsforge/icon-sm.webp",
@@ -1113,7 +1117,7 @@ export const apps: AppData[] = [
   {
     "slug": "ensemblequest",
     "name": "EnsembleQuest",
-    "tagline": "Gamified cooperative creative projects that build social skills incrementally through a progressive social ladder: Solo, then Pair, then Group, then Perform",
+    "tagline": "Gamified cooperative creative projects that build social skills incrementally through a progressive social ladder: Solo, then Pair, then Group, then Perform. Music and art creation serve as the vehicle for structured social interaction, with explicit visual scaffolding for every social step -- visual turn timers, role cards, social scripts, and a communication toolkit.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/ensemblequest/icon-sm.webp",
@@ -1226,7 +1230,7 @@ export const apps: AppData[] = [
   {
     "slug": "ethosforge",
     "name": "EthosForge",
-    "tagline": "Navigate ethical dilemmas across science, technology, history, and daily life with an AI Socratic tutor",
+    "tagline": "Navigate ethical dilemmas across science, technology, history, and daily life with an AI Socratic tutor. Build ethical reasoning through structured debate, perspective-taking, and case analysis.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/ethosforge/icon-sm.webp",
@@ -1281,7 +1285,7 @@ export const apps: AppData[] = [
   {
     "slug": "farmquest",
     "name": "FarmQuest",
-    "tagline": "Run a farm from soil to shelf \u2014 manage crops, raise animals, process food, market products, and balance sustainability with profitability across four seasons of scientific farming and agribusiness",
+    "tagline": "Run a farm from soil to shelf \u2014 manage crops, raise animals, process food, market products, and balance sustainability with profitability across four seasons of scientific farming and agribusiness. Ages 9-14.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/farmquest/icon-sm.webp",
@@ -1356,7 +1360,7 @@ export const apps: AppData[] = [
   {
     "slug": "fitquest",
     "name": "FitQuest",
-    "tagline": "A fitness RPG adventure where physical exercise (tracked via HealthKit) AND knowledge quiz performance jointly determine your character's progression",
+    "tagline": "A fitness RPG adventure where physical exercise (tracked via HealthKit) AND knowledge quiz performance jointly determine your character's progression. Complete real workouts to gain Strength/Stamina, answer questions correctly to gain Wisdom/Intelligence.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/fitquest/icon-sm.webp",
@@ -1393,7 +1397,7 @@ export const apps: AppData[] = [
   {
     "slug": "flightforge",
     "name": "FlightForge",
-    "tagline": "Design, build, and fly aircraft in a physics sandbox \u2014 master aerodynamics from paper planes to jet engines through the four forces of flight, wind tunnel experiments, and aviation engineering challen",
+    "tagline": "Design, build, and fly aircraft in a physics sandbox \u2014 master aerodynamics from paper planes to jet engines through the four forces of flight, wind tunnel experiments, and aviation engineering challenges.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/flightforge/icon-sm.webp",
@@ -1431,7 +1435,7 @@ export const apps: AppData[] = [
   {
     "slug": "focusforge",
     "name": "FocusForge",
-    "tagline": "A gamified executive function training adventure for students ages 9-14, with specific design for ADHD learners",
+    "tagline": "A gamified executive function training adventure for students ages 9-14, with specific design for ADHD learners. Players build study skills through six EF domains: working memory, inhibitory control, cognitive flexibility, planning/organization, task initiation, and time awareness.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/focusforge/icon-sm.webp",
@@ -1468,7 +1472,7 @@ export const apps: AppData[] = [
   {
     "slug": "forgearena",
     "name": "Forgearena",
-    "tagline": "A competitive multiplayer educational game where up to 30 students on any device battle in real-time quiz arenas, team challenges, and subject-specific tournaments \u2014 bridging iOS, Android, and web pla",
+    "tagline": "A competitive multiplayer educational game where up to 30 students on any device battle in real-time quiz arenas, team challenges, and subject-specific tournaments \u2014 bridging iOS, Android, and web players in the same match.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/forgearena/icon-sm.webp",
@@ -1505,7 +1509,7 @@ export const apps: AppData[] = [
   {
     "slug": "forgeclassroom",
     "name": "Forgeclassroom",
-    "tagline": "A teacher-facing classroom management tool that works on any device \u2014 assign Forge app lessons, monitor student progress in real-time, generate standards-aligned reports, and run live quiz competition",
+    "tagline": "A teacher-facing classroom management tool that works on any device \u2014 assign Forge app lessons, monitor student progress in real-time, generate standards-aligned reports, and run live quiz competitions where iOS and Android students play together.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/forgeclassroom/icon-sm.webp",
@@ -1530,7 +1534,7 @@ export const apps: AppData[] = [
   {
     "slug": "forgeportal",
     "name": "Forgeportal",
-    "tagline": "A cross-platform launcher and discovery hub for the entire Forge educational app portfolio \u2014 browse, download, and play any Forge app from one place on iOS, Android, Windows, or web, with unified prog",
+    "tagline": "A cross-platform launcher and discovery hub for the entire Forge educational app portfolio \u2014 browse, download, and play any Forge app from one place on iOS, Android, Windows, or web, with unified progress tracking and family management.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/forgeportal/icon-sm.webp",
@@ -1580,7 +1584,7 @@ export const apps: AppData[] = [
   {
     "slug": "fossilforge",
     "name": "FossilForge",
-    "tagline": "Players run paleontology expeditions -- excavating fossil sites grid-by-grid, preparing specimens in the lab, classifying them taxonomically, and building museum exhibits",
+    "tagline": "Players run paleontology expeditions -- excavating fossil sites grid-by-grid, preparing specimens in the lab, classifying them taxonomically, and building museum exhibits. Real geological periods, scientifically accurate specimens, and the careful process of real fossil preparation. The only paleontology simulation on iOS for ages 9-14.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/fossilforge/icon-sm.webp",
@@ -1617,7 +1621,7 @@ export const apps: AppData[] = [
   {
     "slug": "fractionforge",
     "name": "FractionForge",
-    "tagline": "Master fractions, decimals, and place value through virtual manipulatives, number line challenges, and real-world problem contexts \u2014 following the research-backed Concrete-Representational-Abstract in",
+    "tagline": "Master fractions, decimals, and place value through virtual manipulatives, number line challenges, and real-world problem contexts \u2014 following the research-backed Concrete-Representational-Abstract instructional model. Ages 8-12.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/fractionforge/icon-sm.webp",
@@ -1655,7 +1659,7 @@ export const apps: AppData[] = [
   {
     "slug": "framequest",
     "name": "FrameQuest",
-    "tagline": "Frame-by-frame animation creation that turns autistic preferences for precision and sequencing into creative storytelling",
+    "tagline": "Frame-by-frame animation creation that turns autistic preferences for precision and sequencing into creative storytelling. Players build stop-motion animations that practice social scenarios -- setting up characters, capturing frames, sequencing timelines, and narrating stories. The animation process itself builds fine motor skills, sequential thinking, and emotional understanding.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/framequest/icon-sm.webp",
@@ -1693,7 +1697,7 @@ export const apps: AppData[] = [
   {
     "slug": "functionforge",
     "name": "FunctionForge",
-    "tagline": "Interactive function laboratory \u2014 input-output machines, function tables, linear/quadratic/exponential functions, and real-world data fitting",
+    "tagline": "Interactive function laboratory \u2014 input-output machines, function tables, linear/quadratic/exponential functions, and real-world data fitting. Visual \"function machine\" component builder bridging arithmetic to algebra.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/functionforge/icon-sm.webp",
@@ -1731,7 +1735,7 @@ export const apps: AppData[] = [
   {
     "slug": "geneforge",
     "name": "GeneForge",
-    "tagline": "Extract DNA, map inheritance with Punnett squares, simulate CRISPR gene editing, and debate bioethics \u2014 explore genetics and biotechnology from Mendel's peas to modern gene therapy through hands-on vi",
+    "tagline": "Extract DNA, map inheritance with Punnett squares, simulate CRISPR gene editing, and debate bioethics \u2014 explore genetics and biotechnology from Mendel's peas to modern gene therapy through hands-on virtual lab experiments.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/geneforge/icon-sm.webp",
@@ -1769,7 +1773,7 @@ export const apps: AppData[] = [
   {
     "slug": "geometryforge",
     "name": "GeometryForge",
-    "tagline": "Interactive geometry exploration app for ages 9-14 covering the complete CCSS Geometry curriculum \u2014 transformations, coordinate geometry, similarity, proof, and 3D solids \u2014 using hands-on RealityKit 3",
+    "tagline": "Interactive geometry exploration app for ages 9-14 covering the complete CCSS Geometry curriculum \u2014 transformations, coordinate geometry, similarity, proof, and 3D solids \u2014 using hands-on RealityKit 3D visualization, visual theorem discovery, and progressive spatial reasoning challenges. Companion app to CubeSensei (which focuses on Rubik's Cube mastery and magic tricks).",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/geometryforge/icon-sm.webp",
@@ -1808,7 +1812,7 @@ export const apps: AppData[] = [
   {
     "slug": "grammarforge",
     "name": "GrammarForge",
-    "tagline": "Master grammar, sentence structure, and language conventions through interactive sentence diagramming puzzles, error detective investigations, and style editing challenges \u2014 turning grammar rules into",
+    "tagline": "Master grammar, sentence structure, and language conventions through interactive sentence diagramming puzzles, error detective investigations, and style editing challenges \u2014 turning grammar rules into engaging game mechanics. Ages 9-14.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/grammarforge/icon-sm.webp",
@@ -1883,7 +1887,7 @@ export const apps: AppData[] = [
   {
     "slug": "harmonyforge",
     "name": "HarmonyForge",
-    "tagline": "A music creation app that leverages autistic pattern-thinking strengths by translating visual patterns into music",
+    "tagline": "A music creation app that leverages autistic pattern-thinking strengths by translating visual patterns into music. Players arrange colors, shapes, and positions on a grid -- the pattern IS the music. Includes sensory-safe environments, emotion vocabulary tools, and therapist observer mode.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/harmonyforge/icon-sm.webp",
@@ -1921,7 +1925,7 @@ export const apps: AppData[] = [
   {
     "slug": "harvestforge",
     "name": "HarvestForge",
-    "tagline": "Run a farm from seed to shelf \u2014 manage soil microbiomes, rotate crops, navigate drought and pest challenges, trace food through the supply chain, and investigate food justice issues that determine who",
+    "tagline": "Run a farm from seed to shelf \u2014 manage soil microbiomes, rotate crops, navigate drought and pest challenges, trace food through the supply chain, and investigate food justice issues that determine who eats and who goes hungry.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/harvestforge/icon-sm.webp",
@@ -1958,7 +1962,7 @@ export const apps: AppData[] = [
   {
     "slug": "heatforge",
     "name": "HeatForge",
-    "tagline": "Race heat through solids, liquids, and gases \u2014 watch convection currents spiral, design insulation that defeats a blowtorch, and discover why ice cream melts faster on a hot sidewalk than in the freez",
+    "tagline": "Race heat through solids, liquids, and gases \u2014 watch convection currents spiral, design insulation that defeats a blowtorch, and discover why ice cream melts faster on a hot sidewalk than in the freezer as you master the three laws of thermodynamics.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/heatforge/icon-sm.webp",
@@ -1997,7 +2001,7 @@ export const apps: AppData[] = [
   {
     "slug": "illusionforge",
     "name": "IllusionForge",
-    "tagline": "Science-of-magic exploration app where kids discover the physics, chemistry, and cognitive psychology behind magic tricks and optical illusions",
+    "tagline": "Science-of-magic exploration app where kids discover the physics, chemistry, and cognitive psychology behind magic tricks and optical illusions. Interactive science animations demonstrate forces, optics, and misdirection principles. Performance planning builds public speaking confidence. Concrete cause-and-effect reasoning satisfies the \"need to know why\" drive common in neurodivergent learners.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": null,
@@ -2009,7 +2013,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "hasUserGuide": true
   },
   {
     "slug": "improvquest",
@@ -2052,7 +2057,7 @@ export const apps: AppData[] = [
   {
     "slug": "inclusionforge",
     "name": "InclusionForge",
-    "tagline": "Experience daily life through different abilities, explore the history of disability rights, then design solutions that work for everyone \u2014 using Universal Design principles to build a more accessible",
+    "tagline": "Experience daily life through different abilities, explore the history of disability rights, then design solutions that work for everyone \u2014 using Universal Design principles to build a more accessible world. Ages 9-14.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/inclusionforge/icon-sm.webp",
@@ -2089,7 +2094,7 @@ export const apps: AppData[] = [
   {
     "slug": "inkquest",
     "name": "InkQuest",
-    "tagline": "Junior investigative journalists at a school newspaper collect data, analyze patterns, identify bias, and write articles",
+    "tagline": "Junior investigative journalists at a school newspaper collect data, analyze patterns, identify bias, and write articles. Addresses data literacy + media literacy simultaneously.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/inkquest/icon-sm.webp",
@@ -2165,7 +2170,7 @@ export const apps: AppData[] = [
   {
     "slug": "labsmith",
     "name": "Labsmith",
-    "tagline": "Virtual science lab where kids run real physics simulations \u2014 mix chemicals, build circuits, test buoyancy \u2014 earning mastery ranks through hands-on experimentation, not quizzes",
+    "tagline": "Virtual science lab where kids run real physics simulations \u2014 mix chemicals, build circuits, test buoyancy \u2014 earning mastery ranks through hands-on experimentation, not quizzes. Hypothesis-first loop: predict \u2192 run \u2192 observe \u2192 reconcile.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/labsmith/icon-sm.webp",
@@ -2239,7 +2244,7 @@ export const apps: AppData[] = [
   {
     "slug": "lifequest",
     "name": "LifeQuest",
-    "tagline": "Navigate real-life consumer decisions \u2014 compare phone plans, read lease agreements, plan meals on a budget, spot consumer scams, and manage a household \u2014 through simulation of the everyday adult scena",
+    "tagline": "Navigate real-life consumer decisions \u2014 compare phone plans, read lease agreements, plan meals on a budget, spot consumer scams, and manage a household \u2014 through simulation of the everyday adult scenarios that middle schoolers will face within five years. Ages 11-14.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/lifequest/icon-sm.webp",
@@ -2276,7 +2281,7 @@ export const apps: AppData[] = [
   {
     "slug": "linguaquest",
     "name": "LinguaQuest",
-    "tagline": "Explore a vibrant adventure world where you MUST communicate in your target language to solve puzzles, make friends, order food, and save the kingdom \u2014 an RPG that makes language learning irresistible",
+    "tagline": "Explore a vibrant adventure world where you MUST communicate in your target language to solve puzzles, make friends, order food, and save the kingdom \u2014 an RPG that makes language learning irresistible.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/linguaquest/icon-sm.webp",
@@ -2314,7 +2319,7 @@ export const apps: AppData[] = [
   {
     "slug": "logicquest",
     "name": "LogicQuest",
-    "tagline": "Master the building blocks of clear thinking \u2014 identify logical fallacies, construct truth tables, map arguments, and crack syllogistic puzzles through detective investigations and debate challenges",
+    "tagline": "Master the building blocks of clear thinking \u2014 identify logical fallacies, construct truth tables, map arguments, and crack syllogistic puzzles through detective investigations and debate challenges. Ages 10-14.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": null,
@@ -2389,7 +2394,7 @@ export const apps: AppData[] = [
   {
     "slug": "machineforge",
     "name": "MachineForge",
-    "tagline": "Build extreme machines from simple components \u2014 levers, pulleys, gears, and wheels \u2014 then test them in a physics sandbox, design vehicles, launch catapults, and demolish structures by exploiting mecha",
+    "tagline": "Build extreme machines from simple components \u2014 levers, pulleys, gears, and wheels \u2014 then test them in a physics sandbox, design vehicles, launch catapults, and demolish structures by exploiting mechanical weak points.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/machineforge/icon-sm.webp",
@@ -2427,7 +2432,7 @@ export const apps: AppData[] = [
   {
     "slug": "makerforge",
     "name": "MakerForge",
-    "tagline": "Design, prototype, and virtually fabricate objects using 3D printing simulation, Arduino circuit building, and materials science \u2014 mastering the full engineering design process through constrained cha",
+    "tagline": "Design, prototype, and virtually fabricate objects using 3D printing simulation, Arduino circuit building, and materials science \u2014 mastering the full engineering design process through constrained challenges.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/makerforge/icon-sm.webp",
@@ -2465,7 +2470,7 @@ export const apps: AppData[] = [
   {
     "slug": "mangaforge",
     "name": "MangaForge",
-    "tagline": "Create your own manga and anime-style comics -- learn art fundamentals, visual storytelling, and Japanese cultural literacy",
+    "tagline": "Create your own manga and anime-style comics -- learn art fundamentals, visual storytelling, and Japanese cultural literacy. The #1 creative interest for ages 9-14, manga/anime drawing dominates Outschool with 2,124+ reviews at 4.9 stars for a single class.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": null,
@@ -2477,12 +2482,13 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "hasUserGuide": true
   },
   {
     "slug": "mapforge",
     "name": "MapForge",
-    "tagline": "Build fantasy worlds from tectonic plates up \u2014 master geography, ecology, economics, and storytelling through world-building",
+    "tagline": "Build fantasy worlds from tectonic plates up \u2014 master geography, ecology, economics, and storytelling through world-building. Players create planets by forging plate tectonics (mountains/oceans), designing climate patterns (latitude/altitude/currents), painting biomes, founding civilizations (based on resources), establishing trade routes (geography and distance), and simulating conflicts (scarcit",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": null,
@@ -2493,7 +2499,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "hasUserGuide": true
   },
   {
     "slug": "marketquest",
@@ -2536,7 +2543,7 @@ export const apps: AppData[] = [
   {
     "slug": "mathlore",
     "name": "MathLore",
-    "tagline": "Ethnomathematics adventure traveling through world civilizations \u2014 Babylonian base-60, Mayan vigesimal, Islamic geometric art, Indian zero/algebra, African fractal geometry, Inca quipu, Japanese origa",
+    "tagline": "Ethnomathematics adventure traveling through world civilizations \u2014 Babylonian base-60, Mayan vigesimal, Islamic geometric art, Indian zero/algebra, African fractal geometry, Inca quipu, Japanese origami geometry. Culturally responsive math education.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/mathlore/icon-sm.webp",
@@ -2574,7 +2581,7 @@ export const apps: AppData[] = [
   {
     "slug": "measurequest",
     "name": "MeasureQuest",
-    "tagline": "Hands-on measurement adventures: unit conversions, area and perimeter calculations, data representation, and real-world measurement applications -- building mathematical fluency through interactive ch",
+    "tagline": "Hands-on measurement adventures: unit conversions, area and perimeter calculations, data representation, and real-world measurement applications -- building mathematical fluency through interactive challenges.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/measurequest/icon-sm.webp",
@@ -2612,7 +2619,7 @@ export const apps: AppData[] = [
   {
     "slug": "medicquest",
     "name": "MedicQuest",
-    "tagline": "Run a medical clinic, diagnose patients, perform first aid, and investigate disease outbreaks \u2014 learn anatomy, clinical reasoning, triage, and public health through case-based medical detective gamepl",
+    "tagline": "Run a medical clinic, diagnose patients, perform first aid, and investigate disease outbreaks \u2014 learn anatomy, clinical reasoning, triage, and public health through case-based medical detective gameplay. Includes health influences investigation, patient communication skills, and wellness goal-setting for complete health education coverage.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/medicquest/icon-sm.webp",
@@ -2649,7 +2656,7 @@ export const apps: AppData[] = [
   {
     "slug": "mindforge",
     "name": "MindForge",
-    "tagline": "Adventure RPG where players navigate social scenarios, manage stress through mini-games, and build emotional intelligence by helping NPCs resolve conflicts",
+    "tagline": "Adventure RPG where players navigate social scenarios, manage stress through mini-games, and build emotional intelligence by helping NPCs resolve conflicts. Combines CASEL's 5 core competencies with SHAPE America's National Health Education Standards in a quest-based format. AI-driven NPCs respond to player choices with realistic emotional reactions.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/mindforge/icon-sm.webp",
@@ -2686,7 +2693,7 @@ export const apps: AppData[] = [
   {
     "slug": "mintforge",
     "name": "MintForge",
-    "tagline": "Financial math game where financial scenarios ARE the math problems \u2014 compound interest, percentage markup, budgeting, loan amortization, stock market simulation",
+    "tagline": "Financial math game where financial scenarios ARE the math problems \u2014 compound interest, percentage markup, budgeting, loan amortization, stock market simulation. Math-first approach to financial literacy.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/mintforge/icon-sm.webp",
@@ -2748,7 +2755,7 @@ export const apps: AppData[] = [
   {
     "slug": "mythforge",
     "name": "MythForge",
-    "tagline": "Explore ancient civilizations through mythology-driven adventure quests \u2014 meet gods and heroes, battle mythological creatures, collect historical artifacts, and build ancient cities while learning Gre",
+    "tagline": "Explore ancient civilizations through mythology-driven adventure quests \u2014 meet gods and heroes, battle mythological creatures, collect historical artifacts, and build ancient cities while learning Greek, Roman, Norse, Egyptian, and Mesoamerican cultures.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/mythforge/icon-sm.webp",
@@ -2785,7 +2792,7 @@ export const apps: AppData[] = [
   {
     "slug": "neuralquest",
     "name": "NeuralQuest",
-    "tagline": "Players train image classifiers, build recommendation systems, discover how bias creeps into data, and explore AI ethics through hands-on experiments",
+    "tagline": "Players train image classifiers, build recommendation systems, discover how bias creeps into data, and explore AI ethics through hands-on experiments. Learn how AI actually works -- not by coding, but by doing. The first gamified AI literacy app for kids on any platform.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/neuralquest/icon-sm.webp",
@@ -2823,7 +2830,7 @@ export const apps: AppData[] = [
   {
     "slug": "newsforge",
     "name": "NewsForge",
-    "tagline": "Run a digital newsroom \u2014 investigate stories through primary sources, evaluate credibility under deadline pressure, design data visualizations, produce multimedia reports, and compete to be first with",
+    "tagline": "Run a digital newsroom \u2014 investigate stories through primary sources, evaluate credibility under deadline pressure, design data visualizations, produce multimedia reports, and compete to be first with accurate news in a world full of misinformation.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/newsforge/icon-sm.webp",
@@ -2861,7 +2868,7 @@ export const apps: AppData[] = [
   {
     "slug": "nexusforge",
     "name": "NexusForge",
-    "tagline": "Build and manage interconnected systems where actions cascade across ecology, economy, health, and policy",
+    "tagline": "Build and manage interconnected systems where actions cascade across ecology, economy, health, and policy. First gamified systems thinking app for ages 9-14.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/nexusforge/icon-sm.webp",
@@ -2936,7 +2943,7 @@ export const apps: AppData[] = [
   {
     "slug": "originforge",
     "name": "OriginForge",
-    "tagline": "Explore knowledge traditions from cultures worldwide \u2014 Indigenous ecological knowledge, African mathematical systems, Asian philosophical traditions, Pacific navigation techniques",
+    "tagline": "Explore knowledge traditions from cultures worldwide \u2014 Indigenous ecological knowledge, African mathematical systems, Asian philosophical traditions, Pacific navigation techniques. Developed in partnership with cultural representatives.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/originforge/icon-sm.webp",
@@ -3011,7 +3018,7 @@ export const apps: AppData[] = [
   {
     "slug": "powerforge",
     "name": "PowerForge",
-    "tagline": "Build power plants, manage electrical grids, and engineer renewable energy solutions \u2014 master energy conversion, thermodynamics, and sustainable engineering through infrastructure simulation and physi",
+    "tagline": "Build power plants, manage electrical grids, and engineer renewable energy solutions \u2014 master energy conversion, thermodynamics, and sustainable engineering through infrastructure simulation and physics experiments.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/powerforge/icon-sm.webp",
@@ -3049,7 +3056,7 @@ export const apps: AppData[] = [
   {
     "slug": "prismforge",
     "name": "PrismForge",
-    "tagline": "Bend, split, and focus light through a virtual optics bench \u2014 explore lenses, prisms, mirrors, and the full electromagnetic spectrum while solving light-based engineering challenges and building devic",
+    "tagline": "Bend, split, and focus light through a virtual optics bench \u2014 explore lenses, prisms, mirrors, and the full electromagnetic spectrum while solving light-based engineering challenges and building devices from magnifying glasses to fiber optic cables.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": null,
@@ -3087,7 +3094,7 @@ export const apps: AppData[] = [
   {
     "slug": "proofquest",
     "name": "ProofQuest",
-    "tagline": "Logic puzzle adventure building proof-readiness through deductive reasoning puzzles, informal proofs, and mathematical writing",
+    "tagline": "Logic puzzle adventure building proof-readiness through deductive reasoning puzzles, informal proofs, and mathematical writing. Themed around mathematical discoveries (Euler's bridges, Ramsey theory, four-color theorem).",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/proofquest/icon-sm.webp",
@@ -3151,7 +3158,7 @@ export const apps: AppData[] = [
   {
     "slug": "questforge",
     "name": "QuestForge",
-    "tagline": "Tabletop RPG creation toolkit where kids design characters (stat allocation = algebraic thinking), write quest narratives, build grid-based encounter maps (spatial reasoning), explore dice probability",
+    "tagline": "Tabletop RPG creation toolkit where kids design characters (stat allocation = algebraic thinking), write quest narratives, build grid-based encounter maps (spatial reasoning), explore dice probability, and manage resource economics. TTRPGs are recognized as therapeutic for autistic youth \u2014 turn-based, self-paced, structured creativity.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": null,
@@ -3162,7 +3169,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "hasUserGuide": true
   },
   {
     "slug": "quillspell",
@@ -3205,7 +3213,7 @@ export const apps: AppData[] = [
   {
     "slug": "ratiorealm",
     "name": "RatioRealm",
-    "tagline": "Master ratios, proportions, and percentages through real-world simulation contexts \u2014 recipe scaling in kitchens, blueprint ratios in construction, and map scales in cartography \u2014 with visual models an",
+    "tagline": "Master ratios, proportions, and percentages through real-world simulation contexts \u2014 recipe scaling in kitchens, blueprint ratios in construction, and map scales in cartography \u2014 with visual models and AI-driven difficulty adaptation. Ages 10-14.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/ratiorealm/icon-sm.webp",
@@ -3243,7 +3251,7 @@ export const apps: AppData[] = [
   {
     "slug": "readquest",
     "name": "ReadQuest",
-    "tagline": "Build reading comprehension mastery through interactive passage analysis, evidence-based argument construction, and AI-generated comprehension challenges \u2014 with dual fiction and nonfiction tracks",
+    "tagline": "Build reading comprehension mastery through interactive passage analysis, evidence-based argument construction, and AI-generated comprehension challenges \u2014 with dual fiction and nonfiction tracks. Ages 9-14.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/readquest/icon-sm.webp",
@@ -3281,7 +3289,7 @@ export const apps: AppData[] = [
   {
     "slug": "reelforge",
     "name": "ReelForge",
-    "tagline": "Players learn filmmaking principles by creating short films within a virtual studio -- storyboarding scenes, choosing camera angles, directing lighting, designing sound, and editing on a timeline",
+    "tagline": "Players learn filmmaking principles by creating short films within a virtual studio -- storyboarding scenes, choosing camera angles, directing lighting, designing sound, and editing on a timeline. Progress from single-shot exercises to multi-scene narratives, unlocking techniques from the history of cinema. The only unified filmmaking education app on iOS.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/reelforge/icon-sm.webp",
@@ -3319,7 +3327,7 @@ export const apps: AppData[] = [
   {
     "slug": "researchquest",
     "name": "ResearchQuest",
-    "tagline": "Guided research adventure where students formulate questions, evaluate sources, synthesize findings, and produce reports -- building essential information literacy skills through structured research q",
+    "tagline": "Guided research adventure where students formulate questions, evaluate sources, synthesize findings, and produce reports -- building essential information literacy skills through structured research quests.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/researchquest/icon-sm.webp",
@@ -3395,7 +3403,7 @@ export const apps: AppData[] = [
   {
     "slug": "roboforge",
     "name": "RoboForge",
-    "tagline": "Design robots from modular parts, program them in Swift-like block code, enter them in automated factory challenges, and compete in arena battles \u2014 mastering mechanical design, sensor programming, and",
+    "tagline": "Design robots from modular parts, program them in Swift-like block code, enter them in automated factory challenges, and compete in arena battles \u2014 mastering mechanical design, sensor programming, and algorithmic thinking through the most engaging STEM discipline in middle school.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/roboforge/icon-sm.webp",
@@ -3433,7 +3441,7 @@ export const apps: AppData[] = [
   {
     "slug": "safetyforge",
     "name": "SafetyForge",
-    "tagline": "Navigate the digital world safely through interactive scenarios about privacy, cyberbullying, digital footprint, phishing detection, and responsible technology use \u2014 with a safe social media simulator",
+    "tagline": "Navigate the digital world safely through interactive scenarios about privacy, cyberbullying, digital footprint, phishing detection, and responsible technology use \u2014 with a safe social media simulator that teaches real consequences without real risk. Ages 9-14.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/safetyforge/icon-sm.webp",
@@ -3470,7 +3478,7 @@ export const apps: AppData[] = [
   {
     "slug": "saffronlab",
     "name": "SaffronLab",
-    "tagline": "Players travel the world to learn authentic recipes from different cultures, master cooking techniques through precision mini-games, and discover the science behind food \u2014 why bread rises, why onions ",
+    "tagline": "Players travel the world to learn authentic recipes from different cultures, master cooking techniques through precision mini-games, and discover the science behind food \u2014 why bread rises, why onions caramelize, why emulsions hold together. Includes food safety and hygiene education for complete culinary science coverage.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/saffronlab/icon-sm.webp",
@@ -3533,7 +3541,7 @@ export const apps: AppData[] = [
   {
     "slug": "sleuthlab",
     "name": "SleuthLab",
-    "tagline": "Players run a detective agency, taking on mystery cases that require real forensic science techniques to solve",
+    "tagline": "Players run a detective agency, taking on mystery cases that require real forensic science techniques to solve. Dust for fingerprints, run chromatography, compare fibers under a microscope, analyze handwriting, and build evidence chains to identify suspects. Critical thinking through scientific deduction.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/sleuthlab/icon-sm.webp",
@@ -3637,7 +3645,7 @@ export const apps: AppData[] = [
   {
     "slug": "spectrumcanvas",
     "name": "SpectrumCanvas",
-    "tagline": "A digital art studio designed for autistic visual thinkers where every art material is simulated without the sensory challenges of the physical version",
+    "tagline": "A digital art studio designed for autistic visual thinkers where every art material is simulated without the sensory challenges of the physical version. Watercolor, charcoal, clay, and collage -- all with adjustable texture feedback, sound, and visual intensity. Includes social story illustration tools and an emotion palette that maps feelings to colors.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/spectrumcanvas/icon-sm.webp",
@@ -3675,7 +3683,7 @@ export const apps: AppData[] = [
   {
     "slug": "stageforge",
     "name": "StageForge",
-    "tagline": "Interactive theater arts studio where students write scripts, design sets, direct scenes, and perform -- building creative confidence through the dramatic arts",
+    "tagline": "Interactive theater arts studio where students write scripts, design sets, direct scenes, and perform -- building creative confidence through the dramatic arts. Covers the full production pipeline from script to stage.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/stageforge/icon-sm.webp",
@@ -3713,7 +3721,7 @@ export const apps: AppData[] = [
   {
     "slug": "starforge",
     "name": "StarForge",
-    "tagline": "Players pilot spacecraft through the solar system and beyond, building and upgrading their ship, landing on planets to conduct experiments, establishing colonies, and answering astronomy challenges to",
+    "tagline": "Players pilot spacecraft through the solar system and beyond, building and upgrading their ship, landing on planets to conduct experiments, establishing colonies, and answering astronomy challenges to unlock new regions of space. Real orbital mechanics, scientifically accurate planet conditions, and simulated space phenomena make this the only gamified space adventure RPG on iOS.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/starforge/icon-sm.webp",
@@ -3751,7 +3759,7 @@ export const apps: AppData[] = [
   {
     "slug": "strategyforge",
     "name": "StrategyForge",
-    "tagline": "Master chess, Go, checkers, backgammon, mancala, and Connect 4 through AI-coached lessons, puzzle challenges, and online play \u2014 with a unified strategy thinking curriculum for ages 9-14",
+    "tagline": "Master chess, Go, checkers, backgammon, mancala, and Connect 4 through AI-coached lessons, puzzle challenges, and online play \u2014 with a unified strategy thinking curriculum for ages 9-14. The only app that teaches strategic thinking as a transferable skill across multiple classical games.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/strategyforge/icon-sm.webp",
@@ -3788,7 +3796,7 @@ export const apps: AppData[] = [
   {
     "slug": "styleforge",
     "name": "StyleForge",
-    "tagline": "Players design garments from concept sketch through pattern-making, fabric selection, construction, and runway presentation",
+    "tagline": "Players design garments from concept sketch through pattern-making, fabric selection, construction, and runway presentation. Learn color theory, proportions, textile science, and design principles through a fashion career progression from amateur to haute couture. The only educational fashion design app on iOS for ages 9-14.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/styleforge/icon-sm.webp",
@@ -3808,7 +3816,7 @@ export const apps: AppData[] = [
   {
     "slug": "synaforge",
     "name": "SynaForge",
-    "tagline": "A bidirectional creative tool where drawing produces music and music produces visual art -- simultaneously",
+    "tagline": "A bidirectional creative tool where drawing produces music and music produces visual art -- simultaneously. Inspired by synesthesia, a neurological phenomenon reported at higher rates among autistic individuals, SynaForge lets children explore the hidden connections between what they see and what they hear through customizable cross-modal mappings and guided explorations.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/synaforge/icon-sm.webp",
@@ -3845,12 +3853,13 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "hasUserGuide": true
   },
   {
     "slug": "taleforge",
     "name": "TaleForge",
-    "tagline": "A multiplayer collaborative world-building and storytelling game where players co-create fantasy/sci-fi worlds in real-time using a tile-based map editor, then explore them as characters with AI-gener",
+    "tagline": "A multiplayer collaborative world-building and storytelling game where players co-create fantasy/sci-fi worlds in real-time using a tile-based map editor, then explore them as characters with AI-generated narrative events, NPC dialogue, and emergent storylines. Think \"Dawn of Worlds meets Minecraft meets AI Dungeon\" -- but native iOS with spatial computing support.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/taleforge/icon-sm.webp",
@@ -3870,7 +3879,7 @@ export const apps: AppData[] = [
   {
     "slug": "tectonicforge",
     "name": "TectonicForge",
-    "tagline": "Pilot a drill into Earth's mantle, watch continents drift across 250 million years, trigger earthquakes and volcanic eruptions, and become a geological hazard engineer protecting cities from the dynam",
+    "tagline": "Pilot a drill into Earth's mantle, watch continents drift across 250 million years, trigger earthquakes and volcanic eruptions, and become a geological hazard engineer protecting cities from the dynamic planet beneath your feet.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/tectonicforge/icon-sm.webp",
@@ -3909,7 +3918,7 @@ export const apps: AppData[] = [
   {
     "slug": "terravoyage",
     "name": "TerraVoyage",
-    "tagline": "Kids ages 10-14 traverse a stylized world map, identify locations through environmental and cultural clues, solve geography puzzles, and build a \"World Journal\" of discoveries",
+    "tagline": "Kids ages 10-14 traverse a stylized world map, identify locations through environmental and cultural clues, solve geography puzzles, and build a \"World Journal\" of discoveries. Players explore SpriteKit tile-map regions, interact with culturally-accurate NPCs powered by FoundationModels, and deduce region identities from architecture, flora, language, and climate clues.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/terravoyage/icon-sm.webp",
@@ -3947,7 +3956,7 @@ export const apps: AppData[] = [
   {
     "slug": "trailforge",
     "name": "TrailForge",
-    "tagline": "Players are dropped into different wilderness biomes and must use real outdoor skills to survive and thrive",
+    "tagline": "Players are dropped into different wilderness biomes and must use real outdoor skills to survive and thrive. Build shelters, start fires with friction, purify water, navigate by stars, identify edible plants, predict weather, and handle emergencies. The only wilderness survival education app on any platform.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/trailforge/icon-sm.webp",
@@ -3966,7 +3975,7 @@ export const apps: AppData[] = [
   {
     "slug": "truthquest",
     "name": "TruthQuest",
-    "tagline": "Players are junior journalists at the Truth Tribune, investigating viral claims, social media posts, and news articles",
+    "tagline": "Players are junior journalists at the Truth Tribune, investigating viral claims, social media posts, and news articles. Using real journalistic techniques (source verification, reverse image search, statistical analysis), players determine what is true, misleading, or completely fabricated -- building critical thinking skills for the AI misinformation age.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/truthquest/icon-sm.webp",
@@ -3986,7 +3995,7 @@ export const apps: AppData[] = [
   {
     "slug": "venturequest",
     "name": "VentureQuest",
-    "tagline": "Players start and grow businesses from scratch -- beginning with a lemonade stand and progressing through food trucks, retail shops, tech startups, and enterprises",
+    "tagline": "Players start and grow businesses from scratch -- beginning with a lemonade stand and progressing through food trucks, retail shops, tech startups, and enterprises. Make real business decisions about pricing, marketing, hiring, inventory, and competition. Different from MintQuest (personal finance): this teaches how businesses actually work. The only iOS-native business simulation for ages 9-14.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/venturequest/icon-sm.webp",
@@ -4005,7 +4014,7 @@ export const apps: AppData[] = [
   {
     "slug": "waveforge",
     "name": "WaveForge",
-    "tagline": "Visualize sound as a living waveform \u2014 tune an oscilloscope, build a speaker from scratch, engineer concert hall acoustics, decode whale songs, and master the physics of vibration that underlies all m",
+    "tagline": "Visualize sound as a living waveform \u2014 tune an oscilloscope, build a speaker from scratch, engineer concert hall acoustics, decode whale songs, and master the physics of vibration that underlies all music and communication.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": null,
@@ -4062,7 +4071,7 @@ export const apps: AppData[] = [
   {
     "slug": "wellnessforge",
     "name": "WellnessForge",
-    "tagline": "Build health literacy through nutrition analysis, evidence-based substance abuse prevention, first aid simulations, and social-emotional learning \u2014 using the research-proven Life Skills Training model",
+    "tagline": "Build health literacy through nutrition analysis, evidence-based substance abuse prevention, first aid simulations, and social-emotional learning \u2014 using the research-proven Life Skills Training model rather than fear-based approaches. Ages 9-14.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/wellnessforge/icon-sm.webp",
@@ -4081,7 +4090,7 @@ export const apps: AppData[] = [
   {
     "slug": "wildlens",
     "name": "WildLens",
-    "tagline": "Photograph real animals with your camera, identify species using on-device CoreML, and learn why they matter through food webs, habitat relationships, and ecosystem interconnections",
+    "tagline": "Photograph real animals with your camera, identify species using on-device CoreML, and learn why they matter through food webs, habitat relationships, and ecosystem interconnections. The differentiator: not just what it is \u2014 but why it matters. Ages 9-14.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/wildlens/icon-sm.webp",

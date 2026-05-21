@@ -69,7 +69,21 @@ function extractMarkdown(filePath) {
       continue;
     }
     if (title && !summary && l && !l.startsWith('#') && !l.startsWith('**')) {
-      summary = l.replace(/^\*\*([^*]+)\*\*:?\s*/, '').slice(0, 200);
+      // Take the full first paragraph; soft-cap at ~400 chars at a sentence/clause
+      // boundary so cards have predictable height without ugly mid-word cuts.
+      const raw = l.replace(/^\*\*([^*]+)\*\*:?\s*/, '');
+      if (raw.length <= 400) {
+        summary = raw;
+      } else {
+        const truncated = raw.slice(0, 400);
+        const lastSentence = Math.max(
+          truncated.lastIndexOf('. '),
+          truncated.lastIndexOf('! '),
+          truncated.lastIndexOf('? '),
+          truncated.lastIndexOf('— '),
+        );
+        summary = (lastSentence > 200 ? truncated.slice(0, lastSentence + 1) : truncated).trim();
+      }
       break;
     }
   }
