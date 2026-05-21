@@ -5,7 +5,7 @@ Headquarters:   Remote (US)
 Apps:           134 portfolio apps (36 in active implementation: Waves 1+2+3)
 Target ages:    9-14
 Platforms:      iOS 26+, iPadOS, native macOS, visionOS (select titles)
-Tech stack:     Swift 6, SwiftUI, SwiftData, FoundationModels, SpriteKit
+Tech stack:     Swift 6, SwiftUI, SwiftData, FoundationModels, SpriteKit, RealityKit (select titles)
 Verticals:      STEM, STEAM, Academics, DIR/FEDC, Special Interest
 Privacy:        No ads, no in-app purchases, no tracking, on-device data only, COPPA compliant
 
