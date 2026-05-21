@@ -127,30 +127,53 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
     </div>
   </section>
 
-  <!-- What's inside -->
+  <!-- Long tagline (from User Guide if available) -->
+  {app.longTagline && (
+    <section class="max-w-3xl mx-auto px-6 py-12">
+      <p class="text-xl text-anvil/80 leading-relaxed">{app.longTagline}</p>
+    </section>
+  )}
+
+  <!-- What's inside — features extracted from User Guide, fall back to generic 3-up -->
   <section class="max-w-4xl mx-auto px-6 py-16">
     <h2 class="font-brand font-bold text-3xl text-anvil mb-8">What&apos;s inside</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="p-5 bg-white rounded-xl border border-anvil/10">
-        <div class="text-3xl mb-2">🎯</div>
-        <h3 class="font-brand font-bold mb-2">Learning goal</h3>
-        <p class="text-sm text-anvil/70">{app.tagline}</p>
+    {app.features && app.features.length > 0 ? (
+      <div class="grid md:grid-cols-2 gap-6">
+        {app.features.map(f => (
+          <div class="p-5 bg-white rounded-xl border border-anvil/10">
+            <h3 class="font-brand font-bold mb-2 text-anvil">{f.name}</h3>
+            <p class="text-sm text-anvil/70 leading-relaxed">{f.description}</p>
+          </div>
+        ))}
       </div>
-      <div class="p-5 bg-white rounded-xl border border-anvil/10">
-        <div class="text-3xl mb-2">📚</div>
-        <h3 class="font-brand font-bold mb-2">Question kits</h3>
-        <p class="text-sm text-anvil/70">
-          16 curriculum-aligned kits × 25 questions = 400 questions per app, mapped to recognized standards.
-        </p>
+    ) : (
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-5 bg-white rounded-xl border border-anvil/10">
+          <div class="text-3xl mb-2">🎯</div>
+          <h3 class="font-brand font-bold mb-2">Learning goal</h3>
+          <p class="text-sm text-anvil/70">{app.tagline}</p>
+        </div>
+        <div class="p-5 bg-white rounded-xl border border-anvil/10">
+          <div class="text-3xl mb-2">📚</div>
+          <h3 class="font-brand font-bold mb-2">Question kits</h3>
+          <p class="text-sm text-anvil/70">
+            16 curriculum-aligned kits × 25 questions = 400 questions per app, mapped to recognized standards.
+          </p>
+        </div>
+        <div class="p-5 bg-white rounded-xl border border-anvil/10">
+          <div class="text-3xl mb-2">🤖</div>
+          <h3 class="font-brand font-bold mb-2">On-device AI mentor</h3>
+          <p class="text-sm text-anvil/70">
+            FoundationModels-powered hints, feedback, and adaptive difficulty — all running locally.
+          </p>
+        </div>
       </div>
-      <div class="p-5 bg-white rounded-xl border border-anvil/10">
-        <div class="text-3xl mb-2">🤖</div>
-        <h3 class="font-brand font-bold mb-2">On-device AI mentor</h3>
-        <p class="text-sm text-anvil/70">
-          FoundationModels-powered hints, feedback, and adaptive difficulty — all running locally.
-        </p>
-      </div>
-    </div>
+    )}
+    {app.mentor && (
+      <p class="mt-6 text-sm text-anvil/60 italic">
+        Mentored by <strong class="text-anvil">{app.mentor}</strong> — on-device AI, no data leaves the device.
+      </p>
+    )}
   </section>
 
   <!-- Privacy -->
