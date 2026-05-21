@@ -4346,6 +4346,123 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
+  },
+  {
+    "slug": "lyricforge",
+    "name": "LyricForge",
+    "tagline": "Write the Songs You Hear in Your Head — tween songwriting studio where the lyric is the protagonist; form scaffolds + on-device rhyme/meter + AI Socratic lyric collaborator (Pip).",
+    "vertical": "steam",
+    "heroColor": "#E88774",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "NCAS MU:Cr1-Cr3",
+      "CCSS ELA W.6-8.3",
+      "CCSS ELA RL.6-8.4"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "haikuquest",
+    "name": "HaikuQuest",
+    "tagline": "Form-Scaffold Poetry for Tweens — haiku, tanka, cinquain, limerick with syllable counters, cultural-context teaching, and AI Socratic refinement (Cherry).",
+    "vertical": "academics",
+    "heroColor": "#F4A5B8",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "CCSS ELA W.6-8.3",
+      "CCSS ELA RL.6-8.4",
+      "NCAS LA:Cr1-Cr3"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "characterforge",
+    "name": "CharacterForge",
+    "tagline": "Character-Craft Workshop for Tweens — build the people who could be in stories. Character sheet, arc tracker, relationship graph, voice-consistency feedback (Ink).",
+    "vertical": "academics",
+    "heroColor": "#3D5A80",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "CCSS ELA W.6-8.3.B",
+      "NCAS TH:Cr2",
+      "NCAS LA:Cr1",
+      "CASEL"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "coregrealm",
+    "name": "CoRegRealm",
+    "tagline": "Co-Regulation Role-Reversal RPG — kid co-regulates a smaller creature companion through dysregulation cycles, learning the regulation primitive through the teacher role (Cyan).",
+    "vertical": "dir-fedc",
+    "heroColor": "#4FB3A6",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "DIR/FEDC Capacities 1-2",
+      "DIR/FEDC Capacity 9",
+      "CASEL Self-Management",
+      "SAMHSA TIP 57"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "rupturerepair",
+    "name": "RuptureRepair",
+    "tagline": "Misattunement → Repair Cycle as the Curriculum — two-player relational-craft scaffolding the 5-step repair protocol (Mend). Trauma-informed; no scoring; off-ramps every scenario.",
+    "vertical": "dir-fedc",
+    "heroColor": "#82A878",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "DIR/FEDC Capacities 5-6",
+      "SAMHSA TIP 57",
+      "CASEL Relationship Skills"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "tempcheck",
+    "name": "TempCheck",
+    "tagline": "Daily Attunement Temp-Checks — 15-second bidirectional affect check-in with caregiver; surfaces overlaps + differences; growth chart over weeks (Pulse).",
+    "vertical": "dir-fedc",
+    "heroColor": "#FF9D8E",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "DIR/FEDC Capacity 3",
+      "CASEL Self-Awareness",
+      "CASEL Social Awareness",
+      "SAMHSA TIP 57"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
   }
 ];
 
@@ -4355,8 +4472,8 @@ export const appsBySlug: Record<string, AppData> = Object.fromEntries(
 
 export const verticalCounts = {
   "stem": 43,
-  "steam": 18,
-  "academics": 20,
-  "dir-fedc": 14,
+  "steam": 19,
+  "academics": 22,
+  "dir-fedc": 17,
   "special-interest": 39
 };
