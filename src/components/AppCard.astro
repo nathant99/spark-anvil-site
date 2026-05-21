@@ -8,9 +8,10 @@ interface Props {
   iconPath?: string | null;
   mascotPath?: string | null;
   implementing?: boolean;
+  distributedNarrative?: boolean;
 }
 
-const { slug, name, tagline, vertical, heroColor, iconPath, mascotPath, implementing = true } = Astro.props;
+const { slug, name, tagline, vertical, heroColor, iconPath, mascotPath, implementing = true, distributedNarrative = false } = Astro.props;
 ---
 
 <a
@@ -55,8 +56,20 @@ const { slug, name, tagline, vertical, heroColor, iconPath, mascotPath, implemen
       </span>
     </div>
     <p class="text-sm text-anvil/70 leading-relaxed line-clamp-4">{tagline}</p>
-    {!implementing && (
-      <span class="inline-block mt-3 text-xs text-anvil/40 italic">Coming soon</span>
-    )}
+    <div class="flex flex-wrap gap-2 mt-3">
+      {distributedNarrative && (
+        <a
+          href="/method"
+          class="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-forge/10 text-forge-text font-bold uppercase tracking-wider hover:bg-forge/20 transition-colors"
+          title="Uses distributed-narrative methodology — characters embody the curriculum"
+          onclick="event.stopPropagation()"
+        >
+          <span aria-hidden="true">●</span> Distributed-Narrative
+        </a>
+      )}
+      {!implementing && (
+        <span class="inline-block text-xs text-anvil/40 italic">Coming soon</span>
+      )}
+    </div>
   </div>
 </a>

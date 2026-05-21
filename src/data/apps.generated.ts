@@ -28,6 +28,7 @@ export interface AppData {
   standards: string[];
   hasM9Accessories: boolean;
   wave: number | null;
+  distributedNarrative?: boolean;
 }
 
 export const apps: AppData[] = [
@@ -39,6 +40,7 @@ export const apps: AppData[] = [
     "heroColor": "#81C784",
     "iconPath": "/apps/activeforge/icon-sm.webp",
     "mascotPath": "/apps/activeforge/mascot.webp",
+    "mentor": "Coach Echo",
     "implementing": true,
     "standards": [
       "CASEL",
@@ -128,6 +130,7 @@ export const apps: AppData[] = [
     "heroColor": "#E91E63",
     "iconPath": "/apps/beatforge/icon-sm.webp",
     "mascotPath": "/apps/beatforge/mascot.webp",
+    "mentor": "Tempo",
     "implementing": true,
     "standards": [
       "NCAS",
@@ -252,6 +255,7 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/cardforge/icon-sm.webp",
     "mascotPath": "/apps/cardforge/mascot.webp",
+    "mentor": "Ace",
     "implementing": true,
     "standards": [
       "ISTE",
@@ -367,6 +371,7 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/chronoquest/icon-sm.webp",
     "mascotPath": "/apps/chronoquest/mascot.webp",
+    "mentor": "Era",
     "implementing": true,
     "standards": [
       "ISTE",
@@ -821,6 +826,7 @@ export const apps: AppData[] = [
     "heroColor": "#E91E63",
     "iconPath": "/apps/dancequest/icon-sm.webp",
     "mascotPath": "/apps/dancequest/mascot.webp",
+    "mentor": "Rhythm",
     "implementing": true,
     "standards": [
       "NCAS",
@@ -1151,6 +1157,7 @@ export const apps: AppData[] = [
     "heroColor": "#29B6F6",
     "iconPath": "/apps/equationquest/icon-sm.webp",
     "mascotPath": "/apps/equationquest/mascot.webp",
+    "mentor": "Pivot",
     "implementing": true,
     "standards": [
       "NGSS",
@@ -1717,6 +1724,7 @@ export const apps: AppData[] = [
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/grammarforge/icon-sm.webp",
     "mascotPath": "/apps/grammarforge/mascot.webp",
+    "mentor": "Clause",
     "implementing": true,
     "standards": [
       "CCSS ELA",
@@ -2641,6 +2649,7 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/mythforge/icon-sm.webp",
     "mascotPath": "/apps/mythforge/mascot.webp",
+    "mentor": "Lyra",
     "implementing": true,
     "standards": [
       "ISTE",
@@ -2867,6 +2876,7 @@ export const apps: AppData[] = [
     "heroColor": "#E91E63",
     "iconPath": "/apps/pixelforge/icon-sm.webp",
     "mascotPath": "/apps/pixelforge/mascot.webp",
+    "mentor": "Palette",
     "implementing": true,
     "standards": [
       "NCAS",
@@ -3141,6 +3151,7 @@ export const apps: AppData[] = [
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/readquest/icon-sm.webp",
     "mascotPath": "/apps/readquest/mascot.webp",
+    "mentor": "Margin",
     "implementing": true,
     "standards": [
       "CCSS ELA",
@@ -3754,6 +3765,7 @@ export const apps: AppData[] = [
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/taleforge/icon-sm.webp",
     "mascotPath": "/apps/taleforge/mascot.webp",
+    "mentor": "Loom",
     "implementing": true,
     "standards": [
       "CCSS ELA",
@@ -3813,6 +3825,7 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/terravoyage/icon-sm.webp",
     "mascotPath": "/apps/terravoyage/mascot.webp",
+    "mentor": "Compass",
     "implementing": true,
     "standards": [
       "ISTE",
@@ -3988,6 +4001,7 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/wildlens/icon-sm.webp",
     "mascotPath": "/apps/wildlens/mascot.webp",
+    "mentor": "Lens",
     "implementing": true,
     "standards": [
       "ISTE",
@@ -4203,6 +4217,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "hasUserGuide": false
   },
   {
@@ -4223,6 +4238,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "hasUserGuide": false
   },
   {
@@ -4243,6 +4259,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "hasUserGuide": false
   },
   {
@@ -4262,6 +4279,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "hasUserGuide": false
   },
   {
@@ -4282,6 +4300,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "hasUserGuide": false
   },
   {
@@ -4303,6 +4322,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "hasUserGuide": false
   },
   {
