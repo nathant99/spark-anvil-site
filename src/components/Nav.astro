@@ -2,6 +2,7 @@
 import { nav, site } from '~/data/site';
 
 const { pathname } = Astro.url;
+const items = nav.slice(1);  // skip "Home" — logo links there
 ---
 
 <header class="border-b border-anvil/10 bg-warm/80 backdrop-blur sticky top-0 z-50">
@@ -9,8 +10,10 @@ const { pathname } = Astro.url;
     <a href="/" class="flex items-center gap-3" aria-label={`${site.name} home`}>
       <img src="/brand/lockup.png" alt={site.name} class="h-10 w-auto" />
     </a>
+
+    <!-- Desktop nav -->
     <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
-      {nav.slice(1).map(item => (
+      {items.map(item => (
         <a
           href={item.href}
           class={`text-sm font-medium hover:text-forge transition-colors ${
@@ -21,6 +24,74 @@ const { pathname } = Astro.url;
         </a>
       ))}
     </nav>
-    <a href="/apps" class="md:hidden text-sm font-bold text-forge-text">Apps →</a>
+
+    <!-- Mobile hamburger button -->
+    <button
+      id="mobile-nav-toggle"
+      class="md:hidden p-2 -mr-2 text-anvil"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-nav-drawer"
+    >
+      <svg id="mobile-nav-icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="4" y1="7" x2="20" y2="7" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="17" x2="20" y2="17" />
+      </svg>
+      <svg id="mobile-nav-icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="hidden" aria-hidden="true">
+        <line x1="6" y1="6" x2="18" y2="18" />
+        <line x1="18" y1="6" x2="6" y2="18" />
+      </svg>
+    </button>
   </div>
+
+  <!-- Mobile drawer (slides down below the sticky header) -->
+  <nav
+    id="mobile-nav-drawer"
+    class="md:hidden hidden border-t border-anvil/10 bg-warm"
+    aria-label="Mobile primary"
+  >
+    <ul class="max-w-6xl mx-auto px-6 py-4 space-y-1">
+      {items.map(item => (
+        <li>
+          <a
+            href={item.href}
+            class={`block px-3 py-3 rounded-lg font-brand font-bold text-lg ${
+              pathname === item.href
+                ? 'bg-forge/10 text-forge'
+                : 'text-anvil hover:bg-anvil/5'
+            }`}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 </header>
+
+<script>
+  const btn = document.getElementById('mobile-nav-toggle');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  const iconOpen = document.getElementById('mobile-nav-icon-open');
+  const iconClose = document.getElementById('mobile-nav-icon-close');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = drawer?.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(isOpen));
+    btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    iconOpen?.classList.toggle('hidden', isOpen);
+    iconClose?.classList.toggle('hidden', !isOpen);
+  });
+
+  // Close drawer when a link is tapped (mobile navigation pattern)
+  drawer?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
+      btn?.setAttribute('aria-label', 'Open navigation menu');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    });
+  });
+</script>

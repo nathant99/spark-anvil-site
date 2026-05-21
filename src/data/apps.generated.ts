@@ -119,7 +119,7 @@ export const apps: AppData[] = [
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/beatforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/beatforge/mascot.webp",
     "implementing": true,
     "standards": [
       "NCAS",
@@ -808,7 +808,7 @@ export const apps: AppData[] = [
     "tagline": "A daily-question adventure that builds curiosity into habit.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": null,
+    "iconPath": "/apps/curiosityquest/icon-sm.webp",
     "mascotPath": "/apps/curiosityquest/mascot.webp",
     "implementing": false,
     "standards": [
@@ -816,7 +816,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/curiosityquest/icon.webp"
   },
   {
     "slug": "dancequest",
@@ -1633,7 +1634,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/fossilforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/fossilforge/mascot.webp",
     "implementing": true,
     "standards": [
       "ISTE",
@@ -1708,7 +1709,7 @@ export const apps: AppData[] = [
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/framequest/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/framequest/mascot.webp",
     "implementing": false,
     "standards": [
       "NCAS",
@@ -3071,7 +3072,7 @@ export const apps: AppData[] = [
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/numberverse/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/numberverse/mascot.webp",
     "implementing": false,
     "standards": [
       "NGSS",
@@ -3356,7 +3357,7 @@ export const apps: AppData[] = [
     "tagline": "Spelling and vocabulary mastery through pattern recognition and play.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": null,
+    "iconPath": "/apps/quillspell/icon-sm.webp",
     "mascotPath": "/apps/quillspell/mascot.webp",
     "implementing": false,
     "standards": [
@@ -3385,7 +3386,8 @@ export const apps: AppData[] = [
       }
     ],
     "mentor": "Quill",
-    "hasUserGuide": true
+    "hasUserGuide": true,
+    "iconHeroPath": "/apps/quillspell/icon.webp"
   },
   {
     "slug": "ratiorealm",
@@ -3432,7 +3434,7 @@ export const apps: AppData[] = [
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/readquest/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/readquest/mascot.webp",
     "implementing": true,
     "standards": [
       "CCSS ELA",
@@ -4270,7 +4272,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/wildlens/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/wildlens/mascot.webp",
     "implementing": true,
     "standards": [
       "ISTE",
@@ -4289,7 +4291,7 @@ export const apps: AppData[] = [
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/witquest/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/witquest/mascot.webp",
     "implementing": true,
     "standards": [
       "CCSS ELA",
