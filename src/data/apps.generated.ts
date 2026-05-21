@@ -907,34 +907,7 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "debateforge",
-    "name": "DebateForge",
-    "tagline": "Master the art of persuasion \u2014 research topics, construct arguments, deliver speeches, and compete in structured debates with AI opponents and real classmates.",
-    "vertical": "academics",
-    "heroColor": "#4A6FA5",
-    "iconPath": "/apps/debateforge/icon-sm.webp",
-    "mascotPath": "/apps/debateforge/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "CCSS ELA",
-      "C3 Social Studies",
-      "ISTE"
-    ],
-    "hasM9Accessories": false,
-    "wave": null,
-    "iconHeroPath": "/apps/debateforge/icon.webp",
-    "longTagline": "All planned features and curriculum coverage from DebateForge are now part of SpeakForge's roadmap.",
-    "features": [
-      {
-        "name": "Status",
-        "description": "All planned features and curriculum coverage from DebateForge are now part of SpeakForge's roadmap."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
+  },  {
     "slug": "depthquest",
     "name": "DepthQuest",
     "tagline": "Players pilot a research submarine through ocean zones (sunlight, twilight, midnight, abyssal, hadal), discovering marine species, studying coral reef health, mapping the ocean floor, and answering marine science challenges. The only gamified ocean exploration RPG on iOS for ages 9-14.",
@@ -3077,53 +3050,7 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "punchlineforge",
-    "name": "PunchlineForge",
-    "tagline": "> Meme studio and comic strip builder features have been merged into JestForge as part of portfolio restructuring.",
-    "vertical": "academics",
-    "heroColor": "#4A6FA5",
-    "iconPath": "/apps/punchlineforge/icon-sm.webp",
-    "mascotPath": "/apps/punchlineforge/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "CCSS ELA",
-      "C3 Social Studies",
-      "ISTE"
-    ],
-    "hasM9Accessories": true,
-    "wave": null,
-    "iconHeroPath": "/apps/punchlineforge/icon.webp",
-    "longTagline": "All planned features and curriculum coverage from PunchlineForge are now part of JestForge's roadmap.",
-    "features": [
-      {
-        "name": "Status",
-        "description": "All planned features and curriculum coverage from PunchlineForge are now part of JestForge's roadmap."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
-    "slug": "questforge",
-    "name": "QuestForge",
-    "tagline": "Tabletop RPG creation toolkit where kids design characters (stat allocation = algebraic thinking), write quest narratives, build grid-based encounter maps (spatial reasoning), explore dice probability, and manage resource economics. TTRPGs are recognized as therapeutic for autistic youth \u2014 turn-based, self-paced, structured creativity.",
-    "vertical": "special-interest",
-    "heroColor": "#FFA726",
-    "iconPath": "/apps/questforge/icon-sm.webp",
-    "iconHeroPath": "/apps/questforge/icon.webp",
-    "mascotPath": "/apps/questforge/mascot.webp",
-    "mentor": "Wyld",
-    "implementing": false,
-    "standards": [
-      "ISTE",
-      "Common Sense Privacy"
-    ],
-    "hasM9Accessories": false,
-    "wave": null,
-    "hasUserGuide": true
-  },
-  {
+  },  {
     "slug": "quillspell",
     "name": "QuillSpell",
     "tagline": "Spelling and vocabulary mastery through pattern recognition and play.",
@@ -3470,34 +3397,7 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "scienceforge",
-    "name": "ScienceForge",
-    "tagline": "Design real experiments, run virtual simulations, collect data, and build science fair presentations \u2014 with an AI mentor guiding every step of the scientific method.",
-    "vertical": "stem",
-    "heroColor": "#29B6F6",
-    "iconPath": "/apps/scienceforge/icon-sm.webp",
-    "mascotPath": "/apps/scienceforge/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "NGSS",
-      "CCSS Math",
-      "ISTE"
-    ],
-    "hasM9Accessories": true,
-    "wave": null,
-    "iconHeroPath": "/apps/scienceforge/icon.webp",
-    "longTagline": "All planned features and curriculum coverage from ScienceForge are now part of ForgeKit's roadmap.",
-    "features": [
-      {
-        "name": "Status",
-        "description": "All planned features and curriculum coverage from ScienceForge are now part of ForgeKit's roadmap."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
+  },  {
     "slug": "sleuthlab",
     "name": "SleuthLab",
     "tagline": "Players run a detective agency, taking on mystery cases that require real forensic science techniques to solve. Dust for fingerprints, run chromatography, compare fibers under a microscope, analyze handwriting, and build evidence chains to identify suspects. Critical thinking through scientific deduction.",
@@ -4085,34 +3985,7 @@ export const apps: AppData[] = [
     "iconHeroPath": "/apps/wildlens/icon.webp",
     "longTagline": "WildLens is a wildlife discovery and ecology explorer for ages 9-14 where players photograph real wildlife, identify species with on-device AI, learn ecology through interactive food webs and habitat simulations, and collect observations in a digital field journal \u2014 aligned to NGSS middle school lif",
     "hasUserGuide": true
-  },
-  {
-    "slug": "witquest",
-    "name": "WitQuest",
-    "tagline": "> Comedy RPG adventure mode has been merged into JestForge as part of portfolio restructuring.",
-    "vertical": "academics",
-    "heroColor": "#4A6FA5",
-    "iconPath": "/apps/witquest/icon-sm.webp",
-    "mascotPath": "/apps/witquest/mascot.webp",
-    "implementing": true,
-    "standards": [
-      "CCSS ELA",
-      "C3 Social Studies",
-      "ISTE"
-    ],
-    "hasM9Accessories": true,
-    "wave": 2,
-    "iconHeroPath": "/apps/witquest/icon.webp",
-    "longTagline": "All planned features and curriculum coverage from WitQuest are now part of JestForge's roadmap.",
-    "features": [
-      {
-        "name": "Status",
-        "description": "All planned features and curriculum coverage from WitQuest are now part of JestForge's roadmap."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
+  },  {
     "slug": "wonderforge",
     "name": "WonderForge",
     "tagline": "Become a science magician \u2014 watch \"impossible\" demonstrations, form hypotheses, reveal the physics and chemistry behind each trick, then perform your own science shows.",
