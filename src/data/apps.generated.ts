@@ -1550,33 +1550,7 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "forgeworks",
-    "name": "Forgeworks",
-    "tagline": "> Engineering design features have been split across CircuitForge (electrical), MachineForge (mechanical), and MakerForge (maker/fabrication) as part of portfolio restructuring.",
-    "vertical": "special-interest",
-    "heroColor": "#FFA726",
-    "iconPath": "/apps/forgeworks/icon-sm.webp",
-    "mascotPath": null,
-    "implementing": false,
-    "standards": [
-      "ISTE",
-      "Common Sense Privacy"
-    ],
-    "hasM9Accessories": false,
-    "wave": null,
-    "iconHeroPath": "/apps/forgeworks/icon.webp",
-    "longTagline": "All planned features and curriculum coverage from ForgeWorks are now part of CircuitForge, MachineForge, and MakerForge's roadmaps.",
-    "features": [
-      {
-        "name": "Status",
-        "description": "All planned features and curriculum coverage from ForgeWorks are now part of CircuitForge, MachineForge, and MakerForge's roadmaps."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
+  },  {
     "slug": "fossilforge",
     "name": "FossilForge",
     "tagline": "Players run paleontology expeditions -- excavating fossil sites grid-by-grid, preparing specimens in the lab, classifying them taxonomically, and building museum exhibits. Real geological periods, scientifically accurate specimens, and the careful process of real fossil preparation. The only paleontology simulation on iOS for ages 9-14.",
@@ -2660,6 +2634,7 @@ export const apps: AppData[] = [
     "heroColor": "#81C784",
     "iconPath": "/apps/mindforge/icon-sm.webp",
     "mascotPath": "/apps/mindforge/mascot.webp",
+    "mentor": "Sage",
     "implementing": true,
     "standards": [
       "CASEL",
@@ -3848,6 +3823,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/tableforge/icon-sm.webp",
     "iconHeroPath": "/apps/tableforge/icon.webp",
     "mascotPath": "/apps/tableforge/mascot.webp",
+    "mentor": "Blueprint",
     "implementing": false,
     "standards": [
       "NCAS",
@@ -4181,6 +4157,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/lyricforge/icon-sm.webp",
     "iconHeroPath": "/apps/lyricforge/icon.webp",
     "mascotPath": "/apps/lyricforge/mascot.webp",
+    "mentor": "Pip",
     "implementing": false,
     "standards": [
       "NCAS MU:Cr1-Cr3",
@@ -4200,6 +4177,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/haikuquest/icon-sm.webp",
     "iconHeroPath": "/apps/haikuquest/icon.webp",
     "mascotPath": "/apps/haikuquest/mascot.webp",
+    "mentor": "Cherry",
     "implementing": false,
     "standards": [
       "CCSS ELA W.6-8.3",
@@ -4219,6 +4197,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/characterforge/icon-sm.webp",
     "iconHeroPath": "/apps/characterforge/icon.webp",
     "mascotPath": "/apps/characterforge/mascot.webp",
+    "mentor": "Ink",
     "implementing": false,
     "standards": [
       "CCSS ELA W.6-8.3.B",
@@ -4239,6 +4218,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/coregrealm/icon-sm.webp",
     "iconHeroPath": "/apps/coregrealm/icon.webp",
     "mascotPath": "/apps/coregrealm/mascot.webp",
+    "mentor": "Cyan",
     "implementing": false,
     "standards": [
       "DIR/FEDC Capacities 1-2",
@@ -4259,6 +4239,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/rupturerepair/icon-sm.webp",
     "iconHeroPath": "/apps/rupturerepair/icon.webp",
     "mascotPath": "/apps/rupturerepair/mascot.webp",
+    "mentor": "Mend",
     "implementing": false,
     "standards": [
       "DIR/FEDC Capacities 5-6",
@@ -4278,6 +4259,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/tempcheck/icon-sm.webp",
     "iconHeroPath": "/apps/tempcheck/icon.webp",
     "mascotPath": "/apps/tempcheck/mascot.webp",
+    "mentor": "Pulse",
     "implementing": false,
     "standards": [
       "DIR/FEDC Capacity 3",
@@ -4298,6 +4280,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/gambittales/icon-sm.webp",
     "iconHeroPath": "/apps/gambittales/icon.webp",
     "mascotPath": "/apps/gambittales/mascot.webp",
+    "mentor": "Captain Castle",
     "implementing": false,
     "standards": [
       "ISTE 1.5",
@@ -4317,6 +4300,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/stonesong/icon-sm.webp",
     "iconHeroPath": "/apps/stonesong/icon.webp",
     "mascotPath": "/apps/stonesong/mascot.webp",
+    "mentor": "Stone",
     "implementing": false,
     "standards": [
       "ISTE 1.5",
@@ -4336,6 +4320,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/generalstale/icon-sm.webp",
     "iconHeroPath": "/apps/generalstale/icon.webp",
     "mascotPath": "/apps/generalstale/mascot.webp",
+    "mentor": "General Mei",
     "implementing": false,
     "standards": [
       "ISTE 1.5",
@@ -4355,6 +4340,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/motiflab/icon-sm.webp",
     "iconHeroPath": "/apps/motiflab/icon.webp",
     "mascotPath": "/apps/motiflab/mascot.webp",
+    "mentor": "Trill",
     "implementing": false,
     "standards": [
       "NCAS MU:Cr1-Cr3",
@@ -4373,6 +4359,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/pipquest/icon-sm.webp",
     "iconHeroPath": "/apps/pipquest/icon.webp",
     "mascotPath": "/apps/pipquest/mascot.webp",
+    "mentor": "Peg",
     "implementing": false,
     "standards": [
       "CCSS Math 6.SP",
@@ -4392,6 +4379,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/dealtales/icon-sm.webp",
     "iconHeroPath": "/apps/dealtales/icon.webp",
     "mascotPath": "/apps/dealtales/mascot.webp",
+    "mentor": "Whisp",
     "implementing": false,
     "standards": [
       "CASEL Relationship Skills",
@@ -4412,6 +4400,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/tinyletters/icon-sm.webp",
     "iconHeroPath": "/apps/tinyletters/icon.webp",
     "mascotPath": "/apps/tinyletters/mascot.webp",
+    "mentor": "Pip Jr",
     "implementing": false,
     "standards": [
       "CCSS Foundations.RF.K-2",
@@ -4430,6 +4419,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/countingpals/icon-sm.webp",
     "iconHeroPath": "/apps/countingpals/icon.webp",
     "mascotPath": "/apps/countingpals/mascot.webp",
+    "mentor": "Calc Jr",
     "implementing": false,
     "standards": [
       "CCSS Math.K.CC",
@@ -4448,6 +4438,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/taletrail/icon-sm.webp",
     "iconHeroPath": "/apps/taletrail/icon.webp",
     "mascotPath": "/apps/taletrail/mascot.webp",
+    "mentor": "Page",
     "implementing": false,
     "standards": [
       "CCSS ELA.K.W",
@@ -4467,6 +4458,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/huggyhabits/icon-sm.webp",
     "iconHeroPath": "/apps/huggyhabits/icon.webp",
     "mascotPath": "/apps/huggyhabits/mascot.webp",
+    "mentor": "Hug",
     "implementing": false,
     "standards": [
       "CASEL Self-Management",
@@ -4486,6 +4478,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/bugscamp/icon-sm.webp",
     "iconHeroPath": "/apps/bugscamp/icon.webp",
     "mascotPath": "/apps/bugscamp/mascot.webp",
+    "mentor": "Beetle",
     "implementing": false,
     "standards": [
       "NGSS K-2 LS",
@@ -4505,6 +4498,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/melodymice/icon-sm.webp",
     "iconHeroPath": "/apps/melodymice/icon.webp",
     "mascotPath": "/apps/melodymice/mascot.webp",
+    "mentor": "Squeak",
     "implementing": false,
     "standards": [
       "NCAS MU.K-2.Cr1",
