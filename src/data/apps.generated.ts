@@ -727,6 +727,7 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/creaturecare/icon-sm.webp",
     "mascotPath": "/apps/creaturecare/mascot.webp",
+    "mentor": "Dr. Fern",
     "implementing": true,
     "standards": [
       "ISTE",
@@ -1413,6 +1414,7 @@ export const apps: AppData[] = [
     "heroColor": "#81C784",
     "iconPath": "/apps/focusforge/icon-sm.webp",
     "mascotPath": "/apps/focusforge/mascot.webp",
+    "mentor": "Anchor",
     "implementing": true,
     "standards": [
       "CASEL",
@@ -3462,6 +3464,7 @@ export const apps: AppData[] = [
     "heroColor": "#81C784",
     "iconPath": "/apps/soundsphere/icon-sm.webp",
     "mascotPath": "/apps/soundsphere/mascot.webp",
+    "mentor": "Hush",
     "implementing": true,
     "standards": [
       "CASEL",
@@ -3533,6 +3536,7 @@ export const apps: AppData[] = [
     "heroColor": "#E91E63",
     "iconPath": "/apps/spectrumcanvas/icon-sm.webp",
     "mascotPath": "/apps/spectrumcanvas/mascot.webp",
+    "mentor": "Pigment",
     "implementing": true,
     "standards": [
       "NCAS",
@@ -3704,6 +3708,7 @@ export const apps: AppData[] = [
     "heroColor": "#81C784",
     "iconPath": "/apps/synaforge/icon-sm.webp",
     "mascotPath": "/apps/synaforge/mascot.webp",
+    "mentor": "Chroma",
     "implementing": true,
     "standards": [
       "CASEL",
@@ -3959,10 +3964,11 @@ export const apps: AppData[] = [
     "slug": "wellnessforge",
     "name": "WellnessForge",
     "tagline": "Build health literacy through nutrition analysis, evidence-based substance abuse prevention, first aid simulations, and social-emotional learning \u2014 using the research-proven Life Skills Training model rather than fear-based approaches. Ages 9-14.",
-    "vertical": "dir-fedc",
+    "vertical": "academics",
     "heroColor": "#81C784",
     "iconPath": "/apps/wellnessforge/icon-sm.webp",
     "mascotPath": "/apps/wellnessforge/mascot.webp",
+    "mentor": "Vita",
     "implementing": true,
     "standards": [
       "CASEL",
