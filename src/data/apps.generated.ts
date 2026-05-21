@@ -4398,7 +4398,7 @@ export const appsBySlug: Record<string, AppData> = Object.fromEntries(
 export const verticalCounts = {
   "stem": 41,
   "steam": 20,
-  "academics": 25,
-  "dir-fedc": 17,
-  "special-interest": 38
+  "academics": 26,
+  "dir-fedc": 9,
+  "special-interest": 35
 };
