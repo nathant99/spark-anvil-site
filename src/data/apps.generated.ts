@@ -81,7 +81,7 @@ export const apps: AppData[] = [
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/aiforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/aiforge/mascot.webp",
     "implementing": false,
     "standards": [
       "NGSS",
@@ -416,7 +416,7 @@ export const apps: AppData[] = [
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/cipherforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/cipherforge/mascot.webp",
     "implementing": false,
     "standards": [
       "NGSS",
@@ -492,7 +492,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/cityforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/cityforge/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
@@ -529,7 +529,7 @@ export const apps: AppData[] = [
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/civicforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/civicforge/mascot.webp",
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -567,7 +567,7 @@ export const apps: AppData[] = [
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/claimcraft/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/claimcraft/mascot.webp",
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -642,7 +642,7 @@ export const apps: AppData[] = [
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/coderealm/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/coderealm/mascot.webp",
     "implementing": false,
     "standards": [
       "NGSS",
@@ -902,7 +902,7 @@ export const apps: AppData[] = [
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/debateforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/debateforge/mascot.webp",
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -966,7 +966,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/digquest/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/digquest/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
@@ -1041,7 +1041,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/earthforge/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
@@ -1057,7 +1057,7 @@ export const apps: AppData[] = [
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/economicsforge/mascot.webp",
     "implementing": false,
     "standards": [
       "NGSS",
@@ -1112,7 +1112,7 @@ export const apps: AppData[] = [
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/effectsforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/effectsforge/mascot.webp",
     "implementing": false,
     "standards": [
       "NCAS",
@@ -1280,7 +1280,7 @@ export const apps: AppData[] = [
     "vertical": "academics",
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/ethosforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/ethosforge/mascot.webp",
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -1335,7 +1335,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/farmquest/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/farmquest/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
@@ -1372,7 +1372,7 @@ export const apps: AppData[] = [
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/figureforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/figureforge/mascot.webp",
     "implementing": false,
     "standards": [
       "NGSS",
@@ -1410,7 +1410,7 @@ export const apps: AppData[] = [
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/fitquest/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/fitquest/mascot.webp",
     "implementing": false,
     "standards": [
       "CASEL",
@@ -1447,7 +1447,7 @@ export const apps: AppData[] = [
     "vertical": "stem",
     "heroColor": "#29B6F6",
     "iconPath": "/apps/flightforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/flightforge/mascot.webp",
     "implementing": false,
     "standards": [
       "NGSS",
@@ -1900,7 +1900,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/growforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/growforge/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
@@ -1975,7 +1975,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/harvestforge/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/harvestforge/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
