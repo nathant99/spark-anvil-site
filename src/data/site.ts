@@ -23,10 +23,11 @@ export const trustSignals = [
 export const nav = [
   { href: '/', label: 'Home' },
   { href: '/apps', label: 'Apps' },
+  { href: '/classes', label: 'Classes' },
+  { href: '/teach', label: 'Teach' },
   { href: '/for-parents', label: 'For Parents' },
   { href: '/for-educators', label: 'For Educators' },
   { href: '/mascots', label: 'Mascots' },
-  { href: '/design', label: 'Design' },
   { href: '/about', label: 'About' },
   { href: '/press', label: 'Press' },
 ];

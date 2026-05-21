@@ -1,0 +1,193 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps } from '~/data/apps.generated';
+---
+
+<BaseLayout
+  title="Teach with Spark & Anvil"
+  description="Become a Spark & Anvil teacher. Earn 85% of your class fees, no curriculum to build, no marketing to do. Live small-group classes for ages 9-14 using our 135 apps."
+>
+  <!-- Hero -->
+  <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
+    <span class="inline-block px-3 py-1 mb-4 bg-forge text-warm text-xs font-bold uppercase tracking-wider rounded-full">Now Recruiting — Early Pilot</span>
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
+      Teach the apps your students already love.<br />
+      <span class="text-forge">Keep 85%.</span>
+    </h1>
+    <p class="text-xl text-anvil/70 leading-relaxed max-w-3xl">
+      Spark &amp; Anvil is building a curated teacher marketplace for live, small-group classes — using our
+      {apps.length} portfolio apps as the curriculum. We pre-define every class slot from a specific app's
+      curriculum and grade band. You bid on slots that match your expertise. You teach. You keep 85% of every dollar.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="mailto:teachers@spark-and-anvil.com?subject=Spark%20%26%20Anvil%20Early%20Teacher%20Pilot" class="btn-primary">Apply to the early pilot</a>
+      <a href="#how-it-works" class="btn-secondary">How it works</a>
+    </div>
+    <p class="mt-4 text-sm text-anvil/60 italic">
+      First 50 partners receive a <strong>$500–$2,000 onboarding stipend</strong> + paid pilot classes.
+    </p>
+  </section>
+
+  <!-- Earnings comparison -->
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-3xl text-anvil mb-8">Earnings comparison</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-6 border-2 border-anvil/15">
+          <h3 class="font-brand font-bold text-xl text-anvil/60 mb-2">Outschool</h3>
+          <div class="text-5xl font-brand font-bold text-anvil/60 mb-4">70<span class="text-2xl">%</span></div>
+          <p class="text-anvil/70 leading-relaxed mb-4">to teacher (after Outschool's 30% take)</p>
+          <ul class="text-sm text-anvil/70 space-y-1">
+            <li>• Source your own materials</li>
+            <li>• Market your own classes</li>
+            <li>• Handle COPPA compliance yourself</li>
+            <li>• Generic Zoom integration</li>
+          </ul>
+        </div>
+        <div class="bg-forge text-warm rounded-2xl p-6 border-2 border-forge">
+          <h3 class="font-brand font-bold text-xl text-warm mb-2">Spark &amp; Anvil</h3>
+          <div class="text-5xl font-brand font-bold text-warm mb-4">85<span class="text-2xl">%</span></div>
+          <p class="text-warm/90 leading-relaxed mb-4">to teacher (we keep 15% for platform + payments)</p>
+          <ul class="text-sm text-warm/90 space-y-1">
+            <li>• <strong>135 apps</strong> as your curriculum</li>
+            <li>• <strong>Curated slots</strong> with built-in parent demand</li>
+            <li>• <strong>We handle COPPA-2025</strong> + parental consent + state laws</li>
+            <li>• <strong>ForgeClassroom</strong>: live cohort sync inside the app + teacher dashboard + AI co-pilot</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-anvil/60">
+        On a $20/student/class × 4-student cohort × 8 weeks: <strong>You earn $544</strong> with Spark &amp; Anvil
+        vs <strong>$448</strong> on Outschool. <strong>21% more per cohort, with less work.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-3xl text-anvil mb-8">How it works</h2>
+    <div class="space-y-8">
+      <div class="flex gap-6">
+        <div class="flex-shrink-0 w-12 h-12 bg-forge text-warm rounded-full flex items-center justify-center font-brand font-bold text-xl">1</div>
+        <div>
+          <h3 class="font-brand font-bold text-xl text-anvil mb-2">Browse open class slots</h3>
+          <p class="text-anvil/70 leading-relaxed">
+            We define each slot from a specific app + grade band + curriculum standard.
+            Example: <em>"GambitTales: Sir Pinwell's Tactical Patterns (Grades 5–6) — 6 weeks × 1 hour/week,
+            suggested rate $15–25/student."</em>
+            All slots are pre-curated by us; you focus on teaching, not class design.
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-6">
+        <div class="flex-shrink-0 w-12 h-12 bg-forge text-warm rounded-full flex items-center justify-center font-brand font-bold text-xl">2</div>
+        <div>
+          <h3 class="font-brand font-bold text-xl text-anvil mb-2">Bid on the slots you want</h3>
+          <p class="text-anvil/70 leading-relaxed">
+            Pick your hourly rate (within range), your weekly availability, and your qualifications.
+            We review against the slot's requirements. Top teachers get premier slots.
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-6">
+        <div class="flex-shrink-0 w-12 h-12 bg-forge text-warm rounded-full flex items-center justify-center font-brand font-bold text-xl">3</div>
+        <div>
+          <h3 class="font-brand font-bold text-xl text-anvil mb-2">Parents enroll students into your cohort</h3>
+          <p class="text-anvil/70 leading-relaxed">
+            We market the slot to families who already use the app. You walk into a full
+            cohort of 4–6 motivated students. No cold-start; no marketing burden.
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-6">
+        <div class="flex-shrink-0 w-12 h-12 bg-forge text-warm rounded-full flex items-center justify-center font-brand font-bold text-xl">4</div>
+        <div>
+          <h3 class="font-brand font-bold text-xl text-anvil mb-2">Teach with ForgeClassroom integration</h3>
+          <p class="text-anvil/70 leading-relaxed">
+            Each app has built-in classroom features: live cohort sync (everyone on the same lesson),
+            real-time teacher dashboard, AI co-pilot suggesting discussion prompts, auto-generated
+            weekly parent reports. You teach; we handle the tech.
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-6">
+        <div class="flex-shrink-0 w-12 h-12 bg-forge text-warm rounded-full flex items-center justify-center font-brand font-bold text-xl">5</div>
+        <div>
+          <h3 class="font-brand font-bold text-xl text-anvil mb-2">Get paid weekly via Stripe</h3>
+          <p class="text-anvil/70 leading-relaxed">
+            Stripe Connect direct deposit. 85% of every class fee, paid weekly. 1099-K at year-end.
+            No "Success Tax" eating a third of your revenue.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pilot details -->
+  <section class="bg-spark/10 py-16 border-y border-spark/30">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-3xl text-anvil mb-4">Early pilot — first 50 partners</h2>
+      <p class="text-lg text-anvil/80 leading-relaxed mb-6">
+        We're recruiting the first 50 teachers to pilot Spark &amp; Anvil classrooms during 2026. Each pilot partner gets:
+      </p>
+      <ul class="space-y-2 text-anvil/80 leading-relaxed mb-8">
+        <li>✅ <strong>$500–$2,000 onboarding stipend</strong> (paid before teaching a single class)</li>
+        <li>✅ <strong>Free background check</strong> (we cover it)</li>
+        <li>✅ <strong>Founder access</strong>: direct Slack channel with our team for feedback + roadmap input</li>
+        <li>✅ <strong>Featured Early Teacher badge</strong> on your public profile (parent-visible)</li>
+        <li>✅ <strong>30 paid pilot classes</strong> at full $15–25/student rates</li>
+        <li>✅ <strong>Priority slot selection</strong> when public marketplace launches Q1 2027</li>
+      </ul>
+      <a href="mailto:teachers@spark-and-anvil.com?subject=Spark%20%26%20Anvil%20Early%20Teacher%20Pilot%20Application&body=Please%20share%3A%0A%0A1.%20Name%20%2B%20teaching%20background%3A%0A2.%20Subject%20specialties%20(math%2Fliteracy%2Fchess%2FSEL%2Fetc.)%3A%0A3.%20Outschool%20%2F%20other%20marketplace%20experience%3A%0A4.%20Best%20Outschool%20class%20you%20taught%20(if%20applicable)%3A%0A5.%20Link%20to%20sample%20teaching%20video%20(optional)%3A%0A6.%20Availability%20for%20a%2015-min%20intro%20call%3A%0A%0A" class="btn-primary">Apply now</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-3xl text-anvil mb-8">Common questions</h2>
+    <dl class="space-y-6">
+      <div>
+        <dt class="font-brand font-bold text-lg mb-2">When does the public marketplace launch?</dt>
+        <dd class="text-anvil/70 leading-relaxed">
+          <strong>Q1 2027.</strong> Early pilot (paid contracts for 50 teachers) starts Q3 2026.
+          Apply now to lock in your pilot slot.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-brand font-bold text-lg mb-2">Do I need a teaching credential?</dt>
+        <dd class="text-anvil/70 leading-relaxed">
+          A state teaching license is preferred but not required for most slots. Subject expertise + sample
+          teaching reel + background check (we pay) + parent reviews establish your standing on the platform.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-brand font-bold text-lg mb-2">Can I design my own custom slots?</dt>
+        <dd class="text-anvil/70 leading-relaxed">
+          <strong>Yes — Tier 2 feature.</strong> Top teachers (5+ successful cohorts) can propose custom slot templates.
+          Approved templates give you exclusive first-run + ongoing royalty share. Curated slots remain the default
+          to maintain quality and brand cohesion.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-brand font-bold text-lg mb-2">What's the time commitment for the pilot?</dt>
+        <dd class="text-anvil/70 leading-relaxed">
+          30 paid pilot classes over ~3–4 months (typical ~2-3 hours/week). Stipend is paid up-front; classes
+          earn additional per-class income at full rates.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-brand font-bold text-lg mb-2">Can my existing Outschool students transfer to my Spark &amp; Anvil cohorts?</dt>
+        <dd class="text-anvil/70 leading-relaxed">
+          Yes — we'll help you import your roster + give you a co-branded landing page to share with families.
+          Parents can sign up directly; their kids' Spark &amp; Anvil app progress will sync automatically into
+          your teacher dashboard.
+        </dd>
+      </div>
+    </dl>
+
+    <div class="mt-12 text-center">
+      <a href="mailto:teachers@spark-and-anvil.com?subject=Spark%20%26%20Anvil%20Early%20Teacher%20Pilot" class="btn-primary">Apply to the early pilot</a>
+    </div>
+  </section>
+</BaseLayout>
