@@ -5,104 +5,78 @@ import { apps } from '~/data/apps.generated';
 // Apps currently using distributed-narrative methodology
 const dnApps = apps.filter(a => a.distributedNarrative);
 
-// Cases planned (Wave-1 retrofits — handoff docs shipped, asset gen pending)
+// Apps where the cast is designed; characters arriving 2026
 const wave1Cases = [
-  { slug: 'quillspell', name: 'QuillSpell', cast: '12-character cast — 6 etyma family archetypes (Latin/Greek/Old English/Norse/Norman-French/Arabic) + 6 spelling-pattern archetypes (silent letters, double consonants, schwa, vowel teams, suffixes, syllable rhythm)', status: 'Retrofit handoff shipped' },
-  { slug: 'grammarforge', name: 'GrammarForge', cast: '12-character sentence-citizen cast — Mayor Subject, Verb Verity, Object Otto, Modifier Mike/Madge, Connector Chen, Pronoun Perry, Article Anne, Preposition Pat, Clause-Chief Carla, Punctuator Polly, Agreement Ada', status: 'Retrofit handoff shipped' },
-  { slug: 'logicquest', name: 'LogicQuest', cast: '16-character cast — 12 fallacy archetypes (Ad Hominem Hannibal, Strawman Stella, Slippery-Slope Sam, etc.) + 4 valid-form heroes (Modus-Ponens Mo, Modus-Tollens Tara, Syllogism Solon, Disjunctive-Syllogism Dior)', status: 'Retrofit handoff shipped' },
-  { slug: 'geometryforge', name: 'GeometryForge', cast: '10-character theorem-master cast — Master Pythagoras, Lady Inscribed-Angle, Sir Thales, Apprentice Heron, Axia + Theora (twins), Captain Construction, Compass Wraith, Madame Polygon, Master Tangent', status: 'Retrofit handoff shipped' },
+  { slug: 'quillspell', name: 'QuillSpell', cast: 'A dozen "word-tribe" characters — including a Greek owl-scholar, a Norse navigator, an Old-English forester — who each carry a family of words your kid learns to recognize.', status: 'Coming in 2026' },
+  { slug: 'grammarforge', name: 'GrammarForge', cast: 'A cast of "Sentence City" citizens — Mayor Subject, Verb Verity, the Modifier siblings — who show kids how each part of speech does its job by acting it out.', status: 'Coming in 2026' },
+  { slug: 'logicquest', name: 'LogicQuest', cast: 'A dozen friendly-but-flawed arguers (each making a different classic mistake) plus four logic detectives who teach kids to spot bad reasoning by example.', status: 'Coming in 2026' },
+  { slug: 'geometryforge', name: 'GeometryForge', cast: 'Ten theorem-masters — including Master Pythagoras and Lady Inscribed-Angle — each demonstrating their geometric idea in scene after scene.', status: 'Coming in 2026' },
 ];
 ---
 
 <BaseLayout
-  title="Our Method — Distributed-Narrative Learning"
-  description="Distributed-narrative methodology — characters that embody the curriculum across kits. Spark & Anvil's pedagogical approach grounded in narrative-mode cognition and intrinsic-integration game design."
+  title="How our apps teach — characters that ARE the curriculum"
+  description="Spark & Anvil uses a teaching approach we call distributed-narrative learning: kids learn by following characters who each embody an idea, so abstract concepts become memorable through story."
 >
   <section class="max-w-3xl mx-auto px-6 pt-16 pb-8">
-    <p class="text-xs uppercase tracking-wider text-forge font-bold mb-3">Our method</p>
+    <p class="text-xs uppercase tracking-wider text-forge font-bold mb-3">How our apps teach</p>
     <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-6">
-      Distributed-Narrative Learning
+      Characters that ARE the curriculum
     </h1>
     <p class="text-xl text-anvil/70 leading-relaxed">
-      Characters that don&apos;t just decorate the lesson — they <em>are</em> the lesson.
-      Across a Spark &amp; Anvil app, a small cast of recurring named characters each embodies
-      a specific curricular pattern: a chess tactic, a logical fallacy, a geometric theorem,
-      a spelling rule. Kids learn the abstract pattern by following the character&apos;s story.
+      Most educational apps put a friendly mascot on the screen, then deliver a lesson. We do
+      something different: in many of our apps, the characters themselves <em>are</em> the lesson.
+      Each one shows up again and again across the app, demonstrating a single idea — a chess
+      move, a logic mistake, a spelling pattern, a geometry rule — so your kid learns the idea
+      by following the character's story.
     </p>
   </section>
 
   <section class="max-w-3xl mx-auto px-6 pb-12">
     <div class="bg-forge/5 border-l-4 border-forge rounded p-6">
+      <p class="font-brand font-bold text-anvil mb-2">A quick example</p>
       <p class="text-anvil/80 leading-relaxed">
-        <strong>Example.</strong> In GambitTales, our narrative-driven chess app, <strong>Sir Pinwell</strong>
-        isn&apos;t just a character who teaches kids about pins. Sir Pinwell <em>is</em> the pin
-        — every appearance demonstrates the pattern in a chess scenario. Across 16 kits of content,
-        kids meet Sir Pinwell repeatedly in different positions. They learn the abstract concept
-        through the recurring figure who embodies it.
+        In our chess app GambitTales, your kid meets a knight named <strong>Sir Pinwell</strong>.
+        Sir Pinwell&apos;s whole job is to demonstrate <em>pins</em> — a kind of chess attack that
+        traps a piece in place. He shows up across many puzzles, in many positions, always doing
+        the same kind of move. After a few sessions, your kid recognizes pins instantly — not
+        because they memorized a rule, but because they know Sir Pinwell.
       </p>
     </div>
   </section>
 
   <section class="bg-anvil/5 py-16">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">The pedagogical foundations</h2>
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Why this works</h2>
       <p class="text-anvil/80 leading-relaxed mb-4">
-        Distributed-narrative methodology stitches together four well-attested cognitive and
-        motivational moves from educational research:
+        Kids&apos; brains are built for story. They&apos;ll remember the personalities of every
+        animal in <em>Frog and Toad</em> longer than they&apos;ll remember a multiplication
+        chart. Our approach borrows that strength: we turn the curriculum itself into a story
+        with a recurring cast, so the abstract idea travels on a memorable character.
       </p>
-      <ul class="space-y-4 text-anvil/80 leading-relaxed">
-        <li>
-          <strong>Bruner&apos;s narrative-mode cognition</strong> (1986).
-          Humans have two modes of thought — paradigmatic (logical-categorical) and narrative
-          (story-as-meaning-making). Both serve learning, but formal subjects default to paradigmatic
-          and become more accessible when bridged through narrative. Character archetypes engage
-          narrative-mode encoding alongside paradigmatic content.
-        </li>
-        <li>
-          <strong>Sfard&apos;s participation metaphor</strong> (1998; revisited 2025).
-          Learning is sometimes a commodity to acquire and sometimes a practice to participate in.
-          When &quot;Sir Pinwell IS the pin tactic,&quot; kids don&apos;t acquire-a-fact-about-pins
-          — they <em>participate</em> in a community of practitioners (real and fictional) who
-          deploy the pattern.
-        </li>
-        <li>
-          <strong>Green &amp; Brock&apos;s narrative transportation</strong> (2000; updated 2024).
-          When readers are absorbed into a narrative — focused attention, emotional engagement,
-          mental imagery — they retain more, change attitudes more, and counter-argue less.
-          Stable recurring characters maximize empathy + identification, the strongest single
-          predictor of transportation.
-        </li>
-        <li>
-          <strong>Habgood&apos;s intrinsic-integration critique</strong> (2005).
-          Endogenous fantasy (story-maps-to-content) was once hypothesized to be intrinsically
-          motivating. Habgood reframed it: the fantasy/content fit must operate at the
-          <em>mechanics</em> layer, not the surface layer. Distributed-narrative methodology takes
-          this seriously — characters embody the mechanic, not just the decoration.
-        </li>
-        <li>
-          <strong>Pedagogical-agent meta-analyses</strong> (2021–2025).
-          Multimedia-learning research on on-screen characters consistently shows small-to-moderate
-          gains: retention g ≈ 0.20–0.39, transfer g ≈ 0.31, motivation g ≈ 0.26 — provided the
-          character has affective cues, gestures, and a clear instructional role. We design every
-          cast member to satisfy those conditions.
-        </li>
+      <ul class="space-y-3 text-anvil/80 leading-relaxed">
+        <li><strong>Recurring, not random.</strong> The same characters appear across many lessons. Your kid sees Sir Pinwell in lesson 1, again in lesson 3, again in lesson 7 — each time showing the same kind of move in a new situation.</li>
+        <li><strong>Behavior, not decoration.</strong> The character&apos;s actions <em>are</em> the rule. Sir Pinwell doesn&apos;t talk about pins. He does pins. Your kid learns the pattern by watching, not by being told.</li>
+        <li><strong>Small casts, not crowds.</strong> Each app uses about ten to twelve characters, never dozens. Kids can keep that many in mind — like a Pixar movie ensemble.</li>
+        <li><strong>Story carries the work.</strong> When kids care about a character, they remember what that character did. That memory is the curriculum.</li>
       </ul>
     </div>
   </section>
 
   <section class="max-w-3xl mx-auto px-6 py-16">
-    <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Where we use it today</h2>
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Where this lives today</h2>
     <p class="text-anvil/80 leading-relaxed mb-6">
-      Our <strong>Narrative cluster</strong> is the first wave of apps built distributed-narrative
-      from the ground up. Each app uses a stable cast where character behavior embodies a tactical
-      or curricular pattern across all 16 kits of content.
+      Our <strong>Distributed-Narrative family</strong> is the first set of apps built this way
+      from the start. Each one has its own cast where characters embody the patterns the app
+      teaches — chess tactics, Go formations, music motifs, backgammon plays, bridge bidding
+      partners.
     </p>
     <div class="grid sm:grid-cols-2 gap-4">
       {dnApps.map(app => (
         <a href={`/apps/${app.slug}`} class="block p-4 rounded-xl border border-anvil/15 hover:border-forge hover:shadow-md transition-all">
           <div class="flex items-center gap-3 mb-2">
             <span class="font-brand font-bold text-anvil">{app.name}</span>
-            {app.mentor && <span class="text-xs text-anvil/60">• {app.mentor}</span>}
+            {app.mentor && <span class="text-xs text-anvil/60">• guided by {app.mentor}</span>}
           </div>
           <p class="text-sm text-anvil/70 leading-relaxed line-clamp-3">{app.tagline}</p>
         </a>
@@ -112,11 +86,10 @@ const wave1Cases = [
 
   <section class="bg-anvil/5 py-16">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Where we&apos;re extending it next</h2>
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Coming next</h2>
       <p class="text-anvil/80 leading-relaxed mb-6">
-        Wave-1 retrofits formalize a 12-to-16-character cast for each of four flagship apps.
-        Cast designs are shipped via implementation handoff docs (in each app&apos;s repo);
-        character art and per-kit integration follow.
+        We&apos;re extending this teaching style across the portfolio, app by app, wherever it
+        fits. Here&apos;s what&apos;s next:
       </p>
       <ul class="space-y-5">
         {wave1Cases.map(c => (
@@ -133,30 +106,78 @@ const wave1Cases = [
   </section>
 
   <section class="max-w-3xl mx-auto px-6 py-16">
-    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Where we don&apos;t use it</h2>
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Where it doesn&apos;t fit</h2>
     <p class="text-anvil/80 leading-relaxed mb-3">
-      Distributed-narrative methodology isn&apos;t a universal solvent. Creative-tool and sandbox
-      apps — BeatForge (music composition), SpectrumCanvas (visual art), PixelForge (pixel art),
-      SoundSphere (soundscape design), SynaForge (synesthesia tool) — stay open-ended.
-      Imposing a recurring cast on those apps would constrain kids&apos; creative agency in
-      exactly the place where agency is the point.
+      Not every app gets a cast. Apps where the whole point is your kid&apos;s own creativity —
+      BeatForge for making music, SpectrumCanvas for drawing, PixelForge for pixel art,
+      SoundSphere for sound design, SynaForge for combining the senses — stay open-ended.
+      Imposing a recurring cast on those would get in the way of the thing that matters most
+      there: your kid&apos;s own ideas.
     </p>
     <p class="text-anvil/80 leading-relaxed">
-      We also design carefully against six known failure modes documented in our internal research
-      — cast-size creep, surface-skinning, cultural bias, twee tone, curriculum lock-in, and
-      intra-portfolio character collision. A registry of every named character across the
-      portfolio prevents the last one.
+      We also keep the casts small, diverse, and reviewed for representation before any character
+      ships. A storytelling approach amplifies whoever&apos;s on stage, so we&apos;re careful
+      about who we put there.
     </p>
   </section>
 
-  <section class="bg-spark/10 py-16">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="font-brand font-bold text-2xl text-anvil mb-3">For educators + researchers</h2>
-      <p class="text-anvil/80 leading-relaxed">
-        We&apos;re happy to share the research synthesis, per-app cast specs, and failure-mode
-        design notes with educators, curriculum designers, and learning-science researchers.
-        Email <a href="mailto:educators@spark-and-anvil.com" class="text-forge-text underline">educators@spark-and-anvil.com</a>.
+  <section class="bg-anvil/5 py-16">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">The research behind it</h2>
+      <p class="text-anvil/80 leading-relaxed mb-4">
+        This isn&apos;t a hunch. The approach combines five well-established findings from
+        educational and cognitive research:
+      </p>
+      <ul class="space-y-4 text-anvil/80 leading-relaxed">
+        <li>
+          <strong>Jerome Bruner — narrative-mode thinking (1986).</strong>
+          Bruner showed that people have two distinct ways of making sense of the world: the
+          logical-categorical mode (rules and definitions) and the narrative mode (stories
+          and characters). Both teach, but formal subjects like math, grammar, and logic
+          become much easier to grasp when bridged through narrative.
+        </li>
+        <li>
+          <strong>Anna Sfard — learning as participation (1998, revisited 2025).</strong>
+          Sfard&apos;s influential framework reframed learning as joining a community of
+          practitioners rather than acquiring facts. When Sir Pinwell IS the pin tactic,
+          your kid isn&apos;t collecting a chess fact — they&apos;re participating in a
+          community of practitioners (real and fictional) who use the move.
+        </li>
+        <li>
+          <strong>Green &amp; Brock — narrative transportation (2000, updated 2024).</strong>
+          When readers are absorbed in a story, they remember more of its content, change
+          their attitudes more, and counter-argue less. Stable, recurring characters maximize
+          empathy and identification — the strongest single driver of that absorption.
+        </li>
+        <li>
+          <strong>Jacob Habgood — intrinsic integration (2005).</strong>
+          Habgood found that educational games work best when the story and the learning
+          happen in the <em>same place</em> — when character behavior IS the rule, not a
+          decoration around an unrelated drill.
+        </li>
+        <li>
+          <strong>On-screen characters as teachers (2021&ndash;2025).</strong>
+          A decade of studies on &quot;pedagogical agents&quot; (the formal term for
+          on-screen characters in educational software) consistently finds small but reliable
+          gains in retention, transfer, and motivation when the character has clear emotion,
+          gesture, and a defined teaching role.
+        </li>
+      </ul>
+      <p class="text-anvil/80 leading-relaxed mt-6">
+        If you&apos;re a teacher, parent, or researcher who wants the full bibliography or
+        per-app curriculum mapping, email
+        <a href="mailto:educators@spark-and-anvil.com" class="text-forge-text underline">educators@spark-and-anvil.com</a>.
       </p>
     </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">For parents</h2>
+    <p class="text-anvil/80 leading-relaxed">
+      You don&apos;t need to know any of this for the apps to work. Your kid just plays —
+      they&apos;ll meet the characters naturally, follow their stories, and pick up the
+      patterns without anyone telling them they&apos;re learning. The method is built in.
+      That&apos;s the point.
+    </p>
   </section>
 </BaseLayout>
