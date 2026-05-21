@@ -35,7 +35,7 @@ export const apps: AppData[] = [
     "slug": "activeforge",
     "name": "ActiveForge",
     "tagline": "Build physical fitness, motor skills, and dance proficiency through camera-based movement tracking, choreography challenges, and sport skill progressions \u2014 aligning to both SHAPE America PE standards and NCAS Dance standards. Ages 9-14.",
-    "vertical": "dir-fedc",
+    "vertical": "steam",
     "heroColor": "#81C784",
     "iconPath": "/apps/activeforge/icon-sm.webp",
     "mascotPath": "/apps/activeforge/mascot.webp",
@@ -209,33 +209,7 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": null,
     "hasUserGuide": true
-  },
-  {
-    "slug": "bodyforge",
-    "name": "BodyForge",
-    "tagline": "> Full body systems content has been merged into BioForge as part of portfolio restructuring.",
-    "vertical": "dir-fedc",
-    "heroColor": "#81C784",
-    "iconPath": "/apps/bodyforge/icon-sm.webp",
-    "mascotPath": "/apps/bodyforge/mascot.webp",
-    "implementing": true,
-    "standards": [
-      "CASEL",
-      "NGSS Health"
-    ],
-    "hasM9Accessories": true,
-    "wave": 3,
-    "iconHeroPath": "/apps/bodyforge/icon.webp",
-    "longTagline": "All planned features and curriculum coverage from BodyForge are now part of BioForge's roadmap.",
-    "features": [
-      {
-        "name": "Status",
-        "description": "All planned features and curriculum coverage from BodyForge are now part of BioForge's roadmap."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
+  },  {
     "slug": "bridgeforge",
     "name": "BridgeForge",
     "tagline": "Project-based learning simulation with multi-week real-world challenges integrating math, science, social studies, and ELA. First student-facing PBL app following the Gold Standard PBL cycle (PBLWorks/Buck Institute). Students solve authentic real-world problems that require competency across multiple subjects, building visible bridges on a subject connection map.",
@@ -746,7 +720,7 @@ export const apps: AppData[] = [
     "slug": "creaturecare",
     "name": "CreatureCare",
     "tagline": "Players run an animal hospital, diagnosing and treating animals using real veterinary techniques",
-    "vertical": "special-interest",
+    "vertical": "dir-fedc",
     "heroColor": "#FFA726",
     "iconPath": "/apps/creaturecare/icon-sm.webp",
     "mascotPath": "/apps/creaturecare/mascot.webp",
@@ -1356,7 +1330,7 @@ export const apps: AppData[] = [
     "slug": "fitquest",
     "name": "FitQuest",
     "tagline": "A fitness RPG adventure where physical exercise (tracked via HealthKit) AND knowledge quiz performance jointly determine your character's progression. Complete real workouts to gain Strength/Stamina, answer questions correctly to gain Wisdom/Intelligence.",
-    "vertical": "dir-fedc",
+    "vertical": "special-interest",
     "heroColor": "#81C784",
     "iconPath": "/apps/fitquest/icon-sm.webp",
     "mascotPath": "/apps/fitquest/mascot.webp",
@@ -1497,56 +1471,6 @@ export const apps: AppData[] = [
       {
         "name": "Survival Mode",
         "description": "Keep answering correctly to stay alive. One wrong answer and you are out! Last player standing wins."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
-    "slug": "forgeclassroom",
-    "name": "Forgeclassroom",
-    "tagline": "A teacher-facing classroom management tool that works on any device \u2014 assign Forge app lessons, monitor student progress in real-time, generate standards-aligned reports, and run live quiz competitions where iOS and Android students play together.",
-    "vertical": "special-interest",
-    "heroColor": "#FFA726",
-    "iconPath": "/apps/forgeclassroom/icon-sm.webp",
-    "mascotPath": null,
-    "implementing": false,
-    "standards": [
-      "ISTE",
-      "Common Sense Privacy"
-    ],
-    "hasM9Accessories": false,
-    "wave": null,
-    "iconHeroPath": "/apps/forgeclassroom/icon.webp",
-    "longTagline": "ForgeClassroom is a teacher-facing classroom management tool for K-12 educators that lets you assign Forge app lessons, monitor student progress in real-time, run live quiz competitions, and generate standards-aligned reports \u2014 all from one dashboard.",
-    "features": [
-      {
-        "name": "How to Use",
-        "description": "1. **Set Up Your Class**: Tap \"Classes\" and add a new class. Enter student names \u2014 no student accounts or email addresses required."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
-    "slug": "forgeportal",
-    "name": "Forgeportal",
-    "tagline": "A cross-platform launcher and discovery hub for the entire Forge educational app portfolio \u2014 browse, download, and play any Forge app from one place on iOS, Android, Windows, or web, with unified progress tracking and family management.",
-    "vertical": "special-interest",
-    "heroColor": "#FFA726",
-    "iconPath": "/apps/forgeportal/icon-sm.webp",
-    "mascotPath": null,
-    "implementing": false,
-    "standards": [
-      "ISTE",
-      "Common Sense Privacy"
-    ],
-    "hasM9Accessories": false,
-    "wave": null,
-    "iconHeroPath": "/apps/forgeportal/icon.webp",
-    "longTagline": "ForgePortal is the universal launcher and discovery hub for all Forge educational apps, giving students and families a single place to find, launch, and track progress across every subject in the Forge portfolio.",
-    "features": [
-      {
-        "name": "How to Use",
-        "description": "1. **Create a Profile**: Tap \"Add Profile\" on first launch. Enter a name and age. No email or password needed for child profiles."
       }
     ],
     "hasUserGuide": true
@@ -2028,7 +1952,7 @@ export const apps: AppData[] = [
     "slug": "inclusionforge",
     "name": "InclusionForge",
     "tagline": "Experience daily life through different abilities, explore the history of disability rights, then design solutions that work for everyone \u2014 using Universal Design principles to build a more accessible world. Ages 9-14.",
-    "vertical": "dir-fedc",
+    "vertical": "academics",
     "heroColor": "#81C784",
     "iconPath": "/apps/inclusionforge/icon-sm.webp",
     "mascotPath": "/apps/inclusionforge/mascot.webp",
@@ -2215,7 +2139,7 @@ export const apps: AppData[] = [
     "slug": "lifequest",
     "name": "LifeQuest",
     "tagline": "Navigate real-life consumer decisions \u2014 compare phone plans, read lease agreements, plan meals on a budget, spot consumer scams, and manage a household \u2014 through simulation of the everyday adult scenarios that middle schoolers will face within five years. Ages 11-14.",
-    "vertical": "dir-fedc",
+    "vertical": "academics",
     "heroColor": "#81C784",
     "iconPath": "/apps/lifequest/icon-sm.webp",
     "mascotPath": "/apps/lifequest/mascot.webp",
@@ -2593,7 +2517,7 @@ export const apps: AppData[] = [
     "slug": "medicquest",
     "name": "MedicQuest",
     "tagline": "Run a medical clinic, diagnose patients, perform first aid, and investigate disease outbreaks \u2014 learn anatomy, clinical reasoning, triage, and public health through case-based medical detective gameplay. Includes health influences investigation, patient communication skills, and wellness goal-setting for complete health education coverage.",
-    "vertical": "dir-fedc",
+    "vertical": "stem",
     "heroColor": "#81C784",
     "iconPath": "/apps/medicquest/icon-sm.webp",
     "mascotPath": "/apps/medicquest/mascot.webp",
@@ -2700,33 +2624,7 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "mintquest",
-    "name": "MintQuest",
-    "tagline": "> Personal finance modules have been merged into VentureQuest as part of portfolio restructuring.",
-    "vertical": "dir-fedc",
-    "heroColor": "#81C784",
-    "iconPath": "/apps/mintquest/icon-sm.webp",
-    "mascotPath": "/apps/mintquest/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "CASEL",
-      "NGSS Health"
-    ],
-    "hasM9Accessories": true,
-    "wave": null,
-    "iconHeroPath": "/apps/mintquest/icon.webp",
-    "longTagline": "All planned features and curriculum coverage from MintQuest are now part of VentureQuest's roadmap.",
-    "features": [
-      {
-        "name": "Status",
-        "description": "All planned features and curriculum coverage from MintQuest are now part of VentureQuest's roadmap."
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
+  },  {
     "slug": "mythforge",
     "name": "MythForge",
     "tagline": "Explore ancient civilizations through mythology-driven adventure quests \u2014 meet gods and heroes, battle mythological creatures, collect historical artifacts, and build ancient cities while learning Greek, Roman, Norse, Egyptian, and Mesoamerican cultures.",
@@ -3418,7 +3316,7 @@ export const apps: AppData[] = [
     "slug": "safetyforge",
     "name": "SafetyForge",
     "tagline": "Navigate the digital world safely through interactive scenarios about privacy, cyberbullying, digital footprint, phishing detection, and responsible technology use \u2014 with a safe social media simulator that teaches real consequences without real risk. Ages 9-14.",
-    "vertical": "dir-fedc",
+    "vertical": "academics",
     "heroColor": "#81C784",
     "iconPath": "/apps/safetyforge/icon-sm.webp",
     "mascotPath": "/apps/safetyforge/mascot.webp",
@@ -3622,7 +3520,7 @@ export const apps: AppData[] = [
     "slug": "spectrumcanvas",
     "name": "SpectrumCanvas",
     "tagline": "A digital art studio designed for autistic visual thinkers where every art material is simulated without the sensory challenges of the physical version. Watercolor, charcoal, clay, and collage -- all with adjustable texture feedback, sound, and visual intensity. Includes social story illustration tools and an emotion palette that maps feelings to colors.",
-    "vertical": "steam",
+    "vertical": "dir-fedc",
     "heroColor": "#E91E63",
     "iconPath": "/apps/spectrumcanvas/icon-sm.webp",
     "mascotPath": "/apps/spectrumcanvas/mascot.webp",
@@ -4373,7 +4271,7 @@ export const apps: AppData[] = [
   {
     "slug": "dealtales",
     "name": "DealTales",
-    "tagline": "Narrative-Driven Bridge + Partnership Trick-Taking for Tweens \u2014 bidding-as-conversation between Whisp + Bram. Highest CASEL fit in Storytime cluster (partnership IS the curriculum). Whisp wisp-of-cloud mascot.",
+    "tagline": "Narrative-Driven Bridge + Partnership Trick-Taking for Tweens \u2014 bidding-as-conversation between Whisp + Bram. Highest CASEL fit in the Narrative-Methodology cluster (partnership IS the curriculum). Whisp wisp-of-cloud mascot.",
     "vertical": "academics",
     "heroColor": "#1F3856",
     "iconPath": "/apps/dealtales/icon-sm.webp",
@@ -4453,7 +4351,7 @@ export const apps: AppData[] = [
     "slug": "huggyhabits",
     "name": "HuggyHabits",
     "tagline": "Daily Wellness Routines for Ages 5-7 \u2014 sleep, brush, eat, move habits via gentle scaffolds. Hug (cuddly bear-hug mascot) anchors morning + bedtime routines.",
-    "vertical": "dir-fedc",
+    "vertical": "special-interest",
     "heroColor": "#F4C9A8",
     "iconPath": "/apps/huggyhabits/icon-sm.webp",
     "iconHeroPath": "/apps/huggyhabits/icon.webp",
