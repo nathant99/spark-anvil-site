@@ -157,13 +157,13 @@ const searchHaystack = (app: typeof apps[number]): string => {
   </section>
 
   <section class="max-w-6xl mx-auto px-6 pb-12">
-    <p class="text-xs uppercase tracking-wider text-anvil/50 font-bold mb-2">Curriculum standard</p>
+    <p class="text-xs uppercase tracking-wider text-anvil/50 font-bold mb-2">Standards &amp; frameworks</p>
     <div class="flex flex-wrap gap-2">
       <button
         class="standard-filter px-4 py-2 bg-anvil text-warm border border-anvil rounded-full text-sm font-bold"
         data-standard="all"
       >
-        Any standard
+        Any framework
       </button>
       {STANDARD_BUCKETS.filter(b => (standardsCounts[b.id] ?? 0) > 0).map(b => (
         <button

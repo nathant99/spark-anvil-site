@@ -746,6 +746,7 @@ export const apps: AppData[] = [
     "mentor": "Dr. Fern",
     "implementing": true,
     "standards": [
+      "DIR/FEDC Capacities 2-3",
       "ISTE",
       "Common Sense Privacy"
     ],
@@ -1421,6 +1422,7 @@ export const apps: AppData[] = [
     "mentor": "Anchor",
     "implementing": true,
     "standards": [
+      "DIR/FEDC Capacity 1",
       "CASEL",
       "NGSS Health"
     ],
@@ -2600,8 +2602,10 @@ export const apps: AppData[] = [
     "mentor": "Sage",
     "implementing": true,
     "standards": [
+      "DIR/FEDC Capacities 1-2",
       "CASEL",
-      "NGSS Health"
+      "NGSS Health",
+      "SAMHSA TIP 57"
     ],
     "hasM9Accessories": true,
     "wave": 1,
@@ -3442,6 +3446,7 @@ export const apps: AppData[] = [
     "mentor": "Hush",
     "implementing": true,
     "standards": [
+      "DIR/FEDC Capacity 1",
       "CASEL",
       "NGSS Health"
     ],
@@ -3515,6 +3520,7 @@ export const apps: AppData[] = [
     "mentor": "Pigment",
     "implementing": true,
     "standards": [
+      "DIR/FEDC Capacity 5",
       "NCAS",
       "NGSS",
       "ISTE"
@@ -3691,6 +3697,8 @@ export const apps: AppData[] = [
     "mentor": "Chroma",
     "implementing": true,
     "standards": [
+      "DIR/FEDC Capacity 1",
+      "DIR/FEDC Capacity 5",
       "CASEL",
       "NGSS Health"
     ],
