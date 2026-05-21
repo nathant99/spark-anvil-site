@@ -4271,7 +4271,7 @@ export const apps: AppData[] = [
   {
     "slug": "dealtales",
     "name": "DealTales",
-    "tagline": "Narrative-Driven Bridge + Partnership Trick-Taking for Tweens \u2014 bidding-as-conversation between Whisp + Bram. Highest CASEL fit in the Narrative-Methodology cluster (partnership IS the curriculum). Whisp wisp-of-cloud mascot.",
+    "tagline": "Narrative-Driven Bridge + Partnership Trick-Taking for Tweens \u2014 bidding-as-conversation between Whisp + Bram. Highest CASEL fit in the Distributed-Narrative cluster (partnership IS the curriculum). Whisp wisp-of-cloud mascot.",
     "vertical": "academics",
     "heroColor": "#1F3856",
     "iconPath": "/apps/dealtales/icon-sm.webp",
