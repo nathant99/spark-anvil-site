@@ -4388,6 +4388,117 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "hasUserGuide": false
+  },
+  {
+    "slug": "tinyletters",
+    "name": "TinyLetters",
+    "tagline": "Emergent Phonics + Alphabet for Ages 5-7 \u2014 letter-sound mapping, sight words, decodable storyboarding. Pip Jr (younger-sibling sparrow to LyricForge's Pip) guides daily 15-min phonics routines.",
+    "vertical": "academics",
+    "heroColor": "#FFB89C",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "CCSS Foundations.RF.K-2",
+      "CCSS RL.K-2"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "countingpals",
+    "name": "CountingPals",
+    "tagline": "Number Sense + Early Addition for Ages 5-7 \u2014 subitizing, counting, comparing, one-digit addition. Calc Jr (younger calculator-monster) guides daily 15-min math routines.",
+    "vertical": "stem",
+    "heroColor": "#A8D5F0",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "CCSS Math.K.CC",
+      "CCSS Math.1.OA"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "taletrail",
+    "name": "TaleTrail",
+    "tagline": "Interactive Picture-Book Composition for Ages 5-8 \u2014 picture-book sequencing, optional dictation, character creation, story-arc scaffolds. Page (folded-paper mascot) guides early narrative composition.",
+    "vertical": "academics",
+    "heroColor": "#C8A8E0",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "CCSS ELA.K.W",
+      "CCSS RL.K-2",
+      "NCAS TH:Cr1"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "huggyhabits",
+    "name": "HuggyHabits",
+    "tagline": "Daily Wellness Routines for Ages 5-7 \u2014 sleep, brush, eat, move habits via gentle scaffolds. Hug (cuddly bear-hug mascot) anchors morning + bedtime routines.",
+    "vertical": "dir-fedc",
+    "heroColor": "#F4C9A8",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "CASEL Self-Management",
+      "SHAPE America Pre-K Health",
+      "NAEYC ECE Standards"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "bugscamp",
+    "name": "BugsCamp",
+    "tagline": "Early Life Science Naturalism for Ages 5-8 \u2014 bug + leaf + weather identification + observation journaling. Beetle (ladybug-naturalist mascot) guides backyard discovery.",
+    "vertical": "special-interest",
+    "heroColor": "#B4D88C",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "NGSS K-2 LS",
+      "NGSS K-2 ESS",
+      "NAEYC Early STEM"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "melodymice",
+    "name": "MelodyMice",
+    "tagline": "Early Music + Rhythm for Ages 5-7 \u2014 rhythm patterns, instrument identification, call-and-response melody. Squeak (mouse-musician mascot) guides early music exposure.",
+    "vertical": "steam",
+    "heroColor": "#D8A8E0",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "NCAS MU.K-2.Cr1",
+      "NCAS MU.K-2.Re1"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
   }
 ];
 
@@ -4396,9 +4507,9 @@ export const appsBySlug: Record<string, AppData> = Object.fromEntries(
 );
 
 export const verticalCounts = {
-  "stem": 40,
-  "steam": 19,
-  "academics": 23,
-  "dir-fedc": 16,
-  "special-interest": 37
+  "stem": 41,
+  "steam": 20,
+  "academics": 25,
+  "dir-fedc": 17,
+  "special-interest": 38
 };
