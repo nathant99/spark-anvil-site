@@ -1035,39 +1035,6 @@ export const apps: AppData[] = [
     "hasUserGuide": true
   },
   {
-    "slug": "earthforge",
-    "name": "EarthForge",
-    "tagline": "EarthForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "special-interest",
-    "heroColor": "#FFA726",
-    "iconPath": null,
-    "mascotPath": "/apps/earthforge/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "ISTE",
-      "Common Sense Privacy"
-    ],
-    "hasM9Accessories": false,
-    "wave": null
-  },
-  {
-    "slug": "economicsforge",
-    "name": "EconomicsForge",
-    "tagline": "EconomicsForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "stem",
-    "heroColor": "#29B6F6",
-    "iconPath": null,
-    "mascotPath": "/apps/economicsforge/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "NGSS",
-      "CCSS Math",
-      "ISTE"
-    ],
-    "hasM9Accessories": false,
-    "wave": null
-  },
-  {
     "slug": "ecosphere",
     "name": "EcoSphere",
     "tagline": "Interactive climate and earth systems simulator where players manage interconnected ecosystems across geological time scales",
@@ -1142,23 +1109,6 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "engineerforge",
-    "name": "EngineerForge",
-    "tagline": "EngineerForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "stem",
-    "heroColor": "#29B6F6",
-    "iconPath": null,
-    "mascotPath": "/apps/engineerforge/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "NGSS",
-      "CCSS Math",
-      "ISTE"
-    ],
-    "hasM9Accessories": true,
-    "wave": null
   },
   {
     "slug": "ensemblequest",
@@ -2006,22 +1956,6 @@ export const apps: AppData[] = [
     "hasUserGuide": true
   },
   {
-    "slug": "healthforge",
-    "name": "HealthForge",
-    "tagline": "HealthForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "dir-fedc",
-    "heroColor": "#81C784",
-    "iconPath": null,
-    "mascotPath": null,
-    "implementing": false,
-    "standards": [
-      "CASEL",
-      "NGSS Health"
-    ],
-    "hasM9Accessories": false,
-    "wave": null
-  },
-  {
     "slug": "heatforge",
     "name": "HeatForge",
     "tagline": "Race heat through solids, liquids, and gases \u2014 watch convection currents spiral, design insulation that defeats a blowtorch, and discover why ice cream melts faster on a hot sidewalk than in the freez",
@@ -2059,23 +1993,6 @@ export const apps: AppData[] = [
     ],
     "mentor": "Kelvin",
     "hasUserGuide": true
-  },
-  {
-    "slug": "historyforge",
-    "name": "HistoryForge",
-    "tagline": "HistoryForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "academics",
-    "heroColor": "#4A6FA5",
-    "iconPath": null,
-    "mascotPath": "/apps/historyforge/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "CCSS ELA",
-      "C3 Social Studies",
-      "ISTE"
-    ],
-    "hasM9Accessories": true,
-    "wave": null
   },
   {
     "slug": "illusionforge",
@@ -2283,23 +2200,6 @@ export const apps: AppData[] = [
     "hasUserGuide": true
   },
   {
-    "slug": "languageforge",
-    "name": "LanguageForge",
-    "tagline": "LanguageForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "academics",
-    "heroColor": "#4A6FA5",
-    "iconPath": null,
-    "mascotPath": null,
-    "implementing": false,
-    "standards": [
-      "CCSS ELA",
-      "C3 Social Studies",
-      "ISTE"
-    ],
-    "hasM9Accessories": false,
-    "wave": null
-  },
-  {
     "slug": "levelforge",
     "name": "LevelForge",
     "tagline": "Players learn game design by designing, building, playtesting, and sharing their own playable games",
@@ -2335,22 +2235,6 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "lifeforge",
-    "name": "LifeForge",
-    "tagline": "LifeForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "special-interest",
-    "heroColor": "#FFA726",
-    "iconPath": null,
-    "mascotPath": null,
-    "implementing": false,
-    "standards": [
-      "ISTE",
-      "Common Sense Privacy"
-    ],
-    "hasM9Accessories": false,
-    "wave": null
   },
   {
     "slug": "lifequest",
@@ -2688,43 +2572,6 @@ export const apps: AppData[] = [
     "hasUserGuide": true
   },
   {
-    "slug": "mathquest",
-    "name": "MathQuest",
-    "tagline": "Master 12 math domains through interactive labs, SpriteKit-powered manipulatives, AI-driven tutoring, and cross-concept bridge challenges for ages 9\u201314.",
-    "vertical": "stem",
-    "heroColor": "#29B6F6",
-    "iconPath": null,
-    "mascotPath": "/apps/mathquest/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "NGSS",
-      "CCSS Math",
-      "ISTE"
-    ],
-    "hasM9Accessories": true,
-    "wave": null,
-    "longTagline": "Welcome to MathQuest, a comprehensive mathematics adventure with 12 interactive math labs designed for learners ages 9-14.",
-    "features": [
-      {
-        "name": "First Launch",
-        "description": "1. **Choose your name** -- Pick a display name for your profile. This stays on your device and is never shared."
-      },
-      {
-        "name": "Which Track Should I Start With?",
-        "description": "You can switch between tracks at any time. There is no wrong order."
-      },
-      {
-        "name": "Track Hub Navigation",
-        "description": "The Track Hub is your home screen. Each of the 12 math labs appears as a distinct icon with:"
-      },
-      {
-        "name": "Fraction Lab",
-        "description": "Build fractions with drag-and-drop tiles, compare them on number lines, and master operations from addition to division. Starts with hands-on manipulatives and"
-      }
-    ],
-    "hasUserGuide": true
-  },
-  {
     "slug": "measurequest",
     "name": "MeasureQuest",
     "tagline": "Hands-on measurement adventures: unit conversions, area and perimeter calculations, data representation, and real-world measurement applications -- building mathematical fluency through interactive ch",
@@ -2761,23 +2608,6 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "mediaforge",
-    "name": "MediaForge",
-    "tagline": "MediaForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "steam",
-    "heroColor": "#E91E63",
-    "iconPath": null,
-    "mascotPath": null,
-    "implementing": false,
-    "standards": [
-      "NCAS",
-      "NGSS",
-      "ISTE"
-    ],
-    "hasM9Accessories": false,
-    "wave": null
   },
   {
     "slug": "medicquest",
@@ -3139,23 +2969,6 @@ export const apps: AppData[] = [
       }
     ],
     "hasUserGuide": true
-  },
-  {
-    "slug": "physicsforge",
-    "name": "PhysicsForge",
-    "tagline": "PhysicsForge \u2014 a Spark & Anvil portfolio app.",
-    "vertical": "stem",
-    "heroColor": "#29B6F6",
-    "iconPath": null,
-    "mascotPath": "/apps/physicsforge/mascot.webp",
-    "implementing": false,
-    "standards": [
-      "NGSS",
-      "CCSS Math",
-      "ISTE"
-    ],
-    "hasM9Accessories": true,
-    "wave": null
   },
   {
     "slug": "pixelforge",
@@ -4350,7 +4163,7 @@ export const apps: AppData[] = [
   {
     "slug": "lyricforge",
     "name": "LyricForge",
-    "tagline": "Write the Songs You Hear in Your Head — tween songwriting studio where the lyric is the protagonist; form scaffolds + on-device rhyme/meter + AI Socratic lyric collaborator (Pip).",
+    "tagline": "Write the Songs You Hear in Your Head \u2014 tween songwriting studio where the lyric is the protagonist; form scaffolds + on-device rhyme/meter + AI Socratic lyric collaborator (Pip).",
     "vertical": "steam",
     "heroColor": "#E88774",
     "iconPath": null,
@@ -4369,7 +4182,7 @@ export const apps: AppData[] = [
   {
     "slug": "haikuquest",
     "name": "HaikuQuest",
-    "tagline": "Form-Scaffold Poetry for Tweens — haiku, tanka, cinquain, limerick with syllable counters, cultural-context teaching, and AI Socratic refinement (Cherry).",
+    "tagline": "Form-Scaffold Poetry for Tweens \u2014 haiku, tanka, cinquain, limerick with syllable counters, cultural-context teaching, and AI Socratic refinement (Cherry).",
     "vertical": "academics",
     "heroColor": "#F4A5B8",
     "iconPath": null,
@@ -4388,7 +4201,7 @@ export const apps: AppData[] = [
   {
     "slug": "characterforge",
     "name": "CharacterForge",
-    "tagline": "Character-Craft Workshop for Tweens — build the people who could be in stories. Character sheet, arc tracker, relationship graph, voice-consistency feedback (Ink).",
+    "tagline": "Character-Craft Workshop for Tweens \u2014 build the people who could be in stories. Character sheet, arc tracker, relationship graph, voice-consistency feedback (Ink).",
     "vertical": "academics",
     "heroColor": "#3D5A80",
     "iconPath": null,
@@ -4408,7 +4221,7 @@ export const apps: AppData[] = [
   {
     "slug": "coregrealm",
     "name": "CoRegRealm",
-    "tagline": "Co-Regulation Role-Reversal RPG — kid co-regulates a smaller creature companion through dysregulation cycles, learning the regulation primitive through the teacher role (Cyan).",
+    "tagline": "Co-Regulation Role-Reversal RPG \u2014 kid co-regulates a smaller creature companion through dysregulation cycles, learning the regulation primitive through the teacher role (Cyan).",
     "vertical": "dir-fedc",
     "heroColor": "#4FB3A6",
     "iconPath": null,
@@ -4428,7 +4241,7 @@ export const apps: AppData[] = [
   {
     "slug": "rupturerepair",
     "name": "RuptureRepair",
-    "tagline": "Misattunement → Repair Cycle as the Curriculum — two-player relational-craft scaffolding the 5-step repair protocol (Mend). Trauma-informed; no scoring; off-ramps every scenario.",
+    "tagline": "Misattunement \u2192 Repair Cycle as the Curriculum \u2014 two-player relational-craft scaffolding the 5-step repair protocol (Mend). Trauma-informed; no scoring; off-ramps every scenario.",
     "vertical": "dir-fedc",
     "heroColor": "#82A878",
     "iconPath": null,
@@ -4447,7 +4260,7 @@ export const apps: AppData[] = [
   {
     "slug": "tempcheck",
     "name": "TempCheck",
-    "tagline": "Daily Attunement Temp-Checks — 15-second bidirectional affect check-in with caregiver; surfaces overlaps + differences; growth chart over weeks (Pulse).",
+    "tagline": "Daily Attunement Temp-Checks \u2014 15-second bidirectional affect check-in with caregiver; surfaces overlaps + differences; growth chart over weeks (Pulse).",
     "vertical": "dir-fedc",
     "heroColor": "#FF9D8E",
     "iconPath": null,
@@ -4463,6 +4276,120 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "hasUserGuide": false
+  },
+  {
+    "slug": "gambittales",
+    "name": "GambitTales",
+    "tagline": "Narrative-Driven Chess for Tweens \u2014 tactical patterns (pin / fork / skewer) as recurring character archetypes (Sir Pinwell, Twin Knights of Fork Hill, Lady Skewer). Captain Castle rook mascot.",
+    "vertical": "academics",
+    "heroColor": "#D4A24C",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "ISTE 1.5",
+      "CCSS Math (Spatial)",
+      "CCSS ELA W.6-8.3"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "stonesong",
+    "name": "StoneSong",
+    "tagline": "Narrative-Driven Go for Tweens \u2014 life-and-death patterns as character archetypes (Patient Bamboo, Hungry Crane, Master Snail, Sparring Tiger). 9\u00d79 \u2192 13\u00d713 \u2192 19\u00d719 board-scale progression. Stone mascot.",
+    "vertical": "academics",
+    "heroColor": "#A07845",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "ISTE 1.5",
+      "CCSS Math (Spatial)",
+      "Social-Emotional Resilience"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "generalstale",
+    "name": "GeneralsTale",
+    "tagline": "Narrative-Driven Xiangqi (Chinese Chess) for Tweens \u2014 piece-asymmetry-as-character-richness (General Zhang the cannon, Elephant Wei the river-bound defender). General Mei mascot.",
+    "vertical": "academics",
+    "heroColor": "#5BA08C",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "ISTE 1.5",
+      "CCSS Math (Spatial)",
+      "Cross-Cultural Literacy"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "motiflab",
+    "name": "MotifLab",
+    "tagline": "Composition-as-Narrative-Arc for Tweens \u2014 motif IS the protagonist; 6-stage arc (intro \u2192 motif statement \u2192 development \u2192 contrast \u2192 recapitulation \u2192 resolution). Trill songbird mascot (sibling to LyricForge's Pip).",
+    "vertical": "steam",
+    "heroColor": "#7B5BD9",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "NCAS MU:Cr1-Cr3",
+      "CCSS ELA W.6-8.3"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "pipquest",
+    "name": "PipQuest",
+    "tagline": "Narrative-Driven Backgammon + Dice-Strategy for Tweens \u2014 voyage IS the curriculum (Fruitlandia \u2192 Sunrise Cliffs \u2192 Storm Bay \u2192 Icelandia). Peg dice-cup mascot + Peglegra / Chompus NPCs.",
+    "vertical": "stem",
+    "heroColor": "#1F4E79",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "CCSS Math 6.SP",
+      "CCSS Math 7.SP",
+      "ISTE 1.5"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "dealtales",
+    "name": "DealTales",
+    "tagline": "Narrative-Driven Bridge + Partnership Trick-Taking for Tweens \u2014 bidding-as-conversation between Whisp + Bram. Highest CASEL fit in Storytime cluster (partnership IS the curriculum). Whisp wisp-of-cloud mascot.",
+    "vertical": "academics",
+    "heroColor": "#1F3856",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": null,
+    "implementing": false,
+    "standards": [
+      "CASEL Relationship Skills",
+      "CCSS Math 6.SP",
+      "CCSS ELA L.6-8.5",
+      "ISTE 1.5"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
   }
 ];
 
@@ -4471,9 +4398,9 @@ export const appsBySlug: Record<string, AppData> = Object.fromEntries(
 );
 
 export const verticalCounts = {
-  "stem": 43,
+  "stem": 40,
   "steam": 19,
-  "academics": 22,
-  "dir-fedc": 17,
-  "special-interest": 39
+  "academics": 24,
+  "dir-fedc": 16,
+  "special-interest": 37
 };
