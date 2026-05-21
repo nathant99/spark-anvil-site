@@ -6,9 +6,64 @@ import { apps, verticalCounts } from '~/data/apps.generated';
 
 const implementing = apps.filter(a => a.implementing).length;
 
-// Build a compact, lowercased haystack per card for client-side substring search.
-// Includes name, tagline, mentor, standards, vertical name, and mascotPath stem.
 const verticalNameById = Object.fromEntries(verticals.map(v => [v.id, v.name]));
+
+// Age band derivation — look for "ages X-Y" pattern in tagline/longTagline;
+// default to 9-14 (the tween portfolio anchor). Three exposed buckets:
+//   younger  (5-8): max age <= 8
+//   tween    (9-14): min age >= 9
+//   spanning: bridges both
+type AgeBand = 'younger' | 'tween' | 'spanning';
+const ageBandFor = (app: typeof apps[number]): AgeBand => {
+  const text = `${app.tagline ?? ''} ${(app as any).longTagline ?? ''}`;
+  const m = text.match(/[Aa]ges?\s+(\d{1,2})[–\-](\d{1,2})/);
+  if (!m) return 'tween';
+  const lo = parseInt(m[1], 10);
+  const hi = parseInt(m[2], 10);
+  if (hi <= 8) return 'younger';
+  if (lo >= 9) return 'tween';
+  return 'spanning';
+};
+const ageLabel: Record<AgeBand, string> = {
+  younger: 'Ages 5–8',
+  tween: 'Ages 9–14',
+  spanning: 'Ages 5–14',
+};
+
+// Standards bucketing — top 8 buckets covering the long tail.
+// Strip the variant suffix so "ISTE 1.5", "ISTE 1.7" both map to "ISTE".
+const STANDARD_BUCKETS: Array<{ id: string; label: string; matches: (s: string) => boolean }> = [
+  { id: 'iste', label: 'ISTE', matches: (s) => s.startsWith('ISTE') },
+  { id: 'ngss', label: 'NGSS', matches: (s) => s.startsWith('NGSS') },
+  { id: 'ccss-math', label: 'CCSS Math', matches: (s) => s.startsWith('CCSS Math') },
+  { id: 'ccss-ela', label: 'CCSS ELA', matches: (s) => s.startsWith('CCSS ELA') || s.startsWith('CCSS RL') || s.startsWith('CCSS W') },
+  { id: 'ncas', label: 'NCAS', matches: (s) => s.startsWith('NCAS') },
+  { id: 'c3', label: 'C3 Social Studies', matches: (s) => s.startsWith('C3') },
+  { id: 'casel', label: 'CASEL (SEL)', matches: (s) => s.startsWith('CASEL') },
+  { id: 'dir-fedc', label: 'DIR/FEDC', matches: (s) => s.startsWith('DIR/FEDC') || s.startsWith('SAMHSA') },
+];
+const standardsBucketsFor = (app: typeof apps[number]): string[] => {
+  const seen = new Set<string>();
+  for (const s of app.standards ?? []) {
+    for (const b of STANDARD_BUCKETS) {
+      if (b.matches(s)) seen.add(b.id);
+    }
+  }
+  return [...seen];
+};
+
+// Pre-compute per-app counts for chip labels
+const ageCounts: Record<AgeBand, number> = { younger: 0, tween: 0, spanning: 0 };
+const standardsCounts: Record<string, number> = {};
+const appMeta = apps.map(app => {
+  const ageBand = ageBandFor(app);
+  const buckets = standardsBucketsFor(app);
+  ageCounts[ageBand] += 1;
+  for (const b of buckets) standardsCounts[b] = (standardsCounts[b] ?? 0) + 1;
+  return { app, ageBand, buckets };
+});
+
+// Build a compact, lowercased haystack per card for client-side substring search.
 const searchHaystack = (app: typeof apps[number]): string => {
   const parts: string[] = [
     app.name,
@@ -61,7 +116,8 @@ const searchHaystack = (app: typeof apps[number]): string => {
     <p id="app-search-status" class="text-sm text-anvil/60 mt-2 ml-2" aria-live="polite"></p>
   </section>
 
-  <section class="max-w-6xl mx-auto px-6 pb-12">
+  <section class="max-w-6xl mx-auto px-6 pb-4">
+    <p class="text-xs uppercase tracking-wider text-anvil/50 font-bold mb-2">Vertical</p>
     <div class="flex flex-wrap gap-2">
       <button
         class="vertical-filter px-4 py-2 bg-anvil text-warm border border-anvil rounded-full text-sm font-bold"
@@ -80,14 +136,56 @@ const searchHaystack = (app: typeof apps[number]): string => {
     </div>
   </section>
 
+  <section class="max-w-6xl mx-auto px-6 pb-4">
+    <p class="text-xs uppercase tracking-wider text-anvil/50 font-bold mb-2">Age band</p>
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="age-filter px-4 py-2 bg-anvil text-warm border border-anvil rounded-full text-sm font-bold"
+        data-age="all"
+      >
+        All ages
+      </button>
+      {(['younger', 'tween', 'spanning'] as const).filter(band => ageCounts[band] > 0).map(band => (
+        <button
+          class="age-filter px-4 py-2 bg-white border border-anvil/15 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
+          data-age={band}
+        >
+          {ageLabel[band]} ({ageCounts[band]})
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-12">
+    <p class="text-xs uppercase tracking-wider text-anvil/50 font-bold mb-2">Curriculum standard</p>
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="standard-filter px-4 py-2 bg-anvil text-warm border border-anvil rounded-full text-sm font-bold"
+        data-standard="all"
+      >
+        Any standard
+      </button>
+      {STANDARD_BUCKETS.filter(b => (standardsCounts[b.id] ?? 0) > 0).map(b => (
+        <button
+          class="standard-filter px-4 py-2 bg-white border border-anvil/15 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
+          data-standard={b.id}
+        >
+          {b.label} ({standardsCounts[b.id]})
+        </button>
+      ))}
+    </div>
+  </section>
+
   <section class="max-w-6xl mx-auto px-6 pb-20">
     <div id="app-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {apps.map(app => (
+      {appMeta.map(({ app, ageBand, buckets }) => (
         <div
           class="app-card-wrap"
           data-vertical={app.vertical}
           data-implementing={app.implementing ? 'true' : 'false'}
           data-haystack={searchHaystack(app)}
+          data-age={ageBand}
+          data-standards={buckets.join(',')}
         >
           <AppCard {...app} />
         </div>
@@ -101,7 +199,9 @@ const searchHaystack = (app: typeof apps[number]): string => {
 </BaseLayout>
 
 <script>
-  const buttons = document.querySelectorAll<HTMLButtonElement>('.vertical-filter');
+  const verticalButtons = document.querySelectorAll<HTMLButtonElement>('.vertical-filter');
+  const ageButtons = document.querySelectorAll<HTMLButtonElement>('.age-filter');
+  const standardButtons = document.querySelectorAll<HTMLButtonElement>('.standard-filter');
   const cards = document.querySelectorAll<HTMLDivElement>('.app-card-wrap');
   const searchInput = document.getElementById('app-search') as HTMLInputElement | null;
   const searchClear = document.getElementById('app-search-clear') as HTMLButtonElement | null;
@@ -112,14 +212,30 @@ const searchHaystack = (app: typeof apps[number]): string => {
 
   const params = new URLSearchParams(window.location.search);
   let currentVertical = params.get('vertical') ?? 'all';
+  let currentAge = params.get('age') ?? 'all';
+  let currentStandard = params.get('standard') ?? 'all';
   let currentQuery = (params.get('q') ?? '').toLowerCase();
   if (searchInput && currentQuery) searchInput.value = currentQuery;
 
   applyFilter();
 
-  buttons.forEach(btn => {
+  verticalButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       currentVertical = btn.dataset.vertical ?? 'all';
+      syncUrl();
+      applyFilter();
+    });
+  });
+  ageButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentAge = btn.dataset.age ?? 'all';
+      syncUrl();
+      applyFilter();
+    });
+  });
+  standardButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentStandard = btn.dataset.standard ?? 'all';
       syncUrl();
       applyFilter();
     });
@@ -142,6 +258,8 @@ const searchHaystack = (app: typeof apps[number]): string => {
 
   emptyClear?.addEventListener('click', () => {
     currentVertical = 'all';
+    currentAge = 'all';
+    currentStandard = 'all';
     currentQuery = '';
     if (searchInput) searchInput.value = '';
     syncUrl();
@@ -152,15 +270,18 @@ const searchHaystack = (app: typeof apps[number]): string => {
     const u = new URL(window.location.href);
     if (currentVertical === 'all') u.searchParams.delete('vertical');
     else u.searchParams.set('vertical', currentVertical);
+    if (currentAge === 'all') u.searchParams.delete('age');
+    else u.searchParams.set('age', currentAge);
+    if (currentStandard === 'all') u.searchParams.delete('standard');
+    else u.searchParams.set('standard', currentStandard);
     if (currentQuery) u.searchParams.set('q', currentQuery);
     else u.searchParams.delete('q');
     history.replaceState({}, '', u);
   }
 
-  function applyFilter() {
-    // Update button active state
-    buttons.forEach(b => {
-      const active = b.dataset.vertical === currentVertical;
+  function setActive(group: NodeListOf<HTMLButtonElement>, dataAttr: string, current: string) {
+    group.forEach(b => {
+      const active = b.dataset[dataAttr] === current;
       b.classList.toggle('bg-anvil', active);
       b.classList.toggle('text-warm', active);
       b.classList.toggle('border-anvil', active);
@@ -168,33 +289,34 @@ const searchHaystack = (app: typeof apps[number]): string => {
       b.classList.toggle('bg-white', !active);
       b.classList.toggle('border-anvil/15', !active);
     });
+  }
 
-    // Show/hide cards
+  function applyFilter() {
+    setActive(verticalButtons, 'vertical', currentVertical);
+    setActive(ageButtons, 'age', currentAge);
+    setActive(standardButtons, 'standard', currentStandard);
+
     let visible = 0;
     cards.forEach(card => {
       const verticalMatch = currentVertical === 'all' || card.dataset.vertical === currentVertical;
+      const ageMatch = currentAge === 'all' || card.dataset.age === currentAge;
+      const cardStandards = (card.dataset.standards ?? '').split(',').filter(Boolean);
+      const standardMatch = currentStandard === 'all' || cardStandards.includes(currentStandard);
       const haystack = card.dataset.haystack ?? '';
       const queryMatch = !currentQuery || haystack.includes(currentQuery);
-      const matches = verticalMatch && queryMatch;
+      const matches = verticalMatch && ageMatch && standardMatch && queryMatch;
       card.style.display = matches ? '' : 'none';
       if (matches) visible += 1;
     });
 
-    // Clear button visibility
     searchClear?.classList.toggle('hidden', !currentQuery);
-
-    // Empty-state + grid visibility
     const hasResults = visible > 0;
     emptyState?.classList.toggle('hidden', hasResults);
     appGrid?.classList.toggle('hidden', !hasResults);
 
-    // Status line
     if (searchStatus) {
-      if (currentQuery || currentVertical !== 'all') {
-        searchStatus.textContent = `${visible} app${visible === 1 ? '' : 's'} match`;
-      } else {
-        searchStatus.textContent = '';
-      }
+      const filtersActive = currentQuery || currentVertical !== 'all' || currentAge !== 'all' || currentStandard !== 'all';
+      searchStatus.textContent = filtersActive ? `${visible} app${visible === 1 ? '' : 's'} match` : '';
     }
   }
 </script>
