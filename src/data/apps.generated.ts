@@ -1445,7 +1445,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/forgearena/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/forgearena/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
@@ -3419,7 +3419,7 @@ export const apps: AppData[] = [
     "vertical": "special-interest",
     "heroColor": "#FFA726",
     "iconPath": "/apps/sleuthlab/icon-sm.webp",
-    "mascotPath": null,
+    "mascotPath": "/apps/sleuthlab/mascot.webp",
     "implementing": false,
     "standards": [
       "ISTE",
