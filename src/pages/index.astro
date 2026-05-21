@@ -20,11 +20,11 @@ const mascotApps = apps.filter(a => a.mascotPath).slice(0, 12);
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="text-center md:text-left">
         <h1 class="font-brand font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-anvil mb-6">
-          Educational iOS apps,<br /><span class="text-forge">forged</span> for curiosity.
+          <span class="text-forge">Free forever.</span><br />Educational iOS apps,<br />forged for curiosity.
         </h1>
         <p class="text-lg md:text-xl text-anvil/70 max-w-xl mb-8 leading-relaxed mx-auto md:mx-0">
-          Spark &amp; Anvil makes thoughtfully-crafted iOS apps for kids ages {site.ages}.
-          No ads, no in-app purchases, no tracking. Built with Swift 6 and SwiftUI, running on-device AI.
+          Spark &amp; Anvil's {apps.length} apps for kids ages {site.ages} are <strong>all free, forever</strong>.
+          No ads. No in-app purchases. No tracking. On-device AI mentors that never send your kid's data anywhere.
         </p>
 
         <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-8">
@@ -36,7 +36,12 @@ const mascotApps = apps.filter(a => a.mascotPath).slice(0, 12);
         <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
           <a href="/apps" class="btn-primary">Browse {apps.length} apps</a>
           <a href="/for-parents" class="btn-secondary">For parents</a>
+          <a href="/for-educators" class="btn-secondary">For teachers</a>
         </div>
+        <p class="mt-6 text-sm text-anvil/60 italic max-w-xl">
+          Coming 2027 — teacher-led live classes inside the apps your kid already loves.
+          <a href="/for-educators" class="text-forge-text underline hover:no-underline">Teachers, join the early pilot →</a>
+        </p>
       </div>
 
       <!-- Visual side: 6 mascots arranged in an organic cluster -->
