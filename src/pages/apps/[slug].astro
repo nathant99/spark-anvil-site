@@ -40,9 +40,9 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
         <p class="text-xl text-white/90 leading-relaxed">{app.tagline}</p>
       </div>
       <div class="flex items-center justify-center">
-        {app.iconPath ? (
+        {(app.iconHeroPath ?? app.iconPath) ? (
           <img
-            src={app.iconPath}
+            src={app.iconHeroPath ?? app.iconPath ?? ''}
             alt={`${app.name} app icon`}
             class="w-48 h-48 md:w-64 md:h-64 rounded-3xl shadow-2xl"
           />
@@ -97,7 +97,7 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
   <section class="max-w-4xl mx-auto px-6 py-12">
     <div class="flex flex-wrap items-center gap-3">
       {app.wave && (
-        <span class="px-3 py-1 bg-forge/10 text-forge text-xs font-bold rounded-full uppercase tracking-wider">
+        <span class="px-3 py-1 bg-forge/10 text-forge-text text-xs font-bold rounded-full uppercase tracking-wider">
           Wave {app.wave} implementing
         </span>
       )}
@@ -175,7 +175,7 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
   <!-- Built with ForgeKit -->
   <section class="max-w-4xl mx-auto px-6 py-16">
     <div class="flex items-center gap-4 mb-4">
-      <span class="px-3 py-1 bg-forge/10 text-forge text-xs font-bold rounded-full uppercase tracking-wider">
+      <span class="px-3 py-1 bg-forge/10 text-forge-text text-xs font-bold rounded-full uppercase tracking-wider">
         Built with ForgeKit
       </span>
     </div>

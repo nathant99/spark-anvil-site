@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Geist Variable — brand typeface. Self-hosted, OFL license. */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/Geist-Variable.woff2') format('woff2-variations');
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

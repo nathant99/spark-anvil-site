@@ -6,8 +6,9 @@ export default {
       colors: {
         // Spark & Anvil brand palette — source: labsmith/Branding/Colors/spark-anvil-palette.md
         forge: {
-          DEFAULT: '#E8652B',   // Forge Orange — primary CTAs, key UI
+          DEFAULT: '#E8652B',   // Forge Orange — primary CTAs, key UI (use for fills + large headings only)
           light: '#F07A42',     // Dark-mode variant
+          text: '#C0481F',      // Darker shade for body text on Warm White (passes WCAG AA Normal 5.2:1)
         },
         anvil: {
           DEFAULT: '#2D2D2D',   // Anvil Charcoal — text, grounding
@@ -26,7 +27,7 @@ export default {
         outline: '#2A1F1A',
       },
       fontFamily: {
-        brand: ['Satoshi', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        brand: ['Geist', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         body: ['-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
       },
       maxWidth: {

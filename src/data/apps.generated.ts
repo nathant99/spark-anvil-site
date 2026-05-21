@@ -8,6 +8,7 @@ export interface AppData {
   vertical: 'stem' | 'steam' | 'academics' | 'dir-fedc' | 'special-interest';
   heroColor: string;
   iconPath: string | null;
+  iconHeroPath: string | null;
   mascotPath: string | null;
   implementing: boolean;
   standards: string[];
@@ -22,7 +23,7 @@ export const apps: AppData[] = [
     "tagline": "Build physical fitness, motor skills, and dance proficiency through camera-based movement tracking, choreography challenges, and sport skill progressions \u2014 aligning to both SHAPE America PE standards ",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/activeforge/icon.png",
+    "iconPath": "/apps/activeforge/icon-sm.webp",
     "mascotPath": "/apps/activeforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -30,7 +31,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/activeforge/icon.webp"
   },
   {
     "slug": "adventurehub",
@@ -54,7 +56,7 @@ export const apps: AppData[] = [
     "tagline": "Learn how AI really works by building your own classifiers, training models, detecting bias, and navigating the ethics of a world run by algorithms \u2014 with an AI mentor that teaches you about itself.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/aiforge/icon.png",
+    "iconPath": "/apps/aiforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -63,7 +65,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/aiforge/icon.webp"
   },
   {
     "slug": "beatforge",
@@ -71,7 +74,7 @@ export const apps: AppData[] = [
     "tagline": "Music creation sandbox inside an RPG world where kids ages 10-14 build compositions using visual \"sound blocks\" that snap together on a sequencer canvas",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/beatforge/icon.png",
+    "iconPath": "/apps/beatforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": true,
     "standards": [
@@ -80,7 +83,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/beatforge/icon.webp"
   },
   {
     "slug": "bioforge",
@@ -88,7 +92,7 @@ export const apps: AppData[] = [
     "tagline": "Players learn anatomy and biomechanics through the lens of sports -- understanding how muscles generate force, how joints create leverage, how the cardiovascular system fuels performance, and how trai",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/bioforge/icon.png",
+    "iconPath": "/apps/bioforge/icon-sm.webp",
     "mascotPath": "/apps/bioforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -97,7 +101,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/bioforge/icon.webp"
   },
   {
     "slug": "biomeforge",
@@ -121,7 +126,7 @@ export const apps: AppData[] = [
     "tagline": "> Full body systems content has been merged into BioForge as part of portfolio restructuring.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/bodyforge/icon.png",
+    "iconPath": "/apps/bodyforge/icon-sm.webp",
     "mascotPath": "/apps/bodyforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -129,7 +134,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/bodyforge/icon.webp"
   },
   {
     "slug": "bridgeforge",
@@ -137,7 +143,7 @@ export const apps: AppData[] = [
     "tagline": "Project-based learning simulation with multi-week real-world challenges integrating math, science, social studies, and ELA",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/bridgeforge/icon.png",
+    "iconPath": "/apps/bridgeforge/icon-sm.webp",
     "mascotPath": "/apps/bridgeforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -146,7 +152,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/bridgeforge/icon.webp"
   },
   {
     "slug": "cardforge",
@@ -154,7 +161,7 @@ export const apps: AppData[] = [
     "tagline": "Learn card games from basics to mastery, then amaze friends with step-by-step magic trick tutorials \u2014 a complete card skills academy with AI coaching for ages 9-14",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/cardforge/icon.png",
+    "iconPath": "/apps/cardforge/icon-sm.webp",
     "mascotPath": "/apps/cardforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -162,7 +169,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/cardforge/icon.webp"
   },
   {
     "slug": "chanceforge",
@@ -187,7 +195,7 @@ export const apps: AppData[] = [
     "tagline": "Mix, react, and discover \u2014 a virtual chemistry lab where every reaction is an adventure and the periodic table is your map.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/chemquest/icon.png",
+    "iconPath": "/apps/chemquest/icon-sm.webp",
     "mascotPath": "/apps/chemquest/mascot.webp",
     "implementing": true,
     "standards": [
@@ -196,7 +204,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/chemquest/icon.webp"
   },
   {
     "slug": "chronoquest",
@@ -204,7 +213,7 @@ export const apps: AppData[] = [
     "tagline": "Players use a Chrono Device to visit historical eras, witness pivotal events firsthand, interact with historical figures, and complete missions that require understanding each era's culture, technolog",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/chronoquest/icon.png",
+    "iconPath": "/apps/chronoquest/icon-sm.webp",
     "mascotPath": "/apps/chronoquest/mascot.webp",
     "implementing": true,
     "standards": [
@@ -212,7 +221,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/chronoquest/icon.webp"
   },
   {
     "slug": "cipherforge",
@@ -220,7 +230,7 @@ export const apps: AppData[] = [
     "tagline": "Run a spy agency, learning cryptography from Caesar ciphers to RSA basics through narrative-driven missions \u2014 crack codes, build ciphers, compete in code-breaking duels, and escape timed puzzle rooms.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/cipherforge/icon.png",
+    "iconPath": "/apps/cipherforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -229,7 +239,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/cipherforge/icon.webp"
   },
   {
     "slug": "circuitforge",
@@ -237,7 +248,7 @@ export const apps: AppData[] = [
     "tagline": "Build circuits on a virtual breadboard, watch electricity flow, code virtual robots, and learn the engineering behind every electronic device you use.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/circuitforge/icon.png",
+    "iconPath": "/apps/circuitforge/icon-sm.webp",
     "mascotPath": "/apps/circuitforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -246,7 +257,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/circuitforge/icon.webp"
   },
   {
     "slug": "cityforge",
@@ -254,7 +266,7 @@ export const apps: AppData[] = [
     "tagline": "Players design buildings and plan cities that must satisfy structural physics, environmental constraints, and citizen needs",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/cityforge/icon.png",
+    "iconPath": "/apps/cityforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -262,7 +274,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/cityforge/icon.webp"
   },
   {
     "slug": "civicforge",
@@ -270,7 +283,7 @@ export const apps: AppData[] = [
     "tagline": "Players are newly elected to their town's Youth Council, making real decisions about budgets, zoning, public services, and community issues",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/civicforge/icon.png",
+    "iconPath": "/apps/civicforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -279,7 +292,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/civicforge/icon.webp"
   },
   {
     "slug": "claimcraft",
@@ -287,7 +301,7 @@ export const apps: AppData[] = [
     "tagline": "Visual argument mapping game where players build claim-evidence-reasoning chains and compete in debate duels",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/claimcraft/icon.png",
+    "iconPath": "/apps/claimcraft/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -296,7 +310,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/claimcraft/icon.webp"
   },
   {
     "slug": "climatequest",
@@ -321,7 +336,7 @@ export const apps: AppData[] = [
     "tagline": "Kids ages 10-14 program a companion robot using visual blocks that gradually \"peel back\" to reveal real Swift code as mastery increases",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/coderealm/icon.png",
+    "iconPath": "/apps/coderealm/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -330,7 +345,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/coderealm/icon.webp"
   },
   {
     "slug": "cosmosforge",
@@ -372,7 +388,7 @@ export const apps: AppData[] = [
     "tagline": "Players run an animal hospital, diagnosing and treating animals using real veterinary techniques",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/creaturecare/icon.png",
+    "iconPath": "/apps/creaturecare/icon-sm.webp",
     "mascotPath": "/apps/creaturecare/mascot.webp",
     "implementing": true,
     "standards": [
@@ -380,7 +396,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/creaturecare/icon.webp"
   },
   {
     "slug": "cubesensei",
@@ -388,7 +405,7 @@ export const apps: AppData[] = [
     "tagline": "Learn the Rubik's Cube with a patient mentor and bite-sized practice.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/cubesensei/icon.png",
+    "iconPath": "/apps/cubesensei/icon-sm.webp",
     "mascotPath": "/apps/cubesensei/mascot.webp",
     "implementing": false,
     "standards": [
@@ -396,7 +413,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/cubesensei/icon.webp"
   },
   {
     "slug": "curiosityquest",
@@ -420,7 +438,7 @@ export const apps: AppData[] = [
     "tagline": "Dance as creative art: explore genres, compose choreography, analyze performances, and get camera-based movement feedback -- building artistic expression through dance composition and performance.",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/dancequest/icon.png",
+    "iconPath": "/apps/dancequest/icon-sm.webp",
     "mascotPath": "/apps/dancequest/mascot.webp",
     "implementing": true,
     "standards": [
@@ -429,7 +447,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/dancequest/icon.webp"
   },
   {
     "slug": "dataforge",
@@ -437,7 +456,7 @@ export const apps: AppData[] = [
     "tagline": "Visual, block-based data science environment where players collect, clean, analyze, and visualize real-world datasets",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/dataforge/icon.png",
+    "iconPath": "/apps/dataforge/icon-sm.webp",
     "mascotPath": "/apps/dataforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -446,7 +465,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/dataforge/icon.webp"
   },
   {
     "slug": "debateforge",
@@ -454,7 +474,7 @@ export const apps: AppData[] = [
     "tagline": "Master the art of persuasion \u2014 research topics, construct arguments, deliver speeches, and compete in structured debates with AI opponents and real classmates.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/debateforge/icon.png",
+    "iconPath": "/apps/debateforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -463,7 +483,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/debateforge/icon.webp"
   },
   {
     "slug": "depthquest",
@@ -471,7 +492,7 @@ export const apps: AppData[] = [
     "tagline": "Players pilot a research submarine through ocean zones (sunlight, twilight, midnight, abyssal, hadal), discovering marine species, studying coral reef health, mapping the ocean floor, and answering ma",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/depthquest/icon.png",
+    "iconPath": "/apps/depthquest/icon-sm.webp",
     "mascotPath": "/apps/depthquest/mascot.webp",
     "implementing": false,
     "standards": [
@@ -480,7 +501,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/depthquest/icon.webp"
   },
   {
     "slug": "digquest",
@@ -488,7 +510,7 @@ export const apps: AppData[] = [
     "tagline": "Excavate ancient sites layer by layer, analyze artifacts with real archaeological methods, and reconstruct the stories of lost civilizations \u2014 from Mesopotamia to the Maya.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/digquest/icon.png",
+    "iconPath": "/apps/digquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -496,7 +518,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/digquest/icon.webp"
   },
   {
     "slug": "discretequest",
@@ -504,7 +527,7 @@ export const apps: AppData[] = [
     "tagline": "Exploration game teaching graph theory, combinatorics, and number theory through real-world mysteries",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/discretequest/icon.png",
+    "iconPath": "/apps/discretequest/icon-sm.webp",
     "mascotPath": "/apps/discretequest/mascot.webp",
     "implementing": false,
     "standards": [
@@ -513,7 +536,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/discretequest/icon.webp"
   },
   {
     "slug": "earthforge",
@@ -554,7 +578,7 @@ export const apps: AppData[] = [
     "tagline": "Interactive climate and earth systems simulator where players manage interconnected ecosystems across geological time scales",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/ecosphere/icon.png",
+    "iconPath": "/apps/ecosphere/icon-sm.webp",
     "mascotPath": "/apps/ecosphere/mascot.webp",
     "implementing": false,
     "standards": [
@@ -563,7 +587,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/ecosphere/icon.webp"
   },
   {
     "slug": "effectsforge",
@@ -571,7 +596,7 @@ export const apps: AppData[] = [
     "tagline": "Learn the science and art behind movie special effects \u2014 prosthetics chemistry, Foley sound physics, forced perspective optics, stop-motion animation, and lighting design \u2014 then produce your own short",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/effectsforge/icon.png",
+    "iconPath": "/apps/effectsforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -580,7 +605,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/effectsforge/icon.webp"
   },
   {
     "slug": "engineerforge",
@@ -605,7 +631,7 @@ export const apps: AppData[] = [
     "tagline": "Gamified cooperative creative projects that build social skills incrementally through a progressive social ladder: Solo, then Pair, then Group, then Perform",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/ensemblequest/icon.png",
+    "iconPath": "/apps/ensemblequest/icon-sm.webp",
     "mascotPath": "/apps/ensemblequest/mascot.webp",
     "implementing": false,
     "standards": [
@@ -614,7 +640,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/ensemblequest/icon.webp"
   },
   {
     "slug": "equationquest",
@@ -622,7 +649,7 @@ export const apps: AppData[] = [
     "tagline": "Visual balance-scale approach to the entire CCSS EE domain",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/equationquest/icon.png",
+    "iconPath": "/apps/equationquest/icon-sm.webp",
     "mascotPath": "/apps/equationquest/mascot.webp",
     "implementing": true,
     "standards": [
@@ -631,7 +658,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/equationquest/icon.webp"
   },
   {
     "slug": "escapeforge",
@@ -639,7 +667,7 @@ export const apps: AppData[] = [
     "tagline": "Single-player escape room iOS game for ages 9\u201314",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/escapeforge/icon.png",
+    "iconPath": "/apps/escapeforge/icon-sm.webp",
     "mascotPath": "/apps/escapeforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -647,7 +675,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/escapeforge/icon.webp"
   },
   {
     "slug": "ethosforge",
@@ -655,7 +684,7 @@ export const apps: AppData[] = [
     "tagline": "Navigate ethical dilemmas across science, technology, history, and daily life with an AI Socratic tutor",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/ethosforge/icon.png",
+    "iconPath": "/apps/ethosforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -664,7 +693,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/ethosforge/icon.webp"
   },
   {
     "slug": "etymonrealm",
@@ -689,7 +719,7 @@ export const apps: AppData[] = [
     "tagline": "Run a farm from soil to shelf \u2014 manage crops, raise animals, process food, market products, and balance sustainability with profitability across four seasons of scientific farming and agribusiness",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/farmquest/icon.png",
+    "iconPath": "/apps/farmquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -697,7 +727,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/farmquest/icon.webp"
   },
   {
     "slug": "figureforge",
@@ -705,7 +736,7 @@ export const apps: AppData[] = [
     "tagline": "Detective-style word puzzle game where students identify metaphors, similes, idioms, analogies, and personification through contextual investigation and creative writing challenges.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/figureforge/icon.png",
+    "iconPath": "/apps/figureforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -714,7 +745,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/figureforge/icon.webp"
   },
   {
     "slug": "fitquest",
@@ -722,7 +754,7 @@ export const apps: AppData[] = [
     "tagline": "A fitness RPG adventure where physical exercise (tracked via HealthKit) AND knowledge quiz performance jointly determine your character's progression",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/fitquest/icon.png",
+    "iconPath": "/apps/fitquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -730,7 +762,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/fitquest/icon.webp"
   },
   {
     "slug": "flightforge",
@@ -738,7 +771,7 @@ export const apps: AppData[] = [
     "tagline": "Design, build, and fly aircraft in a physics sandbox \u2014 master aerodynamics from paper planes to jet engines through the four forces of flight, wind tunnel experiments, and aviation engineering challen",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/flightforge/icon.png",
+    "iconPath": "/apps/flightforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -747,7 +780,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/flightforge/icon.webp"
   },
   {
     "slug": "focusforge",
@@ -755,7 +789,7 @@ export const apps: AppData[] = [
     "tagline": "A gamified executive function training adventure for students ages 9-14, with specific design for ADHD learners",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/focusforge/icon.png",
+    "iconPath": "/apps/focusforge/icon-sm.webp",
     "mascotPath": "/apps/focusforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -763,7 +797,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/focusforge/icon.webp"
   },
   {
     "slug": "forgearena",
@@ -771,7 +806,7 @@ export const apps: AppData[] = [
     "tagline": "A competitive multiplayer educational game where up to 30 students on any device battle in real-time quiz arenas, team challenges, and subject-specific tournaments \u2014 bridging iOS, Android, and web pla",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/forgearena/icon.png",
+    "iconPath": "/apps/forgearena/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -779,7 +814,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/forgearena/icon.webp"
   },
   {
     "slug": "forgeclassroom",
@@ -787,7 +823,7 @@ export const apps: AppData[] = [
     "tagline": "A teacher-facing classroom management tool that works on any device \u2014 assign Forge app lessons, monitor student progress in real-time, generate standards-aligned reports, and run live quiz competition",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/forgeclassroom/icon.png",
+    "iconPath": "/apps/forgeclassroom/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -795,7 +831,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/forgeclassroom/icon.webp"
   },
   {
     "slug": "forgeportal",
@@ -803,7 +840,7 @@ export const apps: AppData[] = [
     "tagline": "A cross-platform launcher and discovery hub for the entire Forge educational app portfolio \u2014 browse, download, and play any Forge app from one place on iOS, Android, Windows, or web, with unified prog",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/forgeportal/icon.png",
+    "iconPath": "/apps/forgeportal/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -811,7 +848,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/forgeportal/icon.webp"
   },
   {
     "slug": "forgeworks",
@@ -819,7 +857,7 @@ export const apps: AppData[] = [
     "tagline": "> Engineering design features have been split across CircuitForge (electrical), MachineForge (mechanical), and MakerForge (maker/fabrication) as part of portfolio restructuring.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/forgeworks/icon.png",
+    "iconPath": "/apps/forgeworks/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -827,7 +865,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/forgeworks/icon.webp"
   },
   {
     "slug": "fossilforge",
@@ -835,7 +874,7 @@ export const apps: AppData[] = [
     "tagline": "Players run paleontology expeditions -- excavating fossil sites grid-by-grid, preparing specimens in the lab, classifying them taxonomically, and building museum exhibits",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/fossilforge/icon.png",
+    "iconPath": "/apps/fossilforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": true,
     "standards": [
@@ -843,7 +882,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/fossilforge/icon.webp"
   },
   {
     "slug": "fractionforge",
@@ -851,7 +891,7 @@ export const apps: AppData[] = [
     "tagline": "Master fractions, decimals, and place value through virtual manipulatives, number line challenges, and real-world problem contexts \u2014 following the research-backed Concrete-Representational-Abstract in",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/fractionforge/icon.png",
+    "iconPath": "/apps/fractionforge/icon-sm.webp",
     "mascotPath": "/apps/fractionforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -860,7 +900,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/fractionforge/icon.webp"
   },
   {
     "slug": "framequest",
@@ -868,7 +909,7 @@ export const apps: AppData[] = [
     "tagline": "Frame-by-frame animation creation that turns autistic preferences for precision and sequencing into creative storytelling",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/framequest/icon.png",
+    "iconPath": "/apps/framequest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -877,7 +918,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/framequest/icon.webp"
   },
   {
     "slug": "functionforge",
@@ -885,7 +927,7 @@ export const apps: AppData[] = [
     "tagline": "Interactive function laboratory \u2014 input-output machines, function tables, linear/quadratic/exponential functions, and real-world data fitting",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/functionforge/icon.png",
+    "iconPath": "/apps/functionforge/icon-sm.webp",
     "mascotPath": "/apps/functionforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -894,7 +936,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/functionforge/icon.webp"
   },
   {
     "slug": "geneforge",
@@ -902,7 +945,7 @@ export const apps: AppData[] = [
     "tagline": "Extract DNA, map inheritance with Punnett squares, simulate CRISPR gene editing, and debate bioethics \u2014 explore genetics and biotechnology from Mendel's peas to modern gene therapy through hands-on vi",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/geneforge/icon.png",
+    "iconPath": "/apps/geneforge/icon-sm.webp",
     "mascotPath": "/apps/geneforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -911,7 +954,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/geneforge/icon.webp"
   },
   {
     "slug": "geometryforge",
@@ -919,7 +963,7 @@ export const apps: AppData[] = [
     "tagline": "Interactive geometry exploration app for ages 9-14 covering the complete CCSS Geometry curriculum \u2014 transformations, coordinate geometry, similarity, proof, and 3D solids \u2014 using hands-on RealityKit 3",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/geometryforge/icon.png",
+    "iconPath": "/apps/geometryforge/icon-sm.webp",
     "mascotPath": "/apps/geometryforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -928,7 +972,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/geometryforge/icon.webp"
   },
   {
     "slug": "grammarforge",
@@ -936,7 +981,7 @@ export const apps: AppData[] = [
     "tagline": "Master grammar, sentence structure, and language conventions through interactive sentence diagramming puzzles, error detective investigations, and style editing challenges \u2014 turning grammar rules into",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/grammarforge/icon.png",
+    "iconPath": "/apps/grammarforge/icon-sm.webp",
     "mascotPath": "/apps/grammarforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -945,7 +990,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/grammarforge/icon.webp"
   },
   {
     "slug": "growforge",
@@ -953,7 +999,7 @@ export const apps: AppData[] = [
     "tagline": "Grow a virtual garden powered by real weather data, design plant experiments, and discover the science of photosynthesis, genetics, and ecosystems \u2014 bridging the digital and natural worlds.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/growforge/icon.png",
+    "iconPath": "/apps/growforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -961,7 +1007,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/growforge/icon.webp"
   },
   {
     "slug": "harmonyforge",
@@ -969,7 +1016,7 @@ export const apps: AppData[] = [
     "tagline": "A music creation app that leverages autistic pattern-thinking strengths by translating visual patterns into music",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/harmonyforge/icon.png",
+    "iconPath": "/apps/harmonyforge/icon-sm.webp",
     "mascotPath": "/apps/harmonyforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -978,7 +1025,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/harmonyforge/icon.webp"
   },
   {
     "slug": "harvestforge",
@@ -986,7 +1034,7 @@ export const apps: AppData[] = [
     "tagline": "Run a farm from seed to shelf \u2014 manage soil microbiomes, rotate crops, navigate drought and pest challenges, trace food through the supply chain, and investigate food justice issues that determine who",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/harvestforge/icon.png",
+    "iconPath": "/apps/harvestforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -994,7 +1042,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/harvestforge/icon.webp"
   },
   {
     "slug": "healthforge",
@@ -1018,7 +1067,7 @@ export const apps: AppData[] = [
     "tagline": "Race heat through solids, liquids, and gases \u2014 watch convection currents spiral, design insulation that defeats a blowtorch, and discover why ice cream melts faster on a hot sidewalk than in the freez",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/heatforge/icon.png",
+    "iconPath": "/apps/heatforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1027,7 +1076,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/heatforge/icon.webp"
   },
   {
     "slug": "historyforge",
@@ -1069,7 +1119,7 @@ export const apps: AppData[] = [
     "tagline": "Play improv comedy games with friends and AI scene partners \u2014 say \"yes, and...\" to adventure",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/improvquest/icon.png",
+    "iconPath": "/apps/improvquest/icon-sm.webp",
     "mascotPath": "/apps/improvquest/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1078,7 +1128,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/improvquest/icon.webp"
   },
   {
     "slug": "inclusionforge",
@@ -1086,7 +1137,7 @@ export const apps: AppData[] = [
     "tagline": "Experience daily life through different abilities, explore the history of disability rights, then design solutions that work for everyone \u2014 using Universal Design principles to build a more accessible",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/inclusionforge/icon.png",
+    "iconPath": "/apps/inclusionforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1094,7 +1145,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/inclusionforge/icon.webp"
   },
   {
     "slug": "inkquest",
@@ -1102,7 +1154,7 @@ export const apps: AppData[] = [
     "tagline": "Junior investigative journalists at a school newspaper collect data, analyze patterns, identify bias, and write articles",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/inkquest/icon.png",
+    "iconPath": "/apps/inkquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1111,7 +1163,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/inkquest/icon.webp"
   },
   {
     "slug": "jestforge",
@@ -1119,7 +1172,7 @@ export const apps: AppData[] = [
     "tagline": "Learn to write jokes, riddles, and puns \u2014 then battle friends to see who's funniest",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/jestforge/icon.png",
+    "iconPath": "/apps/jestforge/icon-sm.webp",
     "mascotPath": "/apps/jestforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1128,7 +1181,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/jestforge/icon.webp"
   },
   {
     "slug": "labsmith",
@@ -1136,7 +1190,7 @@ export const apps: AppData[] = [
     "tagline": "Virtual science lab where kids run real physics simulations \u2014 mix chemicals, build circuits, test buoyancy \u2014 earning mastery ranks through hands-on experimentation, not quizzes",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/labsmith/icon.png",
+    "iconPath": "/apps/labsmith/icon-sm.webp",
     "mascotPath": "/apps/labsmith/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1144,7 +1198,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/labsmith/icon.webp"
   },
   {
     "slug": "languageforge",
@@ -1169,7 +1224,7 @@ export const apps: AppData[] = [
     "tagline": "Players learn game design by designing, building, playtesting, and sharing their own playable games",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/levelforge/icon.png",
+    "iconPath": "/apps/levelforge/icon-sm.webp",
     "mascotPath": "/apps/levelforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1177,7 +1232,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/levelforge/icon.webp"
   },
   {
     "slug": "lifeforge",
@@ -1201,7 +1257,7 @@ export const apps: AppData[] = [
     "tagline": "Navigate real-life consumer decisions \u2014 compare phone plans, read lease agreements, plan meals on a budget, spot consumer scams, and manage a household \u2014 through simulation of the everyday adult scena",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/lifequest/icon.png",
+    "iconPath": "/apps/lifequest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1209,7 +1265,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/lifequest/icon.webp"
   },
   {
     "slug": "linguaquest",
@@ -1217,7 +1274,7 @@ export const apps: AppData[] = [
     "tagline": "Explore a vibrant adventure world where you MUST communicate in your target language to solve puzzles, make friends, order food, and save the kingdom \u2014 an RPG that makes language learning irresistible",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/linguaquest/icon.png",
+    "iconPath": "/apps/linguaquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1226,7 +1283,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/linguaquest/icon.webp"
   },
   {
     "slug": "logicquest",
@@ -1251,7 +1309,7 @@ export const apps: AppData[] = [
     "tagline": "Kids ages 10-14 write branching stories inside an RPG world",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/lorequest/icon.png",
+    "iconPath": "/apps/lorequest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1260,7 +1318,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/lorequest/icon.webp"
   },
   {
     "slug": "machineforge",
@@ -1268,7 +1327,7 @@ export const apps: AppData[] = [
     "tagline": "Build extreme machines from simple components \u2014 levers, pulleys, gears, and wheels \u2014 then test them in a physics sandbox, design vehicles, launch catapults, and demolish structures by exploiting mecha",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/machineforge/icon.png",
+    "iconPath": "/apps/machineforge/icon-sm.webp",
     "mascotPath": "/apps/machineforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1277,7 +1336,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/machineforge/icon.webp"
   },
   {
     "slug": "makerforge",
@@ -1285,7 +1345,7 @@ export const apps: AppData[] = [
     "tagline": "Design, prototype, and virtually fabricate objects using 3D printing simulation, Arduino circuit building, and materials science \u2014 mastering the full engineering design process through constrained cha",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/makerforge/icon.png",
+    "iconPath": "/apps/makerforge/icon-sm.webp",
     "mascotPath": "/apps/makerforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1294,7 +1354,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/makerforge/icon.webp"
   },
   {
     "slug": "mangaforge",
@@ -1335,7 +1396,7 @@ export const apps: AppData[] = [
     "tagline": "Virtual economy where students explore supply and demand, set prices, trade goods, and run market experiments -- building economic literacy through hands-on simulation and strategic decision-making.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/marketquest/icon.png",
+    "iconPath": "/apps/marketquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1344,7 +1405,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/marketquest/icon.webp"
   },
   {
     "slug": "mathlore",
@@ -1352,7 +1414,7 @@ export const apps: AppData[] = [
     "tagline": "Ethnomathematics adventure traveling through world civilizations \u2014 Babylonian base-60, Mayan vigesimal, Islamic geometric art, Indian zero/algebra, African fractal geometry, Inca quipu, Japanese origa",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/mathlore/icon.png",
+    "iconPath": "/apps/mathlore/icon-sm.webp",
     "mascotPath": "/apps/mathlore/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1361,7 +1423,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/mathlore/icon.webp"
   },
   {
     "slug": "mathquest",
@@ -1386,7 +1449,7 @@ export const apps: AppData[] = [
     "tagline": "Hands-on measurement adventures: unit conversions, area and perimeter calculations, data representation, and real-world measurement applications -- building mathematical fluency through interactive ch",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/measurequest/icon.png",
+    "iconPath": "/apps/measurequest/icon-sm.webp",
     "mascotPath": "/apps/measurequest/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1395,7 +1458,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/measurequest/icon.webp"
   },
   {
     "slug": "mediaforge",
@@ -1420,7 +1484,7 @@ export const apps: AppData[] = [
     "tagline": "Run a medical clinic, diagnose patients, perform first aid, and investigate disease outbreaks \u2014 learn anatomy, clinical reasoning, triage, and public health through case-based medical detective gamepl",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/medicquest/icon.png",
+    "iconPath": "/apps/medicquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1428,7 +1492,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/medicquest/icon.webp"
   },
   {
     "slug": "mindforge",
@@ -1436,7 +1501,7 @@ export const apps: AppData[] = [
     "tagline": "Adventure RPG where players navigate social scenarios, manage stress through mini-games, and build emotional intelligence by helping NPCs resolve conflicts",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/mindforge/icon.png",
+    "iconPath": "/apps/mindforge/icon-sm.webp",
     "mascotPath": "/apps/mindforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -1444,7 +1509,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/mindforge/icon.webp"
   },
   {
     "slug": "mintforge",
@@ -1452,7 +1518,7 @@ export const apps: AppData[] = [
     "tagline": "Financial math game where financial scenarios ARE the math problems \u2014 compound interest, percentage markup, budgeting, loan amortization, stock market simulation",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/mintforge/icon.png",
+    "iconPath": "/apps/mintforge/icon-sm.webp",
     "mascotPath": "/apps/mintforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1460,7 +1526,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/mintforge/icon.webp"
   },
   {
     "slug": "mintquest",
@@ -1468,7 +1535,7 @@ export const apps: AppData[] = [
     "tagline": "> Personal finance modules have been merged into VentureQuest as part of portfolio restructuring.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/mintquest/icon.png",
+    "iconPath": "/apps/mintquest/icon-sm.webp",
     "mascotPath": "/apps/mintquest/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1476,7 +1543,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/mintquest/icon.webp"
   },
   {
     "slug": "mythforge",
@@ -1484,7 +1552,7 @@ export const apps: AppData[] = [
     "tagline": "Explore ancient civilizations through mythology-driven adventure quests \u2014 meet gods and heroes, battle mythological creatures, collect historical artifacts, and build ancient cities while learning Gre",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/mythforge/icon.png",
+    "iconPath": "/apps/mythforge/icon-sm.webp",
     "mascotPath": "/apps/mythforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -1492,7 +1560,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/mythforge/icon.webp"
   },
   {
     "slug": "neuralquest",
@@ -1500,7 +1569,7 @@ export const apps: AppData[] = [
     "tagline": "Players train image classifiers, build recommendation systems, discover how bias creeps into data, and explore AI ethics through hands-on experiments",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/neuralquest/icon.png",
+    "iconPath": "/apps/neuralquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1509,7 +1578,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/neuralquest/icon.webp"
   },
   {
     "slug": "newsforge",
@@ -1517,7 +1587,7 @@ export const apps: AppData[] = [
     "tagline": "Run a digital newsroom \u2014 investigate stories through primary sources, evaluate credibility under deadline pressure, design data visualizations, produce multimedia reports, and compete to be first with",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/newsforge/icon.png",
+    "iconPath": "/apps/newsforge/icon-sm.webp",
     "mascotPath": "/apps/newsforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -1526,7 +1596,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/newsforge/icon.webp"
   },
   {
     "slug": "nexusforge",
@@ -1534,7 +1605,7 @@ export const apps: AppData[] = [
     "tagline": "Build and manage interconnected systems where actions cascade across ecology, economy, health, and policy",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/nexusforge/icon.png",
+    "iconPath": "/apps/nexusforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1542,7 +1613,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/nexusforge/icon.webp"
   },
   {
     "slug": "numberverse",
@@ -1550,7 +1622,7 @@ export const apps: AppData[] = [
     "tagline": "Kids ages 10-14 construct and explore a living world using math",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/numberverse/icon.png",
+    "iconPath": "/apps/numberverse/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1559,7 +1631,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/numberverse/icon.webp"
   },
   {
     "slug": "originforge",
@@ -1567,7 +1640,7 @@ export const apps: AppData[] = [
     "tagline": "Explore knowledge traditions from cultures worldwide \u2014 Indigenous ecological knowledge, African mathematical systems, Asian philosophical traditions, Pacific navigation techniques",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/originforge/icon.png",
+    "iconPath": "/apps/originforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1575,7 +1648,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/originforge/icon.webp"
   },
   {
     "slug": "physicsforge",
@@ -1600,7 +1674,7 @@ export const apps: AppData[] = [
     "tagline": "Gamified visual arts studio where players master design principles through creative challenges",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/pixelforge/icon.png",
+    "iconPath": "/apps/pixelforge/icon-sm.webp",
     "mascotPath": "/apps/pixelforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -1609,7 +1683,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/pixelforge/icon.webp"
   },
   {
     "slug": "powerforge",
@@ -1617,7 +1692,7 @@ export const apps: AppData[] = [
     "tagline": "Build power plants, manage electrical grids, and engineer renewable energy solutions \u2014 master energy conversion, thermodynamics, and sustainable engineering through infrastructure simulation and physi",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/powerforge/icon.png",
+    "iconPath": "/apps/powerforge/icon-sm.webp",
     "mascotPath": "/apps/powerforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1626,7 +1701,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/powerforge/icon.webp"
   },
   {
     "slug": "prismforge",
@@ -1651,7 +1727,7 @@ export const apps: AppData[] = [
     "tagline": "Logic puzzle adventure building proof-readiness through deductive reasoning puzzles, informal proofs, and mathematical writing",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/proofquest/icon.png",
+    "iconPath": "/apps/proofquest/icon-sm.webp",
     "mascotPath": "/apps/proofquest/mascot.webp",
     "implementing": true,
     "standards": [
@@ -1660,7 +1736,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/proofquest/icon.webp"
   },
   {
     "slug": "punchlineforge",
@@ -1668,7 +1745,7 @@ export const apps: AppData[] = [
     "tagline": "> Meme studio and comic strip builder features have been merged into JestForge as part of portfolio restructuring.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/punchlineforge/icon.png",
+    "iconPath": "/apps/punchlineforge/icon-sm.webp",
     "mascotPath": "/apps/punchlineforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1677,7 +1754,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/punchlineforge/icon.webp"
   },
   {
     "slug": "questforge",
@@ -1717,7 +1795,7 @@ export const apps: AppData[] = [
     "tagline": "Master ratios, proportions, and percentages through real-world simulation contexts \u2014 recipe scaling in kitchens, blueprint ratios in construction, and map scales in cartography \u2014 with visual models an",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/ratiorealm/icon.png",
+    "iconPath": "/apps/ratiorealm/icon-sm.webp",
     "mascotPath": "/apps/ratiorealm/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1726,7 +1804,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/ratiorealm/icon.webp"
   },
   {
     "slug": "readquest",
@@ -1734,7 +1813,7 @@ export const apps: AppData[] = [
     "tagline": "Build reading comprehension mastery through interactive passage analysis, evidence-based argument construction, and AI-generated comprehension challenges \u2014 with dual fiction and nonfiction tracks",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/readquest/icon.png",
+    "iconPath": "/apps/readquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": true,
     "standards": [
@@ -1743,7 +1822,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/readquest/icon.webp"
   },
   {
     "slug": "reelforge",
@@ -1751,7 +1831,7 @@ export const apps: AppData[] = [
     "tagline": "Players learn filmmaking principles by creating short films within a virtual studio -- storyboarding scenes, choosing camera angles, directing lighting, designing sound, and editing on a timeline",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/reelforge/icon.png",
+    "iconPath": "/apps/reelforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1760,7 +1840,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/reelforge/icon.webp"
   },
   {
     "slug": "researchquest",
@@ -1768,7 +1849,7 @@ export const apps: AppData[] = [
     "tagline": "Guided research adventure where students formulate questions, evaluate sources, synthesize findings, and produce reports -- building essential information literacy skills through structured research q",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/researchquest/icon.png",
+    "iconPath": "/apps/researchquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1777,7 +1858,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/researchquest/icon.webp"
   },
   {
     "slug": "riddlerealm",
@@ -1785,7 +1867,7 @@ export const apps: AppData[] = [
     "tagline": "Solve mind-bending riddles, craft your own brain teasers, and build a puzzle kingdom",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/riddlerealm/icon.png",
+    "iconPath": "/apps/riddlerealm/icon-sm.webp",
     "mascotPath": "/apps/riddlerealm/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1794,7 +1876,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/riddlerealm/icon.webp"
   },
   {
     "slug": "roboforge",
@@ -1802,7 +1885,7 @@ export const apps: AppData[] = [
     "tagline": "Design robots from modular parts, program them in Swift-like block code, enter them in automated factory challenges, and compete in arena battles \u2014 mastering mechanical design, sensor programming, and",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/roboforge/icon.png",
+    "iconPath": "/apps/roboforge/icon-sm.webp",
     "mascotPath": "/apps/roboforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1811,7 +1894,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/roboforge/icon.webp"
   },
   {
     "slug": "safetyforge",
@@ -1819,7 +1903,7 @@ export const apps: AppData[] = [
     "tagline": "Navigate the digital world safely through interactive scenarios about privacy, cyberbullying, digital footprint, phishing detection, and responsible technology use \u2014 with a safe social media simulator",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/safetyforge/icon.png",
+    "iconPath": "/apps/safetyforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1827,7 +1911,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/safetyforge/icon.webp"
   },
   {
     "slug": "saffronlab",
@@ -1835,7 +1920,7 @@ export const apps: AppData[] = [
     "tagline": "Players travel the world to learn authentic recipes from different cultures, master cooking techniques through precision mini-games, and discover the science behind food \u2014 why bread rises, why onions ",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/saffronlab/icon.png",
+    "iconPath": "/apps/saffronlab/icon-sm.webp",
     "mascotPath": "/apps/saffronlab/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1843,7 +1928,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/saffronlab/icon.webp"
   },
   {
     "slug": "scienceforge",
@@ -1851,7 +1937,7 @@ export const apps: AppData[] = [
     "tagline": "Design real experiments, run virtual simulations, collect data, and build science fair presentations \u2014 with an AI mentor guiding every step of the scientific method.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/scienceforge/icon.png",
+    "iconPath": "/apps/scienceforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1860,7 +1946,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/scienceforge/icon.webp"
   },
   {
     "slug": "sleuthlab",
@@ -1868,7 +1955,7 @@ export const apps: AppData[] = [
     "tagline": "Players run a detective agency, taking on mystery cases that require real forensic science techniques to solve",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/sleuthlab/icon.png",
+    "iconPath": "/apps/sleuthlab/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1876,7 +1963,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/sleuthlab/icon.webp"
   },
   {
     "slug": "soundsphere",
@@ -1884,7 +1972,7 @@ export const apps: AppData[] = [
     "tagline": "A soundscape creation tool that transforms heightened auditory sensitivity into a creative strength",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/soundsphere/icon.png",
+    "iconPath": "/apps/soundsphere/icon-sm.webp",
     "mascotPath": "/apps/soundsphere/mascot.webp",
     "implementing": true,
     "standards": [
@@ -1892,7 +1980,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/soundsphere/icon.webp"
   },
   {
     "slug": "speakforge",
@@ -1900,7 +1989,7 @@ export const apps: AppData[] = [
     "tagline": "Speaking and listening skills platform for ages 10-14 covering presentations, discussions, debate, active listening, and media analysis",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/speakforge/icon.png",
+    "iconPath": "/apps/speakforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1909,7 +1998,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/speakforge/icon.webp"
   },
   {
     "slug": "spectrumcanvas",
@@ -1917,7 +2007,7 @@ export const apps: AppData[] = [
     "tagline": "A digital art studio designed for autistic visual thinkers where every art material is simulated without the sensory challenges of the physical version",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/spectrumcanvas/icon.png",
+    "iconPath": "/apps/spectrumcanvas/icon-sm.webp",
     "mascotPath": "/apps/spectrumcanvas/mascot.webp",
     "implementing": true,
     "standards": [
@@ -1926,7 +2016,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/spectrumcanvas/icon.webp"
   },
   {
     "slug": "stageforge",
@@ -1934,7 +2025,7 @@ export const apps: AppData[] = [
     "tagline": "Interactive theater arts studio where students write scripts, design sets, direct scenes, and perform -- building creative confidence through the dramatic arts",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/stageforge/icon.png",
+    "iconPath": "/apps/stageforge/icon-sm.webp",
     "mascotPath": "/apps/stageforge/mascot.webp",
     "implementing": false,
     "standards": [
@@ -1943,7 +2034,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/stageforge/icon.webp"
   },
   {
     "slug": "starforge",
@@ -1951,7 +2043,7 @@ export const apps: AppData[] = [
     "tagline": "Players pilot spacecraft through the solar system and beyond, building and upgrading their ship, landing on planets to conduct experiments, establishing colonies, and answering astronomy challenges to",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/starforge/icon.png",
+    "iconPath": "/apps/starforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1960,7 +2052,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/starforge/icon.webp"
   },
   {
     "slug": "strategyforge",
@@ -1968,7 +2061,7 @@ export const apps: AppData[] = [
     "tagline": "Master chess, Go, checkers, backgammon, mancala, and Connect 4 through AI-coached lessons, puzzle challenges, and online play \u2014 with a unified strategy thinking curriculum for ages 9-14",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/strategyforge/icon.png",
+    "iconPath": "/apps/strategyforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1976,7 +2069,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/strategyforge/icon.webp"
   },
   {
     "slug": "styleforge",
@@ -1984,7 +2078,7 @@ export const apps: AppData[] = [
     "tagline": "Players design garments from concept sketch through pattern-making, fabric selection, construction, and runway presentation",
     "vertical": "steam",
     "heroColor": "#E91E63",
-    "iconPath": "/apps/styleforge/icon.png",
+    "iconPath": "/apps/styleforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -1993,7 +2087,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/styleforge/icon.webp"
   },
   {
     "slug": "synaforge",
@@ -2001,7 +2096,7 @@ export const apps: AppData[] = [
     "tagline": "A bidirectional creative tool where drawing produces music and music produces visual art -- simultaneously",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/synaforge/icon.png",
+    "iconPath": "/apps/synaforge/icon-sm.webp",
     "mascotPath": "/apps/synaforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -2009,7 +2104,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/synaforge/icon.webp"
   },
   {
     "slug": "tableforge",
@@ -2034,7 +2130,7 @@ export const apps: AppData[] = [
     "tagline": "A multiplayer collaborative world-building and storytelling game where players co-create fantasy/sci-fi worlds in real-time using a tile-based map editor, then explore them as characters with AI-gener",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/taleforge/icon.png",
+    "iconPath": "/apps/taleforge/icon-sm.webp",
     "mascotPath": "/apps/taleforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -2043,7 +2139,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 3
+    "wave": 3,
+    "iconHeroPath": "/apps/taleforge/icon.webp"
   },
   {
     "slug": "tectonicforge",
@@ -2051,7 +2148,7 @@ export const apps: AppData[] = [
     "tagline": "Pilot a drill into Earth's mantle, watch continents drift across 250 million years, trigger earthquakes and volcanic eruptions, and become a geological hazard engineer protecting cities from the dynam",
     "vertical": "stem",
     "heroColor": "#29B6F6",
-    "iconPath": "/apps/tectonicforge/icon.png",
+    "iconPath": "/apps/tectonicforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -2060,7 +2157,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/tectonicforge/icon.webp"
   },
   {
     "slug": "terravoyage",
@@ -2068,7 +2166,7 @@ export const apps: AppData[] = [
     "tagline": "Kids ages 10-14 traverse a stylized world map, identify locations through environmental and cultural clues, solve geography puzzles, and build a \"World Journal\" of discoveries",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/terravoyage/icon.png",
+    "iconPath": "/apps/terravoyage/icon-sm.webp",
     "mascotPath": "/apps/terravoyage/mascot.webp",
     "implementing": true,
     "standards": [
@@ -2076,7 +2174,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/terravoyage/icon.webp"
   },
   {
     "slug": "terrawatch",
@@ -2084,7 +2183,7 @@ export const apps: AppData[] = [
     "tagline": "Gamified citizen science where players contribute real data to scientific databases (iNaturalist, Globe Observer) while earning XP and completing curriculum-aligned quests.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/terrawatch/icon.png",
+    "iconPath": "/apps/terrawatch/icon-sm.webp",
     "mascotPath": "/apps/terrawatch/mascot.webp",
     "implementing": false,
     "standards": [
@@ -2092,7 +2191,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/terrawatch/icon.webp"
   },
   {
     "slug": "trailforge",
@@ -2100,7 +2200,7 @@ export const apps: AppData[] = [
     "tagline": "Players are dropped into different wilderness biomes and must use real outdoor skills to survive and thrive",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/trailforge/icon.png",
+    "iconPath": "/apps/trailforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -2108,7 +2208,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/trailforge/icon.webp"
   },
   {
     "slug": "truthquest",
@@ -2116,7 +2217,7 @@ export const apps: AppData[] = [
     "tagline": "Players are junior journalists at the Truth Tribune, investigating viral claims, social media posts, and news articles",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/truthquest/icon.png",
+    "iconPath": "/apps/truthquest/icon-sm.webp",
     "mascotPath": "/apps/truthquest/mascot.webp",
     "implementing": true,
     "standards": [
@@ -2125,7 +2226,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/truthquest/icon.webp"
   },
   {
     "slug": "venturequest",
@@ -2133,7 +2235,7 @@ export const apps: AppData[] = [
     "tagline": "Players start and grow businesses from scratch -- beginning with a lemonade stand and progressing through food trucks, retail shops, tech startups, and enterprises",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/venturequest/icon.png",
+    "iconPath": "/apps/venturequest/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -2141,7 +2243,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/venturequest/icon.webp"
   },
   {
     "slug": "waveforge",
@@ -2166,7 +2269,7 @@ export const apps: AppData[] = [
     "tagline": "Build weather instruments, track real storms, predict tomorrow's weather, and simulate the forces behind Earth's most powerful phenomena.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/weatherforge/icon.png",
+    "iconPath": "/apps/weatherforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -2174,7 +2277,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/weatherforge/icon.webp"
   },
   {
     "slug": "wellnessforge",
@@ -2182,7 +2286,7 @@ export const apps: AppData[] = [
     "tagline": "Build health literacy through nutrition analysis, evidence-based substance abuse prevention, first aid simulations, and social-emotional learning \u2014 using the research-proven Life Skills Training model",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
-    "iconPath": "/apps/wellnessforge/icon.png",
+    "iconPath": "/apps/wellnessforge/icon-sm.webp",
     "mascotPath": "/apps/wellnessforge/mascot.webp",
     "implementing": true,
     "standards": [
@@ -2190,7 +2294,8 @@ export const apps: AppData[] = [
       "NGSS Health"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/wellnessforge/icon.webp"
   },
   {
     "slug": "wildlens",
@@ -2198,7 +2303,7 @@ export const apps: AppData[] = [
     "tagline": "Photograph real animals with your camera, identify species using on-device CoreML, and learn why they matter through food webs, habitat relationships, and ecosystem interconnections",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/wildlens/icon.png",
+    "iconPath": "/apps/wildlens/icon-sm.webp",
     "mascotPath": null,
     "implementing": true,
     "standards": [
@@ -2206,7 +2311,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": true,
-    "wave": 1
+    "wave": 1,
+    "iconHeroPath": "/apps/wildlens/icon.webp"
   },
   {
     "slug": "witquest",
@@ -2214,7 +2320,7 @@ export const apps: AppData[] = [
     "tagline": "> Comedy RPG adventure mode has been merged into JestForge as part of portfolio restructuring.",
     "vertical": "academics",
     "heroColor": "#4A6FA5",
-    "iconPath": "/apps/witquest/icon.png",
+    "iconPath": "/apps/witquest/icon-sm.webp",
     "mascotPath": null,
     "implementing": true,
     "standards": [
@@ -2223,7 +2329,8 @@ export const apps: AppData[] = [
       "ISTE"
     ],
     "hasM9Accessories": true,
-    "wave": 2
+    "wave": 2,
+    "iconHeroPath": "/apps/witquest/icon.webp"
   },
   {
     "slug": "wonderforge",
@@ -2231,7 +2338,7 @@ export const apps: AppData[] = [
     "tagline": "Become a science magician \u2014 watch \"impossible\" demonstrations, form hypotheses, reveal the physics and chemistry behind each trick, then perform your own science shows.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
-    "iconPath": "/apps/wonderforge/icon.png",
+    "iconPath": "/apps/wonderforge/icon-sm.webp",
     "mascotPath": null,
     "implementing": false,
     "standards": [
@@ -2239,7 +2346,8 @@ export const apps: AppData[] = [
       "Common Sense Privacy"
     ],
     "hasM9Accessories": false,
-    "wave": null
+    "wave": null,
+    "iconHeroPath": "/apps/wonderforge/icon.webp"
   }
 ];
 
