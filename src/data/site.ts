@@ -30,6 +30,7 @@ export const nav = [
   { href: '/for-educators', label: 'For Educators' },
   { href: '/mascots', label: 'Mascots' },
   { href: '/about', label: 'About' },
+  { href: '/news', label: 'News' },
   { href: '/press', label: 'Press' },
 ];
 

@@ -4397,7 +4397,7 @@ export const apps: AppData[] = [
     "heroColor": "#FFB89C",
     "iconPath": null,
     "iconHeroPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/tinyletters/mascot.webp",
     "implementing": false,
     "standards": [
       "CCSS Foundations.RF.K-2",
@@ -4415,7 +4415,7 @@ export const apps: AppData[] = [
     "heroColor": "#A8D5F0",
     "iconPath": null,
     "iconHeroPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/countingpals/mascot.webp",
     "implementing": false,
     "standards": [
       "CCSS Math.K.CC",
@@ -4433,7 +4433,7 @@ export const apps: AppData[] = [
     "heroColor": "#C8A8E0",
     "iconPath": null,
     "iconHeroPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/taletrail/mascot.webp",
     "implementing": false,
     "standards": [
       "CCSS ELA.K.W",
@@ -4452,7 +4452,7 @@ export const apps: AppData[] = [
     "heroColor": "#F4C9A8",
     "iconPath": null,
     "iconHeroPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/huggyhabits/mascot.webp",
     "implementing": false,
     "standards": [
       "CASEL Self-Management",
@@ -4471,7 +4471,7 @@ export const apps: AppData[] = [
     "heroColor": "#B4D88C",
     "iconPath": null,
     "iconHeroPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/bugscamp/mascot.webp",
     "implementing": false,
     "standards": [
       "NGSS K-2 LS",
@@ -4490,7 +4490,7 @@ export const apps: AppData[] = [
     "heroColor": "#D8A8E0",
     "iconPath": null,
     "iconHeroPath": null,
-    "mascotPath": null,
+    "mascotPath": "/apps/melodymice/mascot.webp",
     "implementing": false,
     "standards": [
       "NCAS MU.K-2.Cr1",
