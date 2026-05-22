@@ -3,6 +3,16 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import AppCard from '~/components/AppCard.astro';
 import { site, verticals } from '~/data/site';
 import { apps, verticalCounts } from '~/data/apps.generated';
+import { modes as modeMetas, modeCounts, type ModeKey } from '~/data/modes';
+
+const mCounts = modeCounts();
+/** Modes an app is meaningfully tagged with (score >= 2 = secondary or primary). */
+const modesFor = (app: typeof apps[number]): ModeKey[] => {
+  if (!app.modes) return [];
+  return (Object.entries(app.modes) as [ModeKey, number][])
+    .filter(([, s]) => s >= 2)
+    .map(([k]) => k);
+};
 
 const implementing = apps.filter(a => a.implementing).length;
 
@@ -117,6 +127,35 @@ const searchHaystack = (app: typeof apps[number]): string => {
   </section>
 
   <section class="max-w-6xl mx-auto px-6 pb-4">
+    <p class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-bold mb-2">Engagement mode</p>
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="mode-filter px-4 py-2 bg-anvil text-warm border border-anvil dark:border-warm rounded-full text-sm font-bold"
+        data-mode="all"
+      >
+        Any mode ({apps.length})
+      </button>
+      {modeMetas.map(m => {
+        const total = mCounts[m.key].primary + mCounts[m.key].secondary;
+        return (
+          <button
+            class="mode-filter px-4 py-2 bg-white dark:bg-anvil/40 border-2 rounded-full text-sm font-medium transition-colors"
+            style={`border-color: ${m.hex}66; color: ${m.hex};`}
+            data-mode={m.key}
+            data-mode-hex={m.hex}
+            title={m.tagline}
+          >
+            <span aria-hidden="true">●</span> {m.label} ({total})
+          </button>
+        );
+      })}
+    </div>
+    <p class="mt-2 text-xs text-anvil/60 dark:text-warm/60 max-w-2xl">
+      Cross-cutting modality, orthogonal to subject. Most apps blend at least two — Learn pairs the AI mentor, Play wraps the game shell, Create gives kids something to ship. <a href="/" class="underline hover:text-forge">Read more on the home page →</a>
+    </p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-4">
     <p class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-bold mb-2">Vertical</p>
     <div class="flex flex-wrap gap-2">
       <button
@@ -186,6 +225,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
           data-haystack={searchHaystack(app)}
           data-age={ageBand}
           data-standards={buckets.join(',')}
+          data-modes={modesFor(app).join(',')}
         >
           <AppCard {...app} />
         </div>
@@ -202,6 +242,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
   const verticalButtons = document.querySelectorAll<HTMLButtonElement>('.vertical-filter');
   const ageButtons = document.querySelectorAll<HTMLButtonElement>('.age-filter');
   const standardButtons = document.querySelectorAll<HTMLButtonElement>('.standard-filter');
+  const modeButtons = document.querySelectorAll<HTMLButtonElement>('.mode-filter');
   const cards = document.querySelectorAll<HTMLDivElement>('.app-card-wrap');
   const searchInput = document.getElementById('app-search') as HTMLInputElement | null;
   const searchClear = document.getElementById('app-search-clear') as HTMLButtonElement | null;
@@ -214,6 +255,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
   let currentVertical = params.get('vertical') ?? 'all';
   let currentAge = params.get('age') ?? 'all';
   let currentStandard = params.get('standard') ?? 'all';
+  let currentMode = params.get('mode') ?? 'all';
   let currentQuery = (params.get('q') ?? '').toLowerCase();
   if (searchInput && currentQuery) searchInput.value = currentQuery;
 
@@ -240,6 +282,13 @@ const searchHaystack = (app: typeof apps[number]): string => {
       applyFilter();
     });
   });
+  modeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentMode = btn.dataset.mode ?? 'all';
+      syncUrl();
+      applyFilter();
+    });
+  });
 
   searchInput?.addEventListener('input', () => {
     currentQuery = (searchInput.value ?? '').trim().toLowerCase();
@@ -260,6 +309,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
     currentVertical = 'all';
     currentAge = 'all';
     currentStandard = 'all';
+    currentMode = 'all';
     currentQuery = '';
     if (searchInput) searchInput.value = '';
     syncUrl();
@@ -274,6 +324,8 @@ const searchHaystack = (app: typeof apps[number]): string => {
     else u.searchParams.set('age', currentAge);
     if (currentStandard === 'all') u.searchParams.delete('standard');
     else u.searchParams.set('standard', currentStandard);
+    if (currentMode === 'all') u.searchParams.delete('mode');
+    else u.searchParams.set('mode', currentMode);
     if (currentQuery) u.searchParams.set('q', currentQuery);
     else u.searchParams.delete('q');
     history.replaceState({}, '', u);
@@ -295,6 +347,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
     setActive(verticalButtons, 'vertical', currentVertical);
     setActive(ageButtons, 'age', currentAge);
     setActive(standardButtons, 'standard', currentStandard);
+    setActiveMode(modeButtons, currentMode);
 
     let visible = 0;
     cards.forEach(card => {
@@ -302,9 +355,11 @@ const searchHaystack = (app: typeof apps[number]): string => {
       const ageMatch = currentAge === 'all' || card.dataset.age === currentAge;
       const cardStandards = (card.dataset.standards ?? '').split(',').filter(Boolean);
       const standardMatch = currentStandard === 'all' || cardStandards.includes(currentStandard);
+      const cardModes = (card.dataset.modes ?? '').split(',').filter(Boolean);
+      const modeMatch = currentMode === 'all' || cardModes.includes(currentMode);
       const haystack = card.dataset.haystack ?? '';
       const queryMatch = !currentQuery || haystack.includes(currentQuery);
-      const matches = verticalMatch && ageMatch && standardMatch && queryMatch;
+      const matches = verticalMatch && ageMatch && standardMatch && modeMatch && queryMatch;
       card.style.display = matches ? '' : 'none';
       if (matches) visible += 1;
     });
@@ -315,8 +370,39 @@ const searchHaystack = (app: typeof apps[number]): string => {
     appGrid?.classList.toggle('hidden', !hasResults);
 
     if (searchStatus) {
-      const filtersActive = currentQuery || currentVertical !== 'all' || currentAge !== 'all' || currentStandard !== 'all';
+      const filtersActive = currentQuery || currentVertical !== 'all' || currentAge !== 'all' || currentStandard !== 'all' || currentMode !== 'all';
       searchStatus.textContent = filtersActive ? `${visible} app${visible === 1 ? '' : 's'} match` : '';
     }
+  }
+
+  /** Mode buttons are colored by mode-hex rather than the default dark fill, so they
+   *  need their own active-state styling: filled with the mode's color when selected. */
+  function setActiveMode(group: NodeListOf<HTMLButtonElement>, current: string) {
+    group.forEach(b => {
+      const mode = b.dataset.mode ?? 'all';
+      const active = mode === current;
+      const hex = b.dataset.modeHex;
+      if (mode === 'all') {
+        // "Any mode" button uses the standard dark-fill active state
+        b.classList.toggle('bg-anvil', active);
+        b.classList.toggle('text-warm', active);
+        b.classList.toggle('font-bold', active);
+        b.classList.toggle('bg-white', !active);
+        b.classList.toggle('dark:bg-anvil/40', !active);
+      } else if (hex) {
+        // Mode buttons: filled with mode color when active; bordered when inactive
+        if (active) {
+          b.style.backgroundColor = hex;
+          b.style.color = '#ffffff';
+          b.style.borderColor = hex;
+          b.classList.add('font-bold');
+        } else {
+          b.style.backgroundColor = '';
+          b.style.color = hex;
+          b.style.borderColor = hex + '66'; // ~40% alpha
+          b.classList.remove('font-bold');
+        }
+      }
+    });
   }
 </script>

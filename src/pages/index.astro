@@ -3,6 +3,16 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import AppCard from '~/components/AppCard.astro';
 import { site, trustSignals, verticals } from '~/data/site';
 import { apps, verticalCounts } from '~/data/apps.generated';
+import { modes as modeMetas, modeCounts, appsScoringAtLeast } from '~/data/modes';
+
+const mCounts = modeCounts();
+// For each mode, the 4 brightest exemplars (score 3, alphabetical) for the home strip
+const modeExemplars = Object.fromEntries(
+  modeMetas.map(m => [
+    m.key,
+    appsScoringAtLeast(m.key, 3).slice(0, 4),
+  ])
+);
 
 // Featured apps: prioritize Wave 1+2+3 implementing + most-asset-complete
 const featuredSlugs = ['curiosityquest', 'cubesensei', 'quillspell', 'mindforge', 'focusforge', 'bioforge'];
@@ -81,6 +91,83 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
             );
           })}
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learn / Play / Create — cross-cutting engagement modes -->
+  <section class="py-20 border-y border-anvil/10 dark:border-warm/15">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 font-bold mb-3">Three ways your kid engages</p>
+        <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil dark:text-warm mb-4">
+          Built around <span style="color: #E8652B;">Learn</span>, <span style="color: #FFBE2E;">Play</span>, and <span style="color: #4A6FA5;">Create</span>
+        </h2>
+        <p class="text-anvil/70 dark:text-warm/70 max-w-2xl mx-auto leading-relaxed">
+          Every app maps to one or more of three engagement modes. Most apps blend two or three — Learn pairs the AI mentor, Play wraps the game shell, Create gives kids something to ship.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {modeMetas.map(m => {
+          const exemplars = modeExemplars[m.key] ?? [];
+          const total = mCounts[m.key].primary + mCounts[m.key].secondary;
+          return (
+            <article
+              class="rounded-2xl p-6 border-2 bg-white dark:bg-anvil/40 flex flex-col"
+              style={`border-color: ${m.hex}66;`}
+            >
+              <header class="flex items-center gap-3 mb-3">
+                <span
+                  class="inline-flex items-center justify-center w-12 h-12 rounded-xl text-white font-brand font-bold text-xl shadow-sm"
+                  style={`background-color: ${m.hex};`}
+                  aria-hidden="true"
+                >
+                  {m.label[0]}
+                </span>
+                <div>
+                  <h3 class="font-brand font-bold text-2xl text-anvil dark:text-warm leading-tight">{m.label}</h3>
+                  <p class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-medium">
+                    {total} apps · {mCounts[m.key].primary} primary
+                  </p>
+                </div>
+              </header>
+              <p class="text-sm text-anvil/80 dark:text-warm/80 leading-relaxed mb-4 flex-1">
+                {m.blurb}
+              </p>
+
+              <div class="mb-4">
+                <p class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-bold mb-2">Examples</p>
+                <ul class="space-y-1.5">
+                  {exemplars.map(app => (
+                    <li>
+                      <a
+                        href={`/apps/${app.slug}`}
+                        class="inline-flex items-center gap-2 text-sm text-anvil/80 dark:text-warm/80 hover:text-forge dark:hover:text-forge-light transition-colors"
+                      >
+                        <span
+                          class="inline-block w-2 h-2 rounded-full"
+                          style={`background-color: ${app.heroColor};`}
+                          aria-hidden="true"
+                        ></span>
+                        <span class="font-medium">{app.name}</span>
+                        <span class="text-xs text-anvil/50 dark:text-warm/50 truncate">{app.mentor ? `· ${app.mentor}` : ''}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={`/apps?mode=${m.key}`}
+                class="inline-block text-sm font-bold transition-opacity hover:opacity-80 mt-auto"
+                style={`color: ${m.hex};`}
+              >
+                See all {m.label} apps →
+              </a>
+            </article>
+          );
+        })}
       </div>
     </div>
   </section>
