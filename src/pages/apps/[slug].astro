@@ -164,6 +164,40 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
     </section>
   )}
 
+  <!-- Distributed-narrative cast — named recurring characters that embody specific curricular concepts -->
+  {app.dnCast && app.dnCast.members.length > 0 && (
+    <section class="bg-forge/5 dark:bg-forge-light/10 py-16 border-y border-forge/15 dark:border-forge-light/20">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-8">
+          <p class="text-xs uppercase tracking-wider text-forge dark:text-forge-light font-bold mb-2">
+            Distributed-narrative cast
+          </p>
+          <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-3">
+            Meet the cast
+          </h2>
+          {app.dnCast.intro && (
+            <p class="text-anvil/70 dark:text-warm/70 leading-relaxed max-w-2xl mx-auto">
+              {app.dnCast.intro}
+            </p>
+          )}
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {app.dnCast.members.map(m => (
+            <div class="p-4 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15">
+              <h3 class="font-brand font-bold text-anvil dark:text-warm mb-1">{m.name}</h3>
+              <p class="text-xs text-anvil/70 dark:text-warm/70 leading-relaxed">{m.role}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-center mt-6">
+          <a href="/method" class="text-forge dark:text-forge-light text-sm font-bold underline hover:no-underline">
+            What&apos;s distributed-narrative methodology? →
+          </a>
+        </p>
+      </div>
+    </section>
+  )}
+
   <!-- What's inside — features extracted from User Guide, fall back to generic 3-up -->
   <section class="max-w-4xl mx-auto px-6 py-16">
     <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-8">What&apos;s inside</h2>

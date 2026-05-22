@@ -30,6 +30,21 @@ export interface AppData {
   wave: number | null;
   distributedNarrative?: boolean;
   /**
+   * Distributed-narrative cast — named recurring characters that embody
+   * specific curricular concepts. Only present on apps with
+   * `distributedNarrative: true`. Per
+   * `labsmith/Docs/GUIDE_DISTRIBUTED_NARRATIVE_METHODOLOGY.md`.
+   */
+  dnCast?: {
+    /** Optional cast-context blurb (1 sentence framing). */
+    intro?: string;
+    members: Array<{
+      name: string;
+      /** 1-line concept embodied — kid-readable, no jargon. */
+      role: string;
+    }>;
+  };
+  /**
    * Engagement modality scores (0-3 per mode). Orthogonal to `vertical`.
    * 0 = mode not present · 1 = minor · 2 = secondary · 3 = primary.
    * Most apps are multi-modal (score ≥1 on 2+ modes).
@@ -167,6 +182,31 @@ export const apps: AppData[] = [
     "wave": 1,
     "iconHeroPath": "/apps/beatforge/icon.webp",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "BeatForge sits in the **creative-studio cluster** alongside HarmonyForge / MotifLab / SoundSphere — all 4 shipping distributed-narrative casts in Wave 7.",
+      "members": [
+        {
+          "name": "Throb",
+          "role": "The steady pulse — the underlying clock every other rhythm hangs from"
+        },
+        {
+          "name": "Snap",
+          "role": "Subdivision — splitting a beat into equal smaller parts (eighths, sixteenths, triplets)"
+        },
+        {
+          "name": "Hammer",
+          "role": "Accent — emphasis on specific beats (the downbeat, the backbeat, polyrhythmic emphasis)"
+        },
+        {
+          "name": "Tilt",
+          "role": "Syncopation — placing weight off the expected beat to create pull and forward motion"
+        },
+        {
+          "name": "Spin",
+          "role": "Groove — the looping pattern that emerges when pulse + subdivision + accent + syncopation cohere; the thing that makes a beat feel like a particular genre"
+        }
+      ]
+    },
     "longTagline": "BeatForge is a music composition studio. You build songs by snapping colorful sound blocks together — notes, rests, chords, dynamics — and the app plays them back through real instruments. As your music skills grow, the colorful blocks slowly reveal real sheet-music notation underneath, so you learn",
     "features": [
       {
@@ -199,6 +239,35 @@ export const apps: AppData[] = [
     "tagline": "Players learn anatomy and biomechanics through the lens of sports -- understanding how muscles generate force, how joints create leverage, how the cardiovascular system fuels performance, and how training improves the body. Each sport unlocks new body systems and biomechanical principles. The only sports-science-meets-anatomy app on any platform.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "BioForge teaches human anatomy through the lens of sports — body systems as the curricular pattern catalogue (skeletal, muscular, nervous, cardiovascular, respiratory, digestive).",
+      "members": [
+        {
+          "name": "Pump",
+          "role": "Cardiovascular (heart, blood, vessels)"
+        },
+        {
+          "name": "Bellows",
+          "role": "Respiratory (lungs, oxygen exchange)"
+        },
+        {
+          "name": "Sprout",
+          "role": "Digestive (stomach, intestines, nutrients)"
+        },
+        {
+          "name": "Flicker",
+          "role": "Nervous (brain, signals, reflexes)"
+        },
+        {
+          "name": "Strand",
+          "role": "Muscular (contraction, movement)"
+        },
+        {
+          "name": "Beam",
+          "role": "Skeletal (bones, levers, support)"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/bioforge/icon-sm.webp",
     "mascotPath": "/apps/bioforge/mascot.webp",
@@ -246,6 +315,30 @@ export const apps: AppData[] = [
     "mentor": "Mossy",
     "implementing": false,
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Canopy",
+          "role": "Forest biomes (temperate, tropical, taiga)"
+        },
+        {
+          "name": "Dune",
+          "role": "Desert biomes (hot, cold, semi-arid)"
+        },
+        {
+          "name": "Reef",
+          "role": "Aquatic biomes (coral reef, freshwater, marine)"
+        },
+        {
+          "name": "Ridge",
+          "role": "Mountain / alpine / vertical-zonation biomes"
+        },
+        {
+          "name": "Flux",
+          "role": "Climate-biome mapping (where biomes shift with climate)"
+        }
+      ]
+    },
     "standards": [
       "ISTE",
       "Common Sense Privacy"
@@ -305,6 +398,50 @@ export const apps: AppData[] = [
     "tagline": "Learn card games from basics to mastery, then amaze friends with step-by-step magic trick tutorials — a complete card skills academy with AI coaching for ages 9-14. The only app that combines interactive card game teaching with magic trick instruction for children.",
     "vertical": "special-interest",
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "The Finesseur",
+          "role": "Finesse (force an opponent's high card via positional play; bridge / hearts / spades)"
+        },
+        {
+          "name": "The Squeezer",
+          "role": "Squeeze (force a discard that gives up a winner; advanced bridge + hearts)"
+        },
+        {
+          "name": "The Endplayer",
+          "role": "Endplay (throw opponent in to force a losing lead; bridge / hearts / whist)"
+        },
+        {
+          "name": "The Counter",
+          "role": "Card-counting / pip-tracking (track played cards to deduce remaining hands; gin / bridge / blackjack-style)"
+        },
+        {
+          "name": "The Long-Suit",
+          "role": "Suit establishment (set up a long suit to run for tricks late in the hand; bridge / whist / spades)"
+        },
+        {
+          "name": "The Bluffer",
+          "role": "Deception under uncertainty (poker betting; representing a hand you don't have)"
+        },
+        {
+          "name": "The Discarder",
+          "role": "Strategic discard (hearts: avoid points; spades / gin / rummy: shed dead wood)"
+        },
+        {
+          "name": "The Trumpkeeper",
+          "role": "Trump management (when to ruff, when to hold; whist / spades / euchre / pinochle)"
+        },
+        {
+          "name": "The Forcer",
+          "role": "Magic forcing (the spectator \"freely chooses\" the card you intended)"
+        },
+        {
+          "name": "The Shuffler",
+          "role": "False-shuffle / stack management (control card order while appearing to randomize; mathematical card magic)"
+        }
+      ]
+    },
     "heroColor": "#FFA726",
     "iconPath": "/apps/cardforge/icon-sm.webp",
     "mascotPath": "/apps/cardforge/mascot.webp",
@@ -349,6 +486,31 @@ export const apps: AppData[] = [
     "tagline": "Run a virtual casino, investigate insurance company math, predict sports outcomes, and solve medical diagnosis puzzles — mastering probability and statistics through real-world contexts where the math determines who wins and who loses.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "Habgood intrinsic-integration test: **the character's behavior IS the statistical move**.",
+      "members": [
+        {
+          "name": "Tally the Counter-of-Outcomes",
+          "role": "Data collection + frequency counting (the foundational \"what happened, how often?\" move)"
+        },
+        {
+          "name": "Display the Picture-Maker",
+          "role": "Graphs and visual displays (bar charts, histograms, dot plots, line graphs — turning numbers into pictures)"
+        },
+        {
+          "name": "Center the Middle-Finder",
+          "role": "Central tendency — mean, median, mode (the \"what's typical?\" question)"
+        },
+        {
+          "name": "Sample the Estimator",
+          "role": "Sampling, sampling distributions, inference from sample to population"
+        },
+        {
+          "name": "Tree the Compound-Brancher",
+          "role": "Compound events and probability trees — multiplication rule for independent events, addition for disjoint, conditional dependencies"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/chanceforge/icon-sm.webp",
     "iconHeroPath": "/apps/chanceforge/icon.webp",
@@ -481,6 +643,42 @@ export const apps: AppData[] = [
     "tagline": "Run a spy agency, learning cryptography from Caesar ciphers to RSA basics through narrative-driven missions — crack codes, build ciphers, compete in code-breaking duels, and escape timed puzzle rooms.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Caesar",
+          "role": "Caesar shift / monoalphabetic shift cipher"
+        },
+        {
+          "name": "Mask",
+          "role": "Atbash + general monoalphabetic substitution (every letter has a fixed substitute)"
+        },
+        {
+          "name": "Vigenère",
+          "role": "Vigenère / polyalphabetic keyword cipher (the Caesar-on-a-rotating-keyword pattern)"
+        },
+        {
+          "name": "Echo Pair",
+          "role": "Playfair digraph cipher (letters encoded in pairs through a 5×5 grid)"
+        },
+        {
+          "name": "Rail",
+          "role": "Rail-fence + columnar transposition ciphers (rearrange letter order without changing the letters themselves)"
+        },
+        {
+          "name": "Tally",
+          "role": "Number-based codes (A1Z26, ASCII, binary, book ciphers — any mapping that converts letters to numbers)"
+        },
+        {
+          "name": "Sift",
+          "role": "Frequency analysis + cryptanalysis-by-statistics (the cipher-breaking method, not a cipher itself)"
+        },
+        {
+          "name": "Lattice",
+          "role": "Modern cryptography fundamentals — XOR, public-key concept, hashing (the irreversible / asymmetric family)"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/cipherforge/icon-sm.webp",
     "mascotPath": "/apps/cipherforge/mascot.webp",
@@ -707,6 +905,31 @@ export const apps: AppData[] = [
     "mentor": "Cirrus",
     "implementing": false,
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ClimateQuest teaches climate science as a **system of coupled processes** — atmosphere, hydrosphere, biosphere, cryosphere — connected through carbon, energy, and water flows.",
+      "members": [
+        {
+          "name": "Haze",
+          "role": "Atmosphere (air, gases, the sky as a thin layer)"
+        },
+        {
+          "name": "Squall",
+          "role": "Weather events (vs. climate — short-term variability)"
+        },
+        {
+          "name": "Round",
+          "role": "Carbon + water cycles (recurring loops, balance)"
+        },
+        {
+          "name": "Blanket",
+          "role": "Greenhouse effect (insulating gases)"
+        },
+        {
+          "name": "Stitch",
+          "role": "Collective action / policy / repair"
+        }
+      ]
+    },
     "standards": [
       "NGSS",
       "CCSS Math",
@@ -790,6 +1013,31 @@ export const apps: AppData[] = [
     "tagline": "Travel 13.8 billion years back to the Big Bang, watch the first stars ignite, witness galaxies collide, peer inside black holes, and hunt for exoplanets — an astrophysics odyssey through scales of space and time that dwarf human imagination.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "Astrophysics has rich personification affordances — gravity already feels like a relentless tug, galaxies already feel like swirling dancers, nebulae like soft veils.",
+      "members": [
+        {
+          "name": "Gleam",
+          "role": "Stellar luminosity / electromagnetic radiation / observation"
+        },
+        {
+          "name": "Sway",
+          "role": "Gravity / orbits / mutual attraction"
+        },
+        {
+          "name": "Swirl",
+          "role": "Galactic rotation / spiral structure / angular momentum"
+        },
+        {
+          "name": "Mist",
+          "role": "Nebulae / dust / gas / accretion / stellar nurseries"
+        },
+        {
+          "name": "Tide",
+          "role": "Cosmological expansion / Hubble flow / cosmic time"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/cosmosforge/icon-sm.webp",
     "iconHeroPath": "/apps/cosmosforge/icon.webp",
@@ -1146,6 +1394,35 @@ export const apps: AppData[] = [
     "tagline": "Exploration game teaching graph theory, combinatorics, and number theory through real-world mysteries. Includes AMC 8/MATHCOUNTS competition timer mode. First gamified discrete math app for ages 9-14.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "Habgood intrinsic-integration test: **the character's behavior IS the discrete pattern**.",
+      "members": [
+        {
+          "name": "Sortie the Set-Curator",
+          "role": "Sets, subsets, set operations (union, intersection, difference)"
+        },
+        {
+          "name": "Tally the Pattern-Counter",
+          "role": "Counting principles and combinatorics (multiplication rule, permutations, combinations)"
+        },
+        {
+          "name": "Verity the Truth-Tester",
+          "role": "Propositional logic, truth tables, AND/OR/NOT operators"
+        },
+        {
+          "name": "Wander the Bridge-Walker",
+          "role": "Graph theory — Eulerian paths, Hamiltonian paths, connectivity"
+        },
+        {
+          "name": "Coil the Self-Reference",
+          "role": "Recursion and sequences (Fibonacci, factorials, recursive patterns)"
+        },
+        {
+          "name": "Prime the Indivisible",
+          "role": "Number theory — primes, factorization, modular arithmetic"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/discretequest/icon-sm.webp",
     "mascotPath": "/apps/discretequest/mascot.webp",
@@ -1204,6 +1481,31 @@ export const apps: AppData[] = [
     "wave": null,
     "iconHeroPath": "/apps/ecosphere/icon.webp",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "Ecology has rich personification affordances — trophic levels feel like roles in a community; niches feel like jobs; succession feels like a slow shift.",
+      "members": [
+        {
+          "name": "Chain",
+          "role": "Food chain / trophic flow (energy moving up levels)"
+        },
+        {
+          "name": "Niche",
+          "role": "Ecological role / job-in-the-ecosystem"
+        },
+        {
+          "name": "Phase",
+          "role": "Succession / ecosystem change over time (primary, secondary, climax)"
+        },
+        {
+          "name": "Crown",
+          "role": "Canopy / trophic-pyramid structure (top vs. base)"
+        },
+        {
+          "name": "Brink",
+          "role": "Tipping points / ecosystem thresholds / resilience-or-collapse"
+        }
+      ]
+    },
     "longTagline": "EcoSphere puts you in charge of planet Earth! Manage the atmosphere, oceans, land, and living things across millions of years. Make decisions about energy, pollution, and resources, and watch how everything connects. Your choices affect the whole planet -- can you keep Earth healthy?",
     "features": [
       {
@@ -1324,6 +1626,31 @@ export const apps: AppData[] = [
     "tagline": "Visual balance-scale approach to the entire CCSS EE domain",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "EquationQuest sits in the **math-mountains zone** alongside GeometryForge / ProofQuest / FunctionForge / RatioRealm / DiscreteQuest / ChanceForge — all 6 ship distributed-narrative casts.",
+      "members": [
+        {
+          "name": "Lever",
+          "role": "Maintaining balance — do the same thing to both sides"
+        },
+        {
+          "name": "Solo",
+          "role": "Isolating the variable — moving everything else away from x"
+        },
+        {
+          "name": "Undo",
+          "role": "Inverse operations — addition ↔ subtraction, multiplication ↔ division"
+        },
+        {
+          "name": "Spread",
+          "role": "Distribution — multiplying across parentheses"
+        },
+        {
+          "name": "Flipper",
+          "role": "The sign-flip in inequalities when multiplying/dividing by a negative"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/equationquest/icon-sm.webp",
     "mascotPath": "/apps/equationquest/mascot.webp",
@@ -1760,6 +2087,31 @@ export const apps: AppData[] = [
     "tagline": "Master fractions, decimals, and place value through virtual manipulatives, number line challenges, and real-world problem contexts — following the research-backed Concrete-Representational-Abstract instructional model. Ages 8-12.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "FractionForge sits in the **math-mountains zone** alongside GeometryForge / ProofQuest / FunctionForge / RatioRealm / DiscreteQuest / ChanceForge — all 6 ship distributed-narrative casts.",
+      "members": [
+        {
+          "name": "Halver",
+          "role": "Partitioning — splitting a whole into equal parts (denominator construction)"
+        },
+        {
+          "name": "Pie",
+          "role": "Wholes and parts — mixed numbers, improper fractions, whole-as-pie anchor"
+        },
+        {
+          "name": "Equi",
+          "role": "Equivalent fractions — different forms, same value (×n/×n scaling)"
+        },
+        {
+          "name": "Stretch",
+          "role": "Common denominators — scaling to a common base for comparison + addition"
+        },
+        {
+          "name": "Dot",
+          "role": "The decimal point and fraction-decimal-percent equivalence"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/fractionforge/icon-sm.webp",
     "mascotPath": "/apps/fractionforge/mascot.webp",
@@ -1849,6 +2201,31 @@ export const apps: AppData[] = [
     "tagline": "Interactive function laboratory — input-output machines, function tables, linear/quadratic/exponential functions, and real-world data fitting. Visual \"function machine\" component builder bridging arithmetic to algebra.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "The four-condition adoption test (from `GUIDE_DISTRIBUTED_NARRATIVE_METHODOLOGY.md` § 2):",
+      "members": [
+        {
+          "name": "Stride the Pattern-Walker",
+          "role": "Linear functions (constant rate of change)"
+        },
+        {
+          "name": "Echo the Sameness-Keeper",
+          "role": "Constant functions (zero rate of change; output unchanged regardless of input)"
+        },
+        {
+          "name": "Arc the Curve-Catcher",
+          "role": "Quadratic functions (parabola — symmetric rate-of-change-changes)"
+        },
+        {
+          "name": "Burst the Doubler",
+          "role": "Exponential functions (constant *multiplicative* rate of change)"
+        },
+        {
+          "name": "Pivot the Rule-Switcher",
+          "role": "Piecewise functions (different rules for different input ranges)"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/functionforge/icon-sm.webp",
     "mascotPath": "/apps/functionforge/mascot.webp",
@@ -1894,6 +2271,31 @@ export const apps: AppData[] = [
     "tagline": "Extract DNA, map inheritance with Punnett squares, simulate CRISPR gene editing, and debate bioethics — explore genetics and biotechnology from Mendel's peas to modern gene therapy through hands-on virtual lab experiments.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "GeneForge teaches inheritance, molecular biology, and biotechnology — a domain with a clean catalogue of named patterns (DNA, alleles, Punnett crosses, mutations, CRISPR edits).",
+      "members": [
+        {
+          "name": "Bead",
+          "role": "Gene as discrete inheritable unit"
+        },
+        {
+          "name": "Match",
+          "role": "Allele pairing (Punnett crosses)"
+        },
+        {
+          "name": "Script",
+          "role": "DNA → RNA → protein (the genetic code as a recipe)"
+        },
+        {
+          "name": "Trace",
+          "role": "Lineage / heredity across generations"
+        },
+        {
+          "name": "Snip",
+          "role": "Mutation + CRISPR (variation + intervention)"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/geneforge/icon-sm.webp",
     "mascotPath": "/apps/geneforge/mascot.webp",
@@ -1939,6 +2341,43 @@ export const apps: AppData[] = [
     "tagline": "Interactive geometry exploration app for ages 9-14 covering the complete CCSS Geometry curriculum — transformations, coordinate geometry, similarity, proof, and 3D solids — using hands-on RealityKit 3D visualization, visual theorem discovery, and progressive spatial reasoning challenges. Companion app to CubeSensei (which focuses on Rubik's Cube mastery and magic tricks).",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "Geometry decomposes neatly into named theorems (Pythagorean, Inscribed-angle, Thales, etc.) and named construction patterns.",
+      "members": [
+        {
+          "name": "Master Pythagoras",
+          "role": "Right-triangle relations: a² + b² = c²"
+        },
+        {
+          "name": "Lady Inscribed-Angle",
+          "role": "Circle theorems (inscribed-angle, central-angle, tangent-chord, cyclic quadrilateral)"
+        },
+        {
+          "name": "Sir Thales",
+          "role": "Parallel-line transversals + intercept theorem (proportional segments cut by parallel lines)"
+        },
+        {
+          "name": "Apprentice Heron",
+          "role": "Area formulas (Heron's formula for triangle area from side lengths; rectangle / parallelogram / trapezoid area)"
+        },
+        {
+          "name": "Captain Construction",
+          "role": "Compass-and-straightedge constructions (bisector, perpendicular, equilateral triangle, regular hexagon, circle-given-three-points)"
+        },
+        {
+          "name": "Compass Wraith",
+          "role": "Locus problems + circle-as-set-of-equidistant-points"
+        },
+        {
+          "name": "Madame Polygon",
+          "role": "Regular-polygon facts (interior-angle sum, exterior-angle sum, regular-tessellation, symmetry of regular n-gons)"
+        },
+        {
+          "name": "Master Tangent",
+          "role": "Limit-and-touch problems (tangent to a circle from external point, tangent-chord angle, tangent-as-limit-of-secant)"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/geometryforge/icon-sm.webp",
     "mascotPath": "/apps/geometryforge/mascot.webp",
@@ -1984,6 +2423,58 @@ export const apps: AppData[] = [
     "tagline": "Master grammar, sentence structure, and language conventions through interactive sentence diagramming puzzles, error detective investigations, and style editing challenges — turning grammar rules into engaging game mechanics. Ages 9-14.",
     "vertical": "academics",
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Mayor Subject",
+          "role": "Subject (noun/pronoun performing the action)"
+        },
+        {
+          "name": "Verb Verity",
+          "role": "Verb (action / state of being)"
+        },
+        {
+          "name": "Object Otto",
+          "role": "Direct / indirect object (receiver of the verb's action)"
+        },
+        {
+          "name": "Modifier Mike",
+          "role": "Adverb (modifies verb / adjective / other adverb)"
+        },
+        {
+          "name": "Modifier Madge",
+          "role": "Adjective (modifies noun / pronoun)"
+        },
+        {
+          "name": "Connector Chen",
+          "role": "Conjunction (coordinating / subordinating — *and*, *but*, *because*, *although*)"
+        },
+        {
+          "name": "Pronoun Perry",
+          "role": "Pronoun (substitute for noun — *he*, *she*, *they*, *it*, *who*)"
+        },
+        {
+          "name": "Article Anne",
+          "role": "Article (*a*, *an*, *the* — definite vs. indefinite)"
+        },
+        {
+          "name": "Preposition Pat",
+          "role": "Preposition (spatial / temporal relations — *on*, *under*, *between*, *before*)"
+        },
+        {
+          "name": "Clause-Chief Carla",
+          "role": "Clause-types (independent / dependent / subordinate / relative)"
+        },
+        {
+          "name": "Punctuator Polly",
+          "role": "Punctuation guardian (commas, semicolons, apostrophes, colons, dashes)"
+        },
+        {
+          "name": "Agreement Ada",
+          "role": "Subject-verb agreement (singular subject → singular verb; plural subject → plural verb; tricky cases — collective nouns, *either/or*, indefinite pronouns)"
+        }
+      ]
+    },
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/grammarforge/icon-sm.webp",
     "mascotPath": "/apps/grammarforge/mascot.webp",
@@ -2085,6 +2576,31 @@ export const apps: AppData[] = [
     "wave": 2,
     "iconHeroPath": "/apps/harmonyforge/icon.webp",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "HarmonyForge sits in the **creative-studio cluster** alongside BeatForge / MotifLab / SoundSphere — all 4 shipping distributed-narrative casts in Wave 7.",
+      "members": [
+        {
+          "name": "Triad",
+          "role": "Chord-stacking — three tones in vertical alignment (root + third + fifth = the foundation of harmony)"
+        },
+        {
+          "name": "Lean",
+          "role": "Voice-leading — smooth stepwise motion between chord tones (the smallest possible movements between consecutive chords)"
+        },
+        {
+          "name": "Pull",
+          "role": "Tension — dissonant intervals (the leading-tone, the suspended 4th, the diminished chord) that *want* to resolve"
+        },
+        {
+          "name": "Land",
+          "role": "Resolution — the consonant arrival when tension releases (root return; cadence; the V→I gesture)"
+        },
+        {
+          "name": "Shift",
+          "role": "Modulation — changing keys mid-piece (the moment a song *moves to a different room* harmonically)"
+        }
+      ]
+    },
     "longTagline": "HarmonyForge lets you create music by arranging colorful shapes on a grid! Each color is a different instrument, each shape is a different rhythm, and where you place it changes the pitch. You do not need to know how to read music -- if you can see patterns, you can make music. The app is designed t",
     "features": [
       {
@@ -2171,6 +2687,31 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "HeatForge teaches thermodynamics as a **family of energy-transfer mechanisms** — conduction, convection, radiation, phase change, and the macroscopic energy-flow consequences (insulation, climate, cooking).",
+      "members": [
+        {
+          "name": "Touch",
+          "role": "Conduction (contact-bound molecular transfer)"
+        },
+        {
+          "name": "Drift",
+          "role": "Convection (fluid circulation carrying heat)"
+        },
+        {
+          "name": "Glow",
+          "role": "Radiation (electromagnetic energy across empty space)"
+        },
+        {
+          "name": "Shift",
+          "role": "Phase change / latent heat (state transition without temperature change)"
+        },
+        {
+          "name": "Hush",
+          "role": "Insulation / thermal equilibrium (slowing transfer, reaching balance)"
+        }
+      ]
+    },
     "iconHeroPath": "/apps/heatforge/icon.webp",
     "longTagline": "HeatForge is a thermodynamics and energy transfer lab where you race heat through materials, watch particles vibrate as they warm up, engineer insulation to defeat a virtual blowtorch, and explore how the greenhouse effect warms our planet. Your AI mentor Kelvin connects the science to real-world en",
     "features": [
@@ -2218,6 +2759,31 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "IllusionForge sits in the **creative-studio visual-arts cluster** alongside PixelForge / SpectrumCanvas / MangaForge — all 4 shipping distributed-narrative casts in Wave 8.",
+      "members": [
+        {
+          "name": "Fade",
+          "role": "The afterimage / persistence-of-vision — the visual trace left after a stimulus is removed (the foundation of animation, film, and many magic tricks)"
+        },
+        {
+          "name": "Stack",
+          "role": "The perspective trap — the geometric arrangement that misleads size and depth judgments (Müller-Lyer, Ponzo, Ebbinghaus, vanishing-point depth cues)"
+        },
+        {
+          "name": "Notch",
+          "role": "The impossible figure — the figure that locally reads as coherent but globally cannot exist (Penrose triangle, Escher staircase, blivet)"
+        },
+        {
+          "name": "Cue",
+          "role": "The auditory illusion — the sound-perception mechanism (Shepard tones, McGurk effect, phantom-melody, missing-fundamental)"
+        },
+        {
+          "name": "Loop",
+          "role": "The perceptual loop — the recursive / endless / barber-pole motion illusion (the mechanism that makes the brain see motion that can't end)"
+        }
+      ]
+    },
     "hasUserGuide": true,
     "modes": {
       "learn": 2,
@@ -2535,6 +3101,31 @@ export const apps: AppData[] = [
     "tagline": "Explore a vibrant adventure world where you MUST communicate in your target language to solve puzzles, make friends, order food, and save the kingdom — an RPG that makes language learning irresistible.",
     "vertical": "academics",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "LinguaQuest sits in the **word-woods zone** of AdventureHub alongside QuillSpell + GrammarForge — both already shipping distributed-narrative casts (Wave 1).",
+      "members": [
+        {
+          "name": "Bough",
+          "role": "Language families (genetic descent — Indo-European / Sino-Tibetan / Afro-Asiatic / Niger-Congo / Austronesian)"
+        },
+        {
+          "name": "Drift",
+          "role": "Sound change (phonological evolution — Grimm's Law, vowel shifts, palatalization)"
+        },
+        {
+          "name": "Glyph",
+          "role": "Writing systems (alphabetic / abjad / abugida / syllabic / logographic — and how each captures speech)"
+        },
+        {
+          "name": "Bridge",
+          "role": "Cognates and loanwords (shared roots across languages; trade-route borrowings)"
+        },
+        {
+          "name": "Cant",
+          "role": "Sociolinguistics — dialect, register, code-switching, formal/informal speech"
+        }
+      ]
+    },
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/linguaquest/icon-sm.webp",
     "mascotPath": "/apps/linguaquest/mascot.webp",
@@ -2580,6 +3171,74 @@ export const apps: AppData[] = [
     "tagline": "Master the building blocks of clear thinking — identify logical fallacies, construct truth tables, map arguments, and crack syllogistic puzzles through detective investigations and debate challenges. Ages 10-14.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Ad Hominem Hannibal",
+          "role": "Attacking the arguer, not the argument"
+        },
+        {
+          "name": "Strawman Stella",
+          "role": "Misrepresenting the opponent's argument"
+        },
+        {
+          "name": "Slippery-Slope Sam",
+          "role": "Chaining dire consequences from a small first step"
+        },
+        {
+          "name": "Appeal-to-Authority Auntie",
+          "role": "Citing irrelevant / unqualified authority as proof"
+        },
+        {
+          "name": "Red-Herring Reggie",
+          "role": "Deflecting to an irrelevant topic"
+        },
+        {
+          "name": "Circular-Reasoning Cici",
+          "role": "Assuming the conclusion in the premise"
+        },
+        {
+          "name": "False-Dichotomy Fia",
+          "role": "Presenting only two options when more exist"
+        },
+        {
+          "name": "Bandwagon Bran",
+          "role": "Truth-by-popularity"
+        },
+        {
+          "name": "Sunk-Cost Cyril",
+          "role": "Refusing to change course because of past investment"
+        },
+        {
+          "name": "Whataboutism Wanda",
+          "role": "Deflecting criticism via someone else's wrongdoing"
+        },
+        {
+          "name": "Equivocator Eva",
+          "role": "Sliding a word's meaning mid-argument"
+        },
+        {
+          "name": "Tu-Quoque Tessa",
+          "role": "\"You too!\" — dismissing criticism by accusing the critic of the same thing"
+        },
+        {
+          "name": "Modus-Ponens Mo",
+          "role": "If P then Q; P; ∴ Q"
+        },
+        {
+          "name": "Modus-Tollens Tara",
+          "role": "If P then Q; ¬Q; ∴ ¬P"
+        },
+        {
+          "name": "Syllogism Solon",
+          "role": "All M are P; all S are M; ∴ all S are P"
+        },
+        {
+          "name": "Disjunctive-Syllogism Dior",
+          "role": "P ∨ Q; ¬P; ∴ Q"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/logicquest/icon-sm.webp",
     "iconHeroPath": "/apps/logicquest/icon.webp",
@@ -2625,6 +3284,31 @@ export const apps: AppData[] = [
     "tagline": "Kids ages 10-14 write branching stories inside an RPG world",
     "vertical": "academics",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "LoreQuest sits in the **word-woods zone** of AdventureHub alongside QuillSpell + GrammarForge — both already shipping distributed-narrative casts (Wave 1).",
+      "members": [
+        {
+          "name": "Mossy",
+          "role": "Forest / nature-spirit archetype (the quiet local-landscape entity who appears across many traditions — wood-elves, dryads, kami of place, etc., abstractly)"
+        },
+        {
+          "name": "Refrain",
+          "role": "Repeating-tale / echo motif archetype (motif recurrence — same story-pattern appearing across cultures: flood myth, hero descent to underworld, twin gods, etc.)"
+        },
+        {
+          "name": "Thread",
+          "role": "Hero-journey / fate-spinner archetype (the spinning thread of destiny that recurs across heroic narratives — Moirai, Norns, Anansi-as-spider, etc., abstractly)"
+        },
+        {
+          "name": "Ruse",
+          "role": "Clever-fool / trickster archetype (the figure who breaks the rules and teaches a lesson by doing so — recurs across MANY traditions, but referenced **abstractly** here; the cast..."
+        },
+        {
+          "name": "Hearth",
+          "role": "Origin / family / hearth-storyteller archetype (the figure who carries oral tradition; the grandmother / elder who tells the stories — found in nearly every tradition's framing..."
+        }
+      ]
+    },
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/lorequest/icon-sm.webp",
     "mascotPath": "/apps/lorequest/mascot.webp",
@@ -2771,6 +3455,31 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 3,
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MangaForge sits in the **creative-studio visual-arts cluster** alongside PixelForge / SpectrumCanvas / IllusionForge — all 4 shipping distributed-narrative casts in Wave 8.",
+      "members": [
+        {
+          "name": "Panel",
+          "role": "The panel — the rectangular frame that contains a single moment of story (the atomic unit of sequential art)"
+        },
+        {
+          "name": "Bubble",
+          "role": "The speech bubble — the shape-encoded container for dialogue + thought + sound (its outline encodes voice register: thought-cloud / shout-burst / whisper-dotted-line / radio-jag..."
+        },
+        {
+          "name": "Sweep",
+          "role": "Speed lines / motion lines — the directional line-bursts that convey speed, impact, and energy direction"
+        },
+        {
+          "name": "Tone",
+          "role": "Screentones — the halftone dot/line patterns laid over an area to convey shadow, mood, and emotional register (the manga-specific shading vocabulary)"
+        },
+        {
+          "name": "Splash",
+          "role": "The splash page — the full-page or near-full-page impact image that marks a story climax (the moment the page breaks its grid to give one image all the space)"
+        }
+      ]
+    },
     "hasUserGuide": true,
     "modes": {
       "learn": 1,
@@ -2896,6 +3605,31 @@ export const apps: AppData[] = [
     "tagline": "Hands-on measurement adventures: unit conversions, area and perimeter calculations, data representation, and real-world measurement applications -- building mathematical fluency through interactive challenges.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MeasureQuest sits in the **math-mountains zone** alongside GeometryForge / ProofQuest / FunctionForge / RatioRealm / DiscreteQuest / ChanceForge — all 6 ship distributed-narrative casts.",
+      "members": [
+        {
+          "name": "Rod",
+          "role": "Linear measurement — length and perimeter (1D extent)"
+        },
+        {
+          "name": "Tile",
+          "role": "Area — 2D coverage (square units)"
+        },
+        {
+          "name": "Cup",
+          "role": "Volume and capacity — 3D space (cubic units, liquid measures)"
+        },
+        {
+          "name": "Tick",
+          "role": "Time — elapsed duration, intervals, and the special-case unit-system (60 / 60 / 24 / 7 / 12)"
+        },
+        {
+          "name": "Pace",
+          "role": "Unit conversion — translating between metric and customary systems"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/measurequest/icon-sm.webp",
     "mascotPath": "/apps/measurequest/mascot.webp",
@@ -3072,6 +3806,67 @@ export const apps: AppData[] = [
     "tagline": "Explore ancient civilizations through mythology-driven adventure quests — meet gods and heroes, battle mythological creatures, collect historical artifacts, and build ancient cities while learning Greek, Roman, Norse, Egyptian, and Mesoamerican cultures.",
     "vertical": "special-interest",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "to violent / colonialist myths.",
+      "members": [
+        {
+          "name": "Trickster",
+          "role": "The boundary-crosser who teaches through inversion. Recurs across nearly all traditions (Anansi, Coyote, Loki, Hermes, Maui, Ijapa)."
+        },
+        {
+          "name": "Hero-King",
+          "role": "The reluctant ruler called to a journey (Campbell's central figure: Gilgamesh, Odysseus, Arjuna, Beowulf, Cuchulain)."
+        },
+        {
+          "name": "Devouring-Mother",
+          "role": "The dark-creator / death-and-renewal force (post-Jungian; surfaces as Kali-aspect / Hel / Coatlicue / Hecate). **High trauma load.**"
+        },
+        {
+          "name": "Wise-Elder",
+          "role": "The mentor-figure who knows the path but cannot walk it for the hero (Athena, Odin-as-wanderer, Krishna-as-advisor)."
+        },
+        {
+          "name": "Threshold-Guardian",
+          "role": "The figure that tests whether the hero is ready to cross (Sphinx, Cerberus, the dragon at the gate, the riddling stranger)."
+        },
+        {
+          "name": "Shadow",
+          "role": "The repressed-self / dark-mirror (Jungian core archetype; surfaces as the hero's nemesis-who-is-also-them: Loki/Baldr, Set/Osiris, Cain/Abel framings)."
+        },
+        {
+          "name": "Anima/Animus (paired)",
+          "role": "The complementary-other-self (Jungian); represented as a pair-character that always appears together, embodying the inner-other-gendered-self pattern that surfaces across many t..."
+        },
+        {
+          "name": "Wanderer",
+          "role": "The journeyer-without-fixed-home who carries stories between cultures (Odysseus-after-Ithaca, the wandering Jew, the diaspora-keeper figure)."
+        },
+        {
+          "name": "Child-Divinity",
+          "role": "The newborn-with-power archetype (infant Krishna, baby Hermes, child Horus, divine-child motif)."
+        },
+        {
+          "name": "Sacrificial-Lamb",
+          "role": "The figure whose loss enables renewal (cross-traditional: dying-and-rising deities, scapegoat figures, voluntary-sacrifice motif)."
+        },
+        {
+          "name": "Warrior",
+          "role": "The conflict-pattern-bearer (Ares, Tyr, Sekhmet-aspect, the warrior-figure across many traditions)."
+        },
+        {
+          "name": "Lover",
+          "role": "The relational-bond-bearer (Aphrodite-aspect, the romantic-mythic pair, the bond-that-shapes-the-world archetype)."
+        },
+        {
+          "name": "Sovereign",
+          "role": "The cosmic-order-keeper archetype (Zeus-aspect, Odin-as-ruler, Ra-as-cosmic-king, Quetzalcoatl-aspect)."
+        },
+        {
+          "name": "Magician",
+          "role": "The transformation-bearer (Hermes-Trismegistus, Tezcatlipoca-aspect, Merlin, the alchemist-figure, the shape-shifter pattern)."
+        }
+      ]
+    },
     "heroColor": "#FFA726",
     "iconPath": "/apps/mythforge/icon-sm.webp",
     "mascotPath": "/apps/mythforge/mascot.webp",
@@ -3247,6 +4042,31 @@ export const apps: AppData[] = [
     "tagline": "Kids ages 10-14 construct and explore a living world using math",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "NumberVerse sits in the **math-mountains zone** alongside GeometryForge / ProofQuest / FunctionForge / RatioRealm / DiscreteQuest / ChanceForge — all 6 ship distributed-narrative casts.",
+      "members": [
+        {
+          "name": "Tenfold",
+          "role": "Place value — powers of 10, positional notation"
+        },
+        {
+          "name": "Zeph",
+          "role": "The zero placeholder — its load-bearing role in positional notation"
+        },
+        {
+          "name": "Mirror",
+          "role": "Negative numbers — reflection across zero on the number line"
+        },
+        {
+          "name": "Skip",
+          "role": "Skip-counting and multiples — repeated addition as forward stepping"
+        },
+        {
+          "name": "Tug",
+          "role": "Inverse operations — addition ↔ subtraction (and the same idea for × ↔ ÷) as opposite pulls on the same line"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/numberverse/icon-sm.webp",
     "mascotPath": "/apps/numberverse/mascot.webp",
@@ -3348,6 +4168,31 @@ export const apps: AppData[] = [
     "wave": 3,
     "iconHeroPath": "/apps/pixelforge/icon.webp",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "PixelForge sits in the **creative-studio visual-arts cluster** alongside SpectrumCanvas / MangaForge / IllusionForge — all 4 shipping distributed-narrative casts in Wave 8, mirroring Wave 7's music-cluster symmetry.",
+      "members": [
+        {
+          "name": "Speck",
+          "role": "The single pixel — the atomic unit of pixel art; every image is a grid of these"
+        },
+        {
+          "name": "Shade",
+          "role": "The palette ramp — a small set of colors arranged from darkest to lightest (the foundation of pixel-art shading and form)"
+        },
+        {
+          "name": "Grid",
+          "role": "The tilemap grid — pixels snapped to repeating units that form tiles, tilesets, and game maps"
+        },
+        {
+          "name": "Tween",
+          "role": "The in-between frame — the animation frame that sits between two keyframes, giving motion its smoothness"
+        },
+        {
+          "name": "Banner",
+          "role": "The impact pose — the heroic / dramatic silhouette that reads instantly at thumbnail size (the principle that good character art is recognizable from its outline alone)"
+        }
+      ]
+    },
     "longTagline": "PixelForge is a visual arts studio where you learn real design skills through creative challenges! Fantasy creature NPC clients hire you to create artwork -- a fire dragon needs a warm-colored banner, a frost fairy wants a symmetrical ice crystal. You will master color theory, composition, and art h",
     "features": [
       {
@@ -3392,6 +4237,31 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "PowerForge teaches energy + power as a **system of conversions and flows** — energy types, conversion devices, transmission infrastructure, source mix (renewable vs fossil), and conservation laws.",
+      "members": [
+        {
+          "name": "Sprint",
+          "role": "Kinetic energy (motion)"
+        },
+        {
+          "name": "Perch",
+          "role": "Potential energy (stored / position)"
+        },
+        {
+          "name": "Trade",
+          "role": "Energy conversion (one form → another)"
+        },
+        {
+          "name": "Keep",
+          "role": "Conservation / efficiency (the law)"
+        },
+        {
+          "name": "Mix",
+          "role": "Source diversification / renewable + storage"
+        }
+      ]
+    },
     "iconHeroPath": "/apps/powerforge/icon.webp",
     "longTagline": "PowerForge is an energy science lab where you build power plants and manage electrical grids! Design solar farms, wind turbines, and other energy systems. Learn how energy is converted from one form to another, and figure out how to power a growing community using clean, renewable energy.",
     "features": [
@@ -3437,6 +4307,31 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 2,
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "PrismForge teaches optics as a **family of light-behaviors** — reflection, refraction, dispersion, lens action, color mixing, and the wave/photon dualities.",
+      "members": [
+        {
+          "name": "Mirror",
+          "role": "Reflection (incoming ray bounces back)"
+        },
+        {
+          "name": "Bend",
+          "role": "Refraction (light slows in denser media)"
+        },
+        {
+          "name": "Spread",
+          "role": "Dispersion / spectrum (different wavelengths bend differently)"
+        },
+        {
+          "name": "Focus",
+          "role": "Lens action (converging + diverging)"
+        },
+        {
+          "name": "Tint",
+          "role": "Color mixing (additive RGB / subtractive CMY)"
+        }
+      ]
+    },
     "longTagline": "PrismForge is a hands-on optics and light science lab where you experiment with lenses, mirrors, and prisms on an interactive optics bench! Drag and rotate optical elements to bend, reflect, and split light rays. Watch in real time as rays trace their paths, discover how rainbows form, and build rea",
     "features": [
       {
@@ -3470,6 +4365,42 @@ export const apps: AppData[] = [
     "tagline": "Logic puzzle adventure building proof-readiness through deductive reasoning puzzles, informal proofs, and mathematical writing. Themed around mathematical discoveries (Euler's bridges, Ramsey theory, four-color theorem).",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Direct-Proof Dora",
+          "role": "Direct proof: assume premises, derive conclusion by straightforward logical steps"
+        },
+        {
+          "name": "Induction Ida",
+          "role": "Weak / standard mathematical induction: base case + inductive step"
+        },
+        {
+          "name": "Strong-Induction Sten",
+          "role": "Strong induction: base case + assume all prior cases hold"
+        },
+        {
+          "name": "Contradiction Cassius",
+          "role": "Proof by contradiction (reductio ad absurdum): assume the negation, derive a contradiction"
+        },
+        {
+          "name": "Contrapositive Cara",
+          "role": "Proof by contrapositive: prove \"not Q → not P\" to establish \"P → Q\""
+        },
+        {
+          "name": "Construction Cole",
+          "role": "Proof by construction: prove existence by explicit construction of an example"
+        },
+        {
+          "name": "Pigeonhole Perch",
+          "role": "Pigeonhole principle: if n+1 items are placed in n bins, at least one bin contains 2+ items"
+        },
+        {
+          "name": "Exhaustion Edda",
+          "role": "Proof by exhaustion / cases: enumerate every case and verify each"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/proofquest/icon-sm.webp",
     "mascotPath": "/apps/proofquest/mascot.webp",
@@ -3515,6 +4446,58 @@ export const apps: AppData[] = [
     "tagline": "Spelling and vocabulary mastery through pattern recognition and play.",
     "vertical": "special-interest",
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Etyma",
+          "role": "Latin Quarter — Latin roots (port, scrib, dict, vis, audi, port)"
+        },
+        {
+          "name": "Sophia",
+          "role": "Greek Acropolis — Greek roots (bio, geo, photo, log, graph, phon)"
+        },
+        {
+          "name": "Birch",
+          "role": "Germanic / Old English Grove — short, punchy Anglo-Saxon roots (mouth, hand, foot, hear, see, walk)"
+        },
+        {
+          "name": "Saga",
+          "role": "Old Norse Longhouse — northern roots (sky, take, gift, raise, weak, scant)"
+        },
+        {
+          "name": "Margaux",
+          "role": "French Chateau — Norman-French roots (royal, chef, ballet, garage, hotel, courage)"
+        },
+        {
+          "name": "Zayn",
+          "role": "Arabic Oasis — Arabic-origin English loans (algebra, algorithm, alchemy, zenith, sugar, cotton)"
+        },
+        {
+          "name": "Hush",
+          "role": "Silent-letter clan (kn-, gn-, wr-, mb, gh, pn-, ps-)"
+        },
+        {
+          "name": "Twin",
+          "role": "Double-consonant rule (running, beginning, hopped, planned — short-vowel-CVC + suffix)"
+        },
+        {
+          "name": "Ember",
+          "role": "Schwa-keeper (the unstressed-vowel \"uh\" — `about`, `pencil`, `lemon`, `circus`, `medium`)"
+        },
+        {
+          "name": "Wren",
+          "role": "Vowel-team duos (ai, ea, ee, oa, ow, ie, oi) — \"when two vowels go walking\""
+        },
+        {
+          "name": "Affix",
+          "role": "Suffix-stack guardian (root + suffix + suffix: nation → national → nationalize → nationalization)"
+        },
+        {
+          "name": "Cadence",
+          "role": "Syllable-rhythm master (di-vid-ing words for spelling: VC/CV, V/CV, syl-lab-i-fi-ca-tion)"
+        }
+      ]
+    },
     "heroColor": "#FFA726",
     "iconPath": "/apps/quillspell/icon-sm.webp",
     "mascotPath": "/apps/quillspell/mascot.webp",
@@ -3559,6 +4542,31 @@ export const apps: AppData[] = [
     "tagline": "Master ratios, proportions, and percentages through real-world simulation contexts — recipe scaling in kitchens, blueprint ratios in construction, and map scales in cartography — with visual models and AI-driven difficulty adaptation. Ages 10-14.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "RatioRealm sits in the **math-mountains zone** of AdventureHub (per `Resources/HubContributions/ratiorealm.json`, shipped labsmith PR #101) alongside ProofQuest, GeometryForge, and FunctionForge — all DN-aligned.",
+      "members": [
+        {
+          "name": "Pair the Ratio-Speaker",
+          "role": "Simple ratios (a:b) — the foundational \"for every A, there are B\" pattern"
+        },
+        {
+          "name": "Scale the Doubler",
+          "role": "Equivalent ratios (scaling both parts by the same factor; recipe-doubling primitive)"
+        },
+        {
+          "name": "Unit the Per-One-Counter",
+          "role": "Rates and unit rates (the per-one normalization that lets us compare different rates)"
+        },
+        {
+          "name": "Cross the Proportion-Solver",
+          "role": "Proportions and cross-multiplication (the canonical \"if a/b = c/d then ad = bc\" mechanic)"
+        },
+        {
+          "name": "Centa the Percent-Translator",
+          "role": "Percentages — the per-hundred special case + percent change"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/ratiorealm/icon-sm.webp",
     "mascotPath": "/apps/ratiorealm/mascot.webp",
@@ -3604,6 +4612,35 @@ export const apps: AppData[] = [
     "tagline": "Build reading comprehension mastery through interactive passage analysis, evidence-based argument construction, and AI-generated comprehension challenges — with dual fiction and nonfiction tracks. Ages 9-14.",
     "vertical": "academics",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ReadQuest sits in the **word-woods zone** of AdventureHub alongside QuillSpell + GrammarForge — both already shipping distributed-narrative casts (Wave 1).",
+      "members": [
+        {
+          "name": "Crest",
+          "role": "Main idea / central message (the *peak* of the passage)"
+        },
+        {
+          "name": "Hunch",
+          "role": "Inference (reading between the lines)"
+        },
+        {
+          "name": "Anchor",
+          "role": "Evidence / textual citation"
+        },
+        {
+          "name": "Plume",
+          "role": "Author's purpose / voice / tone"
+        },
+        {
+          "name": "Frame",
+          "role": "Text structure (compare-contrast, sequence, cause-effect, problem-solution, description)"
+        },
+        {
+          "name": "Pith",
+          "role": "Vocabulary in context (deriving word meaning from surrounding text)"
+        }
+      ]
+    },
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/readquest/icon-sm.webp",
     "mascotPath": "/apps/readquest/mascot.webp",
@@ -3963,6 +5000,31 @@ export const apps: AppData[] = [
     "wave": 2,
     "iconHeroPath": "/apps/soundsphere/icon.webp",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "**This handoff applies the cast ONLY to the sound-science portions** — kits 3, 4, 7, 9, 10, 11, 12.",
+      "members": [
+        {
+          "name": "Wave",
+          "role": "Frequency — the pitch axis; high-frequency sounds vibrate fast, low-frequency sounds vibrate slow"
+        },
+        {
+          "name": "Bloom",
+          "role": "Envelope — the attack / sustain / decay / release shape of a sound (how it begins, holds, and fades)"
+        },
+        {
+          "name": "Layer",
+          "role": "Timbre — the overtone fingerprint that makes a violin sound like a violin and a flute sound like a flute (even at the same pitch)"
+        },
+        {
+          "name": "Ring",
+          "role": "Space — reverb, echo, and room ambience (how the same sound feels different in a bathroom vs a stadium vs a forest)"
+        },
+        {
+          "name": "Tune",
+          "role": "Synthesis — how primitive sound-elements (frequencies + envelopes + layers + space) combine to build entirely new sounds"
+        }
+      ]
+    },
     "longTagline": "SoundSphere lets you build your own calming or energizing soundscapes by mixing sounds together. Track how you are feeling using the Zones of Regulation, then discover which sound combinations help you focus, relax, or get energized. It is your personal sound studio!",
     "features": [
       {
@@ -4049,6 +5111,31 @@ export const apps: AppData[] = [
     "wave": 1,
     "iconHeroPath": "/apps/spectrumcanvas/icon.webp",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "SpectrumCanvas sits in the **creative-studio visual-arts cluster** alongside PixelForge / MangaForge / IllusionForge — all 4 shipping distributed-narrative casts in Wave 8.",
+      "members": [
+        {
+          "name": "Pool",
+          "role": "The wash — the controlled spread of watercolor / wet pigment across a surface (the foundational fluid-art gesture; the moment a single drop becomes a shape)"
+        },
+        {
+          "name": "Cradle",
+          "role": "The composition cradle — the balance of weight and negative space on a canvas (where heavy / light elements rest and where the eye can rest)"
+        },
+        {
+          "name": "Hum",
+          "role": "The color-emotion mapping — the assigning of feelings to color zones (central to SpectrumCanvas's emotion palette feature: which colors feel like which emotions, per learner)"
+        },
+        {
+          "name": "Soften",
+          "role": "The sensory-soften gesture — any move that reduces visual / textural stimulation when it gets high (lower contrast, reduce saturation, calm the line weight, soften the edges)"
+        },
+        {
+          "name": "Weave",
+          "role": "The collage weave — the layered overlay of textures + photos + drawn elements (central to social-story illustration and to multi-media composition)"
+        }
+      ]
+    },
     "longTagline": "SpectrumCanvas is a digital art studio where you can paint, draw, sculpt, and create collages without any messy materials. It simulates real art tools like watercolors, charcoal, and clay, and you can adjust how everything feels on screen. You can also create social stories with illustrations and ex",
     "features": [
       {
@@ -4125,6 +5212,31 @@ export const apps: AppData[] = [
     "tagline": "Players pilot spacecraft through the solar system and beyond, building and upgrading their ship, landing on planets to conduct experiments, establishing colonies, and answering astronomy challenges to unlock new regions of space. Real orbital mechanics, scientifically accurate planet conditions, and simulated space phenomena make this the only gamified space adventure RPG on iOS.",
     "vertical": "stem",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "StarForge's concept centers on stellar astronomy — stellar classification, HR diagram, stellar life cycles, observational astronomy.",
+      "members": [
+        {
+          "name": "Wick",
+          "role": "Protostar (collapsing gas, igniting)"
+        },
+        {
+          "name": "Glow",
+          "role": "Main-sequence star (hydrogen fusion / stable)"
+        },
+        {
+          "name": "Swell",
+          "role": "Red giant (helium fusion / expanded outer layers)"
+        },
+        {
+          "name": "Pinch",
+          "role": "Stellar collapse + neutron star / supernova compaction"
+        },
+        {
+          "name": "Ember",
+          "role": "White dwarf / stellar remnant (cooling final state)"
+        }
+      ]
+    },
     "heroColor": "#29B6F6",
     "iconPath": "/apps/starforge/icon-sm.webp",
     "mascotPath": "/apps/starforge/mascot.webp",
@@ -4505,6 +5617,31 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 2,
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "WaveForge teaches wave physics as a **family of wave behaviors** — frequency/amplitude/wavelength, interference, resonance, Doppler, standing waves, and the visual/audio manifestations of each.",
+      "members": [
+        {
+          "name": "Pulse",
+          "role": "Wave basics (frequency + amplitude + wavelength)"
+        },
+        {
+          "name": "Meet",
+          "role": "Interference (constructive + destructive)"
+        },
+        {
+          "name": "Ring",
+          "role": "Resonance (natural frequency response)"
+        },
+        {
+          "name": "Drift",
+          "role": "Doppler / wave-source motion"
+        },
+        {
+          "name": "Loop",
+          "role": "Standing waves + harmonics"
+        }
+      ]
+    },
     "longTagline": "WaveForge is an acoustics and sound physics laboratory where you can see sound! Use the built-in oscilloscope to visualize your voice as a living waveform, tune vibrating strings to find resonance, design the acoustics of a concert hall, and decode whale songs using spectrograms. Your AI mentor Soni",
     "features": [
       {
@@ -4549,6 +5686,31 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "WeatherForge teaches meteorology as a **family of atmospheric processes** — pressure systems, air masses, fronts, storm formation, water cycle, and forecasting reasoning.",
+      "members": [
+        {
+          "name": "Press",
+          "role": "Air pressure & circulation (highs/lows + wind direction)"
+        },
+        {
+          "name": "Mass",
+          "role": "Air masses & fronts (warm vs cold, moist vs dry)"
+        },
+        {
+          "name": "Loft",
+          "role": "Water cycle & lifting (evaporation, condensation, precipitation)"
+        },
+        {
+          "name": "Brew",
+          "role": "Storm formation (instability + moisture + lifting)"
+        },
+        {
+          "name": "Read",
+          "role": "Forecasting & reasoning (synthesizing data into prediction)"
+        }
+      ]
+    },
     "iconHeroPath": "/apps/weatherforge/icon.webp",
     "longTagline": "WeatherForge is a meteorology and storm science lab for ages 9-14 where players build weather instruments, track real storms using live weather data, predict tomorrow's weather, and simulate the forces behind Earth's most powerful phenomena — hurricanes, tornadoes, thunderstorms, and blizzards.",
     "hasUserGuide": true,
@@ -4601,6 +5763,31 @@ export const apps: AppData[] = [
     "wave": 1,
     "iconHeroPath": "/apps/wildlens/icon.webp",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "WildLens teaches wildlife observation through **photograph → identify → understand-why** loops.",
+      "members": [
+        {
+          "name": "Track",
+          "role": "Animal sign reading (footprints, scat, scrapes, scent)"
+        },
+        {
+          "name": "Roost",
+          "role": "Habitat behavior (where & why animals rest, nest, den)"
+        },
+        {
+          "name": "Brood",
+          "role": "Social structure (family groups, herds, flocks, solitary)"
+        },
+        {
+          "name": "Range",
+          "role": "Territory & migration (where animals live, where they go)"
+        },
+        {
+          "name": "Call",
+          "role": "Communication (vocalization, body language, signals)"
+        }
+      ]
+    },
     "longTagline": "WildLens is a wildlife discovery and ecology explorer for ages 9-14 where players photograph real wildlife, identify species with on-device AI, learn ecology through interactive food webs and habitat simulations, and collect observations in a digital field journal — aligned to NGSS middle school lif",
     "hasUserGuide": true,
     "modes": {
@@ -4824,6 +6011,22 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Sir Pinwell",
+          "role": "Pin pattern — freezes pieces along a line"
+        },
+        {
+          "name": "Twin Knights of Fork Hill",
+          "role": "Fork pattern — attack two targets at once"
+        },
+        {
+          "name": "Lady Skewer",
+          "role": "Skewer pattern — force a valuable piece out of the way"
+        }
+      ]
+    },
     "hasUserGuide": false,
     "modes": {
       "learn": 3,
@@ -4850,6 +6053,26 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Patient Bamboo",
+          "role": "Patience and slow growth — long-game positioning"
+        },
+        {
+          "name": "Hungry Crane",
+          "role": "Capture instinct — taking what's available"
+        },
+        {
+          "name": "Master Snail",
+          "role": "Deliberate strategy — every move considered"
+        },
+        {
+          "name": "Sparring Tiger",
+          "role": "Aggressive contact — direct attacks and clashes"
+        }
+      ]
+    },
     "hasUserGuide": false,
     "modes": {
       "learn": 3,
@@ -4876,6 +6099,26 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "General Zhang",
+          "role": "Decisive command — clear orders, clear outcomes"
+        },
+        {
+          "name": "Elephant Wei",
+          "role": "Powerful straight-line attack pattern"
+        },
+        {
+          "name": "Knight Lu",
+          "role": "Knight-jump tactical maneuver"
+        },
+        {
+          "name": "Soldier Jin",
+          "role": "Forward-advancing infantry — pawn structure"
+        }
+      ]
+    },
     "hasUserGuide": false,
     "modes": {
       "learn": 2,
@@ -4901,6 +6144,14 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Trill",
+          "role": "The motif itself — visual posture shifts as the motif develops, inverts, fragments"
+        }
+      ]
+    },
     "hasUserGuide": false,
     "modes": {
       "learn": 2,
@@ -4927,6 +6178,18 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Peglegra the Bold",
+          "role": "Brave forward-leaping piece — captures via the jump"
+        },
+        {
+          "name": "Chompus the Great",
+          "role": "Multi-capture chain specialist — keeps jumping while targets remain"
+        }
+      ]
+    },
     "hasUserGuide": false,
     "modes": {
       "learn": 3,
@@ -4954,6 +6217,26 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "distributedNarrative": true,
+    "dnCast": {
+      "members": [
+        {
+          "name": "Bram",
+          "role": "Reading partners — inferring what cards your partner holds"
+        },
+        {
+          "name": "Auntie Audrey",
+          "role": "Bidding wisdom — when to commit and when to pass"
+        },
+        {
+          "name": "The Vanderbilt",
+          "role": "Bridge legend — classical convention and table presence"
+        },
+        {
+          "name": "Doubleton Sisters",
+          "role": "Short-suit play — managing two-card holdings"
+        }
+      ]
+    },
     "hasUserGuide": false,
     "modes": {
       "learn": 2,
@@ -5190,6 +6473,31 @@ export const apps: AppData[] = [
     "tagline": "Comedy RPG adventure for ages 9-14 — explore the kingdom of Laughtonia where humor is the combat mechanic, defeat villains with puns and riddles, collect comedy gear, and interact with AI-driven NPCs who remember your joke style.",
     "vertical": "special-interest",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "WitQuest sits in the **word-woods zone** of AdventureHub alongside QuillSpell + GrammarForge — both already shipping distributed-narrative casts (Wave 1).",
+      "members": [
+        {
+          "name": "Quirk",
+          "role": "Puns and double-meanings"
+        },
+        {
+          "name": "Knot",
+          "role": "Riddles (compressed-info puzzles where you decode the answer from constrained clues)"
+        },
+        {
+          "name": "Switch",
+          "role": "Anagrams (rearranging letters to form a different word — \"listen\" → \"silent\")"
+        },
+        {
+          "name": "Lilt",
+          "role": "Idioms and figurative language (phrases whose literal meaning ≠ their actual meaning — \"raining cats and dogs\")"
+        },
+        {
+          "name": "Hop",
+          "role": "Lateral thinking (finding a non-obvious angle on a problem; sidestepping the assumed framing)"
+        }
+      ]
+    },
     "heroColor": "#9C5DC4",
     "iconPath": "/apps/witquest/icon-sm.webp",
     "iconHeroPath": "/apps/witquest/icon.webp",
