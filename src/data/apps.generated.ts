@@ -1894,7 +1894,7 @@ export const apps: AppData[] = [
     "heroColor": "#29B6F6",
     "iconPath": "/apps/geneforge/icon-sm.webp",
     "mascotPath": "/apps/geneforge/mascot.webp",
-    "mentor": "Strand",
+    "mentor": "Codex",
     "implementing": false,
     "standards": [
       "NGSS",
