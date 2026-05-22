@@ -2170,6 +2170,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "iconHeroPath": "/apps/heatforge/icon.webp",
     "longTagline": "HeatForge is a thermodynamics and energy transfer lab where you race heat through materials, watch particles vibrate as they warm up, engineer insulation to defeat a virtual blowtorch, and explore how the greenhouse effect warms our planet. Your AI mentor Kelvin connects the science to real-world en",
     "features": [
@@ -3390,6 +3391,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": true,
     "wave": null,
+    "distributedNarrative": true,
     "iconHeroPath": "/apps/powerforge/icon.webp",
     "longTagline": "PowerForge is an energy science lab where you build power plants and manage electrical grids! Design solar farms, wind turbines, and other energy systems. Learn how energy is converted from one form to another, and figure out how to power a growing community using clean, renewable energy.",
     "features": [
@@ -3434,6 +3436,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": true,
     "wave": 2,
+    "distributedNarrative": true,
     "longTagline": "PrismForge is a hands-on optics and light science lab where you experiment with lenses, mirrors, and prisms on an interactive optics bench! Drag and rotate optical elements to bend, reflect, and split light rays. Watch in real time as rays trace their paths, discover how rainbows form, and build rea",
     "features": [
       {
@@ -4501,6 +4504,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": true,
     "wave": 2,
+    "distributedNarrative": true,
     "longTagline": "WaveForge is an acoustics and sound physics laboratory where you can see sound! Use the built-in oscilloscope to visualize your voice as a living waveform, tune vibrating strings to find resonance, design the acoustics of a concert hall, and decode whale songs using spectrograms. Your AI mentor Soni",
     "features": [
       {
@@ -4544,6 +4548,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "iconHeroPath": "/apps/weatherforge/icon.webp",
     "longTagline": "WeatherForge is a meteorology and storm science lab for ages 9-14 where players build weather instruments, track real storms using live weather data, predict tomorrow's weather, and simulate the forces behind Earth's most powerful phenomena — hurricanes, tornadoes, thunderstorms, and blizzards.",
     "hasUserGuide": true,
