@@ -5159,6 +5159,30 @@ export const apps: AppData[] = [
       "play": 2,
       "create": 1
     }
+  },
+  {
+    "slug": "witquest",
+    "name": "WitQuest",
+    "tagline": "Comedy RPG adventure for ages 9-14 — explore the kingdom of Laughtonia where humor is the combat mechanic, defeat villains with puns and riddles, collect comedy gear, and interact with AI-driven NPCs who remember your joke style.",
+    "vertical": "special-interest",
+    "distributedNarrative": true,
+    "heroColor": "#9C5DC4",
+    "iconPath": "/apps/witquest/icon-sm.webp",
+    "iconHeroPath": "/apps/witquest/icon.webp",
+    "mascotPath": "/apps/witquest/mascot.webp",
+    "implementing": false,
+    "standards": [
+      "NCAS LA:Cr1",
+      "CCSS ELA L.6-8.5"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false,
+    "modes": {
+      "learn": 2,
+      "play": 3,
+      "create": 1
+    }
   }
 ];
 
@@ -5171,5 +5195,5 @@ export const verticalCounts = {
   "steam": 20,
   "academics": 28,
   "dir-fedc": 9,
-  "special-interest": 35
+  "special-interest": 36
 };
