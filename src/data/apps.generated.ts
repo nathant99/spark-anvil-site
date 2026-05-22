@@ -166,6 +166,7 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 1,
     "iconHeroPath": "/apps/beatforge/icon.webp",
+    "distributedNarrative": true,
     "longTagline": "BeatForge is a music composition studio. You build songs by snapping colorful sound blocks together — notes, rests, chords, dynamics — and the app plays them back through real instruments. As your music skills grow, the colorful blocks slowly reveal real sheet-music notation underneath, so you learn",
     "features": [
       {
@@ -2077,6 +2078,7 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 2,
     "iconHeroPath": "/apps/harmonyforge/icon.webp",
+    "distributedNarrative": true,
     "longTagline": "HarmonyForge lets you create music by arranging colorful shapes on a grid! Each color is a different instrument, each shape is a different rhythm, and where you place it changes the pitch. You do not need to know how to read music -- if you can see patterns, you can make music. The app is designed t",
     "features": [
       {
@@ -3948,6 +3950,7 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 2,
     "iconHeroPath": "/apps/soundsphere/icon.webp",
+    "distributedNarrative": true,
     "longTagline": "SoundSphere lets you build your own calming or energizing soundscapes by mixing sounds together. Track how you are feeling using the Zones of Regulation, then discover which sound combinations help you focus, relax, or get energized. It is your personal sound studio!",
     "features": [
       {
