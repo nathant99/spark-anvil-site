@@ -245,6 +245,7 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/biomeforge/mascot.webp",
     "mentor": "Mossy",
     "implementing": false,
+    "distributedNarrative": true,
     "standards": [
       "ISTE",
       "Common Sense Privacy"
@@ -705,6 +706,7 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/climatequest/mascot.webp",
     "mentor": "Cirrus",
     "implementing": false,
+    "distributedNarrative": true,
     "standards": [
       "NGSS",
       "CCSS Math",
@@ -1201,6 +1203,7 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": null,
     "iconHeroPath": "/apps/ecosphere/icon.webp",
+    "distributedNarrative": true,
     "longTagline": "EcoSphere puts you in charge of planet Earth! Manage the atmosphere, oceans, land, and living things across millions of years. Make decisions about energy, pollution, and resources, and watch how everything connects. Your choices affect the whole planet -- can you keep Earth healthy?",
     "features": [
       {
@@ -4592,6 +4595,7 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 1,
     "iconHeroPath": "/apps/wildlens/icon.webp",
+    "distributedNarrative": true,
     "longTagline": "WildLens is a wildlife discovery and ecology explorer for ages 9-14 where players photograph real wildlife, identify species with on-device AI, learn ecology through interactive food webs and habitat simulations, and collect observations in a digital field journal — aligned to NGSS middle school lif",
     "hasUserGuide": true,
     "modes": {
