@@ -2210,6 +2210,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
     "hasUserGuide": true,
     "modes": {
       "learn": 2,
@@ -2762,6 +2763,7 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": true,
     "wave": 3,
+    "distributedNarrative": true,
     "hasUserGuide": true,
     "modes": {
       "learn": 1,
@@ -3338,6 +3340,7 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 3,
     "iconHeroPath": "/apps/pixelforge/icon.webp",
+    "distributedNarrative": true,
     "longTagline": "PixelForge is a visual arts studio where you learn real design skills through creative challenges! Fantasy creature NPC clients hire you to create artwork -- a fire dragon needs a warm-colored banner, a frost fairy wants a symmetrical ice crystal. You will master color theory, composition, and art h",
     "features": [
       {
@@ -4036,6 +4039,7 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 1,
     "iconHeroPath": "/apps/spectrumcanvas/icon.webp",
+    "distributedNarrative": true,
     "longTagline": "SpectrumCanvas is a digital art studio where you can paint, draw, sculpt, and create collages without any messy materials. It simulates real art tools like watercolors, charcoal, and clay, and you can adjust how everything feels on screen. You can also create social stories with illustrations and ex",
     "features": [
       {
