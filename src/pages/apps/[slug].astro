@@ -3,6 +3,7 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import { apps, type AppData } from '~/data/apps.generated';
 import { verticals } from '~/data/site';
 import { renderInline } from '~/lib/markdown';
+import { modes, scoreLabel, type ModeKey } from '~/data/modes';
 
 export async function getStaticPaths() {
   return apps.map(app => ({
@@ -126,6 +127,34 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
         <code class="text-xs">{app.heroColor}</code>
       </span>
     </div>
+
+    {/* Engagement modality badges — Learn / Play / Create cross-cutting axis */}
+    {app.modes && (
+      <div class="mt-6 flex flex-wrap items-center gap-2">
+        <span class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-medium mr-1">
+          Engagement:
+        </span>
+        {modes
+          .map(m => ({ m, score: app.modes![m.key as ModeKey] }))
+          .filter(({ score }) => score >= 2)
+          .sort((a, b) => b.score - a.score)
+          .map(({ m, score }) => (
+            <a
+              href={`/apps?mode=${m.key}`}
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-white shadow-sm hover:opacity-90 transition-opacity"
+              style={`background-color: ${m.hex}`}
+              title={`${m.label} — ${scoreLabel[score as 0|1|2|3]} mode. Click to see all ${m.label} apps.`}
+            >
+              <span aria-hidden="true">●</span>
+              {m.label}
+              <span class="font-medium opacity-80">· {scoreLabel[score as 0|1|2|3]}</span>
+            </a>
+          ))}
+        {(Object.values(app.modes).every(s => s < 2)) && (
+          <span class="text-xs italic text-anvil/40 dark:text-warm/40">Modes pending</span>
+        )}
+      </div>
+    )}
   </section>
 
   <!-- Long tagline (from User Guide if available) -->
