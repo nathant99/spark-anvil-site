@@ -3551,6 +3551,17 @@ export const apps: AppData[] = [
   {
     "slug": "marketquest",
     "name": "MarketQuest",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MarketQuest's 5-character cast embodies the foundational market mechanics — supply (Stock), demand (Crave), price equilibrium (Even), market roles (Hand), and market events (Tide). Stake (mentor) frames each primitive; cast embodies them at small-trader / community-market scale (NEVER Wall-Street register). Wealth-shame gate enforced: cast NEVER frames poverty as moral failing.",
+      "members": [
+      { "name": "Stock", "role": "Supply — producer decisions, scarcity, what gets brought to market" },
+      { "name": "Crave", "role": "Demand — consumer preferences, needs vs wants, price-sensitivity" },
+      { "name": "Even", "role": "Price equilibrium — where supply meets demand, the conversation point" },
+      { "name": "Hand", "role": "Market roles — producer + consumer + distributor, visible labor" },
+      { "name": "Tide", "role": "Market events — shocks + policy + trade flows read as patterns" }
+      ]
+    },
     "tagline": "Virtual economy where students explore supply and demand, set prices, trade goods, and run market experiments -- building economic literacy through hands-on simulation and strategic decision-making.",
     "vertical": "stem",
     "heroColor": "#29B6F6",
@@ -3797,6 +3808,17 @@ export const apps: AppData[] = [
   {
     "slug": "mintforge",
     "name": "MintForge",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MintForge's 5-character cast embodies the foundational money-systems + financial-math primitives — currency (Coin), markup (Tag), compound interest (Grow), budget allocation (Plan), and risk + variability (Tilt). Penny (mentor) frames each primitive; cast embodies them at kids-allowance / school-store / savings-jar scale (NEVER hedge-fund / crypto-bro register). Wealth-shame gate (inherited from MarketQuest) + currency-system gate (tween-appropriate scope; no monetary-policy / inflation political-economy framing) both enforced.",
+      "members": [
+      { "name": "Coin", "role": "Currency + exchange — what money is, what it does, what it can't measure" },
+      { "name": "Tag", "role": "Percentage + markup — the transparent math of how prices are built" },
+      { "name": "Grow", "role": "Compound interest — patient math of money over time" },
+      { "name": "Plan", "role": "Budget allocation + opportunity cost — the math of choosing with limited resources" },
+      { "name": "Tilt", "role": "Risk + variability — the math of uncertain outcomes, distributions over destinies" }
+      ]
+    },
     "tagline": "Financial math game where financial scenarios ARE the math problems — compound interest, percentage markup, budgeting, loan amortization, stock market simulation. Math-first approach to financial literacy.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
@@ -5626,6 +5648,17 @@ export const apps: AppData[] = [
   {
     "slug": "venturequest",
     "name": "VentureQuest",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "VentureQuest's 5-character cast embodies the entrepreneurship-practice primitives — opportunity recognition (Spot), customer discovery (Listen), lean experimentation (Build), pitch craft (Pitch), ethical decision-making (Weigh). Ledger (mentor) frames each primitive; cast embodies them at first-venture scale (lemonade-stand → food-truck register, NEVER unicorn-billionaire scale). Model-billionaire framing gate + wealth-shame gate enforced: cast NEVER frames success as guaranteed-by-effort; explicitly models that ventures fail often + that failure isn't personal shame.",
+      "members": [
+      { "name": "Spot", "role": "Opportunity recognition — noticing problems worth solving for real people" },
+      { "name": "Listen", "role": "Customer discovery — asking + waiting + watching, never guessing" },
+      { "name": "Build", "role": "Lean experimentation — rough first drafts, fast iteration, failure-as-learning" },
+      { "name": "Pitch", "role": "Pitch craft — plain-language story, inviting people in, never pressuring" },
+      { "name": "Weigh", "role": "Ethical decision-making — sitting with tradeoffs, holding stakeholder views" }
+      ]
+    },
     "tagline": "Players start and grow businesses from scratch -- beginning with a lemonade stand and progressing through food trucks, retail shops, tech startups, and enterprises. Make real business decisions about pricing, marketing, hiring, inventory, and competition. Different from MintQuest (personal finance): this teaches how businesses actually work. The only iOS-native business simulation for ages 9-14.",
     "vertical": "special-interest",
     "heroColor": "#FFA726",
