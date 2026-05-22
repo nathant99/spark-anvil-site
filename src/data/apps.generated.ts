@@ -4404,6 +4404,67 @@ export const apps: AppData[] = [
     "hasM9Accessories": false,
     "wave": null,
     "hasUserGuide": false
+  },
+  {
+    "slug": "voicetale",
+    "name": "VoiceTale",
+    "tagline": "Voice-First Oral Storytelling for Tweens — 60-120s told tales across a 5-beat arc (hook/setup/rising/turn/close), AI listening coach, tradition layer honoring oral lineages without appropriation (Bramble).",
+    "vertical": "academics",
+    "heroColor": "#1B7B8C",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": "/apps/voicetale/mascot.webp",
+    "mentor": "Loresinger Mae",
+    "implementing": false,
+    "standards": [
+      "CCSS ELA SL.6-8.4",
+      "CCSS ELA W.6-8.3",
+      "NCAS TH:Pr4-Pr6"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "dialoguequest",
+    "name": "DialogueQuest",
+    "tagline": "Branching-Dialogue Craft for Tweens — voice consistency, subtext, tag balance, branch meaningfulness. Build dialogue trees where every line reveals character, advances plot, and leaves room (Patter).",
+    "vertical": "academics",
+    "heroColor": "#A05A4B",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": "/apps/dialoguequest/mascot.webp",
+    "mentor": "Loresinger Mae",
+    "implementing": false,
+    "standards": [
+      "CCSS ELA W.6-8.3.B",
+      "CCSS ELA RL.6-8.6",
+      "NCAS TH:Cr3"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
+  },
+  {
+    "slug": "microbelab",
+    "name": "MicrobeLab",
+    "tagline": "Microbiology Adventure for Tweens — microscope-zoom core loop, microbiome simulator, named microbe characters (Lacto, Bif), immune-response minigame. Beneficial microbes foregrounded; COVID-trauma-sensitive (Vee).",
+    "vertical": "stem",
+    "heroColor": "#33CCBB",
+    "iconPath": null,
+    "iconHeroPath": null,
+    "mascotPath": "/apps/microbelab/mascot.webp",
+    "mentor": "Dr. Quark",
+    "implementing": false,
+    "standards": [
+      "NGSS MS-LS1-1",
+      "NGSS MS-LS1-2",
+      "NGSS MS-LS1-3",
+      "NGSS MS-LS2-3"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "hasUserGuide": false
   }
 ];
 
@@ -4412,9 +4473,9 @@ export const appsBySlug: Record<string, AppData> = Object.fromEntries(
 );
 
 export const verticalCounts = {
-  "stem": 41,
+  "stem": 42,
   "steam": 20,
-  "academics": 26,
+  "academics": 28,
   "dir-fedc": 9,
   "special-interest": 35
 };
