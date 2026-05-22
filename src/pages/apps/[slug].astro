@@ -48,7 +48,7 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
             class="w-48 h-48 md:w-64 md:h-64 rounded-3xl shadow-2xl"
           />
         ) : (
-          <div class="w-48 h-48 md:w-64 md:h-64 rounded-3xl bg-white/20 flex items-center justify-center text-white/50 text-sm">
+          <div class="w-48 h-48 md:w-64 md:h-64 rounded-3xl bg-white/20 dark:bg-warm/10 flex items-center justify-center text-white/50 text-sm">
             Icon coming soon
           </div>
         )}
@@ -58,11 +58,11 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
 
   <!-- Mascot (if available) -->
   {app.mascotPath && (
-    <section class="bg-anvil/5 py-16">
+    <section class="bg-anvil/5 dark:bg-warm/5 py-16">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center mb-10">
           <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-3">Meet your mentor</h2>
-          <p class="text-anvil/80 leading-relaxed max-w-2xl mx-auto">
+          <p class="text-anvil/80 dark:text-warm/80 leading-relaxed max-w-2xl mx-auto">
             Every Spark &amp; Anvil app has a friendly mentor character that demonstrates,
             praises, and patiently scaffolds learning. On-device AI personalizes the
             mentor&apos;s responses to your kid&apos;s progress — never connecting to a server,
@@ -84,7 +84,7 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
                   onerror="this.parentElement.parentElement.style.display='none'"
                 />
               </div>
-              <figcaption class="mt-2 text-xs uppercase tracking-wider text-anvil/60 font-medium">
+              <figcaption class="mt-2 text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 font-medium">
                 {pose}
               </figcaption>
             </figure>
@@ -98,31 +98,31 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
   <section class="max-w-4xl mx-auto px-6 py-12">
     <div class="flex flex-wrap items-center gap-3">
       {app.wave && (
-        <span class="px-3 py-1 bg-forge/10 text-forge-text text-xs font-bold rounded-full uppercase tracking-wider">
+        <span class="px-3 py-1 bg-forge/10 dark:bg-forge-light/15 text-forge-text dark:text-forge-light text-xs font-bold rounded-full uppercase tracking-wider">
           Wave {app.wave} implementing
         </span>
       )}
       {!app.implementing && (
-        <span class="px-3 py-1 bg-anvil/10 text-anvil/60 text-xs font-bold rounded-full uppercase tracking-wider">
+        <span class="px-3 py-1 bg-anvil/10 dark:bg-warm/10 text-anvil/60 dark:text-warm/60 text-xs font-bold rounded-full uppercase tracking-wider">
           In planning
         </span>
       )}
       {app.hasM9Accessories && (
-        <span class="px-3 py-1 bg-spark/30 text-anvil text-xs font-bold rounded-full">
+        <span class="px-3 py-1 bg-spark/30 dark:bg-spark/40 text-anvil dark:text-warm text-xs font-bold rounded-full">
           8 themed avatar accessories
         </span>
       )}
-      <span class="px-3 py-1 bg-anvil/5 text-anvil/70 text-xs font-medium rounded-full">
+      <span class="px-3 py-1 bg-anvil/5 dark:bg-warm/5 text-anvil/70 dark:text-warm/70 text-xs font-medium rounded-full">
         Swift 6 · SwiftUI · FoundationModels
       </span>
       {app.standards.map(s => (
-        <span class="px-3 py-1 bg-anvil/5 text-anvil/70 text-xs font-medium rounded-full">
+        <span class="px-3 py-1 bg-anvil/5 dark:bg-warm/5 text-anvil/70 dark:text-warm/70 text-xs font-medium rounded-full">
           {s}
         </span>
       ))}
-      <span class="ml-auto inline-flex items-center gap-2 text-xs text-anvil/60">
+      <span class="ml-auto inline-flex items-center gap-2 text-xs text-anvil/60 dark:text-warm/60">
         Hero color:
-        <span class="w-4 h-4 rounded border border-anvil/20" style={`background-color: ${app.heroColor}`}></span>
+        <span class="w-4 h-4 rounded border border-anvil/20 dark:border-warm/25" style={`background-color: ${app.heroColor}`}></span>
         <code class="text-xs">{app.heroColor}</code>
       </span>
     </div>
@@ -131,59 +131,59 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
   <!-- Long tagline (from User Guide if available) -->
   {app.longTagline && (
     <section class="max-w-3xl mx-auto px-6 py-12">
-      <p class="text-xl text-anvil/80 leading-relaxed" set:html={renderInline(app.longTagline)}></p>
+      <p class="text-xl text-anvil/80 dark:text-warm/80 leading-relaxed" set:html={renderInline(app.longTagline)}></p>
     </section>
   )}
 
   <!-- What's inside — features extracted from User Guide, fall back to generic 3-up -->
   <section class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="font-brand font-bold text-3xl text-anvil mb-8">What&apos;s inside</h2>
+    <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-8">What&apos;s inside</h2>
     {app.features && app.features.length > 0 ? (
       <div class="grid md:grid-cols-2 gap-6">
         {app.features.map(f => (
-          <div class="p-5 bg-white rounded-xl border border-anvil/10">
+          <div class="p-5 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15">
             <h3 class="font-brand font-bold mb-2 text-anvil">{f.name}</h3>
-            <p class="text-sm text-anvil/70 leading-relaxed" set:html={renderInline(f.description)}></p>
+            <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed" set:html={renderInline(f.description)}></p>
           </div>
         ))}
       </div>
     ) : (
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-5 bg-white rounded-xl border border-anvil/10">
+        <div class="p-5 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15">
           <div class="text-3xl mb-2">🎯</div>
           <h3 class="font-brand font-bold mb-2">Learning goal</h3>
-          <p class="text-sm text-anvil/70">{app.tagline}</p>
+          <p class="text-sm text-anvil/70 dark:text-warm/70">{app.tagline}</p>
         </div>
-        <div class="p-5 bg-white rounded-xl border border-anvil/10">
+        <div class="p-5 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15">
           <div class="text-3xl mb-2">📚</div>
           <h3 class="font-brand font-bold mb-2">Question kits</h3>
-          <p class="text-sm text-anvil/70">
+          <p class="text-sm text-anvil/70 dark:text-warm/70">
             16 curriculum-aligned kits × 25 questions = 400 questions per app, mapped to recognized standards.
           </p>
         </div>
-        <div class="p-5 bg-white rounded-xl border border-anvil/10">
+        <div class="p-5 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15">
           <div class="text-3xl mb-2">🤖</div>
           <h3 class="font-brand font-bold mb-2">On-device AI mentor</h3>
-          <p class="text-sm text-anvil/70">
+          <p class="text-sm text-anvil/70 dark:text-warm/70">
             FoundationModels-powered hints, feedback, and adaptive difficulty — all running locally.
           </p>
         </div>
       </div>
     )}
     {app.mentor && (
-      <p class="mt-6 text-sm text-anvil/60 italic">
-        Mentored by <strong class="text-anvil">{app.mentor}</strong> — on-device AI, no data leaves the device.
+      <p class="mt-6 text-sm text-anvil/60 dark:text-warm/60 italic">
+        Mentored by <strong class="text-anvil dark:text-warm">{app.mentor}</strong> — on-device AI, no data leaves the device.
       </p>
     )}
   </section>
 
   <!-- Privacy -->
-  <section class="bg-anvil/5 py-16">
+  <section class="bg-anvil/5 dark:bg-warm/5 py-16">
     <div class="max-w-4xl mx-auto px-6">
-      <h2 class="font-brand font-bold text-3xl text-anvil mb-6">
+      <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-6">
         How {app.name} handles your kid&apos;s data
       </h2>
-      <ul class="space-y-3 text-anvil/80 leading-relaxed">
+      <ul class="space-y-3 text-anvil/80 dark:text-warm/80 leading-relaxed">
         <li>✅ All progress, settings, and AI-generated content stays on the device</li>
         <li>✅ No analytics, no tracking, no third-party SDKs</li>
         <li>✅ No ads, no in-app purchases — you pay once</li>
@@ -199,11 +199,11 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
   <!-- Built with ForgeKit -->
   <section class="max-w-4xl mx-auto px-6 py-16">
     <div class="flex items-center gap-4 mb-4">
-      <span class="px-3 py-1 bg-forge/10 text-forge-text text-xs font-bold rounded-full uppercase tracking-wider">
+      <span class="px-3 py-1 bg-forge/10 dark:bg-forge-light/15 text-forge-text dark:text-forge-light text-xs font-bold rounded-full uppercase tracking-wider">
         Built with ForgeKit
       </span>
     </div>
-    <p class="text-anvil/80 leading-relaxed max-w-prose">
+    <p class="text-anvil/80 dark:text-warm/80 leading-relaxed max-w-prose">
       {app.name} runs on ForgeKit — the open-source Swift Package Manager framework that
       powers every Spark &amp; Anvil app. ForgeKit ensures consistent accessibility,
       COPPA compliance, and design language across the portfolio, so your kid&apos;s

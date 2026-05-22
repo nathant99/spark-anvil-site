@@ -23,14 +23,14 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
   <section class="max-w-6xl mx-auto px-6 pt-12 md:pt-20 pb-16 md:pb-24">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="text-center md:text-left">
-        <h1 class="font-brand font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-anvil mb-6">
+        <h1 class="font-brand font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-anvil dark:text-warm mb-6">
           <span class="text-forge">Free forever.</span><br />Educational iOS apps,<br />forged for curiosity.
         </h1>
-        <p class="text-lg md:text-xl text-anvil/70 max-w-xl mb-8 leading-relaxed mx-auto md:mx-0">
+        <p class="text-lg md:text-xl text-anvil/70 dark:text-warm/70 max-w-xl mb-8 leading-relaxed mx-auto md:mx-0">
           Spark &amp; Anvil's {apps.length} apps for kids ages {site.ages} are <strong>all free, forever</strong>.
           No ads. No in-app purchases. No tracking. On-device AI mentors that never send your kid's data anywhere.
         </p>
-        <p class="text-sm text-anvil/60 max-w-xl mb-8 mx-auto md:mx-0">
+        <p class="text-sm text-anvil/60 dark:text-warm/60 max-w-xl mb-8 mx-auto md:mx-0">
           135 apps for tweens <strong>(ages 9–14)</strong> + a Younger Cluster for <strong>ages 5–8</strong> rolling out in 2027.
           Mascot continuity lets kids "graduate" from one portfolio to the next around age 8.
         </p>
@@ -46,9 +46,9 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
           <a href="/for-parents" class="btn-secondary">For parents</a>
           <a href="/for-educators" class="btn-secondary">For teachers</a>
         </div>
-        <p class="mt-6 text-sm text-anvil/60 italic max-w-xl">
+        <p class="mt-6 text-sm text-anvil/60 dark:text-warm/60 italic max-w-xl">
           Coming 2027 — teacher-led live classes inside the apps your kid already loves.
-          <a href="/for-educators" class="text-forge-text underline hover:no-underline">Teachers, join the early pilot →</a>
+          <a href="/for-educators" class="text-forge-text dark:text-forge-light underline hover:no-underline">Teachers, join the early pilot →</a>
         </p>
       </div>
 
@@ -86,14 +86,14 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
   </section>
 
   <!-- Distributed-narrative methodology — our differentiator -->
-  <section class="bg-forge/5 py-20 border-y border-forge/10">
+  <section class="bg-forge/5 dark:bg-forge-light/10 py-20 border-y border-forge/10 dark:border-forge-light/20">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-12">
         <p class="text-xs uppercase tracking-wider text-forge font-bold mb-3">How our apps teach</p>
-        <h2 class="font-brand font-bold text-3xl md:text-5xl text-anvil mb-4 leading-tight">
+        <h2 class="font-brand font-bold text-3xl md:text-5xl text-anvil dark:text-warm mb-4 leading-tight">
           Characters who <em class="text-forge not-italic">ARE</em> the curriculum
         </h2>
-        <p class="text-lg md:text-xl text-anvil/70 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-lg md:text-xl text-anvil/70 dark:text-warm/70 max-w-2xl mx-auto leading-relaxed">
           Not characters bolted onto worksheets. In <strong>{dnApps.length} of our apps</strong>, every concept your kid needs to learn is embodied by a recurring character — so abstract patterns become memorable through story.
         </p>
       </div>
@@ -117,7 +117,7 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
                   loading="lazy"
                 />
               </div>
-              <span class="mt-2 text-xs font-brand font-bold text-anvil/80 group-hover:text-forge transition-colors">
+              <span class="mt-2 text-xs font-brand font-bold text-anvil/80 dark:text-warm/80 group-hover:text-forge transition-colors">
                 {app.name}
               </span>
             </a>
@@ -126,27 +126,27 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
       )}
 
       <div class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto mb-10">
-        <div class="bg-warm rounded-xl p-6 border border-anvil/10">
+        <div class="bg-warm dark:bg-anvil rounded-xl p-6 border border-anvil/10 dark:border-warm/15">
           <h3 class="font-brand font-bold text-base text-forge mb-2">Behavior, not decoration</h3>
-          <p class="text-sm text-anvil/70 leading-relaxed">
+          <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed">
             The character's actions <em>are</em> the rule. Sir Pinwell doesn't talk about pins — he does pins. Your kid learns the pattern by watching, not being told.
           </p>
         </div>
-        <div class="bg-warm rounded-xl p-6 border border-anvil/10">
+        <div class="bg-warm dark:bg-anvil rounded-xl p-6 border border-anvil/10 dark:border-warm/15">
           <h3 class="font-brand font-bold text-base text-forge mb-2">Recurring, not random</h3>
-          <p class="text-sm text-anvil/70 leading-relaxed">
+          <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed">
             The same characters appear across many lessons. Familiar faces mean less re-explaining and more time on the actual learning.
           </p>
         </div>
-        <div class="bg-warm rounded-xl p-6 border border-anvil/10">
+        <div class="bg-warm dark:bg-anvil rounded-xl p-6 border border-anvil/10 dark:border-warm/15">
           <h3 class="font-brand font-bold text-base text-forge mb-2">Small casts, not crowds</h3>
-          <p class="text-sm text-anvil/70 leading-relaxed">
+          <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed">
             About 10 to 14 characters per app — never dozens. Kids can keep that many in mind, like a Pixar movie ensemble.
           </p>
         </div>
-        <div class="bg-warm rounded-xl p-6 border border-anvil/10">
+        <div class="bg-warm dark:bg-anvil rounded-xl p-6 border border-anvil/10 dark:border-warm/15">
           <h3 class="font-brand font-bold text-base text-forge mb-2">Story carries the work</h3>
-          <p class="text-sm text-anvil/70 leading-relaxed">
+          <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed">
             When kids care about a character, they remember what that character did. That memory <em>is</em> the curriculum — grounded in Bruner, Sfard, and Habgood's learning research.
           </p>
         </div>
@@ -160,12 +160,12 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
 
   <!-- Mascot parade -->
   {mascotApps.length > 0 && (
-    <section class="bg-anvil/5 py-16 overflow-hidden">
+    <section class="bg-anvil/5 dark:bg-warm/5 py-16 overflow-hidden">
       <div class="max-w-6xl mx-auto px-6 mb-8 text-center">
         <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil mb-2">
           Meet your mentors
         </h2>
-        <p class="text-anvil/70 max-w-xl mx-auto">
+        <p class="text-anvil/70 dark:text-warm/70 max-w-xl mx-auto">
           Every Spark &amp; Anvil app comes with a friendly mentor character that demonstrates, praises, and patiently guides your kid through new skills.
         </p>
       </div>
@@ -187,7 +187,7 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
                   loading="lazy"
                 />
               </div>
-              <span class="mt-2 text-xs font-brand font-bold text-anvil text-center group-hover:text-forge transition-colors">
+              <span class="mt-2 text-xs font-brand font-bold text-anvil dark:text-warm text-center group-hover:text-forge transition-colors">
                 {app.name}
               </span>
             </a>
@@ -200,28 +200,28 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
   <!-- Why Spark & Anvil -->
   <section class="py-20">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-12 text-center">
+      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil dark:text-warm mb-12 text-center">
         Why Spark &amp; Anvil
       </h2>
       <div class="grid gap-8 md:grid-cols-3">
         <div>
           <div class="text-5xl mb-3">⚒️</div>
           <h3 class="font-brand font-bold text-xl mb-3">Craft</h3>
-          <p class="text-anvil/70 leading-relaxed">
+          <p class="text-anvil/70 dark:text-warm/70 leading-relaxed">
             Swift 6, SwiftUI, on-device AI via FoundationModels. Native iOS apps that feel like the platform — not web shells, not cross-platform compromises.
           </p>
         </div>
         <div>
           <div class="text-5xl mb-3">🛡️</div>
           <h3 class="font-brand font-bold text-xl mb-3">Safety</h3>
-          <p class="text-anvil/70 leading-relaxed">
+          <p class="text-anvil/70 dark:text-warm/70 leading-relaxed">
             No tracking. No ads. No in-app purchases. No third-party SDKs. All data stays on-device. COPPA compliant under the 2026 FTC amendments.
           </p>
         </div>
         <div>
           <div class="text-5xl mb-3">🌟</div>
           <h3 class="font-brand font-bold text-xl mb-3">Range</h3>
-          <p class="text-anvil/70 leading-relaxed">
+          <p class="text-anvil/70 dark:text-warm/70 leading-relaxed">
             {apps.length} apps across STEM, STEAM, Academics, DIR/FEDC, and Special Interest verticals — for the kid who&apos;s obsessed with rockets AND the one who&apos;s obsessed with sonnets.
           </p>
         </div>
@@ -230,10 +230,10 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
   </section>
 
   <!-- Featured apps -->
-  <section class="bg-anvil/5 py-20">
+  <section class="bg-anvil/5 dark:bg-warm/5 py-20">
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex items-end justify-between mb-10">
-        <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil">Featured apps</h2>
+        <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil dark:text-warm">Featured apps</h2>
         <a href="/apps" class="text-forge font-bold text-sm hover:underline">See all {apps.length} →</a>
       </div>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -248,19 +248,19 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
       <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-4 text-center">
         Five learning verticals
       </h2>
-      <p class="text-anvil/70 text-center max-w-2xl mx-auto mb-12">
+      <p class="text-anvil/70 dark:text-warm/70 text-center max-w-2xl mx-auto mb-12">
         Every app maps to one of five learning areas. Browse the portfolio by what interests your kid most.
       </p>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
         {verticals.map(v => (
           <a
             href={`/apps?vertical=${v.id}`}
-            class="block p-5 bg-white rounded-xl border border-anvil/10 hover:border-forge hover:shadow-md transition-all"
+            class="block p-5 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15 hover:border-forge hover:shadow-md transition-all"
           >
             <h3 class="font-brand font-bold text-lg text-forge mb-2">
-              {v.name} <span class="text-anvil/50 text-sm font-normal">({verticalCounts[v.id]})</span>
+              {v.name} <span class="text-anvil/50 dark:text-warm/50 text-sm font-normal">({verticalCounts[v.id]})</span>
             </h3>
-            <p class="text-sm text-anvil/70 leading-relaxed">{v.description}</p>
+            <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed">{v.description}</p>
           </a>
         ))}
       </div>
@@ -268,12 +268,12 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
   </section>
 
   <!-- Parent CTA -->
-  <section class="bg-anvil/5 py-20">
+  <section class="bg-anvil/5 dark:bg-warm/5 py-20">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-4">
+      <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil dark:text-warm mb-4">
         Apps your kid can actually use.<br />Privacy you can actually verify.
       </h2>
-      <p class="text-lg text-anvil/70 mb-8 max-w-2xl mx-auto">
+      <p class="text-lg text-anvil/70 dark:text-warm/70 mb-8 max-w-2xl mx-auto">
         Read our full privacy commitment and the parent-friendly summary of how we handle data.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">

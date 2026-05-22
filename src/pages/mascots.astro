@@ -22,7 +22,7 @@ const totalMascots = withMascot.length;
     <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
       Meet all the mentors
     </h1>
-    <p class="text-xl text-anvil/70 max-w-2xl leading-relaxed">
+    <p class="text-xl text-anvil/70 dark:text-warm/70 max-w-2xl leading-relaxed">
       {totalMascots} mentor characters across the portfolio. Every Spark &amp; Anvil app comes
       with a friendly mentor character that demonstrates, praises, and patiently guides
       your kid through new skills. Click any mentor to visit their app.
@@ -32,20 +32,20 @@ const totalMascots = withMascot.length;
   <!-- Stats strip -->
   <section class="max-w-4xl mx-auto px-6 pb-12">
     <div class="flex flex-wrap gap-6 text-sm">
-      <span class="text-anvil/70">
-        <strong class="text-anvil text-2xl font-brand block">{totalMascots}</strong>
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">{totalMascots}</strong>
         unique mentors
       </span>
-      <span class="text-anvil/70">
-        <strong class="text-anvil text-2xl font-brand block">5</strong>
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">5</strong>
         mentor poses each
       </span>
-      <span class="text-anvil/70">
-        <strong class="text-anvil text-2xl font-brand block">{verticals.length}</strong>
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">{verticals.length}</strong>
         learning verticals
       </span>
-      <span class="text-anvil/70">
-        <strong class="text-anvil text-2xl font-brand block">100%</strong>
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">100%</strong>
         on-device AI mentoring
       </span>
     </div>
@@ -53,14 +53,14 @@ const totalMascots = withMascot.length;
 
   <!-- One section per vertical -->
   {byVertical.map((v, idx) => (
-    <section class={idx % 2 === 0 ? "py-12" : "bg-anvil/5 py-12"}>
+    <section class={idx % 2 === 0 ? "py-12" : "bg-anvil/5 dark:bg-warm/5 py-12"}>
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-end justify-between mb-8">
           <div>
             <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil">{v.name}</h2>
-            <p class="text-sm text-anvil/60 mt-1">{v.description}</p>
+            <p class="text-sm text-anvil/60 dark:text-warm/60 mt-1">{v.description}</p>
           </div>
-          <span class="text-sm text-anvil/50">{v.apps.length} mentors</span>
+          <span class="text-sm text-anvil/50 dark:text-warm/50">{v.apps.length} mentors</span>
         </div>
         <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-4">
           {v.apps.map(app => (
@@ -76,11 +76,11 @@ const totalMascots = withMascot.length;
                   loading="lazy"
                 />
               </div>
-              <span class="mt-2 text-xs font-brand font-bold text-anvil text-center group-hover:text-forge transition-colors">
+              <span class="mt-2 text-xs font-brand font-bold text-anvil dark:text-warm text-center group-hover:text-forge transition-colors">
                 {app.name}
               </span>
               {app.mentor && (
-                <span class="text-xs text-anvil/50 mt-0.5">{app.mentor}</span>
+                <span class="text-xs text-anvil/50 dark:text-warm/50 mt-0.5">{app.mentor}</span>
               )}
             </a>
           ))}
@@ -93,7 +93,7 @@ const totalMascots = withMascot.length;
   {apps.filter(a => !a.mascotPath).length > 0 && (
     <section class="max-w-4xl mx-auto px-6 py-16">
       <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Mentors coming soon</h2>
-      <p class="text-anvil/70 leading-relaxed mb-6">
+      <p class="text-anvil/70 dark:text-warm/70 leading-relaxed mb-6">
         {apps.filter(a => !a.mascotPath).length} more apps are getting their mentor characters next.
         Each mentor is generated in our chunky-cartoon style with five universal poses
         (demonstrating, praising, thinking, working, encouraging) so kids see them across
@@ -103,7 +103,7 @@ const totalMascots = withMascot.length;
         {apps.filter(a => !a.mascotPath).map(app => (
           <a
             href={`/apps/${app.slug}`}
-            class="px-3 py-1 bg-white border border-anvil/15 rounded-full text-xs font-medium text-anvil/70 hover:border-forge hover:text-forge transition-colors"
+            class="px-3 py-1 bg-white dark:bg-anvil/40 border border-anvil/15 dark:border-warm/20 rounded-full text-xs font-medium text-anvil/70 dark:text-warm/70 hover:border-forge hover:text-forge transition-colors"
           >
             {app.name}
           </a>

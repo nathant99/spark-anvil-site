@@ -5,7 +5,7 @@ const { pathname } = Astro.url;
 const items = nav.slice(1);  // skip "Home" — logo links there
 ---
 
-<header class="border-b border-anvil/10 bg-warm/80 backdrop-blur sticky top-0 z-50">
+<header class="border-b border-anvil/10 dark:border-warm/15 bg-warm/80 dark:bg-anvil/80 backdrop-blur sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-3" aria-label={`${site.name} home`}>
       <img src="/brand/lockup.png" alt={site.name} class="h-20 md:h-24 w-auto" />
@@ -16,8 +16,8 @@ const items = nav.slice(1);  // skip "Home" — logo links there
       {items.map(item => (
         <a
           href={item.href}
-          class={`text-sm font-medium hover:text-forge transition-colors ${
-            pathname === item.href ? 'text-forge' : 'text-anvil'
+          class={`text-sm font-medium hover:text-forge dark:hover:text-forge-light transition-colors ${
+            pathname === item.href ? 'text-forge dark:text-forge-light' : 'text-anvil dark:text-warm'
           }`}
         >
           {item.label}
@@ -28,7 +28,7 @@ const items = nav.slice(1);  // skip "Home" — logo links there
     <!-- Mobile hamburger button -->
     <button
       id="mobile-nav-toggle"
-      class="md:hidden p-2 -mr-2 text-anvil"
+      class="md:hidden p-2 -mr-2 text-anvil dark:text-warm"
       aria-label="Open navigation menu"
       aria-expanded="false"
       aria-controls="mobile-nav-drawer"
@@ -48,7 +48,7 @@ const items = nav.slice(1);  // skip "Home" — logo links there
   <!-- Mobile drawer (slides down below the sticky header) -->
   <nav
     id="mobile-nav-drawer"
-    class="md:hidden hidden border-t border-anvil/10 bg-warm"
+    class="md:hidden hidden border-t border-anvil/10 dark:border-warm/15 bg-warm dark:bg-anvil"
     aria-label="Mobile primary"
   >
     <ul class="max-w-6xl mx-auto px-6 py-4 space-y-1">
@@ -58,8 +58,8 @@ const items = nav.slice(1);  // skip "Home" — logo links there
             href={item.href}
             class={`block px-3 py-3 rounded-lg font-brand font-bold text-lg ${
               pathname === item.href
-                ? 'bg-forge/10 text-forge'
-                : 'text-anvil hover:bg-anvil/5'
+                ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light'
+                : 'text-anvil dark:text-warm hover:bg-anvil/5 dark:bg-warm/5 dark:hover:bg-warm/10'
             }`}
           >
             {item.label}

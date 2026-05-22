@@ -85,7 +85,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
     <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
       All {apps.length} apps
     </h1>
-    <p class="text-xl text-anvil/70 max-w-2xl mb-6">
+    <p class="text-xl text-anvil/70 dark:text-warm/70 max-w-2xl mb-6">
       {implementing} actively in implementation (Waves 1–3); {apps.length - implementing} more in planning.
       Search by name, topic, mentor, or curriculum standard; filter by vertical.
     </p>
@@ -94,7 +94,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
   <section class="max-w-6xl mx-auto px-6 pb-6">
     <label for="app-search" class="sr-only">Search apps</label>
     <div class="relative">
-      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-anvil/40 pointer-events-none" aria-hidden="true">
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-anvil/40 dark:text-warm/40 pointer-events-none" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </span>
       <input
@@ -102,32 +102,32 @@ const searchHaystack = (app: typeof apps[number]): string => {
         type="search"
         placeholder={`Search ${apps.length} apps by name, topic, mentor, or curriculum...`}
         autocomplete="off"
-        class="w-full pl-12 pr-12 py-4 bg-white border-2 border-anvil/15 rounded-full text-base text-anvil placeholder:text-anvil/40 focus:outline-none focus:border-forge transition-colors"
+        class="w-full pl-12 pr-12 py-4 bg-white dark:bg-anvil/40 border-2 border-anvil/15 dark:border-warm/20 rounded-full text-base text-anvil placeholder:text-anvil/40 dark:text-warm/40 focus:outline-none focus:border-forge transition-colors"
       />
       <button
         id="app-search-clear"
         type="button"
-        class="absolute right-4 top-1/2 -translate-y-1/2 text-anvil/40 hover:text-anvil hidden"
+        class="absolute right-4 top-1/2 -translate-y-1/2 text-anvil/40 dark:text-warm/40 hover:text-anvil dark:text-warm hidden"
         aria-label="Clear search"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <p id="app-search-status" class="text-sm text-anvil/60 mt-2 ml-2" aria-live="polite"></p>
+    <p id="app-search-status" class="text-sm text-anvil/60 dark:text-warm/60 mt-2 ml-2" aria-live="polite"></p>
   </section>
 
   <section class="max-w-6xl mx-auto px-6 pb-4">
-    <p class="text-xs uppercase tracking-wider text-anvil/50 font-bold mb-2">Vertical</p>
+    <p class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-bold mb-2">Vertical</p>
     <div class="flex flex-wrap gap-2">
       <button
-        class="vertical-filter px-4 py-2 bg-anvil text-warm border border-anvil rounded-full text-sm font-bold"
+        class="vertical-filter px-4 py-2 bg-anvil text-warm border border-anvil dark:border-warm rounded-full text-sm font-bold"
         data-vertical="all"
       >
         All ({apps.length})
       </button>
       {verticals.map(v => (
         <button
-          class="vertical-filter px-4 py-2 bg-white border border-anvil/15 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
+          class="vertical-filter px-4 py-2 bg-white dark:bg-anvil/40 border border-anvil/15 dark:border-warm/20 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
           data-vertical={v.id}
         >
           {v.name} ({verticalCounts[v.id] ?? 0})
@@ -137,17 +137,17 @@ const searchHaystack = (app: typeof apps[number]): string => {
   </section>
 
   <section class="max-w-6xl mx-auto px-6 pb-4">
-    <p class="text-xs uppercase tracking-wider text-anvil/50 font-bold mb-2">Age band</p>
+    <p class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-bold mb-2">Age band</p>
     <div class="flex flex-wrap gap-2">
       <button
-        class="age-filter px-4 py-2 bg-anvil text-warm border border-anvil rounded-full text-sm font-bold"
+        class="age-filter px-4 py-2 bg-anvil text-warm border border-anvil dark:border-warm rounded-full text-sm font-bold"
         data-age="all"
       >
         All ages
       </button>
       {(['younger', 'tween', 'spanning'] as const).filter(band => ageCounts[band] > 0).map(band => (
         <button
-          class="age-filter px-4 py-2 bg-white border border-anvil/15 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
+          class="age-filter px-4 py-2 bg-white dark:bg-anvil/40 border border-anvil/15 dark:border-warm/20 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
           data-age={band}
         >
           {ageLabel[band]} ({ageCounts[band]})
@@ -157,17 +157,17 @@ const searchHaystack = (app: typeof apps[number]): string => {
   </section>
 
   <section class="max-w-6xl mx-auto px-6 pb-12">
-    <p class="text-xs uppercase tracking-wider text-anvil/50 font-bold mb-2">Standards &amp; frameworks</p>
+    <p class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-bold mb-2">Standards &amp; frameworks</p>
     <div class="flex flex-wrap gap-2">
       <button
-        class="standard-filter px-4 py-2 bg-anvil text-warm border border-anvil rounded-full text-sm font-bold"
+        class="standard-filter px-4 py-2 bg-anvil text-warm border border-anvil dark:border-warm rounded-full text-sm font-bold"
         data-standard="all"
       >
         Any framework
       </button>
       {STANDARD_BUCKETS.filter(b => (standardsCounts[b.id] ?? 0) > 0).map(b => (
         <button
-          class="standard-filter px-4 py-2 bg-white border border-anvil/15 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
+          class="standard-filter px-4 py-2 bg-white dark:bg-anvil/40 border border-anvil/15 dark:border-warm/20 rounded-full text-sm font-medium hover:border-forge hover:text-forge transition-colors"
           data-standard={b.id}
         >
           {b.label} ({standardsCounts[b.id]})
@@ -192,8 +192,8 @@ const searchHaystack = (app: typeof apps[number]): string => {
       ))}
     </div>
     <div id="app-empty-state" class="hidden text-center py-16">
-      <p class="font-brand text-2xl text-anvil/70 mb-2">No apps match that search.</p>
-      <p class="text-anvil/60">Try a different keyword, or <button id="app-empty-clear" class="text-forge underline">show all {apps.length} apps</button>.</p>
+      <p class="font-brand text-2xl text-anvil/70 dark:text-warm/70 mb-2">No apps match that search.</p>
+      <p class="text-anvil/60 dark:text-warm/60">Try a different keyword, or <button id="app-empty-clear" class="text-forge underline">show all {apps.length} apps</button>.</p>
     </div>
   </section>
 </BaseLayout>
@@ -284,10 +284,10 @@ const searchHaystack = (app: typeof apps[number]): string => {
       const active = b.dataset[dataAttr] === current;
       b.classList.toggle('bg-anvil', active);
       b.classList.toggle('text-warm', active);
-      b.classList.toggle('border-anvil', active);
+      b.classList.toggle('border-anvil dark:border-warm', active);
       b.classList.toggle('font-bold', active);
-      b.classList.toggle('bg-white', !active);
-      b.classList.toggle('border-anvil/15', !active);
+      b.classList.toggle('bg-white dark:bg-anvil/40', !active);
+      b.classList.toggle('border-anvil/15 dark:border-warm/20', !active);
     });
   }
 
