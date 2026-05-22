@@ -412,7 +412,7 @@ export const apps: AppData[] = [
     "heroColor": "#29B6F6",
     "iconPath": "/apps/cipherforge/icon-sm.webp",
     "mascotPath": "/apps/cipherforge/mascot.webp",
-    "mentor": "Cipher",
+    "mentor": "Cypher",
     "implementing": false,
     "standards": [
       "NGSS",
