@@ -3,7 +3,7 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import AppCard from '~/components/AppCard.astro';
 import { site, trustSignals, verticals } from '~/data/site';
 import { apps, verticalCounts } from '~/data/apps.generated';
-import { modes as modeMetas, modeCounts, appsScoringAtLeast } from '~/data/modes';
+import { modes as modeMetas, modeCounts, appsScoringAtLeast, anchorAppsFor } from '~/data/modes';
 
 const mCounts = modeCounts();
 // For each mode, the 4 brightest exemplars (score 3, alphabetical) for the home strip
@@ -12,6 +12,10 @@ const modeExemplars = Object.fromEntries(
     m.key,
     appsScoringAtLeast(m.key, 3).slice(0, 4),
   ])
+);
+// Per-mode anchor apps (Learn → distributed-narrative; Play → adventure modes; Create → multimedia)
+const modeAnchorApps = Object.fromEntries(
+  modeMetas.map(m => [m.key, anchorAppsFor(m.key)])
 );
 
 // Featured apps: prioritize Wave 1+2+3 implementing + most-asset-complete
@@ -111,6 +115,7 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
       <div class="grid md:grid-cols-3 gap-6">
         {modeMetas.map(m => {
           const exemplars = modeExemplars[m.key] ?? [];
+          const anchorApps = modeAnchorApps[m.key] ?? [];
           const total = mCounts[m.key].primary + mCounts[m.key].secondary;
           return (
             <article
@@ -132,30 +137,54 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
                   </p>
                 </div>
               </header>
-              <p class="text-sm text-anvil/80 dark:text-warm/80 leading-relaxed mb-4 flex-1">
+              <p class="text-sm text-anvil/80 dark:text-warm/80 leading-relaxed mb-4">
                 {m.blurb}
               </p>
 
-              <div class="mb-4">
-                <p class="text-xs uppercase tracking-wider text-anvil/50 dark:text-warm/50 font-bold mb-2">Examples</p>
-                <ul class="space-y-1.5">
-                  {exemplars.map(app => (
-                    <li>
+              {/* Concrete portfolio anchor — the named feature that grounds the abstraction */}
+              <div
+                class="rounded-xl p-4 mb-4 border"
+                style={`background-color: ${m.hex}0F; border-color: ${m.hex}33;`}
+              >
+                <p class="text-xs uppercase tracking-wider font-bold mb-1" style={`color: ${m.hex};`}>
+                  Featuring · {anchorApps.length} apps
+                </p>
+                <p class="font-brand font-bold text-base text-anvil dark:text-warm mb-2">
+                  {m.anchor.label}
+                </p>
+                <p class="text-xs text-anvil/70 dark:text-warm/70 leading-relaxed mb-3">
+                  {m.anchor.description}
+                </p>
+                {anchorApps.length > 0 && (
+                  <div class="flex flex-wrap gap-1.5">
+                    {anchorApps.slice(0, 6).map(app => (
                       <a
                         href={`/apps/${app.slug}`}
-                        class="inline-flex items-center gap-2 text-sm text-anvil/80 dark:text-warm/80 hover:text-forge dark:hover:text-forge-light transition-colors"
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white dark:bg-anvil/60 border border-anvil/15 dark:border-warm/20 text-xs font-medium text-anvil/80 dark:text-warm/80 hover:opacity-80 transition-opacity"
+                        title={app.tagline}
                       >
                         <span
-                          class="inline-block w-2 h-2 rounded-full"
+                          class="inline-block w-1.5 h-1.5 rounded-full"
                           style={`background-color: ${app.heroColor};`}
                           aria-hidden="true"
                         ></span>
-                        <span class="font-medium">{app.name}</span>
-                        <span class="text-xs text-anvil/50 dark:text-warm/50 truncate">{app.mentor ? `· ${app.mentor}` : ''}</span>
+                        {app.name}
                       </a>
-                    </li>
-                  ))}
-                </ul>
+                    ))}
+                    {anchorApps.length > 6 && (
+                      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium text-anvil/60 dark:text-warm/60">
+                        + {anchorApps.length - 6} more
+                      </span>
+                    )}
+                  </div>
+                )}
+                <a
+                  href={m.anchor.href}
+                  class="inline-block mt-3 text-xs font-bold underline hover:no-underline"
+                  style={`color: ${m.hex};`}
+                >
+                  Explore the {m.anchor.label.toLowerCase()} →
+                </a>
               </div>
 
               <a
