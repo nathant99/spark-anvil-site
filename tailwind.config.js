@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
+  // Auto-honor OS-level prefers-color-scheme. Brand palette already ships dark variants
+  // (forge.light / anvil.light / spark.soft) — used via `dark:` modifiers in base styles.
+  darkMode: 'media',
   theme: {
     extend: {
       colors: {

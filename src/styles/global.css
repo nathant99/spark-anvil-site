@@ -15,14 +15,22 @@
   html {
     scroll-behavior: smooth;
   }
+  /* Minimum viable dark mode (Round 46 #199).
+   * Body palette flip + reusable component dark: variants cover most of the
+   * site automatically since Tailwind cascades base colors via inheritance.
+   * Per-page or per-component dark: tweaks are a follow-up wave for any
+   * surface that ships hardcoded light-mode bg/text classes (e.g., the
+   * per-app page hero uses inline style={...} hero-color fill — that
+   * stays the same in both modes intentionally).
+   */
   body {
-    @apply bg-warm text-anvil font-body antialiased;
+    @apply bg-warm text-anvil dark:bg-anvil dark:text-warm font-body antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-brand;
   }
   a {
-    @apply text-slate hover:text-slate-light transition-colors;
+    @apply text-slate hover:text-slate-light dark:text-slate-light dark:hover:text-slate transition-colors;
   }
   ::selection {
     @apply bg-spark text-anvil;
@@ -31,16 +39,16 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-block px-6 py-3 bg-forge text-white font-brand font-bold rounded-lg
-           hover:bg-forge-light transition-colors shadow-sm;
+    @apply inline-block px-6 py-3 bg-forge dark:bg-forge-light text-white font-brand font-bold rounded-lg
+           hover:bg-forge-light dark:hover:bg-forge transition-colors shadow-sm;
   }
   .btn-secondary {
-    @apply inline-block px-6 py-3 border-2 border-anvil text-anvil font-brand font-bold rounded-lg
-           hover:bg-anvil hover:text-warm transition-colors;
+    @apply inline-block px-6 py-3 border-2 border-anvil dark:border-warm text-anvil dark:text-warm font-brand font-bold rounded-lg
+           hover:bg-anvil hover:text-warm dark:hover:bg-warm dark:hover:text-anvil transition-colors;
   }
   .trust-pill {
-    @apply inline-flex items-center gap-1 px-3 py-1 bg-anvil/5 text-anvil
-           text-sm font-medium rounded-full border border-anvil/10;
+    @apply inline-flex items-center gap-1 px-3 py-1 bg-anvil/5 dark:bg-warm/10 text-anvil dark:text-warm
+           text-sm font-medium rounded-full border border-anvil/10 dark:border-warm/20;
   }
   .container-prose {
     @apply max-w-prose mx-auto px-6;
