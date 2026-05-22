@@ -1221,6 +1221,17 @@ export const apps: AppData[] = [
     "name": "DanceQuest",
     "tagline": "Dance as creative art: explore genres, compose choreography, analyze performances, and get camera-based movement feedback -- building artistic expression through dance composition and performance.",
     "vertical": "steam",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "DanceQuest sits in the creative-studio cluster alongside EnsembleQuest / EffectsForge / StageForge (Wave 14). The 5-character cast maps to NCAS Dance's elements (body / space / time / energy / locomotion) and is intentionally non-lean-dancer-coded for body-image safety.",
+      "members": [
+        { "name": "Pose", "role": "Body-awareness + position — listening to your own shape" },
+        { "name": "Trail", "role": "Space + pathways — the floor-pattern shapes you draw moving through space" },
+        { "name": "Phrase", "role": "Time + tempo — how movement is organized in musical counts" },
+        { "name": "Lift", "role": "Energy + effort + dynamics — quality of movement, not aesthetic judgment" },
+        { "name": "Glide", "role": "Locomotion — the craft of going from here to there with whole attention" }
+      ]
+    },
     "heroColor": "#E91E63",
     "iconPath": "/apps/dancequest/icon-sm.webp",
     "mascotPath": "/apps/dancequest/mascot.webp",
@@ -1540,6 +1551,17 @@ export const apps: AppData[] = [
     "name": "EffectsForge",
     "tagline": "Learn the science and art behind movie special effects — prosthetics chemistry, Foley sound physics, forced perspective optics, stop-motion animation, and lighting design — then produce your own short films.",
     "vertical": "steam",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "EffectsForge's 5-character cast is an exact parallel to the 5 hands-on labs — each character is the craft specialist for one technique. Cast frames effects as illusion + craft, never realistic injury (gore-gate enforced).",
+      "members": [
+        { "name": "Crunch", "role": "Foley sound — practical sound effects from everyday objects" },
+        { "name": "Trick", "role": "Forced perspective — the optical illusion that resizes worlds" },
+        { "name": "Skin", "role": "Prosthetic makeup — craft + chemistry for character, never realistic injury" },
+        { "name": "Step", "role": "Stop-motion animation — frame by frame, one decision at a time" },
+        { "name": "Lamp", "role": "Lighting design — the silent author of mood" }
+      ]
+    },
     "heroColor": "#E91E63",
     "iconPath": "/apps/effectsforge/icon-sm.webp",
     "mascotPath": "/apps/effectsforge/mascot.webp",
@@ -1584,6 +1606,17 @@ export const apps: AppData[] = [
     "name": "EnsembleQuest",
     "tagline": "Gamified cooperative creative projects that build social skills incrementally through a progressive social ladder: Solo, then Pair, then Group, then Perform. Music and art creation serve as the vehicle for structured social interaction, with explicit visual scaffolding for every social step -- visual turn timers, role cards, social scripts, and a communication toolkit.",
     "vertical": "steam",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "EnsembleQuest's 5-character cast embodies the collaboration moves a cooperative-arts ensemble needs. Designed for autistic learners; cast inherits dual-palette autism-aware art and a collaboration-shame gate that ensures the cast always models repair + invitation, never clique behavior.",
+      "members": [
+        { "name": "Part", "role": "Role-holding — knowing what MY part is, separate from but supporting the whole" },
+        { "name": "Turn", "role": "Turn-taking — the rhythm of give-and-receive across an ensemble" },
+        { "name": "Ear", "role": "Active listening — receiving the other person's contribution before adding your own" },
+        { "name": "Welcome", "role": "Invitation + repair — bringing back someone who's drifted out of the ensemble" },
+        { "name": "Share", "role": "Synthesis-in-performance — the moment many parts become one piece" }
+      ]
+    },
     "heroColor": "#E91E63",
     "iconPath": "/apps/ensemblequest/icon-sm.webp",
     "mascotPath": "/apps/ensemblequest/mascot.webp",
@@ -5172,6 +5205,17 @@ export const apps: AppData[] = [
     "name": "StageForge",
     "tagline": "Interactive theater arts studio where students write scripts, design sets, direct scenes, and perform -- building creative confidence through the dramatic arts. Covers the full production pipeline from script to stage.",
     "vertical": "steam",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "StageForge's 5-character cast maps to the canonical theater-craft buckets — playwriting / acting / directing / stagecraft / improv. Theater is the original distributed-narrative art form; character-coding makes the production-crew roles visible. Stagefright gate enforced: cast normalizes nerves, never shames missed lines.",
+      "members": [
+        { "name": "Face", "role": "Acting — character work through voice, body, and emotional life" },
+        { "name": "Pen", "role": "Playwriting — turning ideas into scripts with character, conflict, structure" },
+        { "name": "Block", "role": "Blocking — directing actors through stage geography" },
+        { "name": "Rig", "role": "Stagecraft — the technical-theater craft that makes the visible-stage possible" },
+        { "name": "Riff", "role": "Improvisation — the live-performance craft of Yes, and..." }
+      ]
+    },
     "heroColor": "#E91E63",
     "iconPath": "/apps/stageforge/icon-sm.webp",
     "mascotPath": "/apps/stageforge/mascot.webp",
