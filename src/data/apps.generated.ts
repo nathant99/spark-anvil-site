@@ -128,6 +128,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/aiforge/icon-sm.webp",
     "mascotPath": "/apps/aiforge/mascot.webp",
     "mentor": "Bit",
+    "distributedNarrative": true,
     "implementing": false,
     "standards": [
       "NGSS",
@@ -727,6 +728,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/circuitforge/icon-sm.webp",
     "mascotPath": "/apps/circuitforge/mascot.webp",
     "mentor": "Watt",
+    "distributedNarrative": true,
     "implementing": false,
     "standards": [
       "NGSS",
@@ -972,6 +974,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/coderealm/icon-sm.webp",
     "mascotPath": "/apps/coderealm/mascot.webp",
     "mentor": "Loop",
+    "distributedNarrative": true,
     "implementing": false,
     "standards": [
       "NGSS",
@@ -3357,6 +3360,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/machineforge/icon-sm.webp",
     "mascotPath": "/apps/machineforge/mascot.webp",
     "mentor": "Cog",
+    "distributedNarrative": true,
     "implementing": false,
     "standards": [
       "NGSS",
@@ -4821,6 +4825,7 @@ export const apps: AppData[] = [
     "iconPath": "/apps/roboforge/icon-sm.webp",
     "mascotPath": "/apps/roboforge/mascot.webp",
     "mentor": "Servo",
+    "distributedNarrative": true,
     "implementing": false,
     "standards": [
       "NGSS",
