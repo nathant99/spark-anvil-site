@@ -5,7 +5,7 @@ const { pathname } = Astro.url;
 const items = nav.slice(1);  // skip "Home" — logo links there
 
 type NavChild = { href: string; label: string };
-type NavItem = { href: string; label: string; cta?: boolean; children?: NavChild[] };
+type NavItem = { href: string; label: string; cta?: boolean; badge?: string; children?: NavChild[] };
 ---
 
 <header class="border-b border-anvil/10 dark:border-warm/15 bg-warm/80 dark:bg-anvil/80 backdrop-blur sticky top-0 z-50">
@@ -63,11 +63,16 @@ type NavItem = { href: string; label: string; cta?: boolean; children?: NavChild
         return (
           <a
             href={item.href}
-            class={`text-sm font-medium hover:text-forge dark:hover:text-forge-light transition-colors ${
+            class={`inline-flex items-center gap-1.5 text-sm font-medium hover:text-forge dark:hover:text-forge-light transition-colors ${
               active ? 'text-forge dark:text-forge-light' : 'text-anvil dark:text-warm'
             }`}
           >
             {item.label}
+            {item.badge && (
+              <span class="px-1.5 py-0.5 bg-forge text-warm text-[10px] font-bold uppercase tracking-wider rounded-full leading-none">
+                {item.badge}
+              </span>
+            )}
           </a>
         );
       })}
@@ -139,7 +144,7 @@ type NavItem = { href: string; label: string; cta?: boolean; children?: NavChild
           <li>
             <a
               href={item.href}
-              class={`block px-3 py-3 rounded-lg font-brand font-bold text-lg ${
+              class={`flex items-center gap-2 px-3 py-3 rounded-lg font-brand font-bold text-lg ${
                 item.cta
                   ? 'bg-forge text-warm hover:bg-forge/90'
                   : pathname === item.href
@@ -147,7 +152,12 @@ type NavItem = { href: string; label: string; cta?: boolean; children?: NavChild
                   : 'text-anvil dark:text-warm hover:bg-anvil/5 dark:bg-warm/5 dark:hover:bg-warm/10'
               }`}
             >
-              {item.label}
+              <span>{item.label}</span>
+              {item.badge && (
+                <span class="px-2 py-0.5 bg-forge text-warm text-xs font-bold uppercase tracking-wider rounded-full">
+                  {item.badge}
+                </span>
+              )}
             </a>
           </li>
         );

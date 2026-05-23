@@ -23,27 +23,20 @@ export const trustSignals = [
   'Designed for face-to-face play',
 ];
 
-// Top-level nav — kept lean (Hick's law / Miller's 7±2) per
-// `labsmith/Docs/AUDIT_SPARK_ANVIL_SITE_NAV_AND_ENGAGEMENT.md` (queue #266).
-// "For Families" is a dropdown group. Demoted to footer-only: /mascots,
-// /method, /mission, /impact, /board, /annual-report, /press, /privacy, /terms.
+// Top-level nav — flattened 2026-05-23 (queue #322 IA fix).
+// "For Families" dropdown previously nested /for-educators + /teach (semantic mismatch —
+// educators and S&A teachers are not families). Flattened to 3 audience-specific top-level links.
+// Phase 3 of `labsmith/Docs/PLAN_TEACHER_NETWORK_PROMINENCE.md` promotes /teach with "Recruiting" badge.
+// Demoted to footer-only: /classes, /news, /mascots, /method, /mission, /impact, /board, /annual-report, /press, /privacy, /terms.
 export const nav = [
   { href: '/', label: 'Home' },
   { href: '/apps', label: 'Apps' },
   { href: '/cast', label: 'Cast' },
   { href: '/play-together', label: 'Play Together' },
-  {
-    href: '/for-parents',
-    label: 'For Families',
-    children: [
-      { href: '/for-parents', label: 'For Parents' },
-      { href: '/for-educators', label: 'For Educators' },
-      { href: '/classes', label: 'Classes' },
-      { href: '/teach', label: 'Teach' },
-    ],
-  },
+  { href: '/for-parents', label: 'For Parents' },
+  { href: '/for-educators', label: 'For Educators' },
+  { href: '/teach', label: 'Teach', badge: 'Recruiting' },
   { href: '/about', label: 'About' },
-  { href: '/news', label: 'News' },
   { href: '/donate', label: 'Donate', cta: true },
 ];
 
