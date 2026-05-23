@@ -2832,10 +2832,10 @@ export const apps: AppData[] = [
     "vertical": "stem",
     "distributedNarrative": true,
     "dnCast": {
-      "intro": "Geometry decomposes neatly into named theorems (Pythagorean, Inscribed-angle, Thales, etc.) and named construction patterns.",
+      "intro": "Geometry decomposes neatly into named theorems (right-triangle relations, inscribed-angle, transversals) and named construction patterns — every character embodies one foundational geometric idea, no real historical figures.",
       "members": [
         {
-          "name": "Master Pythagoras",
+          "name": "Master Hypotenuse",
           "role": "Right-triangle relations: a² + b² = c²"
         },
         {
@@ -2843,12 +2843,12 @@ export const apps: AppData[] = [
           "role": "Circle theorems (inscribed-angle, central-angle, tangent-chord, cyclic quadrilateral)"
         },
         {
-          "name": "Sir Thales",
+          "name": "Sir Transverse",
           "role": "Parallel-line transversals + intercept theorem (proportional segments cut by parallel lines)"
         },
         {
-          "name": "Apprentice Heron",
-          "role": "Area formulas (Heron's formula for triangle area from side lengths; rectangle / parallelogram / trapezoid area)"
+          "name": "Apprentice Sides",
+          "role": "Area formulas (triangle area from side lengths; rectangle / parallelogram / trapezoid area)"
         },
         {
           "name": "Captain Construction",
