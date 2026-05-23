@@ -60,13 +60,7 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
         <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
           <a href="/apps" class="btn-primary">Browse {apps.length} apps</a>
           <a href="/donate" class="btn-secondary">Support the mission →</a>
-          <a href="/for-parents" class="text-sm text-anvil/70 dark:text-warm/70 hover:text-forge underline">For parents</a>
-          <a href="/for-educators" class="btn-secondary">For teachers</a>
         </div>
-        <p class="mt-6 text-sm text-anvil/60 dark:text-warm/60 italic max-w-xl">
-          Coming 2027 — teacher-led live classes inside the apps your kid already loves.
-          <a href="/for-educators" class="text-forge-text dark:text-forge-light underline hover:no-underline">Teachers, join the early pilot →</a>
-        </p>
       </div>
 
       <!-- Visual side: 6 mascots arranged in an organic cluster -->
@@ -98,6 +92,59 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
             );
           })}
         </div>
+      </div>
+    </div>
+
+    <!-- Audience-segmented entry grid (queue #320 Phase 2 + #322 Phase 1) -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto">
+      {[
+        { icon: '👨‍👩‍👧', label: 'For parents',  hook: 'Privacy you can verify. Apps your kid actually uses.',                    href: '/for-parents',  cta: 'For parents →',         stripe: '#4A6FA5', badge: null },
+        { icon: '🎓',     label: 'For teachers', hook: 'Earn 100% of class fees. Pilot live classes in 2027.',                  href: '/teach',         cta: 'Apply to the early pilot →',  stripe: '#E8652B', badge: 'Now Recruiting' },
+        { icon: '💛',     label: 'Donors',       hook: 'Keep 138 apps free forever. Tax-deductible via fiscal sponsor.',         href: '/donate',        cta: 'Support the mission →', stripe: '#FFBE2E', badge: null },
+        { icon: '📰',     label: 'Press',        hook: 'Press kit, brand assets, founder bio.',                                  href: '/press',         cta: 'Press kit →',           stripe: '#2D2D2D', badge: null },
+      ].map(tile => (
+        <a
+          href={tile.href}
+          class="group relative block bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/10 dark:border-warm/15 hover:border-forge transition-colors overflow-hidden"
+        >
+          <div class="h-1 -mx-5 -mt-5 mb-4" style={`background-color: ${tile.stripe};`} aria-hidden="true"></div>
+          {tile.badge && (
+            <span class="absolute top-3 right-3 px-2 py-0.5 bg-forge text-warm text-[10px] font-bold uppercase tracking-wider rounded-full">
+              {tile.badge}
+            </span>
+          )}
+          <div class="text-3xl mb-2" aria-hidden="true">{tile.icon}</div>
+          <h3 class="font-brand font-bold text-lg text-anvil dark:text-warm mb-2">{tile.label}</h3>
+          <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug mb-3">{tile.hook}</p>
+          <span class="text-sm font-bold text-forge group-hover:underline">{tile.cta}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Impact ticker (queue #320 Phase 2) -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-12 border-y border-anvil/10 dark:border-warm/15">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-8">
+        <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil dark:text-warm">The work, in numbers.</h2>
+        <p class="text-sm text-anvil/60 dark:text-warm/60 mt-2">
+          Updated 2026-05-23. <a href="/impact" class="underline hover:text-forge">See the full impact report →</a>
+        </p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+        {[
+          { v: apps.length.toString(),  l: 'iOS apps' },
+          { v: '586',                    l: 'cast characters' },
+          { v: '21',                     l: 'curriculum frameworks' },
+          { v: '80',                     l: 'trauma-informed gates' },
+          { v: '0',                      l: 'ads · IAPs · trackers' },
+          { v: '100%',                   l: 'free, forever' },
+        ].map(s => (
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-brand font-bold text-forge leading-none">{s.v}</div>
+            <div class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 mt-2">{s.l}</div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
