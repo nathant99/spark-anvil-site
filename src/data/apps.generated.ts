@@ -6481,6 +6481,17 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/lyricforge/mascot.webp",
     "mentor": "Pip",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "LyricForge's 5-character supporting cast embodies lyric-craft primitives — rhyme / vowel-echo (Chime), meter / cadence (Step), hook / chorus anchor (Holler), bridge / off-the-path (Turn), and image / sensory anchor (Spark). Following the MotifLab Wave 7 hero-as-protagonist pattern, Pip (the sparrow mascot + AI Socratic lyric collaborator) remains the protagonist + relational anchor; cast members are Pip's meadow bench-mates — birds and creatures Pip introduces from his songwriting circle. Cast fades by kit 12 so kits 13-16 (multi-form anthology + cross-cluster export) read as integrative. Mascotizing gate: NO character is named after the craft term — Chime (not 'Rhyme'), Step (not 'Meter'), Holler (not 'Hook'), Turn (not 'Bridge'), Spark (not 'Image'). Echo → Chime + Hook → Holler renames in this batch resolve cumulative-cast collisions.",
+      "members": [
+        { "name": "Chime", "role": "Rhyme / vowel-echo — chickadee-tween whose listening-cupped wing catches and returns rhyming partners" },
+        { "name": "Step", "role": "Meter / cadence — rabbit-tween whose hop-rhythm enacts the stressed-syllable pattern" },
+        { "name": "Holler", "role": "Hook / chorus anchor — bullfinch-tween with megaphone who picks ONE line and makes it sing-back-loud" },
+        { "name": "Turn", "role": "Bridge / off-the-path — crow-tween in a long traveling coat who walks the lyric into a new feeling and earns the return" },
+        { "name": "Spark", "role": "Image / sensory anchor — firefly-tween whose abdomen brightens ONLY on specific concrete word-choices (dim on abstractions)" }
+      ]
+    },
     "standards": [
       "NCAS MU:Cr1-Cr3",
       "CCSS ELA W.6-8.3",
@@ -6506,6 +6517,16 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/haikuquest/mascot.webp",
     "mentor": "Cherry",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "HaikuQuest's 4-character supporting cast embodies form-craft primitives — syllable count / count-discipline (Count), kireji / productive break (Pause), kigo / season-word / anchoring image (Lantern), and brevity / saying-less (Trim). Following the MotifLab Wave 7 hero-as-protagonist pattern, Cherry (the cherry-blossom mascot + AI Socratic poetry coach + cultural-tradition holder) remains the protagonist + relational anchor; cast members are woodland-grove creatures Cherry travels with across the seasons. Cast fades by kit 12 so kits 13-16 (anthology + cross-form + free-form) read as integrative. CRITICAL cultural-sensitivity gate (Japanese poetic tradition): NO character is named after a Japanese term (no 'Kigo', no 'Kireji'); NO character is named after a historical poet (Bashō / Buson / Issa / Shiki / Crapsey / Lear cited in kit metadata + framing copy as historical practitioners — NEVER mascotized); Japanese terms taught explicitly in kit framing copy attributed to Japanese tradition; sensitivity reader RECOMMENDED before any external playtest. Kigo → Lantern rename in this batch resolves the mascotizing-the-tradition-term risk.",
+      "members": [
+        { "name": "Count", "role": "Syllable count / count-discipline — magpie-tween whose beak-tap enacts the rhythmic underpinning of every counted form" },
+        { "name": "Pause", "role": "Kireji / cut / productive break — snowy-egret-tween whose perpetually-mid-step body IS the kireji in physical form" },
+        { "name": "Lantern", "role": "Season-word / anchoring image — chipmunk-tween whose wooden lantern visibly shifts color with the season" },
+        { "name": "Trim", "role": "Brevity / saying-less — red-squirrel-tween with brass scissors who snips redundant words to find the smaller-stronger version" }
+      ]
+    },
     "standards": [
       "CCSS ELA W.6-8.3",
       "CCSS ELA RL.6-8.4",
@@ -6531,6 +6552,16 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/characterforge/mascot.webp",
     "mentor": "Ink",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CharacterForge's 4-character supporting cast embodies character-craft primitives — want / engine (Beacon), fear / brake (Crouch), contradiction / depth (Eight), and voice / signature (Click). Following the MotifLab Wave 7 hero-as-protagonist pattern, Ink (the fountain-pen mascot + AI character-craft coach) remains the protagonist + relational anchor; cast members are Ink's inkwell friends — paper-spilled animal companions Ink keeps in his notebook. Cast fades by kit 12 so kits 13-16 (relationship graph + anthology + cross-cluster export) read as integrative. Meta-tension design: CharacterForge teaches HOW to build characters; each cast member is itself a deliberately well-crafted character exhibit. Mascotizing gate: NO character is named after the primitive — Beacon (not 'Want'), Crouch (not 'Fear'), Eight (not 'Contradiction'), Click (not 'Voice'). Knot → Eight rename in this batch resolves a cumulative-cast collision.",
+      "members": [
+        { "name": "Beacon", "role": "Want / engine — moth-tween who walks toward a small floating warm-light she can never quite reach (the want IS her motion)" },
+        { "name": "Crouch", "role": "Fear / brake — hedgehog-tween who tucks away from one specific wooden-door icon visible in every scene she appears in" },
+        { "name": "Eight", "role": "Contradiction / depth — octopus-tween with eight arms in eight different directions (three forward / three back / two crossed)" },
+        { "name": "Click", "role": "Voice / signature — raven-tween in librarian-glasses with a portable typewriter (same idea, different mouth, different feel)" }
+      ]
+    },
     "standards": [
       "CCSS ELA W.6-8.3.B",
       "NCAS TH:Cr2",
@@ -7031,8 +7062,18 @@ export const apps: AppData[] = [
     "iconPath": "/apps/voicetale/icon-sm.webp",
     "iconHeroPath": "/apps/voicetale/icon.webp",
     "mascotPath": "/apps/voicetale/mascot.webp",
-    "mentor": "Loresinger Mae",
+    "mentor": "Bramble",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "VoiceTale's 4-character supporting cast embodies oral-craft primitives — hook / leanability (Lean), pacing across the 5-beat arc (Slow), the pivot / turn at beat 4 (Pivot), and callback / refrain (Refrain). Following the MotifLab Wave 7 hero-as-protagonist pattern, Bramble (the thornbush mascot + AI listening coach + cultural-tradition holder) remains the protagonist + listener-anchor; cast members are hedgerow-fire companions who sit around Bramble's listening circle. Cast fades by kit 12 so kits 13-16 (anthology + cross-form + Indigenous-tradition-layer + free-form) read as integrative + tradition-honoring. Voice-character mode (kit 5) is taught by the kid doing it themselves, NOT by a cast-member exemplar — preserves voice-craft as the kid's own invention. CRITICAL multi-tradition cultural-sensitivity gate: ALL 4 cast names are English sensory-verbs (Lean / Slow / Pivot / Refrain); NO tradition-specific terms mascotized (no Griot / Seanchaí / Rakugo-X / Slam-X); NO named historical storytellers as cast; West African griot / Irish seanchaí / Japanese rakugo / Indigenous American oral histories / modern slam attributed to source communities in kit framing copy. Kit 12 (Indigenous American Oral Histories) requires external Indigenous-community sensitivity reviewer BEFORE playtest (REQUIRED, not optional). Mentor reconciliation in this batch: Loresinger Mae → Bramble (matches code-side coach naming + mascot). Echo → Refrain + Turn → Pivot renames resolve cluster + cumulative collisions.",
+      "members": [
+        { "name": "Lean", "role": "Hook / leanability — badger-tween whose upper body visibly tips forward at second 5; if hook is weak she rocks back to neutral" },
+        { "name": "Slow", "role": "Pacing across the 5-beat arc — tortoise-elder with wooden hourglass; her tempo-trail stretches (slow) or bunches (fast) on purpose" },
+        { "name": "Pivot", "role": "The turn at beat 4 — barn-owl-tween whose head rotates 180° at the exact moment story / teller / listener turn together" },
+        { "name": "Refrain", "role": "Callback / refrain — mockingbird-tween with carved-wood phrase-token who repeats one phrase identically at the closing (same words, same shape, said again, said better)" }
+      ]
+    },
     "standards": [
       "CCSS ELA SL.6-8.4",
       "CCSS ELA W.6-8.3",
@@ -7056,8 +7097,19 @@ export const apps: AppData[] = [
     "iconPath": "/apps/dialoguequest/icon-sm.webp",
     "iconHeroPath": "/apps/dialoguequest/icon.webp",
     "mascotPath": "/apps/dialoguequest/mascot.webp",
-    "mentor": "Loresinger Mae",
+    "mentor": "Patter",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "DialogueQuest's 5-character supporting cast embodies dialogue-craft primitives — branch meaningfulness / weighted choice (Sprig), subtext / surface-vs-implied (Glance), tag balance / attribution rhythm (Weigh), voice consistency / cross-line check (Brogue), and rhythm + silence / productive pause (Rest). Following the MotifLab Wave 7 hero-as-protagonist pattern, Patter (the two-toned speech-bubble mascot + AI dialogue coach) remains the protagonist + relational anchor; cast members are conversational archetypes Patter keeps in his pocket-workshop. Cast fades by kit 12 so kits 13-16 (tree building + anthology + cross-cluster export) read as integrative. Voice-consistency-by-example design: each cast member speaks with a distinct register so the kid sees voice-craft as a LIVED skill (not just a graded one). Mascotizing gate: NO character is named after the craft term — Sprig (not 'Branch'), Glance (not 'Subtext'), Weigh (not 'Tag-balance'), Brogue (not 'Voice'), Rest (not 'Silence'). Brogue's old-country accent is DELIBERATELY non-specific (not any real dialect — folk-storyteller archetype). Mentor reconciliation in this batch: Loresinger Mae → Patter (matches code-side coach naming + mascot). Hush → Glance + Scale → Weigh renames resolve cumulative-cast collisions.",
+      "members": [
+        { "name": "Sprig", "role": "Branch meaningfulness — sapling-tween whose visible branching skeleton shifts physically when she picks between dialogue options (the choice re-routes her body)" },
+        { "name": "Glance", "role": "Subtext — arctic-fox-tween in a thick scarf; speech-bubble visibly half-empty with dotted-line ghost-text floating beside it" },
+        { "name": "Weigh", "role": "Tag balance — pangolin-tween with a brass balance-scale on her shoulder; scales tilt visibly as dialogue happens around her" },
+        { "name": "Brogue", "role": "Voice consistency — border-collie-elder in a worn flat-cap who uses exactly 4-5 signature words across every appearance (deliberately non-specific old-country accent)" },
+        { "name": "Rest", "role": "Rhythm + silence — heron-tween with a small silver pocket-watch around her neck; one foot perpetually raised mid-step; treats the pause as a line of dialogue itself" }
+      ]
+    },
     "standards": [
       "CCSS ELA W.6-8.3.B",
       "CCSS ELA RL.6-8.6",
