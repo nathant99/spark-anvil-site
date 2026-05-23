@@ -1988,6 +1988,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/farmquest/icon-sm.webp",
     "mascotPath": "/apps/farmquest/mascot.webp",
     "mentor": "Furrow",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "FarmQuest's 5-character cast embodies farm-system primitives — soil health + crop rotation (Loam), livestock care + animal-welfare ethics (Pen), harvest + post-harvest handling (Bushel), farmers-market economics (Market), and sustainability + soil-life ethics (Tilth). Furrow (mentor rename — was Sprout, HARD-collide with BioForge Wave-10 cast — resolved code-side in Phase A; site already aligned) frames each primitive; cast embodies them at small-family-farm scale (NEVER agribusiness-mascotization; NEVER industrial-feedlot iconography). Livestock-care + animal-welfare gate enforced (CRITICAL — inherits CreatureCare Wave 18 verbatim): Pen NEVER frames meat-production as morally simple — neither vegan-evangelism nor uncritical-meat-industry; foreground animal welfare ethics + bodily autonomy of animals; respect vegetarian / vegan / omnivore / Indigenous food traditions; kit 4 + kit 8 + kit 10 content warnings + skip-with-summary affordances per .claude/rules/trauma-informed-content.md. Food-justice gate inherits HarvestForge Wave 26 sibling — Market's price-as-truth framing names fair labor explicitly. External animal-welfare ethics + farmworker-labor + Indigenous food-tradition sensitivity reviewer STRONGLY RECOMMENDED ($500-$800) before Wave 26.2 art generation.",
+      "members": [
+        { "name": "Loam", "role": "Soil health + crop rotation — different roots, different seasons; soil-as-record framing" },
+        { "name": "Pen", "role": "Livestock care + animal-welfare ethics — care = consent + comfort; animals-decide-when framing" },
+        { "name": "Bushel", "role": "Harvest + post-harvest handling — gentle hands, clean baskets; bruises-cost-more framing" },
+        { "name": "Market", "role": "Farmers-market economics + agribusiness — fair price = fair work; price-tells-truth framing" },
+        { "name": "Tilth", "role": "Sustainability + soil-life ethics — repair before replace; field-remembers framing" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -2758,6 +2769,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/growforge/icon-sm.webp",
     "mascotPath": "/apps/growforge/mascot.webp",
     "mentor": "Sprig",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "GrowForge's 5-character cast embodies garden-craft primitives — seed-and-planting listening (Tuck), water + irrigation patience (Drip), photosynthesis + cell-level biology (Glow), container + apartment gardening access (Pot), and observation + plant-doctoring patience (Vigil). Sprig (mentor rename — was Bloom, HARD-collide with SoundSphere Wave-7 cast — resolved code-side in Phase A; site already aligned) frames each primitive; cast embodies them at kid-and-windowsill scale (NEVER suburban-backyard-default mascotization). Nature-deficit + privilege gate enforced (CRITICAL — UNIQUE to GrowForge in Wave 26): cast NEVER assumes access to outdoor space, free time, or supplies; Pot's structural presence from kit 8 onward names apartment-windowsill / urban / community-plot as PEER gardening contexts (NOT lesser-than backyard); Pot's catchphrase 'a windowsill is a garden too' is load-bearing; static-response gating for 'real gardeners need a yard' / 'apartment kids can't garden' prompts NEVER reaches FoundationModels (Sprig surface filter). Hands-on-care framing throughout (NOT extractive harvest-and-consume framing). External nature-deficit + urban-gardening + community-gardens sensitivity reviewer RECOMMENDED ($300-$500) before Wave 26.2 art generation.",
+      "members": [
+        { "name": "Tuck", "role": "Seed + planting — every seed knows what it wants; read-the-packet-then-the-soil" },
+        { "name": "Drip", "role": "Water + irrigation literacy — water is the patient teacher; don't-drown-the-thirsty framing" },
+        { "name": "Glow", "role": "Photosynthesis + plant biology — leaf-makes-lunch-from-light; cell-level wonder framing" },
+        { "name": "Pot", "role": "Container + apartment gardening — windowsill-is-a-garden-too; nature-deficit + privilege gate anchor" },
+        { "name": "Vigil", "role": "Observation + plant-doctoring patience — look-every-day-don't-pluck-what's-working; intellectual humility framing" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -2870,7 +2892,18 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/harvestforge/icon-sm.webp",
     "mascotPath": "/apps/harvestforge/mascot.webp",
-    "mentor": "Bramble",
+    "mentor": "Terra",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "HarvestForge's 5-character cast embodies food-system primitives — when-to-plant seasonality (Seed), soil-as-living-community (Soil), supply-chain literacy (Chain), food-access + food-justice (Share), and intergenerational sustainability (Steward). Terra (mentor preserved; site reconciled from 'Bramble' to match shipped code) frames each primitive; cast embodies them at farm-and-community scale (NEVER agribusiness-mascotization). Food-justice + food-access gate enforced (CRITICAL): cast NEVER amplifies food-insecurity shame; Share's structural presence from kit 11 onward names community-food-network framing — food deserts are SYSTEMS not personal failings; supply-chain content includes farmworker labor conditions (kit 12) without scare-tactics. Idyllic-farm-romanticism gate: cast art register is mended/working/patinated; NO white-picket-fence / shiny-tractor / model-farm iconography; supply-chain truthful about labor + food-system fragility. External food-justice + farmworker-labor + Indigenous-food-system sensitivity reviewer RECOMMENDED ($500-$800) before Wave 26.2 art generation.",
+      "members": [
+        { "name": "Seed", "role": "Seasonality + sowing — when to plant, what each season teaches; calendar-as-tool" },
+        { "name": "Soil", "role": "Soil microbiome + nutrient cycling — soil is alive; soil-as-community framing" },
+        { "name": "Chain", "role": "Supply chain literacy — every loaf tells a journey; whose-hands framing" },
+        { "name": "Share", "role": "Food access + food-justice — community-food-network framing; food deserts are systems, NOT moral failings" },
+        { "name": "Steward", "role": "Sustainable practices + intergenerational restoration — field remembers; latest-not-first framing" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -5890,6 +5923,17 @@ export const apps: AppData[] = [
     "iconHeroPath": "/apps/tableforge/icon.webp",
     "mascotPath": "/apps/tableforge/mascot.webp",
     "mentor": "Blueprint",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TableForge's 5-character cast embodies tabletop game-design primitives — dice + randomness as design craft (Bones), cards + hidden information (Hand), turn-structure + action economy (Move), playtest + iteration (Trial), and theme-mechanic integration (Theme — Habgood intrinsic-integration anchor). Blueprint (mentor preserved — code + site aligned) frames each primitive; cast embodies them at kid-table-with-printed-games scale (NEVER casino / gambling mascotization; NEVER 'designer-as-auteur' framing). Gambling-adjacency gate enforced (CRITICAL — UNIQUE to TableForge in Wave 26; inherits ChanceForge Wave 4 verbatim): Bones structurally frames dice as DESIGN CRAFT not BETTING; cast NEVER uses casino register (no chips / no jackpot / no betting / no high-roller / no luck-is-skill); kit 1 explicitly teaches 'designed-randomness has a JOB — fairness / tension / suspense / variability — not casino-thrill'; static-response gating for 'gambling games' / 'bet on dice' / 'casino design' prompts NEVER reaches FoundationModels (Blueprint surface filter); kit 11 (Theme + Mechanic) explicitly contrasts 'theme that does work' vs 'theme as flavor decoration' (the casino-skin problem in game-design pedagogy). Iteration-shame gate enforced (CRITICAL — co-anchor; inherits LevelForge Wave 22 Probe + MakerForge Wave 19 Try): Trial's 'first playtest is supposed to fail' load-bearing; cast NEVER frames failed-playtest as designer-failure. Cultural-appropriation gate (Theme-specific): patchwork theme-cloak uses abstract geometric patterns ONLY — NO mahjong / go / pachisi / kabuki / specific national symbols mascotized; theme content honors-not-claims when global game traditions surface (kit 13). External child-game-design-pedagogy + game-ethics + gambling-pedagogy sensitivity reviewer RECOMMENDED ($300-$500) for kit 1 + kit 11 + kit 13.",
+      "members": [
+        { "name": "Bones", "role": "Dice + randomness + probability — chance is design craft, NOT betting; gambling-adjacency gate anchor" },
+        { "name": "Hand", "role": "Cards + hidden information — what-you-HOLD is information; what-you-SHOW is a different question" },
+        { "name": "Move", "role": "Turn-structure + action economy — every turn is a question and an answer; turn-as-question framing" },
+        { "name": "Trial", "role": "Playtest + iteration — what-they-DID matters more than what-they-SAID; first-playtest-supposed-to-fail framing" },
+        { "name": "Theme", "role": "Game-mechanic + theme integration — the-game-IS-its-mechanics; Habgood intrinsic-integration anchor; theme-MUST-do-work framing" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NCAS",
