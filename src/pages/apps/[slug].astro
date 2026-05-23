@@ -4,6 +4,7 @@ import { apps, type AppData } from '~/data/apps.generated';
 import { verticals } from '~/data/site';
 import { renderInline } from '~/lib/markdown';
 import { modes, scoreLabel, type ModeKey } from '~/data/modes';
+import castManifest from '~/data/cast-manifest.json';
 
 export async function getStaticPaths() {
   return apps.map(app => ({
@@ -18,6 +19,20 @@ interface Props {
 
 const { app } = Astro.props;
 const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.vertical;
+
+// Cast-portrait resolution — mirror labsmith/scripts/gen_cast_portraits.py slug rule
+function slugChar(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/&/g, '-and-')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'char';
+}
+const portraitSet = new Set<string>(castManifest as string[]);
+function portraitFor(charName: string): string | null {
+  const key = `${app.slug}/${slugChar(charName)}.webp`;
+  return portraitSet.has(key) ? `/cast/${key}` : null;
+}
 ---
 
 <BaseLayout
@@ -40,6 +55,12 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
         </p>
         <h1 class="font-brand font-bold text-5xl md:text-6xl mb-4">{app.name}</h1>
         <p class="text-xl text-white/90 leading-relaxed">{app.tagline}</p>
+        {app.playTogether && (
+          <span class="inline-flex items-center gap-1.5 mt-4 px-3 py-1 bg-white/20 backdrop-blur text-white text-sm font-bold rounded-full">
+            <span>👥</span>
+            Pass-and-play available
+          </span>
+        )}
       </div>
       <div class="flex items-center justify-center">
         {(app.iconHeroPath ?? app.iconPath) ? (
@@ -182,12 +203,37 @@ const verticalName = verticals.find(v => v.id === app.vertical)?.name ?? app.ver
           )}
         </div>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {app.dnCast.members.map(m => (
-            <div class="p-4 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15">
-              <h3 class="font-brand font-bold text-anvil dark:text-warm mb-1">{m.name}</h3>
-              <p class="text-xs text-anvil/70 dark:text-warm/70 leading-relaxed">{m.role}</p>
-            </div>
-          ))}
+          {app.dnCast.members.map(m => {
+            const portrait = portraitFor(m.name);
+            return (
+              <div class="p-4 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15 flex gap-3 items-start">
+                {portrait ? (
+                  <div
+                    class="w-14 h-14 rounded-full overflow-hidden border-2 border-warm flex-shrink-0"
+                    style={`background-color: ${app.heroColor}`}
+                  >
+                    <img
+                      src={portrait}
+                      alt={`${m.name} portrait`}
+                      class="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    class="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center font-brand font-bold text-white text-lg"
+                    style={`background-color: ${app.heroColor}`}
+                  >
+                    {m.name.charAt(0)}
+                  </div>
+                )}
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-brand font-bold text-anvil dark:text-warm mb-1 leading-tight">{m.name}</h3>
+                  <p class="text-xs text-anvil/70 dark:text-warm/70 leading-snug">{m.role}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
         <p class="text-center mt-6">
           <a href="/method" class="text-forge dark:text-forge-light text-sm font-bold underline hover:no-underline">
