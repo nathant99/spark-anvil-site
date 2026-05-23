@@ -2,6 +2,8 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import { apps } from '~/data/apps.generated';
 import { verticals } from '~/data/site';
+import fs from 'node:fs';
+import path from 'node:path';
 
 // Distributed-narrative apps with a populated cast
 const withCast = apps.filter(a => a.distributedNarrative && a.dnCast?.members?.length);
@@ -13,6 +15,37 @@ const byVertical = verticals.map(v => ({
 
 const totalApps = withCast.length;
 const totalCharacters = withCast.reduce((sum, a) => sum + (a.dnCast?.members?.length ?? 0), 0);
+
+// Build cast-portrait manifest from public/cast/<app>/<char>.webp at build time.
+// Mirrors the slug rule used by labsmith/scripts/gen_cast_portraits.py.
+function slugChar(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/&/g, '-and-')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'char';
+}
+
+const portraitRoot = path.join(process.cwd(), 'public', 'cast');
+const portraitSet = new Set<string>();
+if (fs.existsSync(portraitRoot)) {
+  for (const appDir of fs.readdirSync(portraitRoot)) {
+    const appPath = path.join(portraitRoot, appDir);
+    if (!fs.statSync(appPath).isDirectory()) continue;
+    for (const file of fs.readdirSync(appPath)) {
+      if (file.endsWith('.webp')) {
+        portraitSet.add(`${appDir}/${file}`);
+      }
+    }
+  }
+}
+
+function portraitPathFor(appSlug: string, charName: string): string | null {
+  const candidate = `${appSlug}/${slugChar(charName)}.webp`;
+  return portraitSet.has(candidate) ? `/cast/${candidate}` : null;
+}
+
+const portraitCount = portraitSet.size;
 ---
 
 <BaseLayout
@@ -46,6 +79,12 @@ const totalCharacters = withCast.reduce((sum, a) => sum + (a.dnCast?.members?.le
         <strong class="text-anvil dark:text-warm text-2xl font-brand block">{totalApps}</strong>
         apps with a cast
       </span>
+      {portraitCount > 0 && (
+        <span class="text-anvil/70 dark:text-warm/70">
+          <strong class="text-anvil dark:text-warm text-2xl font-brand block">{portraitCount}</strong>
+          portraits live
+        </span>
+      )}
       <span class="text-anvil/70 dark:text-warm/70">
         <strong class="text-anvil dark:text-warm text-2xl font-brand block">{verticals.length}</strong>
         learning verticals
@@ -108,13 +147,38 @@ const totalCharacters = withCast.reduce((sum, a) => sum + (a.dnCast?.members?.le
                 </span>
               </header>
 
-              <ul class="space-y-1.5 text-sm">
-                {app.dnCast!.members.map(member => (
-                  <li class="flex gap-2 text-anvil/80 dark:text-warm/80">
-                    <span class="font-brand font-bold text-forge flex-shrink-0">{member.name}</span>
-                    <span class="text-anvil/60 dark:text-warm/60">— {member.role}</span>
-                  </li>
-                ))}
+              <ul class="space-y-2.5 text-sm">
+                {app.dnCast!.members.map(member => {
+                  const portraitUrl = portraitPathFor(app.slug, member.name);
+                  return (
+                    <li class="flex items-start gap-3 text-anvil/80 dark:text-warm/80">
+                      {portraitUrl ? (
+                        <div
+                          class="w-10 h-10 rounded-full overflow-hidden border-2 border-warm flex-shrink-0 mt-0.5"
+                          style={`background-color: ${app.heroColor}`}
+                        >
+                          <img
+                            src={portraitUrl}
+                            alt={`${member.name} portrait`}
+                            class="w-full h-full object-contain"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <div
+                          class="w-10 h-10 rounded-full flex-shrink-0 mt-0.5 flex items-center justify-center font-brand font-bold text-white text-sm"
+                          style={`background-color: ${app.heroColor}`}
+                        >
+                          {member.name.charAt(0)}
+                        </div>
+                      )}
+                      <div class="flex-1 min-w-0 pt-0.5">
+                        <div class="font-brand font-bold text-forge">{member.name}</div>
+                        <div class="text-xs text-anvil/60 dark:text-warm/60 leading-snug">{member.role}</div>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             </article>
           ))}
