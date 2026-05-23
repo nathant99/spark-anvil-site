@@ -3286,7 +3286,18 @@ export const apps: AppData[] = [
     "heroColor": "#E91E63",
     "iconPath": "/apps/inkquest/icon-sm.webp",
     "mascotPath": "/apps/inkquest/mascot.webp",
-    "mentor": "Byline",
+    "mentor": "Caret",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "InkQuest's 5-character cast embodies the data-journalism craft primitives — story-from-data (Lede), interview + notebook craft (Pad), verification + triangulation (Crosscheck), chart-annotation craft (Margin), citation + provenance (Footer). Caret (mentor — proofreader's-mark editorial-craft register; renamed from site placeholder 'Byline' and code-side generic 'Mentor' in Phase A) introduces each primitive. Wave 25 NewsForge cluster strict-no-overlap honored (Source / Tilt / Frame / Verify / Serve REJECTED — those are NewsForge's news-literacy primitives; InkQuest distinct as data-journalism craft). No trauma-informed gate (craft-discipline domain).",
+      "members": [
+        { "name": "Lede", "role": "Story-from-data — finding the angle; what's the story under the numbers?" },
+        { "name": "Pad", "role": "Field-capture + interview craft — open the question; let the answer breathe" },
+        { "name": "Crosscheck", "role": "Verification + triangulation — three sources say the same thing, now I have something" },
+        { "name": "Margin", "role": "Data-table + chart-annotation craft — label the axes; caption the chart; credit the data" },
+        { "name": "Footer", "role": "Citation + provenance — every number has a name behind it; tell the reader who counted" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NCAS",
@@ -4034,7 +4045,18 @@ export const apps: AppData[] = [
     "heroColor": "#29B6F6",
     "iconPath": "/apps/mathlore/icon-sm.webp",
     "mascotPath": "/apps/mathlore/mascot.webp",
-    "mentor": "Glyph",
+    "mentor": "Lore",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MathLore's 5-character meta-cast embodies the math-as-story primitives that recur across every civilization — counting-as-first-story (Heap), pattern-as-discovery (Spire), proof-as-shared-knowledge (Vouch), math-as-cultural-context (Home), cultural-transmission (Carry). Lore (top-tier listener-narrator; DUAL-RESOLVE rename from code-side 'Narrator' + site placeholder 'Glyph' which collided HARD with LinguaQuest Wave 5 cast Glyph) introduces the meta-cast across eras. UNIQUE three-tier voice architecture preserved: Lore = meta-framing (FoundationModels) / Historical mathematician NPCs (Hypatia / Brahmagupta / al-Khwārizmī / Ramanujan / etc.) = per-era voice (@Generable preserved) / Meta-cast = static-catchphrase pattern-bearers. CRITICAL cultural-representation gate enforced: cast names abstract; no real-mathematician mascotization; no specific-culture mascotization; abstract-geometric Home patches; collage-of-evidence Heap vest. External \\$500-\\$1000 multi-cultural-mathematics + ethnomathematics-pedagogy reviewer STRONGLY RECOMMENDED for kits 7+9+10+11+12.",
+      "members": [
+        { "name": "Heap", "role": "Counting-as-first-story — every people figured out their own way to count" },
+        { "name": "Spire", "role": "Pattern-as-discovery — patterns are everywhere when you slow down enough to see them" },
+        { "name": "Vouch", "role": "Proof-as-shared-knowledge — show me why; if your why holds up, I'll build on it" },
+        { "name": "Home", "role": "Math-as-cultural-context — this idea was born somewhere, for someone, with reasons" },
+        { "name": "Carry", "role": "Cultural-transmission — the idea traveled; every place it visited, it grew" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NGSS",
@@ -5904,6 +5926,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/strategyforge/icon-sm.webp",
     "mascotPath": "/apps/strategyforge/mascot.webp",
     "mentor": "Gambit",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "StrategyForge's 5-character cast embodies the transferable strategic-thinking primitives that cross all 6 classical games (chess + Go + checkers + backgammon + mancala + Connect 4) — forward planning + multi-move look-ahead (Foresee), piece-value reasoning + exchange evaluation (Trade), pattern recognition + position-reading (Read), patience + tempo discipline (Bide), graceful loss + post-game analysis (Concede). Gambit (mentor preserved on site; code-side reconciliation Phase A: math-mentor domain-text corrected to strategy-games + transferable-thinking coach) frames each primitive. Cross-game complement to the per-game DN cluster (GambitTales / StoneSong / GeneralsTale / MotifLab / PipQuest / DealTales go DEEP per-game; StrategyForge goes CROSS-game on transferable primitives). GAMBLING-ADJACENCY GATE ENFORCED (CRITICAL — inherits ChanceForge Wave 4 + TableForge Wave 26 verbatim): Trade = exchange-evaluation NEVER wager-evaluation; Bide = strategic-positioning NEVER expected-value-betting; cast NEVER uses casino register; backgammon framed as dice-as-design-tool. Cultural-credit appendix Lesson 7 (Persia/India/China/Korea/Japan/Africa/Mesopotamia/modern-US game-origins named without mascotizing).",
+      "members": [
+        { "name": "Foresee", "role": "Forward planning + multi-move look-ahead — three moves ahead is enough; look further only when the position asks" },
+        { "name": "Trade", "role": "Piece-value reasoning + exchange evaluation — equal value isn't equal worth; position-value matters more than piece-value" },
+        { "name": "Read", "role": "Pattern recognition + position-reading — patterns repeat; the shape tells you the move" },
+        { "name": "Bide", "role": "Patience + tempo discipline — slow is a move too; sometimes the best move is to wait" },
+        { "name": "Concede", "role": "Graceful loss + post-game analysis — losing is a teacher; winning is too; I write down both" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -6115,6 +6148,18 @@ export const apps: AppData[] = [
     "heroColor": "#29B6F6",
     "iconPath": "/apps/tectonicforge/icon-sm.webp",
     "mascotPath": "/apps/tectonicforge/mascot.webp",
+    "mentor": "Geo",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TectonicForge's 5-character cast embodies the plate-tectonic + crustal-motion + magma-behavior primitives — convergent/subduction (Sink), divergent/mid-ocean-ridge (Spread), transform/fault (Slide), volcanism + magma chemistry (Vent), seismology + earthquake preparedness (Tremor). Geo (mentor preserved; registry-confirmed pre-existing) frames each primitive. SITE entry mentor field added in Wave 31 (was missing). TRAUMA-INFORMED CONTENT FLAG TRUE per .claude/rules/trauma-informed-content.md (earthquake + volcano content; kids affected by recent disasters may carry trauma). Earth-as-storyteller-across-time framing: Sink/Spread/Slide patient + Vent evidence-of-internal-state + Tremor preparedness-without-fear. Cast NEVER ranks disasters; NEVER 'biggest ever' gamification. Real-world events (Tōhoku/Christchurch/Pompeii/Krakatoa/Mt-St-Helens/Lisbon/Concepción/Nepal/Ridgecrest) credited BY NAME with respect. Off-ramps required for kit 7+11+12. External \\$300-\\$500 disaster-preparedness-pedagogy reviewer RECOMMENDED for kit 7 (preparedness) + kit 11 (hazard engineering) + kit 12 (real-world case studies).",
+      "members": [
+        { "name": "Sink", "role": "Convergent/subduction boundary — the heavier plate finds its way down; it takes a long time; that's okay" },
+        { "name": "Spread", "role": "Divergent boundary + new crust — when something pulls apart, something new is forming in the middle" },
+        { "name": "Slide", "role": "Transform boundary + stored energy — two plates sliding past; they catch, they hold, then they let go" },
+        { "name": "Vent", "role": "Volcanism + magma chemistry — eruptions tell us what was happening below" },
+        { "name": "Tremor", "role": "Seismology + earthquake preparedness — earthquakes are the Earth telling its story; we can read the lines; we can be ready" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NGSS",
