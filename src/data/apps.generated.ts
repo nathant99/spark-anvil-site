@@ -1103,6 +1103,17 @@ export const apps: AppData[] = [
       "learn": 1,
       "play": 1,
       "create": 3
+    },
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CraftForge's distributed-narrative cast embodies the 5 stages of miniature painting — surface prep, basecoat/wash, color mixing, layered application, and fine detail — as 5 animal-painter characters Iris introduces across the 16 question kits. Perfectionism-gate framing is foregrounded; cast catchphrases normalize WIP-ugly as productive technique, never as a mistake to fix.",
+      "members": [
+        { "name": "Sand", "role": "Surface preparation — the patient pangolin-elder who treats priming as the invisible foundation everything else stands on ('ready surface first; the paint listens to the surface')" },
+        { "name": "Dab", "role": "Basecoat + wash — the confident vole-tween of broad strokes who treats basecoats as the loud first hello and washes as the quiet shadow-finder ('big shapes first, shadows fall second')" },
+        { "name": "Blend", "role": "Color mixing + highlighting — the chameleon-tween of color-vocabulary who treats color theory as language, not rulebook ('two colors meet, a third is born — mix slow; listen to what they're making')" },
+        { "name": "Coat", "role": "Layered application + varnish — the steady badger-tween who treats every coat as deliberate next-stratum patience ('layer waits for layer; patience is the secret pigment')" },
+        { "name": "Tip", "role": "Fine detail + freehand — the relaxed treefrog-tween of fearless small-brush play who carries the cluster's perfectionism-gate anchor ('tiny brushes, loose wrist — wobbly is fine; the eye fixes it from arm's length')" }
+      ]
     }
   },
   {
@@ -3519,6 +3530,17 @@ export const apps: AppData[] = [
       "learn": 1,
       "play": 1,
       "create": 3
+    },
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MakerForge's distributed-narrative cast embodies the 5 stages of the engineering design process — ideate, spec, fabricate, iterate, document — as 5 animal-maker characters Spool introduces across the 16 question kits. Tool-safety + failure-as-feedback framing is foregrounded; Mill carries the Wave 19 maker-cluster tool-safety gate that sibling apps cross-app inherit.",
+      "members": [
+        { "name": "Sketch", "role": "Ideation + concept development — the wild-thinking squirrel-tween who treats divergent brainstorming as judgment-free play ('many before few; wild before tame; crooked sketches are also sketches')" },
+        { "name": "Spec", "role": "Material + constraint commitment — the measured owl-tween who treats spec-commitment as the moment imagination meets physics ('constraints are the shape of the possible')" },
+        { "name": "Mill", "role": "Fabrication + build — the careful beaver-tween who carries the cluster's tool-safety anchor ('tool first checked, adult first told — then we build')" },
+        { "name": "Try", "role": "Prototyping + iteration — the patient salamander-tween who treats first failure as expected design-process behavior ('first try fails, second try tells, third try shapes the design')" },
+        { "name": "Log", "role": "Documentation + reflection — the wise turtle-elder who treats the notebook as the actual deliverable ('make it, mark it, share it — the notebook is the project')" }
+      ]
     }
   },
   {
@@ -5085,6 +5107,17 @@ export const apps: AppData[] = [
       "learn": 2,
       "play": 1,
       "create": 3
+    },
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "SaffronLab's distributed-narrative cast embodies the 5 kitchen-science transformations — mixing/emulsions, heat/states-of-matter, fermentation/leavening, Maillard/caramelization, and preservation/safety — as 5 animal-cook characters Pestle introduces across the 16 question kits. Body-image affirmation, food-access inclusivity, and global cultural-cuisine balance are foregrounded; cast catchphrases never use diet/restriction vocabulary, and cuisine-tradition framing balances across regions equally.",
+      "members": [
+        { "name": "Whisk", "role": "Mixing + emulsions — the energetic hummingbird-tween who treats mixing as conversation between ingredients ('quick wrists, patient eyes — air goes in, lumps come out')" },
+        { "name": "Simmer", "role": "Heat application + states of matter — the patient tortoise-tween who treats heat as the slow-revealer ('heat moves slow, food changes slower; watch the bubbles — they're telling you')" },
+        { "name": "Rise", "role": "Fermentation + leavening — the wise badger-elder who treats fermentation as the patient art of working with living things, foregrounding cross-cultural traditions ('living things take time — wait; the bread knows when it's ready')" },
+        { "name": "Crisp", "role": "Maillard + caramelization — the focused fox-tween who treats browning as the flavor-creating frontier ('sugar meets heat, protein meets heat — new flavors are born')" },
+        { "name": "Brine", "role": "Preservation + food safety — the careful axolotl-tween who treats food safety as care-for-the-eater, foregrounding cross-cultural preservation traditions ('salt remembers, vinegar remembers, cold remembers — food keeps if it's kept right')" }
+      ]
     }
   },
   {
@@ -5510,6 +5543,17 @@ export const apps: AppData[] = [
       "learn": 2,
       "play": 1,
       "create": 3
+    },
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "StyleForge's distributed-narrative cast embodies the 5 stages of garment design — drape/fit, fabric/grain, pattern/cut, finishing/trim, and care/sustainability — as 5 animal-designer characters Stitch introduces across the 16 question kits. Body-image affirmation, sustainability, and cultural-representation balance are foregrounded; cast uses varied body shapes by deliberate design, and Fold carries the moral anchor that clothes outlast trends.",
+      "members": [
+        { "name": "Drape", "role": "Concept silhouette + fit — the curvy capybara-tween who carries the cluster's body-image-gate anchor ('fabric meets body; body says what fabric wants to be — listen to both')" },
+        { "name": "Grain", "role": "Fabric + textile science — the thoughtful raccoon-tween who treats fabric science as a vocabulary of natural-material decisions ('where does this thread come from? where does it go after? fabric has a beginning and an after')" },
+        { "name": "Cut", "role": "Pattern-making + construction — the precise heron-tween who treats pattern-cutting as careful measure-twice-cut-once practice ('measure first, cut once — the pattern is the promise')" },
+        { "name": "Trim", "role": "Finishing + embellishment — the steady mole-tween who treats finishing as the small details that make a garment whole ('big shapes finish first, tiny details finish last — hem first, then bead')" },
+        { "name": "Fold", "role": "Sustainability + garment care — the wise swan-elder in a visibly-mended quilted coat who carries the cluster's sustainability + cultural-representation anchor ('make to last, mend to keep, fold to remember — fashion is a long story, not a short trend')" }
+      ]
     }
   },
   {
