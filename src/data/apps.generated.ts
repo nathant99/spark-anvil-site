@@ -6925,7 +6925,7 @@ export const apps: AppData[] = [
   {
     "slug": "gambittales",
     "name": "GambitTales",
-    "tagline": "Narrative-Driven Chess for Tweens — tactical patterns (pin / fork / skewer) as recurring character archetypes (Sir Pinwell, Twin Knights of Fork Hill, Lady Skewer). Captain Castle rook mascot.",
+    "tagline": "Narrative-Driven Chess for Tweens — Storytime-Chess-inspired 10-character cast: 6 piece-movement archetypes (kings, pawns, bishops, knights, rooks, queen) + 6 tactical-pattern archetypes (pin / fork / skewer / discovered-attack / double-attack / X-ray) + Captain Castle mentor.",
     "vertical": "academics",
     "heroColor": "#D4A24C",
     "iconPath": "/apps/gambittales/icon-sm.webp",
@@ -6942,18 +6942,59 @@ export const apps: AppData[] = [
     "wave": null,
     "distributedNarrative": true,
     "dnCast": {
+      "intro": "GambitTales' 10-character cast splits across two layers: 6 WORLD-layer characters embody chess piece-movement rules (one per piece type, twin-pair compression for bishops/knights/rooks); 6 LESSONS-layer characters embody tactical patterns (pin/fork/skewer/discovered-attack/double-attack/X-ray). Methodology inspired by Storytime Chess (1,000+ schools, 250,000+ children since 2018) but SUBSTANTIALLY DIFFERENTIATED for tween 9-14 audience: net-new character names + net-new characterizations (Pumble = librarian-king not foodie-king; Sienna+Bran = pilgrim-twins not trapeze-circus-twins; Trotter+Trundle = work-horses not magical-dancers; Vesper = ranger-messenger not friendship-officer/architect). Voicing register: warmly absurd with subtext (NOT preschool silly-silly-silly). Captain Castle preserved as mentor + AI-voice; cast members have static catchphrases only (≤8 words). Queen Vesper is ONE archetype with two color presentations (warm-amber White-side, cool-charcoal Black-side) — character economy supports rule-mnemonic clarity for tweens. Per `labsmith/Docs/PLAN_GAMBITTALES_DN_ENHANCEMENT.md` + `gambittales-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_ENHANCEMENT.md` (2026-05-22).",
       "members": [
         {
+          "name": "King Pumble",
+          "role": "White-king piece-movement archetype — librarian-king; one square at a time so scrolls don't scatter"
+        },
+        {
+          "name": "King Sable",
+          "role": "Black-king piece-movement archetype — gardener-king; one snip at a time pruning the topiary"
+        },
+        {
+          "name": "Pawn Patrol",
+          "role": "Pawn piece-movement archetype (collective × 16) — scroll-delivery apprentices; forward-only; diagonal-capture; first-move two-square sprint"
+        },
+        {
+          "name": "Sister Sienna & Brother Bran",
+          "role": "Bishop piece-movement archetype (pilgrim twins) — Sienna on warm-stone diagonals, Bran on moss-stone diagonals; never cross paths"
+        },
+        {
+          "name": "Trotter & Trundle",
+          "role": "Knight piece-movement archetype (work-horse twins) — hop-and-shimmy L-step; only piece that jumps over others"
+        },
+        {
+          "name": "Tower Gable & Tower Garrett",
+          "role": "Rook piece-movement archetype (walking-tower twins) — straight-line walks only; castle next to king to shield him"
+        },
+        {
+          "name": "Queen Vesper",
+          "role": "Queen piece-movement archetype (ONE archetype, two color variants) — ranger-messenger; any direction, any distance, first to arrive"
+        },
+        {
           "name": "Sir Pinwell",
-          "role": "Pin pattern — freezes pieces along a line"
+          "role": "Pin tactical archetype — freezes pieces along a line"
         },
         {
           "name": "Twin Knights of Fork Hill",
-          "role": "Fork pattern — attack two targets at once"
+          "role": "Fork tactical archetype — attack two targets at once"
         },
         {
           "name": "Lady Skewer",
-          "role": "Skewer pattern — force a valuable piece out of the way"
+          "role": "Skewer tactical archetype — force a valuable piece out of the way"
+        },
+        {
+          "name": "Veil & Vow",
+          "role": "Discovered-attack tactical archetype (herald-pair) — Veil steps aside, Vow's threat is revealed"
+        },
+        {
+          "name": "Captain Crossfire",
+          "role": "Double-attack tactical archetype — one move, two threats announced together"
+        },
+        {
+          "name": "The Glass Lantern",
+          "role": "X-ray attack tactical archetype — light pierces through the first piece to reach the target behind"
         }
       ]
     },
