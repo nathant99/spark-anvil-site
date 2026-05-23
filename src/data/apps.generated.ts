@@ -66,6 +66,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/activeforge/icon-sm.webp",
     "mascotPath": "/apps/activeforge/mascot.webp",
     "mentor": "Coach Echo",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ActiveForge's 5-character cast embodies the foundational PE motor-skill primitives per SHAPE America FMS framework — overhand-projection (Throw), lower-body projection (Kick), spatial-perception agility (Dodge), tumbling + safe-fall + locomotor-recovery (Roll), and team-collaboration + sportsmanship (Cheer). Coach Echo (mentor preserved; soft collision with FunctionForge Wave 4 Echo allowed per registry rule 2/3 — mentor vs cast + different domain + 'Coach Echo' full string vs bare 'Echo') frames each primitive; cast embodies them at school-PE / backyard-tag / family-park-pickup-game scale (NEVER 'varsity-athlete' / 'team-jersey-coded' / 'aspirational-fitness' framing). Motor-skill-shame gate enforced (UNIQUE to ActiveForge in Wave 24): cast NEVER frames motor-skill as innate-talent; ALL skills framed as TRAINABLE-through-practice + clumsy-but-trying-is-the-pattern; one character (Roll) explicitly uses adaptive-PE prop (safe-fall helmet) signaling 'ALL bodies move + adaptive gear is normal' — inherits InclusionForge Wave 15 representation gate. Body-image gate cross-app inherits FitQuest Wave 24 verbatim (kit 2 nutrition cast-light + food-access-framing per SaffronLab Wave 19). Cross-cultural movement-tradition foregrounding (sepak takraw / kabaddi / capoeira / parkour / Indigenous lacrosse — kit 9 Olympic content sensitivity-review-gated $500-$800).",
+      "members": [
+        { "name": "Throw", "role": "Overhand-projection motor pattern — targeted-force-at-distance trained-through-practice never-aptitude-test" },
+        { "name": "Kick", "role": "Lower-body projection — foot-language with five-different-parts-of-foot for different kicks" },
+        { "name": "Dodge", "role": "Spatial-perception + agility — read-the-space-and-move-EARLIER not-faster; perception-game not speed-game" },
+        { "name": "Roll", "role": "Tumbling + safe-fall + parkour-shoulder-roll — visible adaptive-PE helmet signals all-bodies-belong" },
+        { "name": "Cheer", "role": "Sportsmanship + bystander-presence-in-play — learnable-skill not personality-trait" }
+      ]
+    },
     "implementing": true,
     "standards": [
       "CASEL",
@@ -2026,7 +2037,18 @@ export const apps: AppData[] = [
     "heroColor": "#81C784",
     "iconPath": "/apps/fitquest/icon-sm.webp",
     "mascotPath": "/apps/fitquest/mascot.webp",
-    "mentor": "Stride",
+    "mentor": "Brio",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "FitQuest's 5-character cast embodies the foundational functional-fitness primitives — push-pattern (Push), hip-hinge pattern (Hinge), core-bracing (Brace), breath as foundational autonomic-control (Breath), and recovery as practice (Rest). Brio (mentor; DUAL-RESOLVE rename from code-side 'Coach' generic placeholder AND site 'Stride' which HARD-collided with FunctionForge Wave 4 cast — both → Brio, Italian musical 'vigor + joy + spirited liveliness' register; anti-aesthetic + non-coach-as-drill-sergeant) frames each primitive; cast embodies them at home-gym / school-PE / picking-up-groceries scale (NEVER 'elite athlete' / 'aesthetic transformation' / 'before-after' / 'optimization' framing). STRONGEST Wave 24 body-image gate enforced (co-strongest with SafetyForge fear-amplification gate; cross-app inherits + extends DanceQuest Wave 14): cast NEVER references weight / calorie / body-composition / tone / sculpt / shred / cut; HealthKit data shown functional-only NEVER aesthetic; stat-axis structurally enforces functional-only stats (NO leanness / tone); all 5 characters art-directed ROUND + SOFT + STRONG (capybara / tortoise / armadillo / panda / sloth — NONE athletic-body-coded); no tank tops / no compression gear / no visible abs; static-response gating for body-image distress queries with NEDA + 988 surface; over-exercise gate via Rest's structurally load-bearing 'recovery IS training' framing; external sensitivity reviewer REQUIRED pre-launch ($800-$1,500 NEDA-affiliated or Body-Project-affiliated advisor).",
+      "members": [
+        { "name": "Push", "role": "Push-pattern (chest press / push-up / push-door-open) — force-INTO-space; foundational upper-body functional movement" },
+        { "name": "Hinge", "role": "Hip-hinge pattern (deadlift / picking-up-groceries) — BENDING-AT-THE-HIP-not-the-spine; anti-back-pain primitive" },
+        { "name": "Brace", "role": "Core-stability bracing — internal-armor NEVER visible six-pack; no crunches; standing dead-bug demonstrations" },
+        { "name": "Breath", "role": "Breath as foundational locomotor + autonomic-regulation — nasal-breathing default + box-breath + breath-as-tempo" },
+        { "name": "Rest", "role": "Recovery + sleep + deload as PRACTICE — adaptation LIVES in the rest; anti-hustle counter-message" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CASEL",
@@ -2070,6 +2092,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/flightforge/icon-sm.webp",
     "mascotPath": "/apps/flightforge/mascot.webp",
     "mentor": "Skye",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "FlightForge's 5-character cast embodies the foundational flight-physics primitives per NASA Glenn + AIAA decomposition — lift via airfoil (Wing), resistance (Drag), propulsion (Thrust), yaw-axis control (Yaw), and stabilizer + control-surface family (Tail). Skye (mentor; site name preserved; code-side renamed from generic 'Mentor' to match — no portfolio collision; sky-evocative + non-military-coded) frames each primitive; cast embodies them at paper-plane / drone / model-rocket / wind-tunnel-sandbox scale (NEVER 'fighter-pilot' / 'military aviator' / 'captain-as-authority' framing). Engineering-failure framing gate enforced (UNIQUE to FlightForge in Wave 24): cast NEVER frames failed-flight as personal-failing; every crash is DATA-not-failing; physics sandbox structurally rewards iteration; cast catchphrases foreground 'I missed. I missed again. I hit. That's the pattern' across all primitives. Cultural representation gate: cast NEVER wears military-uniform-coded clothing; non-Western aviation pioneers foregrounded in Skye's kit-6 + kit-12 mentor copy (Bessie Coleman, Santos-Dumont, Tuskegee Airmen, Indian Air Force test pilots); kit 6 (aviation history) + kit 9 (rockets / Cold War context) sensitivity-review-gated ($300-$500). Cluster-coherence with FitQuest body-image gate (Drag's streamline-suit OVERLAY abstract-teardrop NEVER body-shape-revealing).",
+      "members": [
+        { "name": "Wing", "role": "Lift generation — airfoil + camber + Bernoulli AND Newton both-right complementary" },
+        { "name": "Drag", "role": "Resistance — drag isn't bad, drag is information; shape-fights-air conversation" },
+        { "name": "Thrust", "role": "Propulsion — every engine just throws air the wrong way (propeller/jet/rocket same trick different scale)" },
+        { "name": "Yaw", "role": "Vertical-axis control — the rudder is the POLISH on the turn not the steering" },
+        { "name": "Tail", "role": "Horizontal + vertical stabilizer family — quiet-control-from-the-back; the tail is why your paper plane goes straight" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NGSS",
@@ -5194,6 +5227,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/safetyforge/icon-sm.webp",
     "mascotPath": "/apps/safetyforge/mascot.webp",
     "mentor": "Aegis",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "SafetyForge's 5-character cast embodies the foundational digital-citizenship safety practices per ISTE Digital Citizen + Common Sense Media frameworks — pause-before-clicking (Pause), pattern-spotting in scams (Sniff), kindness-online + bystander-action (Stand), digital-footprint-awareness (Trace), and help-seeking from a trusted adult (Tell). Aegis (mentor; code-side renamed from 'Shield' which redundantly echoed app-name 'SafetyForge' + brand-coded fear-framing; site-aligned with existing 'Aegis' classical Athena's-shield reference — protective + wise + not fear-coded) frames each primitive; cast embodies them at neighborhood / school / family scale (NEVER 'cybersecurity expert' / 'hacker' / 'authority figure' framing). Fear-amplification gate enforced (CRITICAL — CO-STRONGEST Wave 24 burden alongside FitQuest body-image gate): cast NEVER references real-world harms graphically (no kidnapping / grooming / suicide / self-harm scenarios in cast voice); cyberbullying scenarios are framed BYSTANDER-FIRST (what Stand DOES) never VICTIM-FIRST (what happened to a child); phishing scenarios are framed PATTERN-SPOTTING-GAME (Sniff's puzzle) never DISASTER-PREVENTION; kits 5 (cyberbullying) + 10 (help-seeking) + 12 (real-world citizenship) carry pre-content warnings + skip-with-summary + crisis-resource surface (988 + Childhelp + RAINN + NCMEC Cyber Tipline + 911); external ICAC / NCMEC / Common-Sense-Education-affiliated sensitivity reviewer REQUIRED for kits 4 + 5 + 8 + 11 + 12 ($1,000-$1,500). Stand's design specifically counters the typical sad-isolated-victim cyberbullying-illustration trope (Common Sense 2024 evidence: amplifies in-class distress in 14-32% of viewers per session) — Stand is EMPOWERED + PRESENT + warm, never pitying. Pause SOFT collision with JestForge Wave 22 cast + Tell SOFT collision with DataForge Wave 21 cast — both allowed per registry rule 3; flag for cross-app audio-context audit.",
+      "members": [
+        { "name": "Pause", "role": "Pause-before-clicking — the moment between stimulus and response is where safety lives" },
+        { "name": "Sniff", "role": "Pattern-spotting in scams + phishing — every scam has a tell; puzzle-game register not disaster-prevention drill" },
+        { "name": "Stand", "role": "Bystander-action + kindness-online — three moves (defend / distract / document-and-tell); trauma-informed framing" },
+        { "name": "Trace", "role": "Digital-footprint awareness — what stays after you tap; future-self-awareness; visible chalk-trail behind otter-tween" },
+        { "name": "Tell", "role": "Help-seeking from a trusted adult — telling is the most powerful safety move; sparrow-tween with 'told-a-grown-up' badge" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CASEL",
