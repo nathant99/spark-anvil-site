@@ -83,7 +83,7 @@ function portraitFor(charName: string): string | null {
     <section class="bg-anvil/5 dark:bg-warm/5 py-16">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center mb-10">
-          <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-3">Meet your mentor</h2>
+          <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil mb-3 dark:text-warm">Meet your mentor</h2>
           <p class="text-anvil/80 dark:text-warm/80 leading-relaxed max-w-2xl mx-auto">
             Every Spark &amp; Anvil app has a friendly mentor character that demonstrates,
             praises, and patiently scaffolds learning. On-device AI personalizes the
@@ -251,7 +251,7 @@ function portraitFor(charName: string): string | null {
       <div class="grid md:grid-cols-2 gap-6">
         {app.features.map(f => (
           <div class="p-5 bg-white dark:bg-anvil/40 rounded-xl border border-anvil/10 dark:border-warm/15">
-            <h3 class="font-brand font-bold mb-2 text-anvil">{f.name}</h3>
+            <h3 class="font-brand font-bold mb-2 text-anvil dark:text-warm">{f.name}</h3>
             <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed" set:html={renderInline(f.description)}></p>
           </div>
         ))}

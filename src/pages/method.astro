@@ -20,7 +20,7 @@ const wave1Cases = [
 >
   <section class="max-w-3xl mx-auto px-6 pt-16 pb-8">
     <p class="text-xs uppercase tracking-wider text-forge font-bold mb-3">How our apps teach</p>
-    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-6">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-6 dark:text-warm">
       Characters that ARE the curriculum
     </h1>
     <p class="text-xl text-anvil/70 dark:text-warm/70 leading-relaxed">
@@ -34,7 +34,7 @@ const wave1Cases = [
 
   <section class="max-w-3xl mx-auto px-6 pb-12">
     <div class="bg-forge/5 dark:bg-forge-light/10 border-l-4 border-forge rounded p-6">
-      <p class="font-brand font-bold text-anvil mb-2">A quick example</p>
+      <p class="font-brand font-bold text-anvil mb-2 dark:text-warm">A quick example</p>
       <p class="text-anvil/80 dark:text-warm/80 leading-relaxed">
         In our chess app GambitTales, your kid meets a knight named <strong>Sir Pinwell</strong>.
         Sir Pinwell&apos;s whole job is to demonstrate <em>pins</em> — a kind of chess attack that
@@ -47,7 +47,7 @@ const wave1Cases = [
 
   <section class="bg-anvil/5 dark:bg-warm/5 py-16">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Why this works</h2>
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-4 dark:text-warm">Why this works</h2>
       <p class="text-anvil/80 dark:text-warm/80 leading-relaxed mb-4">
         Kids&apos; brains are built for story. They&apos;ll remember the personalities of every
         animal in <em>Frog and Toad</em> longer than they&apos;ll remember a multiplication
@@ -64,7 +64,7 @@ const wave1Cases = [
   </section>
 
   <section class="max-w-3xl mx-auto px-6 py-16">
-    <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Where this lives today</h2>
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-6 dark:text-warm">Where this lives today</h2>
     <p class="text-anvil/80 dark:text-warm/80 leading-relaxed mb-6">
       Our <strong>Distributed-Narrative family</strong> is the first set of apps built this way
       from the start. Each one has its own cast where characters embody the patterns the app
@@ -75,7 +75,7 @@ const wave1Cases = [
       {dnApps.map(app => (
         <a href={`/apps/${app.slug}`} class="block p-4 rounded-xl border border-anvil/15 dark:border-warm/20 hover:border-forge hover:shadow-md transition-all">
           <div class="flex items-center gap-3 mb-2">
-            <span class="font-brand font-bold text-anvil">{app.name}</span>
+            <span class="font-brand font-bold text-anvil dark:text-warm">{app.name}</span>
             {app.mentor && <span class="text-xs text-anvil/60 dark:text-warm/60">• guided by {app.mentor}</span>}
           </div>
           <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed line-clamp-3">{app.tagline}</p>
@@ -86,7 +86,7 @@ const wave1Cases = [
 
   <section class="bg-anvil/5 dark:bg-warm/5 py-16">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">Coming next</h2>
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-6 dark:text-warm">Coming next</h2>
       <p class="text-anvil/80 dark:text-warm/80 leading-relaxed mb-6">
         We&apos;re extending this teaching style across the portfolio, app by app, wherever it
         fits. Here&apos;s what&apos;s next:
@@ -95,7 +95,7 @@ const wave1Cases = [
         {wave1Cases.map(c => (
           <li class="border-l-4 border-forge/30 dark:border-forge-light/40 pl-5">
             <div class="flex items-center justify-between mb-1">
-              <a href={`/apps/${c.slug}`} class="font-brand font-bold text-lg text-anvil hover:text-forge">{c.name}</a>
+              <a href={`/apps/${c.slug}`} class="font-brand font-bold text-lg text-anvil hover:text-forge dark:text-warm">{c.name}</a>
               <span class="text-xs text-anvil/50 dark:text-warm/50 italic">{c.status}</span>
             </div>
             <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed">{c.cast}</p>
@@ -106,7 +106,7 @@ const wave1Cases = [
   </section>
 
   <section class="max-w-3xl mx-auto px-6 py-16">
-    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Where it doesn&apos;t fit</h2>
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4 dark:text-warm">Where it doesn&apos;t fit</h2>
     <p class="text-anvil/80 dark:text-warm/80 leading-relaxed mb-3">
       Not every app gets a cast. Apps where the whole point is your kid&apos;s own creativity —
       BeatForge for making music, SpectrumCanvas for drawing, PixelForge for pixel art,
@@ -123,7 +123,7 @@ const wave1Cases = [
 
   <section class="bg-anvil/5 dark:bg-warm/5 py-16">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">The research behind it</h2>
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-6 dark:text-warm">The research behind it</h2>
       <p class="text-anvil/80 dark:text-warm/80 leading-relaxed mb-4">
         This isn&apos;t a hunch. The approach combines five well-established findings from
         educational and cognitive research:
@@ -172,7 +172,7 @@ const wave1Cases = [
   </section>
 
   <section class="max-w-3xl mx-auto px-6 py-16">
-    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">For parents</h2>
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4 dark:text-warm">For parents</h2>
     <p class="text-anvil/80 dark:text-warm/80 leading-relaxed">
       You don&apos;t need to know any of this for the apps to work. Your kid just plays —
       they&apos;ll meet the characters naturally, follow their stories, and pick up the
