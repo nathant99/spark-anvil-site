@@ -1,0 +1,86 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps } from '~/data/apps.generated';
+
+const totalApps = apps.length;
+const dnApps = apps.filter(a => a.distributedNarrative).length;
+const dnCharacters = apps.reduce((s, a) => s + (a.dnCast?.members?.length ?? 0), 0);
+---
+
+<BaseLayout
+  title="Annual Report"
+  description="Spark & Anvil's annual reports — public-facing transparency reports covering apps shipped, kids reached, partners, board, and audit findings."
+>
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-12">
+    <span class="inline-block px-3 py-1 mb-4 bg-anvil/10 dark:bg-warm/15 text-anvil dark:text-warm text-xs font-bold uppercase tracking-wider rounded-full">FY 2026 — In Progress</span>
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
+      Annual Reports
+    </h1>
+    <p class="text-xl text-anvil/70 dark:text-warm/70 leading-relaxed">
+      As a 501(c)(3) non-profit (pending), Spark &amp; Anvil publishes a public annual report
+      each fiscal year — covering revenue, expenses, kids reached, partners, governance, and
+      audit findings. Our first report publishes at the end of FY 2026.
+    </p>
+  </section>
+
+  <!-- FY 2026 in-progress -->
+  <section class="max-w-4xl mx-auto px-6 pb-12">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-6">FY 2026 — In Progress</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {[
+        { v: totalApps, l: 'apps in portfolio' },
+        { v: dnApps, l: 'apps with named cast' },
+        { v: dnCharacters, l: 'characters site-visible' },
+        { v: '0', l: 'ads, IAPs, trackers' },
+        { v: 'Pending', l: '501(c)(3) status' },
+        { v: 'TBD', l: 'first foundation grant' },
+      ].map(s => (
+        <article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/15 dark:border-warm/15">
+          <div class="text-3xl font-brand font-bold text-forge mb-1">{s.v}</div>
+          <div class="text-sm text-anvil/70 dark:text-warm/70">{s.l}</div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- What the report will cover -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-12">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">What the FY 2026 report will cover</h2>
+      <ul class="space-y-3 text-sm text-anvil/80 dark:text-warm/80 leading-relaxed">
+        <li><strong>Financials</strong>: revenue (donations / grants / district licensing), expenses (engineering / art / hosting / legal), net change in assets, fiscal sponsor accounting.</li>
+        <li><strong>Programs</strong>: apps shipped, kids reached (anonymized App Store install counts), districts served, partner schools.</li>
+        <li><strong>Governance</strong>: board composition, board meetings held, conflict-of-interest disclosures, policies adopted (whistleblower, document-retention, gift-acceptance).</li>
+        <li><strong>Audit findings</strong>: independent audit summary (Year-1 may be a financial review rather than full audit; threshold typically $750K).</li>
+        <li><strong>Forward look</strong>: FY 2027 strategic priorities, roadmap, risks, asks of the community.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Historical reports -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">Historical reports</h2>
+    <p class="text-anvil/70 dark:text-warm/70 leading-relaxed mb-6">
+      The first annual report will publish at the end of FY 2026 (December 2026 or early 2027).
+      Subsequent reports will be archived here.
+    </p>
+    <p class="text-sm text-anvil/60 dark:text-warm/60">
+      Interim transparency: see <a href="/impact" class="underline hover:text-forge">/impact</a> for the
+      live portfolio-state snapshot and <a href="/board" class="underline hover:text-forge">/board</a>
+      for current governance composition.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-anvil text-warm py-16">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-warm/80 leading-relaxed max-w-prose mx-auto mb-6">
+        Want to be notified when each annual report publishes? Email
+        <a href="mailto:hello@spark-and-anvil.com?subject=Annual%20report%20notification" class="underline hover:text-warm">hello@spark-and-anvil.com</a>
+        with the subject "Annual report notification".
+      </p>
+      <a href="/donate" class="btn-primary">Support the mission →</a>
+    </div>
+  </section>
+</BaseLayout>
