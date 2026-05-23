@@ -116,6 +116,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/adventurehub/icon-sm.webp",
     "iconHeroPath": "/apps/adventurehub/icon.webp",
     "mascotPath": "/apps/adventurehub/mascot.webp",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "AdventureHub's 5-character cast IS the launch zone-host mentor roster — NOT a new curricular catalogue but the formalization of the 5 mentor archetypes already shipping across 32 source-app HubContribution configs. The aggregator-function decomposes into 5 thematic zones, each hosted by a named mentor whose voice frames a family of curricular domains: Math Mountains (Trailmaster Theo — 10+ math/logic source apps), Word Woods (Loresinger Mae — 10+ ELA/world-language source apps), Science Labs (Dr. Quark — 6+ STEM source apps), History Ruins (Archivist Atlas — 5+ humanities source apps), Creative Studio (Maestro Mira — 5+ arts source apps). Meta-aggregator application of Bruner narrative-mode + Habgood intrinsic-integration: the zone-host's character IS the aggregator-pattern. Cast supplements — does NOT replace — source-app DN casts (Wave 1-26). Both appear together when a source app contributes content to a zone. Phase 2 expansion: Harbor Anya (Heart Harbor zone) joins as 6th cast member post-launch. NO new mascot generation needed — all 5 zone-host visuals already ship via per-app HubContribution mentor.avatarAssetName references; Wave 27 spend on AdventureHub = $0.",
+      "members": [
+        { "name": "Trailmaster Theo", "role": "Math Mountains zone host — math + logic + ratios + chance + functions + geometry + proof + discrete + chess/Go/Xiangqi/backgammon/bridge tactics; 10+ source apps federated" },
+        { "name": "Loresinger Mae", "role": "Word Woods zone host — spelling + grammar + reading + writing + dialogue + character + poetry + voice + world-languages; 10+ source apps federated" },
+        { "name": "Dr. Quark", "role": "Science Labs zone host — biology + chemistry + ecology + climate + microbiology + Earth-science + AI-literacy; 6+ source apps federated" },
+        { "name": "Archivist Atlas", "role": "History Ruins zone host — history + civics + culture + folklore + chronology + ethics; 5+ source apps federated" },
+        { "name": "Maestro Mira", "role": "Creative Studio zone host — visual art + music + dance + theater + lyrics + motif + composition; 5+ source apps federated" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -2238,7 +2249,18 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/forgearena/icon-sm.webp",
     "mascotPath": "/apps/forgearena/mascot.webp",
-    "mentor": "Bracket",
+    "mentor": "Champ",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ForgeArena's 5-character cast embodies ARENA-ROLE archetypes — NOT new curricular characters. Cast scaffolds the participation structure of competitive quiz battle-royale: Champ (Arena Host — welcomes; this role is BOTH the hero mascot AND the AI host mentor per Wave 27 Phase A reconciliation from code-side 'Mentor' placeholder + site 'Bracket' → 'Champ'), Tally (Scoreboard — points-as-improvement-signal not points-as-worth), Whisk (Referee — fair-play as craft), Cheer (Commentator — celebrate the move, never trash-talk), Rival (Opponent-archetype — worthy-opponent-as-craft-role NEVER rival-as-villain). Toxic-competition gate enforced (CRITICAL — UNIQUE to ForgeArena in Wave 27; inherits EnsembleQuest Wave 14 collaboration-shame gate verbatim + extends): cast NEVER frames losses as worth-determinations, NEVER positions ranking as identity, NEVER uses combat / war / kill-the-other-team register; trash-talk static-response gating ('roast / destroy / own / crush / dunk on / cooked / mid' prompts NEVER reach FoundationModels — Champ surface filter routes to craft-celebrating framing); Cheer's commentator framing structurally counter-codes esports-toxic-commentator register; Rival's worthy-opponent framing inherits chess-tactics + tabletop-game-design + party-game pedagogical traditions. Cooperative-competition gate: Team Battle mode foregrounds 'your team's combined IMPROVEMENT' over zero-sum; Survival Mode rephrases 'last player standing' as 'longest-consecutive-correct streak'. Adolescent-competitive-anxiety gate (per APA 2024 + Common Sense 2024 + Loton 2024): anti-grinding affordances + ranked-mode opt-out + spectator-mode escape; ELO rank-tier reframe REQUIRED Phase A — 'practice courts' NOT 'rank of worth'; Boss Rush 'boss' → 'challenge round' / 'guest opponent'. Cyberbullying register gate inherits SafetyForge Wave 24: NO free-text chat between players; whitelisted positive-emote-set only. External child-competition-pedagogy + esports-ethics + adolescent-competitive-anxiety sensitivity reviewer RECOMMENDED ($500-$800).",
+      "members": [
+        { "name": "Champ", "role": "Arena Host — welcomes / frames every match; doubles as AI host mentor; existing hero mascot promoted to mentor role in Wave 27 Phase A reconciliation (code 'Mentor' + site 'Bracket' → 'Champ')" },
+        { "name": "Tally", "role": "Scoreboard — points-as-improvement-signal NEVER points-as-worth; anti-leaderboard-as-identity framing" },
+        { "name": "Whisk", "role": "Referee — fair-play as craft; rules-without-scolding; anti-power-tripping-ref framing (SOFT collision with SaffronLab Wave 19 Whisk — different role/visual)" },
+        { "name": "Cheer", "role": "Commentator — celebrate-the-move craft-celebrating register; multi-language; anti-toxic-commentator framing (DELIBERATELY shared design language with ActiveForge Wave 24 Cheer — cross-cluster sportsmanship-celebration)" },
+        { "name": "Rival", "role": "Opponent-archetype — worthy-opponent-as-craft-role NEVER rival-as-villain; post-match handshake foregrounding" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -2271,6 +2293,82 @@ export const apps: AppData[] = [
       "learn": 1,
       "play": 3,
       "create": 0
+    }
+  },
+  {
+    "slug": "forgeclassroom",
+    "name": "ForgeClassroom",
+    "tagline": "Teacher-facing classroom management for K-12 — assign Forge app lessons, monitor student progress, generate standards-aligned reports (TEKS/NGSS/CCSS), host live quizzes, and author custom question kits with AI assistance that supports teacher autonomy.",
+    "vertical": "special-interest",
+    "heroColor": "#FFA726",
+    "iconPath": "/apps/forgeclassroom/icon-sm.webp",
+    "iconHeroPath": "/apps/forgeclassroom/icon.webp",
+    "mascotPath": "/apps/forgeclassroom/mascot.webp",
+    "mentor": "Ledger",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ForgeClassroom's 5-character cast embodies CLASSROOM-ROLE archetypes that SUPPORT teacher autonomy — NEVER replace the teacher, NEVER position above teacher judgment, NEVER grade students. Cast scaffolds the TEACHER'S workflow (NOT a kid-facing curricular catalogue): Ledger (Classroom AI Assistant — record-keeping-as-craft NEVER surveillance; cast member #1 doubles as the AI assistant via Wave 27 Phase A mentor reconciliation from code-side generic 'Mentor' placeholder), Plan (Lesson Planner — pacing-as-craft, plan-as-hypothesis-not-contract), Spot (Progress Observer — surfaces patterns NEVER labels students), Kit (Kit-Author Assistant — AI scaffolding for teacher-authored content; teacher always retains final-edit authority), Round (Live Quiz Host Coordinator — manages quiz-show flow; deliberately differentiated from ForgeArena Champ's competitive-emcee register). All cast members visibly ADULT-coded (elder-tier) because the cast is the TEACHER's crew, not student mentors. Teacher-autonomy gate enforced (CRITICAL — UNIQUE to ForgeClassroom in Wave 27 + portfolio-wide): cast NEVER overrides teacher decisions, NEVER grades a student, NEVER recommends a student be held back / advanced / disciplined; cast NEVER ranks students against classmates; cast NEVER surfaces socioeconomic / family-background / disciplinary-history data; cast NEVER labels students ('struggling' / 'gifted' / 'behind' / 'ahead' static-response gated — Spot surface filter routes to descriptive-not-evaluative framing). Surveillance gate enforced: real-time-monitoring affordances structurally counter-coded — Ledger's 'I keep records, YOU make the calls' load-bearing; no facial-detection / sentiment-analysis on student devices; no time-on-task as compliance-policing. AI-replaces-teacher-content gate (CRITICAL): Kit's 'I'll DRAFT it, you'll FINISH it' structurally load-bearing; FoundationModels output ALWAYS surfaces as 'DRAFT' watermark + teacher-edit-required gate. Equity gate inherits InclusionForge Wave 15 representation gate: cast NEVER surfaces racial / socioeconomic / linguistic / disability data in pattern-analysis; Spot's pattern-mapping disabled for protected demographic dimensions. SITE ENTRY CREATION in Wave 27 batch PR (ForgeClassroom was missing entirely from apps.generated.ts; slug count contribution +1). External education-equity + teacher-autonomy + AI-in-classroom-ethics sensitivity reviewer RECOMMENDED ($500-$800).",
+      "members": [
+        { "name": "Ledger", "role": "Classroom AI Assistant — record-keeping-as-craft NEVER surveillance; doubles as AI assistant via Wave 27 Phase A mentor reconciliation" },
+        { "name": "Plan", "role": "Lesson Planner — pacing-as-craft, standards-as-scaffolding-not-compliance, plan-as-hypothesis-not-contract" },
+        { "name": "Spot", "role": "Progress Observer — surfaces patterns NEVER labels students; pattern-spotting as craft (DELIBERATELY shared design language with TerraWatch Wave 20 Spot — cross-cluster pattern-spotting continuity)" },
+        { "name": "Kit", "role": "Kit-Author Assistant — AI scaffolding for teacher-authored content; teacher always retains final-edit authority" },
+        { "name": "Round", "role": "Live Quiz Host Coordinator — manages quiz-show flow; deliberately differentiated from ForgeArena Champ's competitive-emcee register" }
+      ]
+    },
+    "implementing": false,
+    "standards": [
+      "TEKS",
+      "NGSS",
+      "CCSS",
+      "ISTE",
+      "Common Sense Privacy"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "longTagline": "ForgeClassroom is the teacher-facing control surface for the Forge educational portfolio — manage classes, assign lessons across 130+ Forge apps, monitor real-time progress, generate standards-aligned reports, host live quizzes, and author AI-assisted custom kits while always retaining final-edit authority. The cast (Ledger, Plan, Spot, Kit, Round) supports teacher autonomy on every decision; never grades, never overrides, never surveils.",
+    "hasUserGuide": false,
+    "modes": {
+      "learn": 1,
+      "play": 1,
+      "create": 2
+    }
+  },
+  {
+    "slug": "forgeportal",
+    "name": "ForgePortal",
+    "tagline": "Universal launcher and discovery hub for the Forge educational app portfolio — browse apps by subject and age, unified profile with cross-platform sync, cross-app learning pathway recommendations, and family management with per-child controls that empower parents without shame.",
+    "vertical": "special-interest",
+    "heroColor": "#FFA726",
+    "iconPath": "/apps/forgeportal/icon-sm.webp",
+    "iconHeroPath": "/apps/forgeportal/icon.webp",
+    "mascotPath": "/apps/forgeportal/mascot.webp",
+    "mentor": "Hearth",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ForgePortal's 5-character cast embodies PARENT-COMPANION archetypes that EMPOWER the parent's relationship to their kid's learning — NEVER shame the parent, NEVER position above parent judgment, NEVER trigger performative-parenting anxiety. Cast scaffolds the FAMILY's workflow (NOT a kid-facing curricular catalogue): Hearth (Family AI Companion — warm gathering-place; cast member #1 doubles as the AI companion via Wave 27 Phase A mentor reconciliation from code-side generic 'Mentor' placeholder), Sift (Translator-of-Progress — plain-language not spreadsheet), Spark (Cheerleader-of-Effort — effort + curiosity + persistence celebrated; NEVER ranking), Ask (Question-Asker — better dinner-table questions; conversation-starter not lecture-suggestor; nine-second-listen practice), Tend (Family-Pace Companion — healthy-pace WITHOUT shaming; anti-screen-time-shaming + anti-restriction-as-virtue). All cast members visibly ADULT-CODED (parent-peer-tier, NOT elder-authority) — peer-friends a parent might invite to the kitchen table. Parent-shaming gate enforced (CRITICAL — UNIQUE to ForgePortal in Wave 27 + portfolio-wide; per LeapFrog 2024 + Common Sense 2024 + APA 2024 evidence base): cast NEVER frames parent as falling-short, NEVER guilts about screen-time / learning-gaps / not-enough-quality-time; Hearth's 'you know your kid; I just keep the lights on' load-bearing; cast NEVER ranks families against other families; cast NEVER surfaces 'kids in your zip code average X' / 'top-1% of families do Y' comparative metrics. Performative-parenting anxiety gate (inherits RuptureRepair Wave 1 + DanceQuest Wave 14 body-image gate verbatim + extends): no parenting-style labels surfaced; no parenting-style ranking; cast NEVER amplifies social-media parenting discourse. Body-image + trauma-informed gate (CRITICAL — inherits DanceQuest Wave 14 + FitQuest Wave 24 + MedicQuest Wave 25 + RuptureRepair Wave 1 + SafetyForge Wave 24): cast NEVER references weight / calories / body-composition; trauma-content surfacing with content-warning + co-noticing prompts per TempCheck Wave 18 dyadic-affect-noticing register; crisis-resource co-surfacing (988 / NEDA / Childhelp / RAINN / Trevor Project / Crisis Text Line) with co-noticing language NEVER alarm-bell language. Surveillance gate: no covert monitoring; no facial-detection / sentiment-analysis; data surfaced descriptively without judgment. Family-structure-inclusive copy required Phase A: 'family adults' / 'your household' replaces 'Mom and Dad' / 'spouse' / 'partner' framings; no real-parenting-expert mascotization. TRAUMA-INFORMED CONTENT FLAG TRUE per .claude/rules/trauma-informed-content.md. SITE ENTRY CREATION in Wave 27 batch PR (ForgePortal was missing entirely from apps.generated.ts; slug count contribution +1). External family-psychology + parenting-anxiety + co-regulation + trauma-informed-parenting sensitivity reviewer RECOMMENDED ($800-$1,500).",
+      "members": [
+        { "name": "Hearth", "role": "Family AI Companion — warm gathering-place; supports parent autonomy NEVER positions above; doubles as AI companion via Wave 27 Phase A mentor reconciliation" },
+        { "name": "Sift", "role": "Translator-of-Progress — plain-language not spreadsheet; signal not data dump (SOFT collision with NewsForge Wave 25 Sift — different role/visual; flag for cross-app audio-context audit)" },
+        { "name": "Spark", "role": "Cheerleader-of-Effort — celebrates effort + curiosity + persistence; NEVER celebrates ranking / outperformance" },
+        { "name": "Ask", "role": "Question-Asker — surfaces better dinner-table questions; conversation-starter not lecture-suggestor; nine-second-listen practice (DELIBERATELY shared design language with MedicQuest Wave 25 Ask — cross-cluster asking-as-craft continuity)" },
+        { "name": "Tend", "role": "Family-Pace Companion — healthy-pace WITHOUT shaming; anti-screen-time-shaming + anti-restriction-as-virtue (DELIBERATELY shared design language with CreatureCare Wave 18 Tend — cross-cluster attentive-care continuity)" }
+      ]
+    },
+    "implementing": false,
+    "standards": [
+      "ISTE",
+      "Common Sense Privacy",
+      "COPPA"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "longTagline": "ForgePortal is the family-facing launcher and discovery hub for the Forge educational portfolio — browse 130+ apps by subject and age, unified profile with cross-platform sync, learning-pathway recommendations, and per-child parental controls that empower without shame. The cast (Hearth, Sift, Spark, Ask, Tend) supports the parent as coach — never positions above parent judgment, never triggers performative-parenting anxiety, never amplifies social-media-comparison discourse.",
+    "hasUserGuide": false,
+    "modes": {
+      "learn": 1,
+      "play": 0,
+      "create": 1
     }
   },
   {
