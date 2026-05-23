@@ -19,6 +19,7 @@ export const trustSignals = [
   'COPPA compliant',
   'iOS 26 native',
   'On-device AI',
+  'Designed for face-to-face play',
 ];
 
 export const nav = [
@@ -30,6 +31,7 @@ export const nav = [
   { href: '/for-educators', label: 'For Educators' },
   { href: '/mascots', label: 'Mascots' },
   { href: '/cast', label: 'Cast' },
+  { href: '/play-together', label: 'Play Together' },
   { href: '/method', label: 'Method' },
   { href: '/about', label: 'About' },
   { href: '/news', label: 'News' },

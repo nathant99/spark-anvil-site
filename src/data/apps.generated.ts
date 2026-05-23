@@ -54,6 +54,15 @@ export interface AppData {
     play: 0 | 1 | 2 | 3;
     create: 0 | 1 | 2 | 3;
   };
+  /**
+   * Pass-and-play / face-to-face mode flag. When true, the app ships at least
+   * one mode designed for two-or-more humans on a single device (couch-coop,
+   * hot-seat, parent-child pass-the-device). Per
+   * `labsmith/Docs/RESEARCH_PASS_AND_PLAY_DIFFERENTIATOR.md` (queue #221).
+   * Currently 6 apps ship pass-and-play: escapeforge / framequest /
+   * geometryforge / jestforge / numberverse / witquest.
+   */
+  playTogether?: boolean;
 }
 
 export const apps: AppData[] = [
@@ -2031,7 +2040,8 @@ export const apps: AppData[] = [
       "learn": 1,
       "play": 3,
       "create": 1
-    }
+        },
+    "playTogether": true
   },
   {
     "slug": "ethosforge",
@@ -2672,7 +2682,8 @@ export const apps: AppData[] = [
       "learn": 1,
       "play": 1,
       "create": 3
-    }
+        },
+    "playTogether": true
   },
   {
     "slug": "functionforge",
@@ -2894,7 +2905,8 @@ export const apps: AppData[] = [
       "learn": 3,
       "play": 1,
       "create": 1
-    }
+        },
+    "playTogether": true
   },
   {
     "slug": "grammarforge",
@@ -3509,7 +3521,8 @@ export const apps: AppData[] = [
       "learn": 2,
       "play": 2,
       "create": 3
-    }
+        },
+    "playTogether": true
   },
   {
     "slug": "labsmith",
@@ -4826,7 +4839,8 @@ export const apps: AppData[] = [
       "learn": 3,
       "play": 1,
       "create": 0
-    }
+        },
+    "playTogether": true
   },
   {
     "slug": "originforge",
@@ -7717,7 +7731,8 @@ export const apps: AppData[] = [
       "learn": 2,
       "play": 3,
       "create": 1
-    }
+    },
+    "playTogether": true
   }
 ];
 
