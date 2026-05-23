@@ -12,6 +12,7 @@ export const site = {
 };
 
 export const trustSignals = [
+  '501(c)(3) non-profit (pending)',
   'Free forever',
   'No ads',
   'No in-app purchases',
@@ -33,6 +34,8 @@ export const nav = [
   { href: '/cast', label: 'Cast' },
   { href: '/play-together', label: 'Play Together' },
   { href: '/method', label: 'Method' },
+  { href: '/mission', label: 'Mission' },
+  { href: '/donate', label: 'Donate' },
   { href: '/about', label: 'About' },
   { href: '/news', label: 'News' },
   { href: '/press', label: 'Press' },

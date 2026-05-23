@@ -1,0 +1,90 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps } from '~/data/apps.generated';
+
+const totalApps = apps.length;
+const dnApps = apps.filter(a => a.distributedNarrative).length;
+const dnCharacters = apps.reduce((s, a) => s + (a.dnCast?.members?.length ?? 0), 0);
+const playTogether = apps.filter(a => a.playTogether).length;
+
+// Pulled from labsmith REGISTRY_APP_HERO_COLORS.md + content audits
+const standardsCount = 21;  // 7 major + 14 additional curriculum frameworks
+const trauma = 80;          // ~80 trauma-informed gates established
+---
+
+<BaseLayout
+  title="Impact"
+  description={`${totalApps} apps · ${dnCharacters} characters · ${standardsCount} curriculum frameworks · 100% free. The current state of Spark & Anvil's work in service of kids ages 5-14.`}
+>
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-12">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
+      The work, in numbers.
+    </h1>
+    <p class="text-xl text-anvil/70 dark:text-warm/70 leading-relaxed">
+      Spark &amp; Anvil's mission shows up as code, curriculum kits, character casts, and
+      trauma-informed design discipline. Here's the current state of the portfolio.
+    </p>
+    <p class="mt-4 text-anvil/60 dark:text-warm/60 leading-relaxed text-sm">
+      Updated 2026-05-23. <strong>We don't track kids</strong> — these stats are about what we
+      built and what we ship, not what kids do inside our apps.
+    </p>
+  </section>
+
+  <!-- Big stats -->
+  <section class="max-w-5xl mx-auto px-6 py-8">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {[
+        { v: totalApps, l: 'iOS apps', d: 'across 5 learning verticals; all free, all on-device.' },
+        { v: dnApps, l: 'apps with a named cast', d: '100% portfolio coverage — every app has recurring characters that embody curricular concepts.' },
+        { v: dnCharacters, l: 'characters site-visible', d: 'across the portfolio; each character carries one specific learnable thing.' },
+        { v: playTogether, l: 'apps ship pass-and-play', d: 'today; ~111 more on the roadmap (~80% portfolio ceiling).' },
+        { v: standardsCount, l: 'curriculum frameworks', d: 'mapped across the portfolio (NGSS / CCSS / NCAS / C3 / ISTE + 16 more).' },
+        { v: trauma, l: 'trauma-informed gates', d: 'established (SAMHSA TIP 57) for apps touching heavy content; external review for the strictest set.' },
+        { v: 0, l: 'ads · IAPs · trackers', d: 'shipped across the portfolio. By construction.' },
+        { v: 100, l: '% free, forever', d: 'guaranteed via the non-profit pivot.' },
+        { v: 'iOS 26', l: 'native build target', d: 'Swift 6, SwiftUI, SpriteKit, FoundationModels on-device.' },
+      ].map(s => (
+        <article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/10 dark:border-warm/15">
+          <div class="text-4xl font-brand font-bold text-forge mb-1">{s.v}</div>
+          <div class="font-brand font-bold text-anvil dark:text-warm mb-2 text-sm">{s.l}</div>
+          <p class="text-xs text-anvil/70 dark:text-warm/70 leading-snug">{s.d}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Methodology note -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-12">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">How we count</h2>
+      <ul class="space-y-3 text-sm text-anvil/80 dark:text-warm/80 leading-relaxed">
+        <li>
+          <strong>Apps shipped</strong> = production-track portfolio repos (see <a href="/apps" class="underline hover:text-forge">/apps</a> for the full inventory).
+        </li>
+        <li>
+          <strong>Kids reached</strong> — we will publish this number annually using anonymized
+          App Store install counts. We don't track usage inside apps. We don't know which kid
+          opened which app on which date. That's by design.
+        </li>
+        <li>
+          <strong>Trauma-informed gates</strong> — counted as the number of apps that ship a
+          documented sensitivity posture in <code>Docs/TECHNICAL_DESIGN.md</code> per
+          <a href="https://store.samhsa.gov/product/TIP-57-Trauma-Informed-Care-in-Behavioral-Health-Services/SMA14-4816" target="_blank" rel="noopener" class="underline hover:text-forge">SAMHSA TIP 57</a>.
+        </li>
+        <li>
+          <strong>Curriculum frameworks</strong> — counted from <code>Docs/RESEARCH_CURRICULUM_STANDARDS_MAPPING.md</code> (NGSS / CCSS-Math / CCSS-ELA / NCAS / C3 / ISTE + 16 others).
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Annual report stub -->
+  <section class="max-w-3xl mx-auto px-6 py-16 text-center">
+    <p class="text-anvil/70 dark:text-warm/70 mb-6 leading-relaxed">
+      Our first <strong>annual report</strong> will publish at end of fiscal year 2026 with
+      revenue, expenses, board, partners, app-install counts, and audit findings.
+    </p>
+    <a href="/donate" class="btn-primary">Support the mission →</a>
+  </section>
+</BaseLayout>

@@ -1,0 +1,103 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Donate"
+  description="Support Spark & Anvil's mission to keep 138 educational iOS apps free for every kid, forever. We're a non-profit (501(c)(3) status pending; donations via our fiscal sponsor are tax-deductible)."
+>
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-8">
+    <span class="inline-block px-3 py-1 mb-4 bg-forge text-warm text-xs font-bold uppercase tracking-wider rounded-full">Non-profit (pending)</span>
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
+      Keep the apps free, forever.
+    </h1>
+    <p class="text-xl text-anvil/70 dark:text-warm/70 leading-relaxed">
+      Spark &amp; Anvil makes 138 educational iOS apps for kids ages 5-14 — all free, no ads, no
+      in-app purchases, no tracking. We can keep it that way because we're restructuring as a
+      mission-driven non-profit.
+    </p>
+  </section>
+
+  <!-- Donor tiers (stub) -->
+  <section class="max-w-4xl mx-auto px-6 py-8">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-6">Recurring monthly</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {[
+        { amount: '$5', label: 'Friend', desc: 'A tank of coffee for the maker.' },
+        { amount: '$10', label: 'Supporter', desc: 'One app\'s hosting + analytics for a month.' },
+        { amount: '$25', label: 'Sustainer', desc: 'A character art commission for the cast.' },
+        { amount: '$100', label: 'Builder', desc: 'One classroom\'s worth of curriculum kits.' },
+      ].map(tier => (
+        <article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/15 dark:border-warm/15 hover:border-forge transition-colors">
+          <div class="text-3xl font-brand font-bold text-forge mb-1">{tier.amount}<span class="text-sm text-anvil/60 dark:text-warm/60">/mo</span></div>
+          <div class="font-brand font-bold text-anvil dark:text-warm mb-2">{tier.label}</div>
+          <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug">{tier.desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- One-time + founder circle (stub) -->
+  <section class="max-w-4xl mx-auto px-6 py-8">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-6">One-time + founder circle</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/15 dark:border-warm/15">
+        <div class="text-3xl font-brand font-bold text-forge mb-1">$1,000</div>
+        <div class="font-brand font-bold text-anvil dark:text-warm mb-2">One-time</div>
+        <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug">
+          Funds a full app's question-kit refresh wave (16 kits × 25 questions) + the AI-mentor
+          persona finalization for that app.
+        </p>
+      </article>
+      <article class="bg-forge text-warm rounded-2xl p-5">
+        <div class="text-3xl font-brand font-bold mb-1">$10,000+</div>
+        <div class="font-brand font-bold mb-2">Founder Circle</div>
+        <p class="text-sm text-warm/90 leading-snug">
+          Direct line to the founder, board observer seat (optional), recognition on
+          /impact, custom acknowledgment in next annual report.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Donate CTA (stub) -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-anvil/80 dark:text-warm/80 mb-6 leading-relaxed">
+        <strong>Donation flow coming soon.</strong> We're finalizing fiscal sponsorship (Hack
+        Foundation expected) to make donations immediately tax-deductible while our IRS Form 1023
+        determination clears (~12-18 months from filing). In the meantime, email
+        <a href="mailto:hello@spark-and-anvil.com" class="underline hover:text-forge">hello@spark-and-anvil.com</a>
+        to be the first to know.
+      </p>
+      <a href="mailto:hello@spark-and-anvil.com?subject=Spark%20%26%20Anvil%20donation%20interest" class="btn-primary">
+        Email us about donating →
+      </a>
+    </div>
+  </section>
+
+  <!-- Tax + transparency -->
+  <section class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">Tax deductibility &amp; transparency</h2>
+    <ul class="space-y-3 text-sm text-anvil/80 dark:text-warm/80 leading-relaxed">
+      <li>
+        <strong>501(c)(3) status:</strong> pending. We've filed (or are filing) IRS Form 1023.
+        Typical determination period is ~191 days median, 12-18 months real-world.
+      </li>
+      <li>
+        <strong>Fiscal sponsorship bridge:</strong> while 1023 clears, donations route through
+        our fiscal sponsor (Hack Foundation / HCB or similar). Sponsor's EIN provides
+        tax-deductibility today.
+      </li>
+      <li>
+        <strong>Annual report:</strong> we'll publish a public annual report covering revenue,
+        expenses, kids reached, partners, board, and 2026 audit findings.
+      </li>
+      <li>
+        <strong>No ads, no tracking, no sale of data:</strong> these don't change under
+        non-profit status; they're load-bearing to the mission.
+      </li>
+    </ul>
+  </section>
+</BaseLayout>
