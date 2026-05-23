@@ -17,16 +17,41 @@ import { site } from '~/data/site';
 
   <section class="max-w-3xl mx-auto px-6 pb-16">
     <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">Fact sheet</h2>
-    <dl class="space-y-3">
-      <div class="flex gap-3"><dt class="font-bold w-32">Founded</dt><dd>2025</dd></div>
-      <div class="flex gap-3"><dt class="font-bold w-32">Headquarters</dt><dd>Remote (US)</dd></div>
-      <div class="flex gap-3"><dt class="font-bold w-32">Apps</dt><dd>{site.appCount} (Wave 1+2+3 implementing: 36 active)</dd></div>
-      <div class="flex gap-3"><dt class="font-bold w-32">Target ages</dt><dd>{site.ages}</dd></div>
-      <div class="flex gap-3"><dt class="font-bold w-32">Platforms</dt><dd>iOS, iPadOS, native macOS, visionOS (select titles)</dd></div>
-      <div class="flex gap-3"><dt class="font-bold w-32">Tech stack</dt><dd>Swift 6, SwiftUI, SwiftData, FoundationModels, SpriteKit, RealityKit (select titles)</dd></div>
-      <div class="flex gap-3"><dt class="font-bold w-32">Verticals</dt><dd>STEM, STEAM, Academics, DIR/FEDC, Special Interest</dd></div>
-      <div class="flex gap-3"><dt class="font-bold w-32">Privacy</dt><dd>No ads, no in-app purchases, no tracking, on-device data only, COPPA compliant</dd></div>
+    <dl class="space-y-3 text-anvil/80 dark:text-warm/80">
+      <div class="flex gap-3"><dt class="font-bold w-40">Founded</dt><dd>2025</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Org structure</dt><dd>501(c)(3) non-profit (pending — fiscal sponsor bridges)</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Headquarters</dt><dd>Remote (US)</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Apps</dt><dd>{site.appCount}</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Cast members</dt><dd>586 named characters (100% distributed-narrative coverage)</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Target ages</dt><dd>{site.ages}</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Platforms</dt><dd>iOS, iPadOS, native macOS, visionOS (select titles)</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Tech stack</dt><dd>Swift 6, SwiftUI, SwiftData, FoundationModels, SpriteKit, RealityKit</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Verticals</dt><dd>STEM, STEAM, Academics, DIR/FEDC, Special Interest</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Privacy</dt><dd>No ads, no in-app purchases, no tracking, on-device data only, COPPA compliant</dd></div>
+      <div class="flex gap-3"><dt class="font-bold w-40">Funding model</dt><dd>Foundation grants + district licensing + individual donations (all apps remain free for individuals forever)</dd></div>
     </dl>
+  </section>
+
+  <!-- Non-profit boilerplate -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-12">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">Boilerplate (for press)</h2>
+      <p class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+        <strong>About Spark &amp; Anvil:</strong> Spark &amp; Anvil is a mission-driven non-profit
+        organization (501(c)(3) status pending) building {site.appCount} educational iOS apps for kids
+        ages {site.ages}. The portfolio spans STEM, STEAM, Academics, social-emotional learning, and
+        special-interest verticals. All apps are free forever, ad-free, with no in-app purchases and
+        no tracking. Spark &amp; Anvil pioneered <strong>distributed-narrative methodology</strong>
+        (named recurring characters that embody curricular concepts; 586 characters site-visible
+        across 138 apps) and <strong>pass-and-play face-to-face game modes</strong> designed for
+        device-mediated family + peer co-play. Tech stack: Swift 6, SwiftUI, on-device AI via
+        Apple FoundationModels.
+      </p>
+      <p class="mt-3 text-anvil/80 dark:text-warm/80 leading-relaxed">
+        <a href="mailto:press@spark-and-anvil.com" class="underline hover:text-forge">press@spark-and-anvil.com</a>
+        &middot; spark-and-anvil.com
+      </p>
+    </div>
   </section>
 
   <section class="bg-anvil/5 dark:bg-warm/5 py-16">
