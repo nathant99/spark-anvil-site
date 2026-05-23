@@ -1,0 +1,143 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps } from '~/data/apps.generated';
+import { verticals } from '~/data/site';
+
+// Distributed-narrative apps with a populated cast
+const withCast = apps.filter(a => a.distributedNarrative && a.dnCast?.members?.length);
+
+const byVertical = verticals.map(v => ({
+  ...v,
+  apps: withCast.filter(a => a.vertical === v.id),
+})).filter(v => v.apps.length > 0);
+
+const totalApps = withCast.length;
+const totalCharacters = withCast.reduce((sum, a) => sum + (a.dnCast?.members?.length ?? 0), 0);
+---
+
+<BaseLayout
+  title="The Cast"
+  description={`${totalCharacters} named characters across ${totalApps} apps. Each character embodies a specific curricular concept — the cast IS the curriculum.`}
+>
+  <!-- Hero -->
+  <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
+      Meet the cast
+    </h1>
+    <p class="text-xl text-anvil/70 dark:text-warm/70 max-w-2xl leading-relaxed">
+      Across {totalApps} apps, {totalCharacters} named recurring characters embody specific curricular
+      concepts. The cast IS the curriculum — every character's recurring behavior demonstrates one
+      pattern, one technique, or one idea that your kid is learning.
+    </p>
+    <p class="mt-4 text-anvil/60 dark:text-warm/60 leading-relaxed max-w-2xl">
+      This is distributed-narrative methodology — grounded in Bruner narrative learning and Habgood
+      intrinsic integration. <a href="/method" class="underline hover:text-forge">Read about our method →</a>
+    </p>
+  </section>
+
+  <!-- Stats strip -->
+  <section class="max-w-4xl mx-auto px-6 pb-12">
+    <div class="flex flex-wrap gap-6 text-sm">
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">{totalCharacters}</strong>
+        named characters
+      </span>
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">{totalApps}</strong>
+        apps with a cast
+      </span>
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">{verticals.length}</strong>
+        learning verticals
+      </span>
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">100%</strong>
+        portfolio coverage
+      </span>
+    </div>
+  </section>
+
+  <!-- One section per vertical -->
+  {byVertical.map((v, idx) => (
+    <section class={idx % 2 === 0 ? "py-12" : "bg-anvil/5 dark:bg-warm/5 py-12"}>
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-end justify-between mb-8">
+          <div>
+            <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil dark:text-warm">{v.name}</h2>
+            <p class="text-sm text-anvil/60 dark:text-warm/60 mt-1">{v.description}</p>
+          </div>
+          <span class="text-sm text-anvil/50 dark:text-warm/50">{v.apps.length} apps · {v.apps.reduce((s, a) => s + (a.dnCast?.members?.length ?? 0), 0)} characters</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          {v.apps.map(app => (
+            <article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/10 dark:border-warm/10 hover:border-forge/40 transition-colors">
+              <header class="flex items-center gap-3 mb-3">
+                {app.mascotPath ? (
+                  <div
+                    class="w-12 h-12 rounded-xl overflow-hidden border-2 border-warm flex-shrink-0"
+                    style={`background-color: ${app.heroColor}`}
+                  >
+                    <img
+                      src={app.mascotPath}
+                      alt=""
+                      class="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center font-brand font-bold text-white text-xl"
+                    style={`background-color: ${app.heroColor}`}
+                  >
+                    {app.name.charAt(0)}
+                  </div>
+                )}
+                <div class="min-w-0 flex-1">
+                  <a href={`/apps/${app.slug}`} class="block font-brand font-bold text-anvil dark:text-warm hover:text-forge transition-colors truncate">
+                    {app.name}
+                  </a>
+                  {app.mentor && (
+                    <p class="text-xs text-anvil/60 dark:text-warm/60 truncate">
+                      mentored by {app.mentor}
+                    </p>
+                  )}
+                </div>
+                <span class="text-xs font-mono text-anvil/40 dark:text-warm/40 flex-shrink-0">
+                  {app.dnCast!.members.length} chars
+                </span>
+              </header>
+
+              <ul class="space-y-1.5 text-sm">
+                {app.dnCast!.members.map(member => (
+                  <li class="flex gap-2 text-anvil/80 dark:text-warm/80">
+                    <span class="font-brand font-bold text-forge flex-shrink-0">{member.name}</span>
+                    <span class="text-anvil/60 dark:text-warm/60">— {member.role}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Methodology callout -->
+  <section class="bg-anvil text-warm py-16">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-brand font-bold text-3xl mb-4">The cast IS the curriculum</h2>
+      <p class="text-warm/80 leading-relaxed max-w-prose mx-auto mb-6">
+        Each character's recurring behavior literally embodies one specific curricular primitive.
+        Sir Pinwell IS the chess pin. Direct-Proof Dora IS direct proof. Stride IS the linear function.
+        This isn't mascot dressing — it's how kids actually learn complex patterns, by binding them
+        to memorable, recurring characters.
+      </p>
+      <p class="text-warm/70 leading-relaxed max-w-prose mx-auto mb-8 text-sm">
+        Grounded in Bruner narrative learning + Habgood intrinsic integration.
+        Validated across all {totalApps} apps, ages 5–14.
+      </p>
+      <a href="/method" class="btn-primary">How distributed-narrative works →</a>
+    </div>
+  </section>
+</BaseLayout>
