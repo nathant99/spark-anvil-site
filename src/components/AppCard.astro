@@ -58,14 +58,12 @@ const { slug, name, tagline, vertical, heroColor, iconPath, mascotPath, implemen
     <p class="text-sm text-anvil/70 dark:text-warm/70 leading-relaxed line-clamp-4">{tagline}</p>
     <div class="flex flex-wrap gap-2 mt-3">
       {distributedNarrative && (
-        <a
-          href="/method"
-          class="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-forge/10 dark:bg-forge-light/15 text-forge-text dark:text-forge-light font-bold uppercase tracking-wider hover:bg-forge/20 dark:bg-forge-light/25 dark:hover:bg-forge-light/25 transition-colors"
+        <span
+          class="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-forge/10 dark:bg-forge-light/15 text-forge-text dark:text-forge-light font-bold uppercase tracking-wider"
           title="Uses distributed-narrative methodology — characters embody the curriculum"
-          onclick="event.stopPropagation()"
         >
           <span aria-hidden="true">●</span> Distributed-Narrative
-        </a>
+        </span>
       )}
       {!implementing && (
         <span class="inline-block text-xs text-anvil/40 dark:text-warm/40 italic">Coming soon</span>
