@@ -28,7 +28,7 @@ const palette = [
   description="The Spark & Anvil visual system — chunky-cartoon flat-vector aesthetic, brand palette, and portfolio mascot lineup."
 >
   <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
-    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4 dark:text-warm">
       The visual system
     </h1>
     <p class="text-xl text-anvil/70 dark:text-warm/70 leading-relaxed">
@@ -46,7 +46,7 @@ const palette = [
         <div class="overflow-hidden rounded-xl border border-anvil/10 dark:border-warm/15">
           <div class="h-24" style={`background-color: ${p.hex}`}></div>
           <div class="p-3 bg-white dark:bg-anvil/40">
-            <div class="font-brand font-bold text-sm text-anvil">{p.name}</div>
+            <div class="font-brand font-bold text-sm text-anvil dark:text-warm">{p.name}</div>
             <code class="text-xs text-anvil/60 dark:text-warm/60">{p.hex}</code>
             <p class="text-xs text-anvil/50 dark:text-warm/50 mt-1">{p.use}</p>
           </div>
@@ -58,7 +58,7 @@ const palette = [
   <!-- Aesthetic principles -->
   <section class="bg-anvil/5 dark:bg-warm/5 py-16">
     <div class="max-w-4xl mx-auto px-6">
-      <h2 class="font-brand font-bold text-2xl text-anvil mb-6">The chunky-cartoon register</h2>
+      <h2 class="font-brand font-bold text-2xl text-anvil mb-6 dark:text-warm">The chunky-cartoon register</h2>
       <ul class="space-y-3 text-anvil/80 dark:text-warm/80 leading-relaxed">
         <li><strong>Bold uniform outline</strong> — <code class="text-anvil dark:text-warm">#2A1F1A</code> at consistent weight on every shape boundary. Reads as intentional ink, not anti-aliased lines.</li>
         <li><strong>Flat saturated fills</strong> — no gradients, no noise, no 3D shading. Every region is one color.</li>
@@ -72,7 +72,7 @@ const palette = [
   <!-- Mascot showcase -->
   <section class="max-w-6xl mx-auto px-6 py-16">
     <div class="flex items-end justify-between mb-8">
-      <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil">The mascot lineup</h2>
+      <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil dark:text-warm">The mascot lineup</h2>
       <span class="text-sm text-anvil/50 dark:text-warm/50">{mascotSample.length} of {apps.filter(a => a.mascotPath).length}</span>
     </div>
     <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4">
@@ -99,7 +99,7 @@ const palette = [
   <section class="bg-anvil/5 dark:bg-warm/5 py-16">
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex items-end justify-between mb-8">
-        <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil">Icon system</h2>
+        <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil dark:text-warm">Icon system</h2>
         <span class="text-sm text-anvil/50 dark:text-warm/50">{iconSample.length} of {apps.filter(a => a.iconPath).length}</span>
       </div>
       <p class="text-anvil/70 dark:text-warm/70 mb-8 max-w-prose">
@@ -126,7 +126,7 @@ const palette = [
 
   <!-- ForgeKit -->
   <section class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="font-brand font-bold text-2xl text-anvil mb-4">Powered by ForgeKit</h2>
+    <h2 class="font-brand font-bold text-2xl text-anvil mb-4 dark:text-warm">Powered by ForgeKit</h2>
     <p class="text-anvil/80 dark:text-warm/80 leading-relaxed mb-4">
       ForgeKit is the open-source Swift Package Manager framework underneath every Spark &amp; Anvil
       app. 50+ modules covering accessibility, COPPA, on-device AI integration, persistence,

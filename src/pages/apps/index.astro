@@ -92,7 +92,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
   description={`Browse all ${apps.length} Spark & Anvil iOS apps across STEM, STEAM, Academics, DIR/FEDC, and Special Interest verticals.`}
 >
   <section class="max-w-6xl mx-auto px-6 pt-16 pb-8">
-    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil mb-4 dark:text-warm">
       All {apps.length} apps
     </h1>
     <p class="text-xl text-anvil/70 dark:text-warm/70 max-w-2xl mb-6">
@@ -112,7 +112,7 @@ const searchHaystack = (app: typeof apps[number]): string => {
         type="search"
         placeholder={`Search ${apps.length} apps by name, topic, mentor, or curriculum...`}
         autocomplete="off"
-        class="w-full pl-12 pr-12 py-4 bg-white dark:bg-anvil/40 border-2 border-anvil/15 dark:border-warm/20 rounded-full text-base text-anvil placeholder:text-anvil/40 dark:text-warm/40 focus:outline-none focus:border-forge transition-colors"
+        class="w-full pl-12 pr-12 py-4 bg-white dark:bg-anvil/40 border-2 border-anvil/15 dark:border-warm/20 rounded-full text-base text-anvil placeholder:text-anvil/40 dark:text-warm/40 focus:outline-none focus:border-forge transition-colors dark:text-warm"
       />
       <button
         id="app-search-clear"
