@@ -1292,6 +1292,19 @@ export const apps: AppData[] = [
       }
     ],
     "mentor": "Cubix",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CubeSensei's 6-character method-steward cast operates at the SOLVING METHOD scale (5 methods + 1 cross-method coordinator) — every algorithm in CubeSensei's 198-entry taxonomy is already a named pattern primitive at finer grain, so the right cast scale is method-stewards (Layer / Cross / Block / Edge / Pair) + cross-method look-ahead coordinator (Look). Cast appears on method-intro screens + algorithm-group introductions + Cube Builder collectibles + adventure-mode encounter art; static catchphrases ONLY (no FoundationModels access). NO real-cuber mascotization (Fridrich / Roux / Zborowski / Ortega credited as method-creators in static metadata ONLY). Per `cubesensei-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Cubix preserved as AI coach + primary visual identity. Labsmith generates ~$1.62 cast assets.",
+      "members": [
+        { "name": "Layer", "role": "Beginner method — layer-by-layer steward; 'Bottom first. Always.'" },
+        { "name": "Cross", "role": "CFOP method — speedcubing steward; 'Cross, F2L, OLL, PLL — that's the road.'" },
+        { "name": "Block", "role": "Roux method — block-building steward; 'Build the blocks. Skip the cross.'" },
+        { "name": "Edge", "role": "ZZ method — edge-orientation steward; 'Orient first. Then everything's faster.'" },
+        { "name": "Pair", "role": "Ortega method — 2x2 specialist; 'Two-by-two has its own rules.'" },
+        { "name": "Look", "role": "Cross-method look-ahead coordinator; 'Eyes ahead. Hands following.'" }
+      ]
+    },
+    
     "hasUserGuide": true,
     "modes": {
       "learn": 3,
@@ -1490,6 +1503,18 @@ export const apps: AppData[] = [
     "iconPath": "/apps/depthquest/icon-sm.webp",
     "mascotPath": "/apps/depthquest/mascot.webp",
     "mentor": "Marlin",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "DepthQuest's 5-character ocean-zone-steward cast maps 1:1 to the 5 ocean zones — sunlit / twilight / midnight / abyss / hadal. Cast: Reef / Drift / Press / Smoke / Trench. UNIQUE TRAUMA-INFORMED FLAG: ocean-acidification + coral-bleaching + plastic-pollution content is climate-trauma-adjacent — off-ramps required. Per `depthquest-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Marlin preserved as mentor. Vent→Smoke collision-rename applied. Labsmith generates ~$1.35 cast assets + $300-500 marine-conservation-pedagogy sensitivity reviewer RECOMMENDED. Cross-app cameos: Reef ↔ EcoSphere+WildLens+BiomeForge (biodiversity-cluster load-bearing); Drift+Press ↔ ClimateQuest; Smoke ↔ ChemQuest Wave 32a sibling (chemosynthesis ↔ chemistry); Trench ↔ FossilForge (ancient-time-depth). Digital Aquarium gets all 5 stewards as buildable collectibles.",
+      "members": [
+        { "name": "Reef", "role": "Sunlit zone — coral + photosynthesis-zone biodiversity" },
+        { "name": "Drift", "role": "Twilight zone — bioluminescent + migratory species" },
+        { "name": "Press", "role": "Midnight zone — pressure + cold + giant-squid scale" },
+        { "name": "Smoke", "role": "Abyss zone — hydrothermal vents + chemosynthesis" },
+        { "name": "Trench", "role": "Hadal zone — deepest trenches + extreme-adaptation" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "NGSS",
@@ -1912,6 +1937,20 @@ export const apps: AppData[] = [
     "iconPath": "/apps/escapeforge/icon-sm.webp",
     "mascotPath": "/apps/escapeforge/mascot.webp",
     "mentor": "Latch",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "EscapeForge's 7-character puzzle-archetype cast maps 1:1 to the 7 puzzle types — math / word / cipher / pattern / logic / connection / sequence. Each character IS the puzzle pattern; channel-based event system surfaces the appropriate cast member on chamber entry. Per `escapeforge-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Latch preserved as AI mentor. Original cast names Weave + Loom RENAMED to Tile + Link to resolve collisions (SpectrumCanvas Wave 8 Weave + TaleForge Wave 28 mentor Loom). Labsmith generates ~$1.89 cast assets. Cross-app cameos: Sift ↔ CipherForge (cryptography sibling) load-bearing; Tile ↔ GeometryForge; Cog ↔ LogicQuest; Beat ↔ MathLore.",
+      "members": [
+        { "name": "Tally", "role": "Math puzzles — counting / arithmetic / number-sense" },
+        { "name": "Lexa", "role": "Word puzzles — anagrams / vocabulary / spelling" },
+        { "name": "Sift", "role": "Cipher puzzles — substitution / Caesar / frequency analysis" },
+        { "name": "Tile", "role": "Pattern puzzles — repetition / symmetry / tessellation" },
+        { "name": "Cog", "role": "Logic puzzles — deduction / elimination / constraint" },
+        { "name": "Link", "role": "Connection puzzles — association / category / cross-reference" },
+        { "name": "Beat", "role": "Sequence puzzles — temporal-order / step-by-step / dependency" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "ISTE",
@@ -2053,6 +2092,19 @@ export const apps: AppData[] = [
     "iconPath": "/apps/figureforge/icon-sm.webp",
     "mascotPath": "/apps/figureforge/mascot.webp",
     "mentor": "Trope",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "FigureForge's 6-character figurative-device cast maps 1:1 to the 6 core literary devices — metaphor / simile / idiom / analogy / personification / hyperbole-irony-understatement cluster. Per `figureforge-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Trope preserved as mentor. Multiple collision-renames applied (Bridge→Ferry / Like→Ripple / Span→Twin / Pulse→Hum / Loom→Mask). Detective-style word-puzzle integrates cast as 'suspect-style' device-archetype clue-givers. Labsmith generates ~$1.62 cast assets. Cross-app cameos: Mask ↔ StageForge / Knot ↔ LinguaQuest / Hum ↔ TempCheck+RuptureRepair / Twin ↔ ProofQuest.",
+      "members": [
+        { "name": "Ferry", "role": "Metaphor — 'X IS Y' direct comparison; carries meaning across" },
+        { "name": "Ripple", "role": "Simile — 'X is LIKE Y' softer comparison" },
+        { "name": "Knot", "role": "Idiom — fixed expressions whose meaning isn't literal" },
+        { "name": "Twin", "role": "Analogy — extended comparison / X:Y::A:B parallel mapping" },
+        { "name": "Hum", "role": "Personification — non-human takes on human qualities" },
+        { "name": "Mask", "role": "Hyperbole + understatement + irony cluster — say one thing, mean another" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "NGSS",
@@ -2516,6 +2568,18 @@ export const apps: AppData[] = [
     "iconPath": "/apps/framequest/icon-sm.webp",
     "mascotPath": "/apps/framequest/mascot.webp",
     "mentor": "Reel",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "FrameQuest's 5-character stop-motion-craft cast carries UNIQUE autism-affirming LOCKED-consistency constraints — same outfit + same catchphrase + same voice EVERY appearance (per ASAN 2024 + Sayman 2025 autism-affirming design literature). Cast: Pane (single-frame) / Tween (motion-between) / Beat (story-beat) / Beam (emotion) / Pass (social-story). Per `framequest-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Reel preserved as mentor (SOFT collision with ReelForge mentor Slate — flag for cross-app audio-context audit). Multiple collision-renames applied (Frame→Pane / Feel→Beam / Share→Pass). Labsmith generates ~$1.35 cast assets + $500-800 autism-affirming sensitivity reviewer RECOMMENDED. Cross-app cameos: Beat ↔ EscapeForge Wave 32b sibling (sequence-craft shared design); Tween ↔ ReelForge Wave 32b sibling.",
+      "members": [
+        { "name": "Pane", "role": "Single-frame composition — 'One frame. Then the next.'" },
+        { "name": "Tween", "role": "Frame-to-frame change / motion-between — 'Move a little. Then a little more.'" },
+        { "name": "Beat", "role": "Story beat / sequence — 'First this. Then this. Then this.'" },
+        { "name": "Beam", "role": "Emotion expression / character feeling — 'How do they FEEL? Show their face.'" },
+        { "name": "Pass", "role": "Social story / sharing with others — 'My story. Your turn.'" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "NCAS",
@@ -3397,6 +3461,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/labsmith/icon-sm.webp",
     "mascotPath": "/apps/labsmith/mascot.webp",
     "mentor": "Smithy",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "LabSmith-app's 4-character OHEL-step cast IS the loop — Observe / Hypothesize / Experiment / Learn primitives map 1:1 to 4-character cast See / Guess / Check / Reflect. STRONGEST 1:1 primitive-to-cast mapping in the portfolio. Per `labsmith-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22 (NOTE: labsmith-app is the SCIENCE EXPERIMENT SANDBOX RPG product, NOT the labsmith research hub). Smithy preserved as Socratic mentor. Multiple cast collision-renames applied (Watch→See / Wonder→Guess / Try→Check / Learn→Reflect). Labsmith generates ~$1.08 cast assets. Cross-app cameos: See ↔ TerraWatch+CuriosityQuest (patient-observation cluster load-bearing); Guess ↔ ChanceForge (probability-as-hypothesis); Check ↔ MakerForge+LevelForge (iteration cluster load-bearing); Reflect ↔ ResearchQuest+MindForge (meta-cognition cluster). NO real-scientist mascotization (Newton/Curie/Einstein/Feynman in static kit metadata ONLY).",
+      "members": [
+        { "name": "See", "role": "Observe — gather raw data first; 'Look first. Talk later.'" },
+        { "name": "Guess", "role": "Hypothesize — frame a testable guess; 'What if…?'" },
+        { "name": "Check", "role": "Experiment — design + run the test; 'One test at a time.'" },
+        { "name": "Reflect", "role": "Learn — interpret results + revise; 'What did we learn? What surprised us?'" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "ISTE",
@@ -3493,7 +3568,20 @@ export const apps: AppData[] = [
     "heroColor": "#81C784",
     "iconPath": "/apps/lifequest/icon-sm.webp",
     "mascotPath": "/apps/lifequest/mascot.webp",
-    "mentor": "Tally",
+    "mentor": "Steward",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "LifeQuest's 6-character life-skill-domain cast maps 1:1 to the 6 consumer-literacy + life-skills domains — budgeting / document-reading / scam-detection / forms-and-taxes / meal-planning / interview-and-self-advocacy. Cast: Save / Parse / Spot / Fill / Cook / Say. UNIQUE TRAUMA-INFORMED BURDEN: class-stress-adjacent content requires off-ramps + sensitivity reviewer ($500-$800). Per `lifequest-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. MENTOR RENAMED in Wave 32b: previous 'Tally' (HARD collision with EscapeForge Wave 32b sibling cast member Tally) → 'Steward' (life-decisions-stewardship register; clear in registry). Multiple cast collision-renames applied (Plan→Save / Read→Parse / Tell→Say). Labsmith generates ~$1.62 cast assets. Cross-app cameos: Spot ↔ TerraWatch+ForgeClassroom+CuriosityQuest (load-bearing observation cluster); Save ↔ EconomicsForge planning; Parse ↔ TruthQuest; Cook ↔ SaffronLab; Say ↔ DebateForge+SpeakForge.",
+      "members": [
+        { "name": "Save", "role": "Budgeting + financial planning — 'Money is a tool. Plan the tool.'" },
+        { "name": "Parse", "role": "Reading-comprehension for adult docs — 'Slow down. Read it ALL.'" },
+        { "name": "Spot", "role": "Scam-detection + critical-claim-evaluation — 'Show me the proof.'" },
+        { "name": "Fill", "role": "Forms + paperwork + simplified taxes — 'Fill out. Then double-check.'" },
+        { "name": "Cook", "role": "Meal planning + nutrition + budget-cooking — 'Eat well. Spend smart.'" },
+        { "name": "Say", "role": "Self-advocacy + interview-craft — 'Be clear. Be kind. Be specific.'" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "CASEL",
@@ -4225,6 +4313,18 @@ export const apps: AppData[] = [
     "iconPath": "/apps/mindforge/icon-sm.webp",
     "mascotPath": "/apps/mindforge/mascot.webp",
     "mentor": "Sage",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MindForge's 5-character CASEL-competency cast maps 1:1 to CASEL's 5 core competencies — self-awareness / self-management / social awareness / relationship skills / responsible decision-making. Cast: Inside / Settle / Open / Touch / Choose. STRONGEST trauma-informed burden in the portfolio (MindForge is the portfolio gold-standard for trauma-informed digital design per SAMHSA TIP 57 + NCTSN explicit references). Cast embodies CAPACITIES TO BUILD, never DEFICITS TO FIX. NO mascotizing of mental-health conditions. Cast NEVER says 'calm down'. Per `mindforge-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Sage preserved as gold-standard mentor. Lens→Open + Bridge→Touch collision-renames applied. Labsmith generates ~$1.35 cast assets + $1000-1500 CASEL-affiliated + pediatric-mental-health-clinician sensitivity reviewer REQUIRED (not optional). Cross-app cameos: Settle ↔ FocusForge; Inside ↔ TempCheck+CoRegRealm Wave 32b sibling (interoception cluster load-bearing); Open ↔ InclusionForge; Touch ↔ RuptureRepair+CoRegRealm (relational-repair cluster load-bearing); Choose ↔ EthosForge.",
+      "members": [
+        { "name": "Inside", "role": "Self-awareness — emotion + thought + body awareness; 'Notice. Don't fix.'" },
+        { "name": "Settle", "role": "Self-management — regulation + impulse + stress; 'One breath. Then I choose.'" },
+        { "name": "Open", "role": "Social awareness — perspective + empathy + context; 'Their world. Then ours.'" },
+        { "name": "Touch", "role": "Relationship skills — communication + boundaries + repair; 'Say it small. Listen big.'" },
+        { "name": "Choose", "role": "Responsible decision-making — values + consequences + action; 'What matters? Then I act.'" }
+      ]
+    },
+    
     "implementing": true,
     "standards": [
       "DIR/FEDC Capacities 1-2",
@@ -5263,6 +5363,19 @@ export const apps: AppData[] = [
     "iconPath": "/apps/reelforge/icon-sm.webp",
     "mascotPath": "/apps/reelforge/mascot.webp",
     "mentor": "Slate",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ReelForge's 6-character filmmaking-craft cast maps 1:1 to the 6 craft primitives — storyboarding / camera / lighting / sound / editing / narrative. Cast: Draft (storyboard) / Aim (camera) / Bright (lighting) / Buzz (sound) / Snip (editing) / Whole (narrative). Per `reelforge-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Slate preserved as mentor. Multiple collision-renames applied (Board→Draft / Lens→Aim / Glow→Bright / Cut→Snip / Arc→Whole). Labsmith generates ~$1.62 cast assets. Cross-app cameos: Snip ↔ EffectsForge / Aim ↔ FrameQuest Wave 32b sibling (camera-craft shared design); Buzz ↔ StageForge / Bright ↔ PixelForge / Whole ↔ TaleForge. NO real-director mascotization.",
+      "members": [
+        { "name": "Draft", "role": "Storyboarding — pre-visualization; 'Draw it first. Then film it.'" },
+        { "name": "Aim", "role": "Camera angles + framing — 'Where the camera stands changes the story.'" },
+        { "name": "Bright", "role": "Lighting design — 'Three lights. Different feelings.'" },
+        { "name": "Buzz", "role": "Sound design — foley + ambient + dialogue — 'Sound is the other half.'" },
+        { "name": "Snip", "role": "Editing — timeline + transitions + pacing — 'Cut here. Not there.'" },
+        { "name": "Whole", "role": "Multi-scene narrative — 'Beginning. Middle. End.'" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "NCAS",
@@ -5686,6 +5799,18 @@ export const apps: AppData[] = [
     "iconPath": "/apps/speakforge/icon-sm.webp",
     "mascotPath": "/apps/speakforge/mascot.webp",
     "mentor": "Resonance",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "SpeakForge's 5-character speaking-craft cast maps 1:1 to CCSS Speaking & Listening primitives — Pose (posture/presence) / Pitch (voice projection + tone) / Hark (active listening) / Truss (argument structure) / Echo (audience awareness). Per `speakforge-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Resonance preserved as mentor. Original Frame + Tilt RENAMED to Truss + Echo to resolve Wave 31 + NexusForge Wave 23 collisions. Labsmith generates ~$1.35 cast assets. Cross-app cameos: Truss ↔ BridgeForge / Hark ↔ DebateForge / Echo ↔ ImprovQuest / Pitch ↔ HarmonyForge. NO real-orator mascotization (Cicero/Demosthenes/MLK/Obama in static kit metadata ONLY).",
+      "members": [
+        { "name": "Pose", "role": "Posture / presence / stance — 'Stand. Then speak.'" },
+        { "name": "Pitch", "role": "Voice projection + tone variation — 'Your voice is a road. Not a wall.'" },
+        { "name": "Hark", "role": "Active listening — 'Listen all the way through.'" },
+        { "name": "Truss", "role": "Argument structure (claim / evidence / reasoning) — 'Claim, then proof, then why.'" },
+        { "name": "Echo", "role": "Audience awareness + tone calibration — 'Who's listening? Speak to THEM.'" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -6533,6 +6658,17 @@ export const apps: AppData[] = [
     "name": "WellnessForge",
     "tagline": "Build health literacy through nutrition analysis, evidence-based substance abuse prevention, first aid simulations, and social-emotional learning — using the research-proven Life Skills Training model rather than fear-based approaches. Ages 9-14.",
     "vertical": "academics",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "WellnessForge's cast embodies the Life Skills Training (Botvin LST) primitives — health-decision craft as practiced moves, not lectured-at content. Cast supports mentor Vita through nutrition-analysis, substance-resistance, first-aid, mental-health, and safety-decision kits. Cluster sibling to MindForge (SEL) + FocusForge (EF) + InclusionForge (perspective) + RuptureRepair (repair) + TempCheck (attunement) — heart-harbor zone register applies. External sensitivity reviewer recommended for kits touching substance-use + crisis-resource surfacing.",
+      "members": [
+        { "name": "Read", "role": "Nutrition-label literacy — what the package actually says vs. claims" },
+        { "name": "Pause", "role": "Refusal craft — practiced 'no' moves under social pressure" },
+        { "name": "Steady", "role": "Stress-regulation primitives — breath / ground / reframe before deciding" },
+        { "name": "Mend", "role": "First-aid response — assess / call / care framing" },
+        { "name": "Ask", "role": "Help-seeking — trusted-adult identification + crisis-resource awareness" }
+      ]
+    },
     "heroColor": "#81C784",
     "iconPath": "/apps/wellnessforge/icon-sm.webp",
     "mascotPath": "/apps/wellnessforge/mascot.webp",
@@ -6775,6 +6911,19 @@ export const apps: AppData[] = [
     "iconHeroPath": "/apps/coregrealm/icon.webp",
     "mascotPath": "/apps/coregrealm/mascot.webp",
     "mentor": "Cyan",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CoRegRealm's 6-character co-regulation-move cast maps 1:1 to ForgeKit 0.86.0 CoRegulationEngine 6-move palette — affect-matching / vocal co-regulation / rhythmic co-regulation / containment / naming / patience. Cast: Match / Hum / Sway / Beside / Word / Patient. INVERSE-semantic pair with MindForge Wave 32b sibling cast — CoRegRealm cast embodies MOVES THE PLAYER PERFORMS, MindForge cast embodies INTERNAL CAPACITIES TO BUILD. Both apps form load-bearing cross-cluster. Per `coregrealm-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. Cyan preserved as companion creature (NOT coach per registry). Multiple cast collision-renames applied (Bounce→Sway / Hold→Beside / Name→Word / Wait→Patient). Labsmith generates ~$1.62 cast assets + $1000-1500 DIR-Floortime-certified sensitivity reviewer REQUIRED. Cross-app cameos: Match+Word ↔ MindForge Inside+Settle (load-bearing); Sway ↔ HarmonyForge+BeatForge; Patient ↔ FocusForge Wait+MindForge Settle (load-bearing); Beside ↔ RuptureRepair+TempCheck (presence-as-tool cluster load-bearing).",
+      "members": [
+        { "name": "Match", "role": "Affect-matching — meet the dysregulation where it is; 'I see you. Right where you are.'" },
+        { "name": "Hum", "role": "Vocal co-regulation — gentle vocal-tone modulation; 'Hmm. I'm here.'" },
+        { "name": "Sway", "role": "Rhythmic co-regulation — gentle bounce + breath rhythm; 'Slow in. Slow out.'" },
+        { "name": "Beside", "role": "Containment — bounded presence without overwhelm; 'Right next to you. Not in front.'" },
+        { "name": "Word", "role": "Naming — gently labeling the feeling; 'Maybe it's ___? Or maybe something else.'" },
+        { "name": "Patient", "role": "Patience — giving time without rushing; 'Take all the time you need.'" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "DIR/FEDC Capacities 1-2",
@@ -7396,7 +7545,20 @@ export const apps: AppData[] = [
     "iconPath": "/apps/microbelab/icon-sm.webp",
     "iconHeroPath": "/apps/microbelab/icon.webp",
     "mascotPath": "/apps/microbelab/mascot.webp",
-    "mentor": "Dr. Quark",
+    "mentor": "Cilia",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MicrobeLab's 6-character microbe-archetype cast formalizes the CLAUDE.md 'named microbe characters' core feature. Cast: Lacto (helpful bacteria) / Yeast (helpful fungi) / Photo (photosynthetic microbes) / Net (mycorrhizal networks) / Spore (pathogens, opt-in gated) / Guard (immune cells). UNIQUE COVID-trauma-sensitive burden: beneficial microbes foregrounded (kits 1-4), pathogens opt-in (kit 5), immune-response as cast story (kit 6), NO COVID-specific scenarios. Per `microbelab-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` Wave 32b 2026-05-22. MENTOR RENAMED in Wave 32b: previous 'Dr. Quark' (HARD collision with AdventureHub Wave 27 zone-host Dr. Quark Science Labs) → 'Cilia' (microbiology-domain-specific register; clear in registry). Multiple cast collision-renames applied (Sun→Photo / Soil→Net). Labsmith generates ~$1.62 cast assets + $500-800 pediatric-microbiology-pedagogy + COVID-trauma-aware sensitivity reviewer RECOMMENDED. Cross-app cameos: Net ↔ NexusForge+OriginForge (network-systems cluster load-bearing); Lacto+Yeast ↔ SaffronLab (fermentation cluster); Photo ↔ EcoSphere+BiomeForge (photosynthesis cluster); Guard ↔ BodyForge+HealthForge (immune-system cluster).",
+      "members": [
+        { "name": "Lacto", "role": "Lactobacillus + helpful-bacteria — 'Friend in your food. Friend in your gut.'" },
+        { "name": "Yeast", "role": "Saccharomyces + helpful-fungi — 'I make air inside bread.'" },
+        { "name": "Photo", "role": "Cyanobacteria + photosynthetic-microbes — 'Sunlight. Then air. Then everything else.'" },
+        { "name": "Net", "role": "Mycorrhizal-fungi + nitrogen-fixers — 'Forests talk through me.'" },
+        { "name": "Spore", "role": "Pathogens (opt-in gated) — 'Some friends. Some not. All real.'" },
+        { "name": "Guard", "role": "Immune cells (T-cell / macrophage / B-cell) — 'I check IDs. Patient + careful.'" }
+      ]
+    },
+    
     "implementing": false,
     "standards": [
       "NGSS MS-LS1-1",
