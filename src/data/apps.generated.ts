@@ -780,6 +780,32 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": false,
     "wave": null,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CityForge's distributed-narrative cast embodies the 5 primitives of urban-equity design — zoning-with-neighbors, public-space community, walkable streets, equitable transit, and housing-as-human-right — as 5 animal-urbanist characters Plumb introduces across the 16 question kits. Urban-equity gate is foregrounded; Stoop's 'old places, not new ones, when we can' and Dwell's 'repair before replace; listen before plan' are load-bearing; NO real-architect mascots, NO blank-slate framing.",
+      "members": [
+        {
+          "name": "Block",
+          "role": "Zoning + density — the badger-tween with clay-block models who teaches zoning as 'plan for the neighbors first, not the buildings'"
+        },
+        {
+          "name": "Stoop",
+          "role": "Public space + community — the capybara-elder on a wooden stoop who treats public space as the city's living room, foregrounding existing stoop-cultures (Brooklyn / Latin American plazas / Italian piazzas / West African gathering trees)"
+        },
+        {
+          "name": "Lane",
+          "role": "Walkability + mobility — the rabbit-tween in safety-vest with a chalk-spool who teaches streets-as-spaces ('streets are rooms; cars are guests, not owners')"
+        },
+        {
+          "name": "Hub",
+          "role": "Transit nodes — the pangolin-tween in conductor-vest who teaches that transit is about ACCESS, not about cars-vs-trains ('many ways, equal ways; the bus matters as much as the train')"
+        },
+        {
+          "name": "Dwell",
+          "role": "Housing equity + repair — the owl-elder in a mended quilted-coat who teaches anti-displacement, repair-not-replace urbanism ('repair before replace; listen before plan; the people who live here ARE the design')"
+        }
+      ]
+    },
     "iconHeroPath": "/apps/cityforge/icon.webp",
     "longTagline": "CityForge lets you be an architect and city planner! Design buildings that can actually stand up using real structural physics, then plan entire cities with roads, parks, water systems, and more. Every building you design has to satisfy real engineering rules, and every city you plan has to keep its",
     "features": [
@@ -3611,6 +3637,32 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": true,
     "wave": 3,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MapForge's distributed-narrative cast embodies the 5 primitives of cartographic literacy — orientation, scale, legend, coordinates, and non-Western mapping traditions — as 5 animal-cartographer characters Atlas introduces across the 16 question kits. Map-as-power gate is foregrounded; Bearing's 'north is one direction, not the direction' is load-bearing, and Wayfind structurally elevates Polynesian / Aboriginal / Indigenous mapping traditions as PEER cartographies, not curiosities.",
+      "members": [
+        {
+          "name": "Bearing",
+          "role": "Orientation — the tortoise-elder who treats north-up as a convention, not a truth ('north is one direction, not the direction'); teaches that orientation is a choice mapmakers make"
+        },
+        {
+          "name": "Inset",
+          "role": "Scale — the field-mouse-tween with a folded map-within-a-map who teaches scale-choice as a political act ('bigger map, less detail; smaller map, more story — pick on purpose')"
+        },
+        {
+          "name": "Key",
+          "role": "Legend literacy — the owl-tween in a dot-shawl who treats the legend as the mapmaker's confession ('what's NOT on the map — that's also a map')"
+        },
+        {
+          "name": "Plot",
+          "role": "Coordinates — the pangolin-tween with graticule-scale armor who teaches that coordinate systems are human inventions, plural across cultures ('every place has many addresses; many cultures have many ways of saying here')"
+        },
+        {
+          "name": "Wayfind",
+          "role": "Non-Western mapping traditions — the heron-elder in a woven-grass cloak with stick-chart props who structurally elevates Polynesian wayfinding, Aboriginal songlines, and Indigenous TEK as peer cartographies ('some maps you sing, some you walk, some you only learn from elders')"
+        }
+      ]
+    },
     "hasUserGuide": true,
     "modes": {
       "learn": 2,
@@ -5726,6 +5778,32 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": true,
     "wave": 2,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TerraVoyage's distributed-narrative cast embodies the 5 primitives of curious-respectful-traveler thinking — open exploration, journey/migration, cultural-heritage listening, non-extractive cultural exchange, and planetary-scale interconnection — as 5 animal-traveler characters Compass introduces across the 16 question kits. Cultural-representation gate is foregrounded; Origin's 'before you visit, learn whose home this is; before you name, learn what it's already called' is load-bearing; NO colonial-explorer iconography, NO specific-culture mascotization, NO 'discovered by' framing.",
+      "members": [
+        {
+          "name": "Roam",
+          "role": "Open exploration + curiosity — the otter-tween with pocket-tunic full of found things who teaches that curiosity-without-destination is a valid mode ('curious feet learn more than busy feet')"
+        },
+        {
+          "name": "Trek",
+          "role": "Movement + migration — the red-deer-tween in polysemic wool wrap with pack-and-walking-stick who dignifies all journey-reasons equally — seasons / scarcity / opportunity / safety / curiosity ('some journeys are choice; some are not; every traveler deserves welcome')"
+        },
+        {
+          "name": "Origin",
+          "role": "Cultural-heritage anchor — the heron-elder with bundle of family-trees and oral-history-cards who teaches that 'discovery' is a colonial word and every place has been home for someone, often for millennia ('before you visit, learn whose home this is; before you name, learn what it's already called')"
+        },
+        {
+          "name": "Braid",
+          "role": "Cultural exchange — the weaverbird-tween with small loom-pouch whose threads-from-many-places stay distinct AND together; teaches anti-appropriation, exchange-not-extraction ('threads from many places — each keeps its color; together they make something new — together, not apart')"
+        },
+        {
+          "name": "Reach",
+          "role": "Planetary scale + interconnection — the albatross-elder with continent-patterned wings who teaches Earth-as-one-system, climate-justice, environmental-equity framing ('far is closer than you think; everywhere is somewhere's neighbor')"
+        }
+      ]
+    },
     "iconHeroPath": "/apps/terravoyage/icon.webp",
     "longTagline": "TerraVoyage is a geography and world cultures exploration adventure for ages 10-14 where players traverse a stylized world map, identify locations through environmental and cultural clues, solve geography puzzles, and build a World Journal of discoveries — turning the whole planet into a game world.",
     "hasUserGuide": true,
@@ -5743,7 +5821,7 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/terrawatch/icon-sm.webp",
     "mascotPath": "/apps/terrawatch/mascot.webp",
-    "mentor": "Field",
+    "mentor": "Scout",
     "implementing": false,
     "standards": [
       "ISTE",
@@ -5751,6 +5829,32 @@ export const apps: AppData[] = [
     ],
     "hasM9Accessories": true,
     "wave": null,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TerraWatch's distributed-narrative cast embodies the 5 primitives of citizen-science practice — observation/noticing, structured recording, geolocation, biodiversity counting, and change-over-time tracking — as 5 animal-field-scientist characters Scout introduces across the 16 question kits. Eco-anxiety gate is foregrounded; Trend's 'today is one dot; many dots make a line; lines can bend; your dot helps the line' is load-bearing, with hopeful-trend data structurally present (fish populations recovering, ozone hole shrinking) alongside worrying trends. NO doom-only framing; NO 'real scientist' hierarchy; agency-positive throughout.",
+      "members": [
+        {
+          "name": "Spot",
+          "role": "Observation + noticing — the chickadee-tween perched on a branch who teaches slow-noticing as the first scientific skill ('look once, then look again, slower; the second look usually finds more')"
+        },
+        {
+          "name": "Note",
+          "role": "Structured recording — the beaver-tween in notebook-pocket vest who teaches fact-vs-inference discipline ('write what you saw; then write what you think it means; don't mix them')"
+        },
+        {
+          "name": "Pin",
+          "role": "Geolocation + spatial-data discipline — the hummingbird-tween with pin-tail-feather who teaches that location-stamps + time-stamps make observations useful to other scientists ('where matters; when matters; the same plant in two places is two stories')"
+        },
+        {
+          "name": "Census",
+          "role": "Biodiversity counting + sampling — the raccoon-tween with tally-pattern vest who treats unglamorous repeated counting as the actual magic of science ('one bird seen is a moment; ten birds seen over ten days is a pattern; counting is the magic')"
+        },
+        {
+          "name": "Trend",
+          "role": "Change-over-time + agency-positive climate framing — the tortoise-elder with tree-ring shell and folding-graph showing both worrying AND hopeful trends; carries the eco-anxiety-gate anchor ('today is one dot; many dots make a line; lines can bend; your dot helps the line')"
+        }
+      ]
+    },
     "iconHeroPath": "/apps/terrawatch/icon.webp",
     "longTagline": "TerraWatch is a gamified citizen science platform for ages 9-14 where students contribute to real scientific projects by collecting field observations with their device's built-in sensors, earning XP and badges while building authentic scientific skills used by professional researchers.",
     "hasUserGuide": true,
