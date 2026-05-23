@@ -6658,6 +6658,17 @@ export const apps: AppData[] = [
     "name": "WellnessForge",
     "tagline": "Build health literacy through nutrition analysis, evidence-based substance abuse prevention, first aid simulations, and social-emotional learning — using the research-proven Life Skills Training model rather than fear-based approaches. Ages 9-14.",
     "vertical": "academics",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "WellnessForge's cast embodies the Life Skills Training (Botvin LST) primitives — health-decision craft as practiced moves, not lectured-at content. Cast supports mentor Vita through nutrition-analysis, substance-resistance, first-aid, mental-health, and safety-decision kits. Cluster sibling to MindForge (SEL) + FocusForge (EF) + InclusionForge (perspective) + RuptureRepair (repair) + TempCheck (attunement) — heart-harbor zone register applies. External sensitivity reviewer recommended for kits touching substance-use + crisis-resource surfacing.",
+      "members": [
+        { "name": "Read", "role": "Nutrition-label literacy — what the package actually says vs. claims" },
+        { "name": "Pause", "role": "Refusal craft — practiced 'no' moves under social pressure" },
+        { "name": "Steady", "role": "Stress-regulation primitives — breath / ground / reframe before deciding" },
+        { "name": "Mend", "role": "First-aid response — assess / call / care framing" },
+        { "name": "Ask", "role": "Help-seeking — trusted-adult identification + crisis-resource awareness" }
+      ]
+    },
     "heroColor": "#81C784",
     "iconPath": "/apps/wellnessforge/icon-sm.webp",
     "mascotPath": "/apps/wellnessforge/mascot.webp",
