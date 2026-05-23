@@ -7015,7 +7015,7 @@ export const apps: AppData[] = [
   {
     "slug": "gambittales",
     "name": "GambitTales",
-    "tagline": "Narrative-Driven Chess for Tweens — tactical patterns (pin / fork / skewer) as recurring character archetypes (Sir Pinwell, Twin Knights of Fork Hill, Lady Skewer). Captain Castle rook mascot.",
+    "tagline": "Narrative-Driven Chess for Tweens — tactical patterns + piece movements as recurring character archetypes (10-character cast: tactics layer + world layer). Captain Castle rook mascot narrates a kingdom where Pin / Fork / Skewer / Discovered Attack / Double Attack / X-Ray live alongside King Pumble, King Sable, Pawn Patrol, Sienna & Bran, Trotter & Trundle, Gable & Garrett, Queen Vesper.",
     "vertical": "academics",
     "heroColor": "#D4A24C",
     "iconPath": "/apps/gambittales/icon-sm.webp",
@@ -7044,6 +7044,42 @@ export const apps: AppData[] = [
         {
           "name": "Lady Skewer",
           "role": "Skewer pattern — force a valuable piece out of the way"
+        },
+        {
+          "name": "Veil & Vow",
+          "role": "Discovered attack — step aside to reveal a hidden threat"
+        },
+        {
+          "name": "Captain Crossfire",
+          "role": "Double attack — one move threatens two targets"
+        },
+        {
+          "name": "The Glass Lantern",
+          "role": "X-ray attack — light pierces through to the piece behind"
+        },
+        {
+          "name": "King Pumble & King Sable",
+          "role": "Two kings — librarian and gardener; one step at a time"
+        },
+        {
+          "name": "Pawn Patrol",
+          "role": "The 16 pawns — one step forward, two on first, high-five to capture"
+        },
+        {
+          "name": "Sienna & Bran",
+          "role": "Bishops — twin pilgrims on warm-stone and moss-stone diagonal paths"
+        },
+        {
+          "name": "Trotter & Trundle",
+          "role": "Knights — work-horse twins who hop two and shimmy one"
+        },
+        {
+          "name": "Gable & Garrett",
+          "role": "Rooks — walking towers in straight lines, shielding the king"
+        },
+        {
+          "name": "Queen Vesper",
+          "role": "Queen — ranger-messenger; any direction, any distance"
         }
       ]
     },
