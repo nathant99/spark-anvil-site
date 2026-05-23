@@ -1434,6 +1434,43 @@ export const apps: AppData[] = [
     }
   },
   {
+    "slug": "debateforge",
+    "name": "DebateForge",
+    "tagline": "Competitive Speech & Debate Arena for ages 10-14 — master argumentation by researching evidence, building cases, delivering speeches, and competing in AI-judged debate tournaments where steelmanning, civil disagreement, and concession craft determine the strongest debater. Aligned to CCSS Speaking & Listening standards.",
+    "vertical": "academics",
+    "heroColor": "#4A6FA5",
+    "iconPath": "/apps/debateforge/icon-sm.webp",
+    "iconHeroPath": "/apps/debateforge/icon.webp",
+    "mascotPath": "/apps/debateforge/mascot.webp",
+    "mentor": "Rhetor",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "DebateForge's 5-character cast embodies the foundational argumentation primitives per NSDA + Toulmin (claim/warrant/data) + steelman tradition — case-construction (Build), evidence-evaluation (Weigh), steelmanning-the-opposing-view (Steel), civil-rebuttal-not-rebuke (Reply), and changing-your-mind-in-light-of-evidence-as-strength (Yield). Rhetor (mentor; rename from code-side generic placeholder 'Mentor' + site entry creation — Greek: speaker; classical-academic register parallel to Veritas + Cura; non-religious) frames each primitive; cast embodies them at school-debate-club / family-dinner-disagreement / community-forum scale (NEVER national-debate-champion / pundit / lawyer / politician framing). Polarization-amplification gate enforced (CRITICAL — UNIQUE to DebateForge in Wave 25): cast NEVER positions disagreement as combat; banned vocabulary 'crush/destroy/own/demolish/rekt' in cast voice + AI opponent + AI judge; Steel's structural presence from kit 5 onward names 'best version of opposing view BEFORE arguing with it' as load-bearing; debate-arena scoring measures CRAFT MOVES (citation quality + steelman fidelity + civil rebuttal + evidence weighing + concession) NOT raw winning. Bullying-register gate enforced: Reply's 'I disagree because' structurally distinct from 'you're wrong because'. Identity-debate avoidance gate enforced (CRITICAL): kit 9 explicit content rule + AI opponent topic-filter REQUIRED — never debate marginalized identities' validity. No real-politicians + no real-debaters mascotization (inherits ClaimCraft Wave 21). External sensitivity reviewer with debate-pedagogy + civil-discourse + youth-conflict-resolution + identity-affirming-pedagogy expertise REQUIRED for kit 9 + AI opponent topic-filter audit ($500-$1,000).",
+      "members": [
+        { "name": "Build", "role": "Case-construction — claim + warrant + evidence as architecture; what does your case REQUIRE to stand?" },
+        { "name": "Weigh", "role": "Evidence-evaluation — sources have positions, evidence has limits; credibility-as-calibration (shared design language with TruthQuest Weigh — cross-app continuity)" },
+        { "name": "Steel", "role": "Steelmanning the opposing view — strongest version of what they would say IF you let them; visibly holds up opposing-view-card with two hands" },
+        { "name": "Reply", "role": "Civil-rebuttal-not-rebuke — 'I disagree because' not 'you're wrong because'; address the ARGUMENT not the PERSON" },
+        { "name": "Yield", "role": "Changing-your-mind-in-light-of-evidence-as-strength — concession is craft + intellectual courage; visibly carries 'updated' badge (shared design language with TruthQuest Update — cross-app continuity)" }
+      ]
+    },
+    "implementing": false,
+    "standards": [
+      "CCSS Speaking & Listening",
+      "C3 Social Studies",
+      "ISTE"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "longTagline": "DebateForge is a competitive debate arena where you research evidence, build cases, deliver speeches, and compete in AI-judged tournaments. Learn to steelman opposing views, identify fallacies, deliver effective rebuttals, and change your mind in light of better evidence — debate craft as civil-discourse skill, not argument-as-weapon.",
+    "hasUserGuide": false,
+    "modes": {
+      "learn": 2,
+      "play": 3,
+      "create": 1
+    }
+  },
+  {
     "slug": "depthquest",
     "name": "DepthQuest",
     "tagline": "Players pilot a research submarine through ocean zones (sunlight, twilight, midnight, abyssal, hadal), discovering marine species, studying coral reef health, mapping the ocean floor, and answering marine science challenges. The only gamified ocean exploration RPG on iOS for ages 9-14.",
@@ -3957,7 +3994,18 @@ export const apps: AppData[] = [
     "heroColor": "#81C784",
     "iconPath": "/apps/medicquest/icon-sm.webp",
     "mascotPath": "/apps/medicquest/mascot.webp",
-    "mentor": "Doc",
+    "mentor": "Cura",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MedicQuest's 5-character cast embodies the foundational medical-literacy primitives per AAP 2024 + NHES 1-8 + WHO Health Literacy Framework — symptom-noticing-without-alarm (Notice), clinical-history-taking + questioning (Ask), body-autonomy + consent (Boundary), help-seeking from a trusted adult (Tell), and wellness-as-multi-factor-system (Whole). Cura (mentor; DUAL-RESOLVE rename from code-side 'Mentor' generic placeholder + site 'Doc' on Wave 25 brief pre-reserve-AVOID list — too on-the-nose for medical domain — → Cura, Latin: care; classical-academic register parallel to Veritas; non-religious) frames each primitive; cast embodies them at school-nurse / family-doctor-visit / community-health-fair scale (NEVER ER-doctor / specialist-surgeon / medical-celebrity framing). Medical-trauma gate enforced (CRITICAL — STRONGEST in Wave 25 + among-strongest portfolio-wide): cast NEVER assumes health-normalcy (1 in 5 adolescents has chronic illness per AAP 2024); cast NEVER positions any body as 'normal' vs 'abnormal'; cast NEVER references weight / calories / body-composition / 'fitness level' anywhere; static-response gating for self-harm + ED + abuse signals routes to crisis-resources (988 + NEDA 1-800-931-2237 + Childhelp 1-800-422-4453 + Crisis Text Line HOME-741741 + RAINN 1-800-656-4673). Body-image gate inherits FitQuest Wave 24 + DanceQuest Wave 14 verbatim. Illness-anxiety gate: Notice's design counter-codes hypochondria. Pharma-skepticism balance gate. Body-autonomy + abuse-recognition gate: kit 7 carries mandatory-reporter-relevant content per RAINN + Childhelp guidance — FULL trauma-informed protocol. External sensitivity reviewer envelope $2,000-$3,800 cumulative (NEDA + RAINN + Childhelp + adolescent-medicine + comparative-religion-for-health-belief) — HIGHEST PRIORITY in Wave 25.",
+      "members": [
+        { "name": "Notice", "role": "Symptom-noticing without alarm — most symptoms are minor + temporary; notice without catastrophizing" },
+        { "name": "Ask", "role": "Clinical-history-taking + questioning — your questions are MEDICAL EVIDENCE; never feel silly asking" },
+        { "name": "Boundary", "role": "Body-autonomy + consent — your body is YOURS; ask-first is universal; pangolin curl-pose models self-protection-as-positive" },
+        { "name": "Tell", "role": "Help-seeking from a trusted adult — telling is the most powerful medical move (shared design language with SafetyForge Wave 24 Tell — cross-app continuity)" },
+        { "name": "Whole", "role": "Wellness-as-multi-factor-system — health is sleep + food + movement + relationships + meaning + safety; never single-factor; explicit health-equity foregrounding" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CASEL",
@@ -4275,6 +4323,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/newsforge/icon-sm.webp",
     "mascotPath": "/apps/newsforge/mascot.webp",
     "mentor": "Scoop",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "NewsForge's 5-character cast embodies the foundational news-literacy practices per News Literacy Project Five Filters + Stanford SHEG Civic Online Reasoning + SIFT (Stop / Investigate / Find / Trace) frameworks — source-evaluation (Source), bias-and-perspective detection (Tilt), headline-and-framing craft (Frame), verification + lateral-reading discipline (Verify), and community-information-needs framing (Serve). Scoop (mentor preserved) frames each primitive; cast embodies them at school-newspaper / neighborhood-newsletter / community-info scale (NEVER national-press-corps framing). Doomscroll-anxiety gate enforced (CRITICAL — co-strongest Wave 25 burden): cast NEVER amplifies catastrophizing; Serve's structural presence from kit 5 onward names 'what can my reader DO with this?' as load-bearing question. Misinformation harm gate: ALL examples ABSTRACT or FICTIONAL (per Lewandowsky 2024). Political-neutrality gate: NO real-politician archetypes; NO party color-coding; Tilt's bias work is STRUCTURAL not PARTISAN. External sensitivity reviewer with journalism-pedagogy + adolescent-news-mental-health expertise REQUIRED before Wave 25.2 art generation.",
+      "members": [
+        { "name": "Source", "role": "Source-quality evaluation — who would KNOW this best? who has a stake? source-card-comparison the routine" },
+        { "name": "Tilt", "role": "Bias-and-perspective detection — every story has a frame; name the frame, then read; structural NOT partisan" },
+        { "name": "Frame", "role": "Headline-and-framing craft — a headline is a SUMMARY not a HOOK; counter-clickbait" },
+        { "name": "Verify", "role": "Verification + lateral-reading discipline — SIFT (Stop, Investigate, Find, Trace); open four tabs, never one" },
+        { "name": "Serve", "role": "Community-information-needs framing — what does my reader NEED to know to DO something? agency-foregrounding; counter-doomscroll" }
+      ]
+    },
     "implementing": true,
     "standards": [
       "CCSS ELA",
@@ -6052,6 +6111,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/truthquest/icon-sm.webp",
     "mascotPath": "/apps/truthquest/mascot.webp",
     "mentor": "Veritas",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TruthQuest's 5-character cast embodies the foundational epistemic practices per Stanford SHEG Civic Online Reasoning + News Literacy Project + Lewandowsky 2024 prebunking framework — claim-identification (Claim), credibility-evaluation (Weigh), evidence-traceback (Trace), belief-revision (Update), and epistemic-humility (Wonder). Veritas (mentor preserved; Latin 'truth'; non-religious classical-philosophy register) frames each primitive; cast embodies them at school-research / family-dinner-claim-checking / community-rumor scale (NEVER professional-fact-checker / PhD-philosopher framing). Conspiracy-content trauma gate enforced (CRITICAL — STRONGEST in Wave 25 alongside MedicQuest medical-trauma): cast NEVER engages specific real conspiracy theories — ALL examples FICTIONAL or ABSTRACT structural-analogs (per Lewandowsky 2024 prebunking-via-structural-analog recommendation). Trust-erosion gate enforced: cast NEVER drifts into 'trust nothing' cynicism; Wonder carries 'trust CALIBRATED to evidence + source' framing. Religious-belief sensitivity gate: cast distinguishes EMPIRICAL from BELIEF claims (kit 12); fictional-religion examples ONLY. External sensitivity reviewer with epistemology-pedagogy + adolescent-conspiracy-resistance + comparative-religion expertise REQUIRED before Wave 25.2 art generation.",
+      "members": [
+        { "name": "Claim", "role": "Claim-identification — what EXACTLY is being asserted? distinguish claim from opinion from feeling from prediction" },
+        { "name": "Weigh", "role": "Credibility-evaluation — who's in a position to KNOW? what stake? calibration not verdict (shared design language with DebateForge Weigh)" },
+        { "name": "Trace", "role": "Evidence-traceback — where does this claim ORIGINATE? what's the chain? open four tabs; follow it back" },
+        { "name": "Update", "role": "Belief-revision — being WRONG is how knowledge MOVES; visibly carry old-guess and new-guess as data (shared design language with DebateForge Yield)" },
+        { "name": "Wonder", "role": "Epistemic-humility — 'I don't know yet' is the START of knowing; trust calibrated to evidence; counter-cynicism" }
+      ]
+    },
     "implementing": true,
     "standards": [
       "CCSS ELA",
