@@ -1368,6 +1368,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/digquest/icon-sm.webp",
     "mascotPath": "/apps/digquest/mascot.webp",
     "mentor": "Trowel",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "DigQuest's 5-character cast embodies the foundational archaeology-and-cultural-context primitives — stratigraphic context (Layer), artifact-typological analysis (Shape), dating techniques (Past), cultural-context inference (Keep), and community-partnership ethics (Ask). Trowel (mentor) frames each primitive; cast embodies them at youth-archaeology-club scale (NEVER Indiana-Jones / treasure-hunter / pith-helmet-colonialism register). Cultural-archaeology gate enforced (STRONGEST Wave 17 sensitivity burden): NAGPRA + UNDRIP-grounded framing; Ask co-introduces with Keep at kit 7 as the cluster's ethical anchor.",
+      "members": [
+        { "name": "Layer", "role": "Stratigraphic context — where in the layered earth? (vertical chronology, context integrity)" },
+        { "name": "Shape", "role": "Artifact-typological analysis — what family of object? (comparative typology, craft traditions)" },
+        { "name": "Past", "role": "Dating techniques — when by which method? (dates as ranges with confidence intervals)" },
+        { "name": "Keep", "role": "Cultural-context inference — keep-what-people-said, not invent-what-they-must-have-meant" },
+        { "name": "Ask", "role": "Community-partnership ethics — whose story is this and who gets to tell it? (NAGPRA + UNDRIP-grounded, descendant-community partnership)" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -2083,6 +2094,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/fossilforge/icon-sm.webp",
     "mascotPath": "/apps/fossilforge/mascot.webp",
     "mentor": "Amber",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "FossilForge's 5-character cast embodies the foundational paleontology-and-deep-time primitives — taxonomic classification (Seam), deep-time chronology (Span), morphological evolution (Branch), paleoenvironment reconstruction (Field), and extinction-event reasoning (Last). Professor Petra (mentor; site label 'Amber') frames each primitive; cast embodies them at museum-paleontology-club scale (NEVER extinction-spectacle / climate-doom register). Deep-time framing gate enforced: cast frames extinctions with both awe and grief; cross-app cameo registered with EcoSphere Wave 11 Brink.",
+      "members": [
+        { "name": "Seam", "role": "Taxonomic + fossil-type classification — family-resemblance-matching (what KIND of organism?)" },
+        { "name": "Span", "role": "Deep-time + geological chronology — scale-of-scales (WHEN did this organism live?)" },
+        { "name": "Branch", "role": "Morphological adaptation + evolutionary change — branching-not-laddering" },
+        { "name": "Field", "role": "Paleoenvironment + ecosystem reconstruction — fossils-as-a-place-story" },
+        { "name": "Last", "role": "Mass extinctions + extinction-event reasoning — witness-and-choose (cross-app cameo with EcoSphere Brink)" }
+      ]
+    },
     "implementing": true,
     "standards": [
       "ISTE",
@@ -4836,6 +4858,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/riddlerealm/icon-sm.webp",
     "mascotPath": "/apps/riddlerealm/mascot.webp",
     "mentor": "Cryptic",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "RiddleRealm's 5-character cast embodies the foundational riddle-craft primitives — wordplay (Twist), logic + lateral thinking (Aha), math + number riddles (Reckon), visual + spatial riddles (Pan), and mystery + synthesis (Yarn). Cryptic (mentor) frames each primitive; cast embodies them at puzzle-club / brain-teaser-tutor scale (NEVER Mensa-test / IQ-gatekeeping register). 'I don't get it yet' anxiety gate enforced: Aha's catchphrase normalizes slow-solving as productive cognitive state.",
+      "members": [
+        { "name": "Twist", "role": "Wordplay riddles — puns, homophones, semantic misdirection (fair-trick framing)" },
+        { "name": "Aha", "role": "Logic riddles — patient frame-finding; 'I don't get it yet' = productive cognitive state" },
+        { "name": "Reckon", "role": "Math + number riddles — sequences, hidden constraints, numeric patterns" },
+        { "name": "Pan", "role": "Visual + spatial riddles — picture puzzles, perspective rotation" },
+        { "name": "Yarn", "role": "Mystery + detective + synthesis riddles — multi-step narrative with fair-planted clues" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -5011,6 +5044,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/sleuthlab/icon-sm.webp",
     "mascotPath": "/apps/sleuthlab/mascot.webp",
     "mentor": "Inspector Vex",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "SleuthLab's 5-character cast embodies the foundational forensic-science evidence-type primitives — impression evidence (Loop), trace evidence (Fiber), chemical evidence (Drop), document analysis (Stroke), and biological + digital evidence (Witness). Inspector Vex (mentor; code-side name 'Inspector Kit') frames each primitive; cast embodies them at school-detective-club / junior-forensics-team scale (NEVER hardboiled-noir / CSI-procedural register). Investigation-bias gate enforced: cast models evidence-based reasoning over hunch; foregrounds 'what would change your mind?' epistemic humility.",
+      "members": [
+        { "name": "Loop", "role": "Impression evidence — fingerprints, shoeprints, toolmarks (class vs individual evidence)" },
+        { "name": "Fiber", "role": "Trace evidence — fibers, hairs, paint, glass (Locard's exchange principle)" },
+        { "name": "Drop", "role": "Chemical evidence — chromatography, pH, spectroscopy (test-don't-guess)" },
+        { "name": "Stroke", "role": "Document analysis — handwriting, ink, paper (comparison methodology)" },
+        { "name": "Witness", "role": "Biological + digital evidence — DNA + digital footprints (statistical-match, not certainty)" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
