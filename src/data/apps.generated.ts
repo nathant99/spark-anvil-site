@@ -361,7 +361,18 @@ export const apps: AppData[] = [
     "heroColor": "#29B6F6",
     "iconPath": "/apps/bridgeforge/icon-sm.webp",
     "mascotPath": "/apps/bridgeforge/mascot.webp",
-    "mentor": "Span",
+    "mentor": "Archie",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "BridgeForge's 5-character cast embodies the foundational cross-curricular-bridging connective primitives — math↔science (Truss, causal-evidential), math↔art (Arch, proportion-aesthetic), math↔social-studies (Pier, data-narrative), math↔ELA (Splice, structure-metaphor), and math↔music (Cable, ratio-temporal). Archie (mentor; renamed from site placeholder 'Span' to resolve soft collision with FossilForge Wave 17 cast Span + match code-side style guide) frames each primitive; cast embodies them at school-engineering-team / community-design-studio scale. Bridge-rigor gate enforced: cast models defensible specific connections over surface-level rhyming; foregrounds 'at what level of abstraction does this bridge hold?' rigor; explicit math-side AND domain-side evidence required.",
+      "members": [
+        { "name": "Truss", "role": "Math↔Science bridges — causal-evidential connection (measurement + replication; both sides need numbers)" },
+        { "name": "Arch", "role": "Math↔Art bridges — proportion-aesthetic connection (golden ratio + symmetry; math you can SEE)" },
+        { "name": "Cable", "role": "Math↔Music bridges — ratio-temporal connection (frequency ratios + rhythm; math you can HEAR)" },
+        { "name": "Pier", "role": "Math↔Social-Studies bridges — data-narrative connection (statistics in history + civics; numbers + people)" },
+        { "name": "Splice", "role": "Math↔ELA bridges — structure-metaphor connection (sequence + symmetry in writing; math is the bones)" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NGSS",
@@ -885,7 +896,18 @@ export const apps: AppData[] = [
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/claimcraft/icon-sm.webp",
     "mascotPath": "/apps/claimcraft/mascot.webp",
-    "mentor": "Warrant",
+    "mentor": "Logos",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ClaimCraft's 5-character cast embodies the foundational argumentation primitives — claim (Posit, asserting-for-testing), evidence (Heft, weighing-with-care), warrant (Lean, connective-reasoning), counterargument (Counter, opponent-taking-seriously), and fallacy (Pry, trap-spotting starting with your own arguments). Logos (mentor; renamed from site placeholder 'Warrant' — which collided with the cast warrant-primitive role taken by Lean — to match code-side style guide) frames each primitive; cast embodies them at school-debate-club / community-forum scale. Epistemic-doubt gate enforced (CRITICAL): cast scaffolds reasoning between cynicism ('trust no one') and relativism ('all claims equal'); foregrounds 'what would change your mind?' as load-bearing question; cross-app inherits investigation-bias-safe register from SleuthLab Wave 17 + AI-ethics from AIForge Wave 13 + 18-fallacy catalogue from LogicQuest Wave 1.",
+      "members": [
+        { "name": "Posit", "role": "Claim — asserting-for-testing posture (claim is a card on the table, not a fortress)" },
+        { "name": "Heft", "role": "Evidence — weighing-with-care posture (weight matters more than count)" },
+        { "name": "Lean", "role": "Warrant — connective-reasoning posture (the BECAUSE between evidence + claim)" },
+        { "name": "Counter", "role": "Counterargument — opponent-taking-seriously posture (best version of the other side strengthens yours)" },
+        { "name": "Pry", "role": "Fallacy — trap-spotting posture (check YOUR argument first; 18-fallacy catalogue)" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -1342,7 +1364,18 @@ export const apps: AppData[] = [
     "heroColor": "#29B6F6",
     "iconPath": "/apps/dataforge/icon-sm.webp",
     "mascotPath": "/apps/dataforge/mascot.webp",
-    "mentor": "Data",
+    "mentor": "Datum",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "DataForge's 5-character cast embodies the foundational data-pipeline primitives — collection (Catch, who/what/why/when), cleaning (Tidy, documented choices), visualization (Graph, shape-of-the-story), interpretation (Tell, correlation-vs-causation), and ethics (Guard, bias-privacy-harm-consent — structurally present in every kit from kit 6 onward). Datum (mentor; renamed from 'Data' to resolve mentor-vs-curriculum collision per Wave 21 brief — Latin singular 'one data point' carries humility + ethics-foregrounding) frames each primitive; cast embodies them at school-data-club / community-data-journalism scale. Data-ethics gate enforced (CRITICAL): cast NEVER frames data collection as neutral; foregrounds 'data is collected by someone, for a purpose'; bias enters at every step; cross-app inherits AI-ethics register from AIForge Wave 13 (mandatory Stake-Guard + Feed-Catch coordination).",
+      "members": [
+        { "name": "Catch", "role": "Data collection — who-what-why-when posture (every dataset has a collector + purpose + omissions)" },
+        { "name": "Tidy", "role": "Data cleaning — preparation-with-integrity posture (every cleaning choice changes meaning; document the choices)" },
+        { "name": "Graph", "role": "Data visualization — shape-of-the-story posture (which chart tells the truth, not the loudest one)" },
+        { "name": "Tell", "role": "Interpretation — correlation-not-causation posture (data shows patterns; humans interpret; confidence not certainty)" },
+        { "name": "Guard", "role": "Data ethics — bias-privacy-harm-consent posture (who benefits, who's harmed, who decided; structurally present in every kit from kit 6)" }
+      ]
+    },
     "implementing": true,
     "standards": [
       "NGSS",
@@ -4939,7 +4972,18 @@ export const apps: AppData[] = [
     "heroColor": "#4A6FA5",
     "iconPath": "/apps/researchquest/icon-sm.webp",
     "mascotPath": "/apps/researchquest/mascot.webp",
-    "mentor": "Source",
+    "mentor": "Scholar",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ResearchQuest's 5-character cast embodies the foundational research-method primitives — question-formulation (Wonder), source-evaluation (Vet, CRAAP test), note-taking (Quote, quoting + paraphrasing + summarizing), synthesis (Synth, across multiple sources), and citation (Tether, attribution + bibliography). Scholar (mentor; renamed from site placeholder 'Source' to resolve Wave 21 'too on-the-nose' exclusion + match code-side style guide) frames each primitive; cast embodies them at school-research-club / public-library-volunteer scale. 'I'm not a real scientist' anxiety gate enforced: cast normalizes that kids ARE researchers when they investigate; foregrounds curiosity over credential; cross-app inherits investigation-bias-safe register from SleuthLab Wave 17.",
+      "members": [
+        { "name": "Wonder", "role": "Question-formulation — narrowing vague interest into focused, answerable research questions" },
+        { "name": "Vet", "role": "Source-evaluation — CRAAP test (Currency, Relevance, Authority, Accuracy, Purpose)" },
+        { "name": "Quote", "role": "Note-taking — quoting + paraphrasing + summarizing; keeping voices separate" },
+        { "name": "Synth", "role": "Synthesis — combining evidence across multiple sources; finding agreement, disagreement, gaps" },
+        { "name": "Tether", "role": "Citation — attribution + bibliography; gratitude + map back to sources" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CCSS ELA",
