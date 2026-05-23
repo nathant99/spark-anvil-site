@@ -1,0 +1,85 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps } from '~/data/apps.generated';
+const totalApps = apps.length;
+---
+
+<BaseLayout
+  title="Mission"
+  description="Educational software for kids 5-14 should be free, ad-free, tracking-free, and built with care. We're a non-profit (pending) building 138 apps that take that seriously."
+>
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-12">
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
+      Educational software, in service of kids.
+    </h1>
+    <p class="text-xl text-anvil/70 dark:text-warm/70 leading-relaxed">
+      Spark &amp; Anvil exists to build educational iOS apps for kids ages 5-14 that respect
+      their attention, protect their privacy, and trust their intelligence. We're restructuring
+      as a non-profit so this mission can outlast any individual product cycle.
+    </p>
+  </section>
+
+  <!-- Mission / Vision / Values -->
+  <section class="max-w-4xl mx-auto px-6 py-8 space-y-12">
+    <div>
+      <h2 class="font-brand font-bold text-2xl text-forge mb-3">Mission</h2>
+      <p class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+        Build, ship, and steward a portfolio of educational iOS apps that are <strong>free
+        forever</strong>, <strong>standards-aligned</strong>, <strong>COPPA-compliant by
+        construction</strong>, and <strong>designed for face-to-face play</strong> between kids
+        and the adults around them.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="font-brand font-bold text-2xl text-forge mb-3">Vision</h2>
+      <p class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+        A world where every kid age 5-14 has access to thoughtful, kind, rigorous educational
+        software — without ads, without tracking, without subscription, without compromise. The
+        apps belong to the kids. The mission belongs to the public.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="font-brand font-bold text-2xl text-forge mb-3">Values</h2>
+      <ul class="space-y-3 text-anvil/80 dark:text-warm/80 leading-relaxed">
+        <li><strong>Kids first.</strong> Every design decision starts with the kid's experience and developmental fit.</li>
+        <li><strong>Free forever.</strong> We don't paywall learning. Mission revenue (donations, grants, school licenses) keeps the apps free.</li>
+        <li><strong>Trauma-informed by default.</strong> Apps touching heavy content (loss, conflict, identity) follow SAMHSA TIP 57 principles + external sensitivity review.</li>
+        <li><strong>Family-cohesion-aware.</strong> Pass-and-play modes invite parent + sibling + grandparent into the play moment.</li>
+        <li><strong>Open about how we work.</strong> Public methodology (distributed-narrative, on-device AI), public docs, public annual report.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- The portfolio in one paragraph -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-12">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">{totalApps} apps, one mission</h2>
+      <p class="text-anvil/80 dark:text-warm/80 leading-relaxed mb-4">
+        From cipher-breaking to chess pins, from co-regulation breathing to vocabulary games to
+        biome ecology — {totalApps} apps share one chunky-cartoon visual language, one
+        on-device-AI substrate, one COPPA-by-construction privacy posture, and one
+        distributed-narrative pedagogy that lets named characters embody specific curricular
+        concepts.
+      </p>
+      <p>
+        <a href="/apps" class="underline hover:text-forge">Browse the apps →</a>
+        <span class="ml-4"><a href="/method" class="underline hover:text-forge">How distributed-narrative works →</a></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-3xl mx-auto px-6 py-16 text-center">
+    <p class="text-anvil/70 dark:text-warm/70 mb-6 leading-relaxed">
+      The pivot from indie studio to non-profit is in motion. The work continues. The apps stay free.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="/donate" class="btn-primary">Support the mission →</a>
+      <a href="/board" class="btn-secondary">Meet the board →</a>
+      <a href="/impact" class="btn-secondary">See the impact →</a>
+    </div>
+  </section>
+</BaseLayout>

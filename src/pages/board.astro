@@ -1,0 +1,94 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Board"
+  description="The Spark & Anvil board of directors + advisory board. Recruiting through 2026; current composition reflects fiscal-sponsorship phase."
+>
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-12">
+    <span class="inline-block px-3 py-1 mb-4 bg-anvil/10 dark:bg-warm/15 text-anvil dark:text-warm text-xs font-bold uppercase tracking-wider rounded-full">Recruiting</span>
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
+      Board of Directors
+    </h1>
+    <p class="text-xl text-anvil/70 dark:text-warm/70 leading-relaxed">
+      Spark &amp; Anvil's governance board steers the organization's mission, finances, and
+      strategic direction. We're recruiting a 3-5-person founding board through 2026. Interested
+      in serving? <a href="mailto:board@spark-and-anvil.com" class="underline hover:text-forge">board@spark-and-anvil.com</a>.
+    </p>
+  </section>
+
+  <!-- Founding board (placeholders) -->
+  <section class="max-w-5xl mx-auto px-6 py-8">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-6">Founding Board</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Founder seat (filled) -->
+      <article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-forge">
+        <div class="w-20 h-20 rounded-full bg-forge text-warm flex items-center justify-center font-brand font-bold text-3xl mb-3">
+          NT
+        </div>
+        <div class="font-brand font-bold text-anvil dark:text-warm mb-1">Nathan Tran</div>
+        <div class="text-xs text-forge font-bold uppercase tracking-wider mb-2">Founder &middot; Board Chair</div>
+        <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug">
+          Designer, engineer, and primary maker behind the 138-app portfolio. Background in iOS
+          + Swift + education-product design.
+        </p>
+      </article>
+
+      <!-- Open seats -->
+      {[
+        { focus: 'Education / Pedagogy', why: 'K-12 educator, school district leader, or learning-sciences researcher to anchor the curriculum-fidelity perspective.' },
+        { focus: 'Non-profit Finance / Governance', why: 'CFO / treasurer with non-profit experience to chair audit + finance committee; understanding of fiscal-sponsorship phase + 1023 process.' },
+        { focus: 'Family / Child Development', why: 'Pediatric, developmental psych, or family-systems voice — load-bearing for the trauma-informed + pass-and-play work.' },
+        { focus: 'Diversity / Equity / Access', why: 'Title-I + multilingual + accessibility lens. Pushes the org to keep the portfolio reaching kids beyond early-adopter households.' },
+      ].map(seat => (
+        <article class="bg-anvil/5 dark:bg-warm/5 rounded-2xl p-5 border-2 border-dashed border-anvil/20 dark:border-warm/25">
+          <div class="w-20 h-20 rounded-full bg-anvil/10 dark:bg-warm/15 flex items-center justify-center font-brand font-bold text-2xl text-anvil/40 dark:text-warm/40 mb-3">
+            ?
+          </div>
+          <div class="font-brand font-bold text-anvil dark:text-warm mb-1">Open seat</div>
+          <div class="text-xs text-anvil/60 dark:text-warm/60 font-bold uppercase tracking-wider mb-2">{seat.focus}</div>
+          <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug">{seat.why}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Advisory board (placeholder) -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-12">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">Advisory Board</h2>
+      <p class="text-anvil/70 dark:text-warm/70 mb-6 leading-relaxed">
+        Separately from the governance board, an advisory group provides subject-matter expertise
+        without fiduciary duty. We're recruiting advisors with deep expertise in:
+      </p>
+      <ul class="grid sm:grid-cols-2 gap-3 text-sm text-anvil/80 dark:text-warm/80">
+        <li>· COPPA + ed-privacy law (state-level + federal)</li>
+        <li>· Foundation funding (former program officers welcome)</li>
+        <li>· District procurement + EdTech licensing</li>
+        <li>· iOS / Swift / SwiftUI / on-device AI</li>
+        <li>· Trauma-informed digital design (SAMHSA / NCTSN voices)</li>
+        <li>· Distributed-narrative + learning-sciences research</li>
+        <li>· Indigenous knowledge sovereignty + cultural sensitivity review</li>
+        <li>· Pediatric SEL + family-cohesion research</li>
+      </ul>
+      <p class="mt-6 text-anvil/70 dark:text-warm/70">
+        Email <a href="mailto:board@spark-and-anvil.com" class="underline hover:text-forge">board@spark-and-anvil.com</a> with interest.
+      </p>
+    </div>
+  </section>
+
+  <!-- Governance posture -->
+  <section class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4">Governance posture</h2>
+    <ul class="space-y-3 text-sm text-anvil/80 dark:text-warm/80 leading-relaxed">
+      <li><strong>Term limits:</strong> 3-year terms; max 2 consecutive terms.</li>
+      <li><strong>Quarterly meetings.</strong> Founder reports + financial review + risk + strategic items.</li>
+      <li><strong>Independence:</strong> minimum 50% independent (no employment / contracts with the organization).</li>
+      <li><strong>Conflicts of interest:</strong> annual disclosure; conflicted members recuse on relevant votes.</li>
+      <li><strong>Compensation:</strong> board service is unpaid. Travel + reasonable expenses reimbursed.</li>
+      <li><strong>Transparency:</strong> minutes (redacted as appropriate) published with annual report.</li>
+    </ul>
+  </section>
+</BaseLayout>
