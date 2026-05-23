@@ -6386,7 +6386,6 @@ export const apps: AppData[] = [
         "description": "Adjust magma composition (silica and gas content) to control eruption style. Low silica creates gentle Hawaiian-style lava flows. High silica and high gas conte"
       }
     ],
-    "mentor": "Geo",
     "hasUserGuide": true,
     "modes": {
       "learn": 3,
