@@ -23,22 +23,28 @@ export const trustSignals = [
   'Designed for face-to-face play',
 ];
 
+// Top-level nav — kept lean (Hick's law / Miller's 7±2) per
+// `labsmith/Docs/AUDIT_SPARK_ANVIL_SITE_NAV_AND_ENGAGEMENT.md` (queue #266).
+// "For Families" is a dropdown group. Demoted to footer-only: /mascots,
+// /method, /mission, /impact, /board, /annual-report, /press, /privacy, /terms.
 export const nav = [
   { href: '/', label: 'Home' },
   { href: '/apps', label: 'Apps' },
-  { href: '/classes', label: 'Classes' },
-  { href: '/teach', label: 'Teach' },
-  { href: '/for-parents', label: 'For Parents' },
-  { href: '/for-educators', label: 'For Educators' },
-  { href: '/mascots', label: 'Mascots' },
   { href: '/cast', label: 'Cast' },
   { href: '/play-together', label: 'Play Together' },
-  { href: '/method', label: 'Method' },
-  { href: '/mission', label: 'Mission' },
-  { href: '/donate', label: 'Donate' },
+  {
+    href: '/for-parents',
+    label: 'For Families',
+    children: [
+      { href: '/for-parents', label: 'For Parents' },
+      { href: '/for-educators', label: 'For Educators' },
+      { href: '/classes', label: 'Classes' },
+      { href: '/teach', label: 'Teach' },
+    ],
+  },
   { href: '/about', label: 'About' },
   { href: '/news', label: 'News' },
-  { href: '/press', label: 'Press' },
+  { href: '/donate', label: 'Donate', cta: true },
 ];
 
 export const verticals = [

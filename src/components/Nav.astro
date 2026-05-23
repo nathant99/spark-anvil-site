@@ -3,6 +3,9 @@ import { nav, site } from '~/data/site';
 
 const { pathname } = Astro.url;
 const items = nav.slice(1);  // skip "Home" — logo links there
+
+type NavChild = { href: string; label: string };
+type NavItem = { href: string; label: string; cta?: boolean; children?: NavChild[] };
 ---
 
 <header class="border-b border-anvil/10 dark:border-warm/15 bg-warm/80 dark:bg-anvil/80 backdrop-blur sticky top-0 z-50">
@@ -12,17 +15,62 @@ const items = nav.slice(1);  // skip "Home" — logo links there
     </a>
 
     <!-- Desktop nav -->
-    <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
-      {items.map(item => (
-        <a
-          href={item.href}
-          class={`text-sm font-medium hover:text-forge dark:hover:text-forge-light transition-colors ${
-            pathname === item.href ? 'text-forge dark:text-forge-light' : 'text-anvil dark:text-warm'
-          }`}
-        >
-          {item.label}
-        </a>
-      ))}
+    <nav class="hidden md:flex items-center gap-5" aria-label="Primary">
+      {(items as NavItem[]).map(item => {
+        const active = pathname === item.href || (item.children?.some(c => c.href === pathname));
+        if (item.cta) {
+          return (
+            <a
+              href={item.href}
+              class="px-4 py-2 bg-forge hover:bg-forge/90 text-warm text-sm font-bold rounded-full transition-colors"
+            >
+              {item.label}
+            </a>
+          );
+        }
+        if (item.children) {
+          return (
+            <div class="relative group">
+              <button
+                type="button"
+                class={`flex items-center gap-1 text-sm font-medium hover:text-forge dark:hover:text-forge-light transition-colors ${
+                  active ? 'text-forge dark:text-forge-light' : 'text-anvil dark:text-warm'
+                }`}
+                aria-haspopup="true"
+              >
+                {item.label}
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                </svg>
+              </button>
+              <div class="absolute right-0 top-full mt-1 min-w-[180px] bg-warm dark:bg-anvil border border-anvil/10 dark:border-warm/15 rounded-lg shadow-md p-1 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity">
+                {item.children.map(child => (
+                  <a
+                    href={child.href}
+                    class={`block px-3 py-2 rounded text-sm font-medium ${
+                      pathname === child.href
+                        ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light'
+                        : 'text-anvil dark:text-warm hover:bg-anvil/5 dark:hover:bg-warm/10'
+                    }`}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          );
+        }
+        return (
+          <a
+            href={item.href}
+            class={`text-sm font-medium hover:text-forge dark:hover:text-forge-light transition-colors ${
+              active ? 'text-forge dark:text-forge-light' : 'text-anvil dark:text-warm'
+            }`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
     </nav>
 
     <!-- Mobile hamburger button -->
@@ -52,20 +100,58 @@ const items = nav.slice(1);  // skip "Home" — logo links there
     aria-label="Mobile primary"
   >
     <ul class="max-w-6xl mx-auto px-6 py-4 space-y-1">
-      {items.map(item => (
-        <li>
-          <a
-            href={item.href}
-            class={`block px-3 py-3 rounded-lg font-brand font-bold text-lg ${
-              pathname === item.href
-                ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light'
-                : 'text-anvil dark:text-warm hover:bg-anvil/5 dark:bg-warm/5 dark:hover:bg-warm/10'
-            }`}
-          >
-            {item.label}
-          </a>
-        </li>
-      ))}
+      {(items as NavItem[]).map(item => {
+        if (item.children) {
+          return (
+            <li>
+              <details class="group">
+                <summary class={`flex items-center justify-between px-3 py-3 rounded-lg font-brand font-bold text-lg cursor-pointer ${
+                  item.children.some(c => c.href === pathname)
+                    ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light'
+                    : 'text-anvil dark:text-warm'
+                }`}>
+                  {item.label}
+                  <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-open:rotate-180 transition-transform" aria-hidden="true">
+                    <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                  </svg>
+                </summary>
+                <ul class="pl-3 mt-1 space-y-1">
+                  {item.children.map(child => (
+                    <li>
+                      <a
+                        href={child.href}
+                        class={`block px-3 py-2 rounded-lg text-base ${
+                          pathname === child.href
+                            ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light font-bold'
+                            : 'text-anvil/80 dark:text-warm/80 hover:bg-anvil/5 dark:hover:bg-warm/10'
+                        }`}
+                      >
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </li>
+          );
+        }
+        return (
+          <li>
+            <a
+              href={item.href}
+              class={`block px-3 py-3 rounded-lg font-brand font-bold text-lg ${
+                item.cta
+                  ? 'bg-forge text-warm hover:bg-forge/90'
+                  : pathname === item.href
+                  ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light'
+                  : 'text-anvil dark:text-warm hover:bg-anvil/5 dark:bg-warm/5 dark:hover:bg-warm/10'
+              }`}
+            >
+              {item.label}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   </nav>
 </header>
@@ -84,7 +170,7 @@ const items = nav.slice(1);  // skip "Home" — logo links there
     iconClose?.classList.toggle('hidden', !isOpen);
   });
 
-  // Close drawer when a link is tapped (mobile navigation pattern)
+  // Close drawer when a leaf link is tapped (mobile navigation pattern)
   drawer?.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       drawer.classList.add('hidden');
