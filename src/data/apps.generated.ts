@@ -7084,6 +7084,15 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/countingpals/mascot.webp",
     "mentor": "Calc Jr",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CountingPals's 3-character supporting cast (Wave 29 — Younger Cluster Variant; ages 5-7) embodies early-math primitives as concrete-physical math-friends — one-to-one tap-counting (Tappa), same-sized-hops counting (Hop), grouping + same-vs-different (Pile). Following the MotifLab Wave 7 hero-as-protagonist pattern adapted for ages 5-7, Calc Jr (calculator-monster mascot + AI math coach) remains the protagonist + math-garden host; cast members are math-garden friends Calc Jr visits with the kid. Cast fades by kit 7 so kit 8 (reflection) is the kid's own counting work. Catchphrases ≤6 words repeated identically (`One thing. One number.` / `Same hop. Every time.` / `Same goes with same.`). CRITICAL math-anxiety prevention gate: no character ever says wrong / incorrect / try harder; no time-pressure on counting; counting is for thinking not racing; no kid-to-kid comparisons. Parent co-play affordance: cast intros explicitly invite grown-ups. Tappa replaces initially-proposed Counta per HARD collision with DiscreteQuest Wave-4 squirrel-cast Counta. Hop SOFT-collision with WitQuest Wave 22 cast Hop allowed per registry rule 3 (different role / domain / visual register; flag for cross-app audio-context audit).",
+      "members": [
+        { "name": "Tappa", "role": "One-to-one correspondence — soft russet squirrel-kid who taps each item as she counts; trail of glowing number-dots above each tapped item" },
+        { "name": "Hop", "role": "Same-sized jumps / early addition seed — cream-and-grey rabbit-kid whose hops are always exactly the same length; visible dotted-line jump-arcs as equal arcs" },
+        { "name": "Pile", "role": "Grouping + same-vs-different — plump warm-amber hedgehog-kid who scoops + groups + piles things into matching bunches; tidy piles of 3s + 4s + 5s on color-coded sorting-mat" }
+      ]
+    },
     "standards": [
       "CCSS Math.K.CC",
       "CCSS Math.1.OA"
@@ -7133,6 +7142,15 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/huggyhabits/mascot.webp",
     "mentor": "Hug",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "HuggyHabits's 3-character supporting cast (Wave 29 — Younger Cluster Variant; ages 5-7) embodies daily-wellness routine primitives as concrete-physical routine-friends — bedtime winding-down (Snooze), brushing + hygiene (Scrub), body-movement breaks (Bounce). Following the MotifLab Wave 7 hero-as-protagonist pattern adapted for ages 5-7, Hug (cuddly bear-hug mascot + AI wellness coach) remains the protagonist + warm-wrap-around-every-routine; cast members are routine-time friends. Daily-use app — cast does NOT fully fade (kit 7-8 transitions them from teacher to companion since daily routine practice IS the use case). Catchphrases ≤6 words pairing action with feel-good payoff (`Slow down. Tuck in.` / `Brush brush. All clean.` / `Bounce a little. Feel good.`). CRITICAL gates: no shame on skipped routines (cast frames missed-day as invitation never correction); streak-broken UI shows `Welcome back!` never `streak ended`; body-image gate — no character ever comments on body shape / weight / food quantity; movement promoted as feel-good never appearance-tied. Parent co-play affordance + local-only `show your grown-up` celebration. Bounce replaces initially-proposed Wiggle per intra-Wave-29 collision with BugsCamp earthworm-cast Wiggle.",
+      "members": [
+        { "name": "Snooze", "role": "Bedtime + winding-down — pale-cream sloth-kid in footed pajamas with stars; pillow tucked under arm; warm-amber nightlight glow" },
+        { "name": "Scrub", "role": "Brushing + handwashing + bath — soft russet otter-kid in waterproof apron + rubber boots; chunky pastel toothbrush + tiny soap; bubble sparkles" },
+        { "name": "Bounce", "role": "Body movement + active breaks — warm-amber fox-kit in soft athletic-tee + chunky sneakers; rainbow scarf flowing as bounce-trail; motion-dotted lines" }
+      ]
+    },
     "standards": [
       "CASEL Self-Management",
       "SHAPE America Pre-K Health",
@@ -7158,6 +7176,15 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/bugscamp/mascot.webp",
     "mentor": "Beetle",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "BugsCamp's 3-character supporting cast (Wave 29 — Younger Cluster Variant inaugural; ages 5-8) embodies early-naturalism observation primitives as concrete-physical garden-friends — surface-walking observation (Crawl), hidden-discovery observation (Wiggle), partial-view observation (Peek). Following the MotifLab Wave 7 hero-as-protagonist pattern adapted for ages 5-8, Beetle (ladybug-naturalist mascot + AI nature coach) remains the protagonist + in-frame star; cast members are FRIENDS Beetle visits in different garden corners. Cast fades by kit 7 so kit 8 (reflection) is the kid's own observation journal. Catchphrases ≤6 words repeated identically each appearance (`Look slow. See more.` / `Lift a leaf. Surprise!` / `I see a wing. What is it?`) — kid memorizes catchphrase before underlying skill. CRITICAL gates: vocabulary appropriate for ages 5-8 (no observation / specimen / habitat jargon); gentle correction never wrong-as-failure (every wrong-tap is co-exploration invitation); Parent Companion mode with grown-up tips per kit; hero-mascot Beetle stays in-frame ≥50% of every cast scene. No trauma-informed depth needed at this age (scope explicitly gentle — no death / predation / extinction at this age). Visual repetition IS the methodology — same recurring posture + color + catchphrase = recognition.",
+      "members": [
+        { "name": "Crawl", "role": "Surface-walking observation — soft mint-green snail-kid with cream shell-swirl + tiny lantern + magnifying-bead; crawls slowly across screens; trail of footprint-dots" },
+        { "name": "Wiggle", "role": "Hidden-discovery observation — plump glossy-russet earthworm-tween in soft-yellow safety vest; head + tail-tip visible above soil-line; ? sparkles around discoveries" },
+        { "name": "Peek", "role": "Partial-view observation — soft cream-and-warm-brown sparrow-tween in tiny moss-green hood; always half-hidden behind chunky leaf or flower; one round eye + one wing-tip visible" }
+      ]
+    },
     "standards": [
       "NGSS K-2 LS",
       "NGSS K-2 ESS",
@@ -7183,6 +7210,15 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/melodymice/mascot.webp",
     "mentor": "Squeak",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MelodyMice's 3-character supporting cast (Wave 29 — Younger Cluster Variant; ages 5-7) embodies early-music primitives as concrete-physical mouse-band mates — steady beat / rhythm-keeping (Tap-Tap), call-and-response melody (Sing-Back), instrument exploration + timbre (Shaky). Following the MotifLab Wave 7 hero-as-protagonist pattern adapted for ages 5-7, Squeak (mouse-musician mascot + AI music coach) remains the protagonist + band-leader; cast members are MOUSE-BAND MATES (same species family for visual cohesion). Cast fades by kit 8 (cast-farewell — kid composes/plays tiny song with Squeak alone). Catchphrases ≤6 words pairing action with invitation (`Steady beat. Keep going.` / `I sing. You sing.` / `New sound. Try it.`). CRITICAL music-anxiety prevention gate: no pitch-accuracy gating on Sing-Back (kids 5-7 sing what they hear; pitch-graded feedback IS the shame-vector); no beat-precision gating on Tap-Tap (tapping at all is success state); celebrate participation never accuracy; no off-key / wrong-note framing ever. Kit 7 (Songs from Around the World) is cultural-credit-led — cast PLAYS source-community songs but framing copy credits communities by name (cast NEVER speaks from any cultural tradition). Voice-recording features deferred to v2 per COPPA + 2026 amendments. Sing-Back replaces initially-proposed Echo per 3rd-instance audio-context collision (ActiveForge Coach Echo + FunctionForge constant-Echo).",
+      "members": [
+        { "name": "Tap-Tap", "role": "Steady beat / rhythm-keeping — soft cream-and-grey field-mouse-kid in striped overalls + chunky boots; visible tap-tap-tap sound-dots from foot; tiny tambourine clipped to belt" },
+        { "name": "Sing-Back", "role": "Call-and-response — warm-russet dormouse-kid in soft acorn-cap + bowtie; musical-note sparkles from mouth on call; hand cupped behind ear on response-wait" },
+        { "name": "Shaky", "role": "Instrument exploration + timbre — soft warm-amber harvest-mouse-kid in pocketed overalls full of mini-instruments; different instrument in paw each scene; shake/ring/boom sparkles match active instrument" }
+      ]
+    },
     "standards": [
       "NCAS MU.K-2.Cr1",
       "NCAS MU.K-2.Re1"
