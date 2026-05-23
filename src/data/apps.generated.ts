@@ -2207,6 +2207,18 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/focusforge/mascot.webp",
     "mentor": "Anchor",
     "implementing": true,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "FocusForge's 6-character cast embodies EXECUTIVE-FUNCTION DOMAINS as CAPACITIES-not-GAPS per Wave 28 DN retrofit (Wave 15 retry): Hold (working memory) / Wait (inhibitory control) / Pivot (cognitive flexibility) / Map (planning + organization) / Begin (task initiation) / Clock (time awareness). Anchor (the existing AI mentor) introduces and references each EF domain. ADHD-shame gate enforced (CRITICAL — STRONGEST Wave 28 burden per Mautone 2024 + Hai 2025 + CHADD 2024): cast NEVER says 'you should focus better' / 'try harder' / 'stop being distracted'; cast frames every skill as a CAPACITY to BUILD never a GAP to FILL; NO before/after character pairs (broken-clock / scrambled-brain visuals REJECTED); neurodivergent-affirming voice baseline ('ADHD is a way your brain works, not a flaw' / 'all brains have to learn these skills'); static-response gating for shame signals ('I can't focus' / 'I'm broken' / 'my brain doesn't work') NEVER reaches FoundationModels — Anchor surface filter routes to neurodivergent-affirming reply; kit 6 + kit 10 carry off-ramp affordances per SAMHSA TIP 57; no second-person imperative catchphrases ever — all first-person modeling. KitMetadata.castAllowed flag required for any DIR-FEDC-capacity-1-sensitive kit; cast pacing respects DIR-FEDC attention duration. External CHADD-affiliated or pediatric-ADHD-clinician sensitivity reviewer STRONGLY RECOMMENDED ($800-$1,200). Soft collision with ReadQuest Wave 5 Anchor cast member allowed per registry rule 3 (mentor vs cast; different domain).",
+      "members": [
+        { "name": "Hold", "role": "Working memory — keeping a thing in mind while you use it; cast literally cups an orb that pulses gently" },
+        { "name": "Wait", "role": "Inhibitory control — the pause between impulse and action; cast treats the pause as a skill, NEVER a moral test" },
+        { "name": "Pivot", "role": "Cognitive flexibility — switching strategies / reframing; cast treats plan-change as INTERESTING not catastrophic" },
+        { "name": "Map", "role": "Planning + organization — breaks ANY task into chunks; never says 'you should already know how'" },
+        { "name": "Begin", "role": "Task initiation — the hardest part is the first second; cast is gentle never-pushy (rejected: Spark — brand collision; Lift-Off — verbosity)" },
+        { "name": "Clock", "role": "Time awareness — time as a felt sense the learner can BUILD; never says 'you should know how long this takes'" }
+      ]
+    },
     "standards": [
       "DIR/FEDC Capacity 1",
       "CASEL",
@@ -3222,6 +3234,17 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/inclusionforge/mascot.webp",
     "mentor": "Beacon",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "InclusionForge's 5-character cast embodies ALLY-MOVE PRACTICES not PEOPLE per Wave 28 DN retrofit (Wave 15 retry): Lens (perspective-taking) / Notice (barrier-identification) / Ask (consent + amplify) / Design (Universal Design) / Repair (repair-and-reflect). Beacon (the existing AI mentor) introduces and references each ally-move. Identity-representation gate enforced (CRITICAL — second-most-careful Wave 28 burden per Annamma 2024 DisCrit + ASAN 2024 + Sayman 2025): NO cast character represents a specific identity group; all 5 are non-human animals embodying PRACTICES never PEOPLE; NO real-cultural-leader-names as cast (no MLK / Mandela / Marsha-P-Johnson / Judy-Heumann / Ed-Roberts / Haben-Girma archetypes); multidimensional-identity baseline per Crenshaw 1991 intersectionality (race × gender × class × disability × age × culture × religion — NO single-axis-identity scenarios). Real identity representation lives in kit illustrations of historical figures (Judy Heumann / Ed Roberts / Justin Dart Jr. / Haben Girma / Stella Young — authored with cultural-credit framing + community-sourced references), Beacon's mentor copy for kits 3 / 7 / 9 / 11 (history + cultural-awareness + allyship), and Perspective Mode scenarios with community-source citation. Cast NEVER speaks AS or FOR any identity group. Kits 3 / 7 / 9 are CAST-FREE (real historical figures + cultural-awareness content — community voices lead). External disability-community + intersectional-identity sensitivity reviewer STRONGLY RECOMMENDED ($800-$1,500). Mend rejected (RuptureRepair mentor collision) → Repair.",
+      "members": [
+        { "name": "Lens", "role": "Perspective-taking — asking + listening, NEVER mind-reading; 'I can't BE you. But I can ASK what it's like.'" },
+        { "name": "Notice", "role": "Barrier-identification — barriers as PROPERTIES OF SPACES never PROPERTIES OF PEOPLE; 'It's not the wheel. It's the stair.'" },
+        { "name": "Ask", "role": "Ask-don't-assume + amplify — makes SPACE for voices, never replaces them; 'What would feel right TO YOU? I'll listen.'" },
+        { "name": "Design", "role": "Universal Design — multi-modal solutions; never one-size-fits-most; 'Three doors. Different doors. All doors.'" },
+        { "name": "Repair", "role": "Repair-and-reflect — mistakes as PART OF the work; never self-flagellating (renamed from Mend — RuptureRepair mentor collision)" }
+      ]
+    },
     "standards": [
       "CASEL",
       "NGSS Health"
@@ -6057,6 +6080,17 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/taleforge/mascot.webp",
     "mentor": "Loom",
     "implementing": true,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TaleForge's 5-character cast embodies STORYTELLING PRIMITIVES (NOT real cultural traditions) per LoreQuest Wave 5 mythic-distance precedent — Hook scaffolds opening-as-contract, Spine scaffolds character-as-tension (wants vs fears vs contradictions), Bough scaffolds world-coherence-as-promise, Echoes scaffolds voice-as-listening, Glimmer scaffolds revision-as-second-look. Loom (the existing AI collaborative mentor) introduces and references each primitive. Cultural-representation gate enforced (CRITICAL — load-bearing for TaleForge in Wave 28): world-building drifts EASILY into appropriation; cast establishes MYTHIC DISTANCE via fantasy primitives ONLY (NO kimono / kente / headdress / specific national dress / real religious symbols / named real deities); cast NEVER speaks AS or FROM any real-world cultural tradition; real cultural-tradition appreciation lives in kit 11 (Adaptation + Transmedia) with EXPLICIT community-source citation per `.claude/rules/trauma-informed-content.md`. AI NPC generation guardrails MUST include static-response gating for 'make my world's people EXACTLY like [real culture]' prompts → routes to 'let's invent something INSPIRED by that, and credit the inspiration'. Cast pronouns 'they/them'; all 5 non-human in invented-fantasy garb. External cultural-sensitivity reviewer RECOMMENDED ($500-$800) for kit 7 (Genre Writing — touches real cultural genres) + kit 11 (Adaptation). Bough SOFT collision with LinguaQuest Wave 5 cast allowed per registry rule 3 (different role / domain / visual register).",
+      "members": [
+        { "name": "Hook", "role": "Story elements — opening as contract with the reader; the first line is a promise; 'Make me lean in. Then keep me leaning.'" },
+        { "name": "Spine", "role": "Character creation — character-as-tension (wants × fears × contradictions); 'Every character has a NO they keep saying YES to.'" },
+        { "name": "Bough", "role": "World-building — coherence-rules-as-promises-the-world-keeps; what the world ALWAYS does + NEVER does (SOFT collision with LinguaQuest Bough — different role/domain/visual)" },
+        { "name": "Echoes", "role": "Voice + dialogue — voice as listening-craft NOT inherited-by-birth; if two characters could say it, neither one really did" },
+        { "name": "Glimmer", "role": "Revision + reflection — first draft as DATA not failure; the second look that makes the first attempt useful" }
+      ]
+    },
     "standards": [
       "CCSS ELA",
       "C3 Social Studies",
@@ -6229,6 +6263,17 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/trailforge/mascot.webp",
     "mentor": "Ranger",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TrailForge's 5-character cast embodies OUTDOOR-SKILL PRIMITIVES + LAND-RESPECT framing — Way scaffolds orientation-as-reading-what's-already-there, Shelter scaffolds insulation-as-three-walls (wind + cold-ground + rain), Watch scaffolds weather-as-conversation-already-happening, Tend scaffolds body-priority-order (water → warmth → food), Listen scaffolds trail-as-already-known + land-respect. Ranger (the existing AI mentor) introduces and references each primitive. Land-relationship gate enforced (CRITICAL — load-bearing for TrailForge in Wave 28 per Whyte 2024 + Kimmerer 2013 + Indigenous Environmental Network 2024): trail / outdoor content unavoidably touches Indigenous land-stewardship traditions; cast NEVER speaks AS or FROM any Indigenous tradition; Listen's catchphrase ('this trail isn't mine; it was here first') scaffolds tween-appropriate respect-the-trail framing WITHOUT appropriating Indigenous TEK; real Indigenous TEK attributed in KIT METADATA only with proper source citation per Indigenous-led peer-reviewed sources. Cast pronouns 'they/them'; all 5 non-human in generic outdoor-tween garb (NO specific cultural textile / scout-organization uniform / military camo / Indigenous regalia — Listen's wrap is ABSTRACT geometric pattern). Wilderness-emergency content (kit 4 first-aid + kit 13 signaling-rescue + kit 14 winter survival) carries off-ramp affordances + content warnings + base-rate framing ('most wilderness experiences are safe and joyful — these skills are for the rare moment they're needed'). Tend SOFT collision with CreatureCare Wave 18 + ForgePortal Wave 27 + Listen SOFT collision with OriginForge Wave 23 — both DELIBERATELY shared cross-cluster design language; allowed per registry rule 3. External Indigenous-TEK + outdoor-safety-pedagogy sensitivity reviewer RECOMMENDED ($300-$500) for kit 5 (plants) + kit 8 (LNT) + kit 12 (terrain-specific).",
+      "members": [
+        { "name": "Way", "role": "Navigation + orienteering — reading-what's-already-there orientation; 'Stop. Look. Find one thing you know. Now you have a starting point.'" },
+        { "name": "Shelter", "role": "Shelter-building + warmth — three-walls insulation (wind / cold-ground / rain)" },
+        { "name": "Watch", "role": "Weather reading + observation — sky-as-conversation-already-happening; notice the moment it changes" },
+        { "name": "Tend", "role": "Water + plants + body-care — survival-as-attentiveness to body priority-order (water first, then warmth, then food); DELIBERATELY shared design with CreatureCare + ForgePortal Tend" },
+        { "name": "Listen", "role": "Trail-listening + land-respect — every trail was here before you; credit the source; leave no trace; DELIBERATELY shared design with OriginForge Listen" }
+      ]
+    },
     "standards": [
       "ISTE",
       "Common Sense Privacy"
