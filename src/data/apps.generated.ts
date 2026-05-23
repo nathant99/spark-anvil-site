@@ -2954,6 +2954,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/improvquest/icon-sm.webp",
     "mascotPath": "/apps/improvquest/mascot.webp",
     "mentor": "Riff",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ImprovQuest's 5-character cast embodies the foundational improv-comedy primitives — yes-and / offer-acceptance (Give, make-your-partner-look-good posture), listening (Hark, the-answer-is-in-what-they-said discipline), character work (Don, body-finds-voice physicality), scene-building (Lay, platform-before-plot patience), and risk-tolerance (Leap, your-worst-commit-beats-your-best-half-commit). Riff (mentor; soft-collision with StageForge Wave 14 cast Riff allowed per registry rule 4 — different role + register) frames each primitive; cast embodies them at school-improv-club / community-improv-jam scale (NEVER stand-up-comedy-tryout / SNL-audition / 'are you funny enough' gatekeeping). Social-anxiety + performance-anxiety gate enforced: cast NEVER positions improv as competitive; Give's 'make your partner look good' is structurally load-bearing across every cast appearance; static-response gating for 'I'm not funny' anxiety signals; cooperative ensemble framing over individual virtuosity throughout.",
+      "members": [
+        { "name": "Give", "role": "Yes-and / offer-acceptance — make-your-partner-look-good cooperative posture (the gift-orb metaphor)" },
+        { "name": "Hark", "role": "Listening — receiving-before-responding discipline (the answer is in what your partner just said)" },
+        { "name": "Don", "role": "Character work + physicality — body-finds-voice, find-ONE-thing approach" },
+        { "name": "Lay", "role": "Scene-building + narrative — patient platform-before-plot foundation-laying (who/where/what/why)" },
+        { "name": "Leap", "role": "Risk-tolerance + commitment — leap-and-the-net-appears; worst-commit-beats-best-half-commit" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NCAS",
@@ -3085,6 +3096,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/jestforge/icon-sm.webp",
     "mascotPath": "/apps/jestforge/mascot.webp",
     "mentor": "Quip",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "JestForge's 5-character cast embodies the foundational comedy-craft primitives — joke structure (Plant, setup-and-payoff plant-and-harvest architecture), wordplay (Bend, semantic-twist + double-meaning), timing (Pause, the-laugh-lives-in-the-space discipline), audience awareness (Gauge, read-the-room-before-you-joke), and cross-cultural humor (Trove, honor-the-tradition-don't-claim-it elder-keeper). Quip (mentor) frames each primitive; cast embodies them at school-comedy-club / community-open-mic-warmup-circle scale (NEVER comedy-club-headliner / late-night-show / 'is it funny enough' gatekeeping). Punching-down gate enforced (CRITICAL): cast NEVER mocks identity / body / disability / mental health; comedy structurally punches UP (at systems, at universal absurdity, at the comedian's own foibles) NEVER DOWN (at people who can't laugh back); static-response gating for targeted-humor prompts. Timing-shame gate enforced: Pause's catchphrase normalizes that timing is learned; no innate-talent framing. Cross-cultural humor (kit 7+) gated on Trove's anti-cultural-appropriation register.",
+      "members": [
+        { "name": "Plant", "role": "Joke structure — plant-the-seed-in-the-setup / harvest-the-laugh architecture" },
+        { "name": "Pause", "role": "Comedic timing — the-laugh-lives-in-the-space patient-restraint discipline" },
+        { "name": "Bend", "role": "Wordplay + puns — semantic-twist + double-meaning (groans are the laugh you didn't expect)" },
+        { "name": "Gauge", "role": "Audience awareness — read-the-room-before-you-joke; same-you-different-gauge framing" },
+        { "name": "Trove", "role": "Cross-cultural humor — honor-the-tradition-don't-claim-it elder-keeper of comedy-traditions-as-equals" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -3172,6 +3194,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/levelforge/icon-sm.webp",
     "mascotPath": "/apps/levelforge/mascot.webp",
     "mentor": "Pixel",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "LevelForge's 5-character cast embodies the foundational game-level-design primitives — level architecture (Carve, where-does-the-eye-go-first spatial-flow), player psychology (Coax, invite-don't-trap warm-host posture), juice + feedback (Bounce, tiny-celebrations empathy-polish), playtesting + iteration (Probe, what-did-they-DO-not-SAID listening-discipline), and difficulty curves (Ramp, teach-test-vary-rest deliberate-difficulty-as-love-letter). Pixel (mentor) frames each primitive; cast embodies them at school-game-dev-club / indie-jam-team scale (NEVER AAA-studio-crunch / 'soulslike-hard-only' / 'real games are difficult' gatekeeping). Frustration-design gate enforced (CRITICAL — UNIQUE to LevelForge): cast models deliberate-difficulty as CARE-FOR-PLAYER NEVER PUNISH-PLAYER; foregrounds playtester empathy; static-response gating for 'make it harder' surface requests; Probe's playtester-quote primacy structurally anti-auteurism. Difficulty-shame gate: frustration is INFORMATION not failure; Coax's 'invite, don't trap' is load-bearing across every cast appearance.",
+      "members": [
+        { "name": "Carve", "role": "Level architecture — where-does-the-eye-go-first spatial-flow + sight-line + landmark craft" },
+        { "name": "Coax", "role": "Player psychology — invite-don't-trap; warm-host posture; player chooses forward" },
+        { "name": "Bounce", "role": "Juice + feedback — tiny-celebrations; squash-stretch-shake-thunk; juice as empathy" },
+        { "name": "Probe", "role": "Playtesting + iteration — what-they-DID-not-SAID listening-discipline; playtester-over-designer-taste" },
+        { "name": "Ramp", "role": "Difficulty curves — teach-test-vary-rest; deliberate-difficulty-as-love-letter; never-spike never-punish" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
