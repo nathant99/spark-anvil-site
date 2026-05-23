@@ -1867,7 +1867,7 @@ export const apps: AppData[] = [
     "vertical": "steam",
     "distributedNarrative": true,
     "dnCast": {
-      "intro": "EnsembleQuest's 5-character cast embodies the collaboration moves a cooperative-arts ensemble needs. Designed for autistic learners; cast inherits dual-palette autism-aware art and a collaboration-shame gate that ensures the cast always models repair + invitation, never clique behavior.",
+      "intro": "EnsembleQuest's 5-character cast embodies the collaboration moves a cooperative-arts ensemble needs. Designed for autistic and other neurodivergent learners; cast inherits dual-palette autism-aware art and a collaboration-shame gate that ensures the cast always models repair + invitation, never clique behavior.",
       "members": [
         { "name": "Part", "role": "Role-holding — knowing what MY part is, separate from but supporting the whole" },
         { "name": "Turn", "role": "Turn-taking — the rhythm of give-and-receive across an ensemble" },
@@ -2321,7 +2321,7 @@ export const apps: AppData[] = [
   {
     "slug": "focusforge",
     "name": "FocusForge",
-    "tagline": "A gamified executive function training adventure for students ages 9-14, with specific design for ADHD learners. Players build study skills through six EF domains: working memory, inhibitory control, cognitive flexibility, planning/organization, task initiation, and time awareness.",
+    "tagline": "A gamified executive function training adventure for students ages 9-14, with specific design for ADHD and other neurodivergent learners. Players build study skills through six EF domains: working memory, inhibitory control, cognitive flexibility, planning/organization, task initiation, and time awareness.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/focusforge/icon-sm.webp",
@@ -2631,7 +2631,7 @@ export const apps: AppData[] = [
   {
     "slug": "framequest",
     "name": "FrameQuest",
-    "tagline": "Frame-by-frame animation creation that turns autistic preferences for precision and sequencing into creative storytelling. Players build stop-motion animations that practice social scenarios -- setting up characters, capturing frames, sequencing timelines, and narrating stories. The animation process itself builds fine motor skills, sequential thinking, and emotional understanding.",
+    "tagline": "Frame-by-frame animation creation that turns neurodivergent preferences for precision and sequencing — drawing especially on autistic pattern-recognition strengths — into creative storytelling. Players build stop-motion animations that practice social scenarios -- setting up characters, capturing frames, sequencing timelines, and narrating stories. The animation process itself builds fine motor skills, sequential thinking, and emotional understanding.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/framequest/icon-sm.webp",
@@ -3062,7 +3062,7 @@ export const apps: AppData[] = [
   {
     "slug": "harmonyforge",
     "name": "HarmonyForge",
-    "tagline": "A music creation app that leverages autistic pattern-thinking strengths by translating visual patterns into music. Players arrange colors, shapes, and positions on a grid -- the pattern IS the music. Includes sensory-safe environments, emotion vocabulary tools, and therapist observer mode.",
+    "tagline": "A music creation app that leverages neurodivergent (especially autistic) pattern-thinking strengths by translating visual patterns into music. Players arrange colors, shapes, and positions on a grid -- the pattern IS the music. Includes sensory-safe environments, emotion vocabulary tools, and therapist observer mode.",
     "vertical": "steam",
     "heroColor": "#E91E63",
     "iconPath": "/apps/harmonyforge/icon-sm.webp",
@@ -5922,7 +5922,7 @@ export const apps: AppData[] = [
   {
     "slug": "spectrumcanvas",
     "name": "SpectrumCanvas",
-    "tagline": "A digital art studio designed for autistic visual thinkers where every art material is simulated without the sensory challenges of the physical version. Watercolor, charcoal, clay, and collage -- all with adjustable texture feedback, sound, and visual intensity. Includes social story illustration tools and an emotion palette that maps feelings to colors.",
+    "tagline": "A digital art studio designed for autistic and other neurodivergent visual thinkers where every art material is simulated without the sensory challenges of the physical version. Watercolor, charcoal, clay, and collage -- all with adjustable texture feedback, sound, and visual intensity. Includes social story illustration tools and an emotion palette that maps feelings to colors.",
     "vertical": "dir-fedc",
     "heroColor": "#E91E63",
     "iconPath": "/apps/spectrumcanvas/icon-sm.webp",
@@ -6209,7 +6209,7 @@ export const apps: AppData[] = [
   {
     "slug": "synaforge",
     "name": "SynaForge",
-    "tagline": "A bidirectional creative tool where drawing produces music and music produces visual art -- simultaneously. Inspired by synesthesia, a neurological phenomenon reported at higher rates among autistic individuals, SynaForge lets children explore the hidden connections between what they see and what they hear through customizable cross-modal mappings and guided explorations.",
+    "tagline": "A bidirectional creative tool where drawing produces music and music produces visual art -- simultaneously. Inspired by synesthesia, a neurological phenomenon reported at higher rates among autistic and other neurodivergent individuals, SynaForge lets children explore the hidden connections between what they see and what they hear through customizable cross-modal mappings and guided explorations.",
     "vertical": "dir-fedc",
     "heroColor": "#81C784",
     "iconPath": "/apps/synaforge/icon-sm.webp",
@@ -6251,7 +6251,7 @@ export const apps: AppData[] = [
         }
       ]
     },
-    "longTagline": "SynaForge is a visual-music synesthesia creative tool for autistic children ages 9-14 where drawing produces music and music produces visual art simultaneously. Players explore the connection between color, shape, and sound through bidirectional cross-modal mappings they can customize at any time.",
+    "longTagline": "SynaForge is a visual-music synesthesia creative tool for autistic and other neurodivergent children ages 9-14 where drawing produces music and music produces visual art simultaneously. Players explore the connection between color, shape, and sound through bidirectional cross-modal mappings they can customize at any time.",
     "features": [
       {
         "name": "How to Use",

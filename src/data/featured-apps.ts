@@ -42,7 +42,7 @@ export const featured: FeaturedApp[] = [
   {
     slug: 'focusforge',
     name: 'FocusForge',
-    tagline: 'ADHD-friendly executive-function practice in 10-minute sessions.',
+    tagline: 'Neurodivergent-affirming executive-function practice in 10-minute sessions (designed for ADHD focus).',
     vertical: 'dir-fedc',
     heroColor: '#FF8A65',
   },
