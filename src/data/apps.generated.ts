@@ -6757,6 +6757,17 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/rupturerepair/mascot.webp",
     "mentor": "Mend",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "RuptureRepair's 5-character cast (Wave 30 — Heart-Harbor relational cluster; standard methodology + trauma-informed) embodies the foundational rupture-repair protocol-step primitives — notice harm (See-It), acknowledge (Sorry), name impact (Felt), offer repair (Offer), re-engage (Together). Mend (needle-and-thread witness-stance mascot) frames each step; cast embodies them at peer-to-peer / family-dyad / classroom-relational scale (NEVER 'best-practice-perfect-repair' / 'fix-the-relationship' / 'sorry-fixes-everything' framing). HEAVIEST Wave 30 sensitivity burden — 4 critical gates: (1) self-blame-shame (catchphrase `I see what I did. Or what landed.` explicitly includes `or what landed` so acknowledgment ≠ admission-of-guilt); (2) power-difference kit-9 (when other person has power over kid, FIRST move is trusted-adult, NOT offer-repair; RAINN + Childhelp surfaces); (3) cultural-credit kit-10 (NEVER mascotizes any tradition; framing copy credits Hawaiian ho'oponopono / Lakota + Diné restorative circles / Japanese kintsugi / Buddhist apology / Jewish teshuvah / Christian reconciliation / Restorative Justice / Nonviolent Communication BY NAME); (4) mandatory-reporter kit-11 (persistent crisis-resource affordance; static-response gating routes self-harm + abuse signals to 988 + Childhelp 1-800-422-4453 + RAINN 1-800-656-4673 + Crisis Text Line HOME-741741; NEVER reaches FoundationModels). External-reviewer envelope $1.8K-$3.1K cumulative (RAINN + Childhelp + cross-cultural-repair + Indigenous-knowledges + adolescent-mental-health). See-It (hyphenated) replaces initially-proposed Notice per Wave 29 codified 3rd-instance audio-context threshold (InclusionForge + CuriosityQuest + MedicQuest already hold Notice variants). Together SOFT-paired-character pattern with TempCheck Both (same wave; allowed; flag for audio-context audit). Cross-app cameo opportunity Sorry ↔ CoRegRealm warm-acknowledgment move (deferred Wave 30.5).",
+      "members": [
+        { "name": "See-It", "role": "Notice harm — soft warm-russet deer-tween in chunky moss-green vest; ears literally perked + eyes wide + one hoof raised mid-step; doesn't pretend not to see what just happened" },
+        { "name": "Sorry", "role": "Acknowledge — soft cream-and-amber otter-tween in chunky soft-blue scarf; palms-up open-hands level bow-pose (NOT cringe); treats acknowledgment as skill, never proof of badness" },
+        { "name": "Felt", "role": "Name-impact — round soft-grey-and-cream badger-tween with tiny notebook + soft-charcoal pencil; mid-listening with head tilted; never assumes — always asks-then-listens" },
+        { "name": "Offer", "role": "Offer-repair — warm-amber raccoon-tween with chunky-paw extended palm-up holding small soft hand-folded paper-crane (universal not specific cultural symbol); never grasping" },
+        { "name": "Together", "role": "Re-engage — two warm-cream-and-russet sparrow-twins on a single chunky branch, perched comfortable-distance-apart; both looking outward in same direction; `we're still here` energy" }
+      ]
+    },
     "standards": [
       "DIR/FEDC Capacities 5-6",
       "SAMHSA TIP 57",
@@ -6782,6 +6793,16 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/tempcheck/mascot.webp",
     "mentor": "Pulse",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TempCheck's 4-character cast (Wave 30 — Heart-Harbor relational cluster; standard methodology + trauma-informed) embodies the dyadic attunement-move primitives — noticing self (Pick), dyad-sync (Both), mismatch-as-data (Gap), growth-chart over time (Streak). Pulse (calm heart-shape listening-stance mascot) frames each move; cast embodies them at kid-caregiver / kid-teacher / kid-grandparent dyad scale (NEVER nuclear-family / single-dyad / `we should always match` framing — Gap structurally counter-codes this). 4 critical gates: (1) streak-shame prevention (Streak = pattern-over-time, NOT consecutive-day metric; NO daily-streak counter UI; growth-chart UI shows TYPES of cards over time, never X-day-streak; inherits HuggyHabits Wave 29 `Welcome back!` framing); (2) multi-caregiver isolation (per-dyad SwiftData partitioning; cast intro copy explicitly normalizes multiple dyads — `share with a parent, a grandparent, a teacher — anyone you trust`); (3) acute-risk static-response surfacing (kit 7 + Streak appearance shifts to supportive-not-celebratory when worried/sad pattern detected 3+ days; static-response gating routes to 988 + Crisis Text Line HOME-741741 + Childhelp; NEVER reaches FoundationModels); (4) body-image / appearance gate (affect-card library audit REQUIRED in Phase A — no body-shape / weight / food-quantity / appearance-metric cards; inherits FitQuest Wave 24 + DanceQuest Wave 14 verbatim). External adolescent-mental-health reviewer $500-$800 recommended pre-launch. Both SOFT-paired-character pattern with RuptureRepair Together (same wave; allowed; flag for audio-context audit). Voice-recording features deferred to v2 per COPPA + 2026 amendments (text + card-tap only).",
+      "members": [
+        { "name": "Pick", "role": "Noticing self — soft warm-coral rabbit-tween in chunky cream cardigan; tiny held-up affect-card; ears soft + not-tense; one paw tapping card-corner; treats card-picking as thinking-pause" },
+        { "name": "Both", "role": "Dyad-sync — two warm-cream hares mirror-paired with cards held up side-by-side; both facing same direction; happy-but-not-overjoyed (overlap is data, not victory)" },
+        { "name": "Gap", "role": "Mismatch-as-data — round warm-amber fox-tween in soft slate-blue vest holding chunky measuring-string between two cards; treats SPACE between picks as teaching artifact; never-frustrated, always-curious" },
+        { "name": "Streak", "role": "Growth-chart — tall soft-grey heron-elder in chunky charcoal vest reading long chart with hash-marks; wing pointing at time-axis; treats LONG pattern as whole skill, never single check-in as success-or-failure" }
+      ]
+    },
     "standards": [
       "DIR/FEDC Capacity 3",
       "CASEL Self-Awareness",
@@ -7060,6 +7081,15 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/tinyletters/mascot.webp",
     "mentor": "Pip Jr",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TinyLetters's 3-character supporting cast (Wave 30 — Younger Cluster Variant; ages 5-7) embodies emergent-phonics primitives as concrete-physical sound-friends — consonant-sounds (Huff), vowel-sounds (Loo), blend-sounds (Stick). Following the Wave 29 Younger Cluster Variant pattern (BugsCamp / CountingPals / HuggyHabits / MelodyMice), Pip Jr (younger sparrow sibling to LyricForge's Pip + AI phonics coach) remains the protagonist + phonics-garden host; cast members are phonics-garden friends Pip Jr visits at each sound-skill. Cast fades by kit 7 so kit 8 (reflection) is the kid's own decoding of a short book. Catchphrases ≤6 words repeated identically (`Quick sound. Like this.` / `Hold the sound. Sing it.` / `Stick them. Say them fast.`); each catchphrase is itself made of short decodable words — meta-pedagogically the catchphrases ARE the practice. CRITICAL phonics-shame prevention sub-gate: never call out a missed sound publicly; attempts-count is internal-only telemetry, never surfaced. Cast catchphrases sound-evocative (Huff = puff; Loo = long-vowel hoot; Stick = glue-them-together). Gentle-correction-only feedback (no wrong-sound red-flash; co-exploration invitations). Parent co-play affordances required — grown-ups model the puff / hold / stretch-and-snap gestures. All 3 names new to registry (no collisions).",
+      "members": [
+        { "name": "Huff", "role": "Consonant sounds — soft pale-blue bunny-kid in coral scarf; literally puffs a soft cloud-shape for each consonant sound; treats each sound as gentle quick exhale" },
+        { "name": "Loo", "role": "Vowel sounds — soft warm-amber owl-kid in tiny moss-green hood; HOLDS each vowel sound by hooting it slowly with visible long sound-wave; conductor-cue wing tip for hold-along" },
+        { "name": "Stick", "role": "Blend sounds — tiny warm-russet squirrel-kid in cream apron full of letter-tiles + tiny pot of soft-honey `sound glue`; sticks letter-tiles together then says the blended word; treats blending as hand-craft anyone can practice" }
+      ]
+    },
     "standards": [
       "CCSS Foundations.RF.K-2",
       "CCSS RL.K-2"
@@ -7117,6 +7147,15 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/taletrail/mascot.webp",
     "mentor": "Page",
     "implementing": false,
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "TaleTrail's 3-character supporting cast (Wave 30 — Younger Cluster Variant; ages 5-8) embodies story-stage primitives as concrete-physical story-friends — beginning-of-story (Once), middle-trouble (Bump), end-resolution (Tada). Following the Wave 29 Younger Cluster Variant pattern (BugsCamp / CountingPals / HuggyHabits / MelodyMice), Page (folded-paper mascot + AI narrative coach) remains the protagonist + storybook-trail host; cast members are story-trail friends Page visits at each story-stage. Cast fades by kit 7 so kit 8 (reflection) is the kid's own whole story. Catchphrases ≤6 words repeated identically (`Who lives here? Where?` / `Uh-oh! Now what?` / `Tada! We did it.`). Cast names are simple English words a 5-year-old already says. Catchphrases meta-pedagogically model the question every story-stage answers. All 3 names new to registry (no collisions); flag for cross-app audio-context audit none required. Gentle-correction-only feedback (no wrong-sequence red-flash; co-exploration invitations). Parent co-play affordances required — `with a grown-up` framing in all intro cards (especially kit 4 dictation where grown-up can scribe).",
+      "members": [
+        { "name": "Once", "role": "Beginning-of-story — plump cream-and-lavender field-mouse-kid in tiny `Once upon a time` pennant-vest; always carrying a tiny rolled scroll; treats BEGINNING as most-important-part" },
+        { "name": "Bump", "role": "Middle-trouble — round warm-russet turtle-kid in soft-yellow safety helmet; literally bumps into something on every screen; never sad about bumping, always curious" },
+        { "name": "Tada", "role": "End-resolution — tiny warm-amber hummingbird-kid in soft sparkle-cape; both wings spread wide in `Ta-da!` reveal; treats resolution as celebration never a stop" }
+      ]
+    },
     "standards": [
       "CCSS ELA.K.W",
       "CCSS RL.K-2",
