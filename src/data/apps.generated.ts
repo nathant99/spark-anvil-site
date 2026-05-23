@@ -1123,6 +1123,32 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 1,
     "iconHeroPath": "/apps/creaturecare/icon.webp",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CreatureCare's distributed-narrative cast embodies the 5 stages of veterinary workflow — observation, diagnosis, treatment, recovery, and welfare ethics — as 5 animal-partner characters Dr. Fern introduces across the 16 question kits. Welfare-ethics framing is foregrounded; the cast inherits the trauma-informed posture for animal-illness + end-of-life content.",
+      "members": [
+        {
+          "name": "Heed",
+          "role": "Patient assessment — the listener who treats observation as relationship, not data-gathering ('listen first, look second, then we know')"
+        },
+        {
+          "name": "Chart",
+          "role": "Diagnostics — the thoughtful pattern-finder who treats lab data as story-fragments ('numbers are notes; notes are not the song')"
+        },
+        {
+          "name": "Tend",
+          "role": "Treatment delivery — the steady-handed practitioner who foregrounds consent and explains procedures BEFORE doing them ('slow hands, calm voice, patient first')"
+        },
+        {
+          "name": "Knit",
+          "role": "Recovery + follow-up — the patient tortoise-elder who teaches that healing is slow and that's the point ('days come, bandages come off, walk again — not yet, soon')"
+        },
+        {
+          "name": "Bond",
+          "role": "Welfare ethics + animal-human relationship — the wise heron-elder who carries the welfare-ethics gate at the kit-12 capstone ('care is more than cure — sometimes care means stopping; always care means seeing')"
+        }
+      ]
+    },
     "longTagline": "CreatureCare lets you run your own animal hospital! Diagnose and treat animals using real veterinary techniques -- take temperatures, read X-rays, run blood tests, perform surgery mini-games, and watch your patients recover. This is real vet science, not just tapping to heal!",
     "features": [
       {
@@ -4004,6 +4030,32 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": null,
     "iconHeroPath": "/apps/neuralquest/icon.webp",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "NeuralQuest's distributed-narrative cast embodies the 5 decision points in the AI/ML pipeline — labeling, training, bias-check, generalization, ethics — as 5 lab-partner characters Sift introduces across the 16 question kits. The cast foregrounds AI bias-vigilance (Skew appears in every kit from 5 onward) and neurodivergent-affirming human cognition (no 'your brain is like a model' framing).",
+      "members": [
+        {
+          "name": "Tag",
+          "role": "Labeling — the cheerful labeler who treats every label as a human choice and meaning-making act ('every label is a choice — and you're the one making it')"
+        },
+        {
+          "name": "Drill",
+          "role": "Training loops — the focused practitioner who treats iteration as rhythm, not race; explicit teacher of when-to-stop ('once, again, again — different this time? Then again')"
+        },
+        {
+          "name": "Skew",
+          "role": "Bias + data fairness — the bias-vigilance anchor who always asks 'whose data is in here, whose is missing, who decided'; appears in every kit from kit 5 onward"
+        },
+        {
+          "name": "Veer",
+          "role": "Generalization vs overfit — the wandering scout who treats generalization as travel ('trained here, tested here — now go somewhere new, does it still know the way?')"
+        },
+        {
+          "name": "Weigh",
+          "role": "Ethics + decisions — the reflective elder who carries the ethics gate at the AI-in-society capstone ('can we build it? Yes. Should we? That's a different question')"
+        }
+      ]
+    },
     "longTagline": "NeuralQuest teaches you how artificial intelligence actually works -- by doing it yourself! Train image classifiers, build recommendation systems, discover bias in data, and explore AI ethics. You do not need to know how to code. You will learn by running real experiments in a virtual AI research la",
     "features": [
       {
@@ -5479,6 +5531,32 @@ export const apps: AppData[] = [
     "hasM9Accessories": true,
     "wave": 2,
     "iconHeroPath": "/apps/synaforge/icon.webp",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "SynaForge's distributed-narrative cast embodies the 5 cross-modal mapping families — color→sound, sound→color, kinesthetic-to-music, sensory-regulation, and bidirectional synthesis — as 5 sensory-low-stimulation animal-partner characters Chroma introduces ONLY in the 16 question kits (creative-sandbox modes stay cast-free per partial-DN pattern). The cast is autism-affirming in every framing decision: no 'right perception', no 'good vs bad creation', no scoring, no leaderboards.",
+      "members": [
+        {
+          "name": "Hue",
+          "role": "Color → sound — the moth-tween who treats every color as a sound waiting to be heard ('what color is this? Now what does it sound like to YOU?')"
+        },
+        {
+          "name": "Pitch",
+          "role": "Sound → color — the patient axolotl-tween who treats every sound as a color waiting to be seen ('there's no wrong answer')"
+        },
+        {
+          "name": "Brush",
+          "role": "Drawing-as-music — the focused sloth-tween who treats slowness as its own kind of music ('slow strokes, long sounds; fast strokes, short sounds — all correct')"
+        },
+        {
+          "name": "Lull",
+          "role": "Sensory regulation + panic-button companion — the hedgehog-elder who treats every overwhelm-moment as completely valid ('too much? Less is enough; quiet is also creating')"
+        },
+        {
+          "name": "Float",
+          "role": "Bidirectional synthesis — the manatee-tween who treats both-at-once as integration, not 'advanced' mode ('drawing makes music; music makes drawing; both, at the same time, going both ways')"
+        }
+      ]
+    },
     "longTagline": "SynaForge is a visual-music synesthesia creative tool for autistic children ages 9-14 where drawing produces music and music produces visual art simultaneously. Players explore the connection between color, shape, and sound through bidirectional cross-modal mappings they can customize at any time.",
     "features": [
       {
