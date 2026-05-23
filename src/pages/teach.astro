@@ -9,15 +9,17 @@ import { apps } from '~/data/apps.generated';
 >
   <!-- Hero -->
   <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
-    <span class="inline-block px-3 py-1 mb-4 bg-forge text-warm text-xs font-bold uppercase tracking-wider rounded-full">Now Recruiting — Early Pilot</span>
+    <span class="inline-block px-3 py-1 mb-4 bg-forge text-warm text-xs font-bold uppercase tracking-wider rounded-full">Now Recruiting — 501(c)(3) Early Pilot</span>
     <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
       Teach the apps your students already love.<br />
-      <span class="text-forge">Keep 85%.</span>
+      <span class="text-forge">Keep 100%.</span>
     </h1>
     <p class="text-xl text-anvil/70 dark:text-warm/70 leading-relaxed max-w-3xl">
-      Spark &amp; Anvil is building a curated teacher marketplace for live, small-group classes — using our
+      Spark &amp; Anvil is a 501(c)(3) non-profit teacher network for live, small-group classes — using our
       {apps.length} portfolio apps as the curriculum. We pre-define every class slot from a specific app's
-      curriculum and grade band. You bid on slots that match your expertise. You teach. You keep 85% of every dollar.
+      curriculum and grade band. You bid on slots that match your expertise. You teach.
+      <strong>You keep 100% of every dollar</strong> (minus the ~3% Stripe processing fee — same as any payment
+      processor). <strong>We take 0% — ever.</strong>
     </p>
 
     <div class="mt-8 flex flex-wrap gap-4">
@@ -25,15 +27,16 @@ import { apps } from '~/data/apps.generated';
       <a href="#how-it-works" class="btn-secondary">How it works</a>
     </div>
     <p class="mt-4 text-sm text-anvil/60 dark:text-warm/60 italic">
-      First 50 partners get paid pilot classes + founder access during 2026.
+      First 50 partners get paid pilot classes + founder access during 2026. 100% of class fees go directly to you.
+      Stripe Connect Direct Charges — same as any payment processor.
     </p>
   </section>
 
   <!-- Earnings comparison -->
   <section class="bg-anvil/5 dark:bg-warm/5 py-16">
-    <div class="max-w-4xl mx-auto px-6">
+    <div class="max-w-5xl mx-auto px-6">
       <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-8">Earnings comparison</h2>
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-white dark:bg-anvil/40 rounded-2xl p-6 border-2 border-anvil/15 dark:border-warm/20">
           <h3 class="font-brand font-bold text-xl text-anvil/60 dark:text-warm/60 mb-2">Outschool</h3>
           <div class="text-5xl font-brand font-bold text-anvil/60 dark:text-warm/60 mb-4">70<span class="text-2xl">%</span></div>
@@ -47,19 +50,33 @@ import { apps } from '~/data/apps.generated';
         </div>
         <div class="bg-forge text-warm rounded-2xl p-6 border-2 border-forge">
           <h3 class="font-brand font-bold text-xl text-warm mb-2">Spark &amp; Anvil</h3>
-          <div class="text-5xl font-brand font-bold text-warm mb-4">85<span class="text-2xl">%</span></div>
-          <p class="text-warm/90 leading-relaxed mb-4">to teacher (we keep 15% for platform + payments)</p>
+          <div class="text-5xl font-brand font-bold text-warm mb-4">100<span class="text-2xl">%</span></div>
+          <p class="text-warm/90 leading-relaxed mb-4">to teacher (we take 0%; Stripe ~3% direct)</p>
           <ul class="text-sm text-warm/90 space-y-1">
-            <li>• <strong>135 apps</strong> as your curriculum</li>
+            <li>• <strong>{apps.length} apps</strong> as your curriculum</li>
             <li>• <strong>Curated slots</strong> with built-in parent demand</li>
             <li>• <strong>We handle COPPA-2025</strong> + parental consent + state laws</li>
-            <li>• <strong>ForgeClassroom</strong>: live cohort sync inside the app + teacher dashboard + AI co-pilot</li>
+            <li>• <strong>ForgeClassroom</strong>: live cohort sync + teacher dashboard + AI co-pilot</li>
+            <li>• <strong>501(c)(3) non-profit</strong> — platform funded by foundations + donors</li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-anvil/40 rounded-2xl p-6 border-2 border-anvil/15 dark:border-warm/20">
+          <h3 class="font-brand font-bold text-xl text-anvil/60 dark:text-warm/60 mb-2">Khan Academy / Code.org</h3>
+          <div class="text-5xl font-brand font-bold text-anvil/60 dark:text-warm/60 mb-4">N/A</div>
+          <p class="text-anvil/70 dark:text-warm/70 leading-relaxed mb-4">no live-class marketplace; teacher = user / volunteer</p>
+          <ul class="text-sm text-anvil/70 dark:text-warm/70 space-y-1">
+            <li>• Free apps for teachers</li>
+            <li>• No live-class paid model</li>
+            <li>• Volunteer or unpaid only</li>
+            <li>• Different model than ours</li>
           </ul>
         </div>
       </div>
       <p class="mt-6 text-sm text-anvil/60 dark:text-warm/60">
-        On a $20/student/class × 4-student cohort × 8 weeks: <strong>You earn $544</strong> with Spark &amp; Anvil
-        vs <strong>$448</strong> on Outschool. <strong>21% more per cohort, with less work.</strong>
+        On a $20/student/class × 4-student cohort × 8 weeks ($640 gross):
+        <strong>You earn ~$622</strong> with Spark &amp; Anvil (after Stripe's ~$18 processing fee — paid
+        directly by you to Stripe, not deducted by us) vs <strong>$448</strong> on Outschool.
+        <strong>That's $174 more per cohort — and the difference compounds across multiple cohorts.</strong>
       </p>
     </div>
   </section>
@@ -114,13 +131,37 @@ import { apps } from '~/data/apps.generated';
       <div class="flex gap-6">
         <div class="flex-shrink-0 w-12 h-12 bg-forge text-warm rounded-full flex items-center justify-center font-brand font-bold text-xl">5</div>
         <div>
-          <h3 class="font-brand font-bold text-xl text-anvil mb-2 dark:text-warm">Get paid weekly via Stripe</h3>
+          <h3 class="font-brand font-bold text-xl text-anvil mb-2 dark:text-warm">Get paid weekly via Stripe Connect</h3>
           <p class="text-anvil/70 dark:text-warm/70 leading-relaxed">
-            Stripe Connect direct deposit. 85% of every class fee, paid weekly. 1099-K at year-end.
-            No "Success Tax" eating a third of your revenue.
+            Stripe Connect Direct Charges — you are the merchant of record, you receive the parent's
+            payment directly, you pay Stripe's standard ~2.9% + $0.30 processing fee (same as any
+            payment processor). <strong>Spark &amp; Anvil collects $0.</strong> 1099-K issued by
+            Stripe at year-end. <strong>No platform commission, ever.</strong>
           </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- How we sustain the platform -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-16">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-4">How we sustain the platform</h2>
+      <p class="text-anvil/80 dark:text-warm/80 leading-relaxed mb-6">
+        Spark &amp; Anvil is a 501(c)(3) non-profit (pending). Our teacher network platform —
+        COPPA compliance, background-check coverage, ForgeClassroom server, parent-side discovery,
+        payment orchestration — costs about $50K-$140K per year to operate. We cover those costs
+        through foundation grants (Chan-Zuckerberg Initiative, Hewlett, Schmidt Sciences program
+        lines) and individual donations from families who value the mission. Want to help sustain
+        teacher-fee-free live classes for kids ages 9-14?
+      </p>
+      <a href="/donate?source=teach&tier=teacher-network-sustainers" class="btn-primary">
+        Support the teacher network →
+      </a>
+      <p class="mt-4 text-sm text-anvil/60 dark:text-warm/60">
+        Donate at /donate or join our Teacher Network Sustainers monthly giving tier.
+        Your gift is tax-deductible to the full extent of US law.
+      </p>
     </div>
   </section>
 
@@ -132,11 +173,12 @@ import { apps } from '~/data/apps.generated';
         We're recruiting the first 50 teachers to pilot Spark &amp; Anvil classrooms during 2026. Each pilot partner gets:
       </p>
       <ul class="space-y-2 text-anvil/80 dark:text-warm/80 leading-relaxed mb-8">
-        <li>✅ <strong>Free background check</strong> (we cover it)</li>
+        <li>✅ <strong>Free background check</strong> (we cover it — funded by founding-pilot donors)</li>
         <li>✅ <strong>Founder access</strong>: direct Slack channel with our team for feedback + roadmap input</li>
         <li>✅ <strong>Featured Early Teacher badge</strong> on your public profile (parent-visible)</li>
-        <li>✅ <strong>30 paid pilot classes</strong> at full $15–25/student rates</li>
+        <li>✅ <strong>30 paid pilot classes</strong> at full $15–25/student rates (100% to you)</li>
         <li>✅ <strong>Priority slot selection</strong> when public marketplace launches Q1 2027</li>
+        <li>✅ <strong>Founding Sustainer recognition</strong> on the /donate page if you wish to be acknowledged (optional — we'll never publish your name without consent)</li>
       </ul>
       <a href="mailto:teachers@spark-and-anvil.com?subject=Spark%20%26%20Anvil%20Early%20Teacher%20Pilot%20Application&body=Please%20share%3A%0A%0A1.%20Name%20%2B%20teaching%20background%3A%0A2.%20Subject%20specialties%20(math%2Fliteracy%2Fchess%2FSEL%2Fetc.)%3A%0A3.%20Outschool%20%2F%20other%20marketplace%20experience%3A%0A4.%20Best%20Outschool%20class%20you%20taught%20(if%20applicable)%3A%0A5.%20Link%20to%20sample%20teaching%20video%20(optional)%3A%0A6.%20Availability%20for%20a%2015-min%20intro%20call%3A%0A%0A" class="btn-primary">Apply now</a>
     </div>
@@ -146,6 +188,35 @@ import { apps } from '~/data/apps.generated';
   <section class="max-w-3xl mx-auto px-6 py-16">
     <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-8">Common questions</h2>
     <dl class="space-y-6">
+      <div>
+        <dt class="font-brand font-bold text-lg mb-2">Why does Spark &amp; Anvil take 0%? How is the platform sustained?</dt>
+        <dd class="text-anvil/70 dark:text-warm/70 leading-relaxed">
+          We're a 501(c)(3) non-profit. Our mission is to keep educational software + live classes
+          accessible without extracting a commission from teachers. Platform costs (~$50K-$140K/yr)
+          are covered by foundation grants (CZI Learning Commons, Hewlett OER, Schmidt Sciences) and
+          individual donations. Your class fees go directly to you. That's the model.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-brand font-bold text-lg mb-2">What about Stripe's fee? Are there hidden costs?</dt>
+        <dd class="text-anvil/70 dark:text-warm/70 leading-relaxed">
+          Stripe charges ~2.9% + $0.30 per transaction — that's the standard for any payment
+          processor. You pay it directly to Stripe. We don't add anything to it. There are no
+          hidden costs, no annual platform fees, no per-cohort fees. The only deduction from your
+          earnings is Stripe's standard processing fee, paid directly to Stripe.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-brand font-bold text-lg mb-2">Compared to TeachersPayTeachers or Outschool, what's the catch?</dt>
+        <dd class="text-anvil/70 dark:text-warm/70 leading-relaxed">
+          No catch — we're a different kind of organization. TeachersPayTeachers (a marketplace
+          for static content) and Outschool (a marketplace for live classes) take 15-30% commissions
+          because they're for-profit companies that need that revenue. We're a non-profit that
+          covers platform costs through philanthropy. The catch (if you want to call it that) is
+          our slots are curated from our app curriculum — you don't get to invent any class topic.
+          That trade-off lets us offer 100%-to-teacher economics.
+        </dd>
+      </div>
       <div>
         <dt class="font-brand font-bold text-lg mb-2">When does the public marketplace launch?</dt>
         <dd class="text-anvil/70 dark:text-warm/70 leading-relaxed">
