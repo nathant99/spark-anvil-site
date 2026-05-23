@@ -593,6 +593,28 @@ export const apps: AppData[] = [
     "iconPath": "/apps/chemquest/icon-sm.webp",
     "mascotPath": "/apps/chemquest/mascot.webp",
     "mentor": "Beaker",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ChemQuest's 16-character cast splits 12 element-archetypes + 4 bond-type archetypes — element personalities embody their atomic behavior; bond-type characters are abstract energy-shapes (not faces) embodying the connection pattern. Per `chemquest-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` (Wave 3, shipped 2026-05-21 — site backfill 2026-05-22 Wave 32a). Mentor Beaker stays the AI tutor; cast appears via static catchphrases + 5-pose ForgeIllustrations bundles. Strict cast-pacing discipline: max 2 new characters per kit; bond-type characters introduced after their atom relatives are familiar; 16-character cast acceptable ONLY because bond-types are visually distinct (forces, not atoms) — fall back to 12 elements if D7/D30 retention probes show recall lift drops at this cast size.",
+      "members": [
+        { "name": "Hydra", "role": "Hydrogen (H) — lightweight, ubiquitous, always paired up; buddy-system enthusiast" },
+        { "name": "Carbo", "role": "Carbon (C) — connects to anything; the social atom; backbone of life" },
+        { "name": "Oxy", "role": "Oxygen (O) — eager bonder; electronegative; the hungry grabber" },
+        { "name": "Nitra", "role": "Nitrogen (N) — triple-bond loyal; slow-to-warm; locks in deeply once bonded" },
+        { "name": "Sodi", "role": "Sodium (Na) — generous, impulsive; always giving away electrons" },
+        { "name": "Chlora", "role": "Chlorine (Cl) — sharp, focused; the collector who finishes what Sodi starts" },
+        { "name": "Helio", "role": "Helium (He) — noble gas; peaceful, floaty, complete; the contented onlooker" },
+        { "name": "Sulfa", "role": "Sulfur (S) — earthy, dramatic; the stinky uncle of volcanoes and proteins" },
+        { "name": "Phossa", "role": "Phosphorus (P) — energetic, restless; the spark of ATP and matches" },
+        { "name": "Magna", "role": "Magnesium (Mg) — bold, ceremonial; burns bright white; chlorophyll core" },
+        { "name": "Silica", "role": "Silicon (Si) — patient, geometric; the architect who builds quietly" },
+        { "name": "Alumi", "role": "Aluminum (Al) — practical, modest; the workhorse of cans and foil" },
+        { "name": "Tugger", "role": "Ionic bond — forceful, decisive; full electron transfer; opposites attract" },
+        { "name": "Sharer", "role": "Covalent bond — cooperative, balanced; equal partnership" },
+        { "name": "Streamer", "role": "Metallic bond — flowing, communal; delocalized electron sea" },
+        { "name": "Whisperer", "role": "Hydrogen bond — subtle, persistent; water's superpower; DNA pairing" }
+      ]
+    },
     "implementing": true,
     "standards": [
       "NGSS",
@@ -637,6 +659,20 @@ export const apps: AppData[] = [
     "iconPath": "/apps/chronoquest/icon-sm.webp",
     "mascotPath": "/apps/chronoquest/mascot.webp",
     "mentor": "Era",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ChronoQuest's 8-guide cast is a roster of methodological lenses — historians' tools personified — NOT representations of real cultural figures. Each guide is a mythic-historian archetype (NEVER 'Herodotus the Witness'; NEVER 'Mercator the Cartographer'). Per `chronoquest-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` (Wave 3, shipped 2026-05-21 — site backfill 2026-05-22 Wave 32a). UNIQUE TRAUMA-INFORMED BURDEN (HIGHEST in Wave 3): kits 04 / 07 / 08 / 10 are 'Very High' load; off-ramps + pre-content warnings + skip-with-summary + mentor 'validate-then-inform' posture required. Kit 10 (Indigenous Civilizations) gets four heaviest-stewardship guides cooperating. External sensitivity reviewer collective REQUIRED ($1000-$1500) before Storykeeper + Chronicler-of-the-Defeated art generation — broadest stewardship burden in Wave 3. Strict separation between guide cast + existing real-historical-figure FoundationModels dialogue surface; the two layers must never blur.",
+      "members": [
+        { "name": "The Cartographer", "role": "Frame-setter — where + when before what + why; methodological starting point" },
+        { "name": "The Witness", "role": "Primary-source lens — what did people THERE see + write?" },
+        { "name": "The Storykeeper", "role": "Oral-tradition lens — multi-tradition keeper-archetype; invented + non-mascotizing" },
+        { "name": "The Trade-Wind", "role": "Connection lens — what moved between civilizations? goods, ideas, diseases" },
+        { "name": "The Counter-Voice", "role": "Critical-analysis lens — who benefits from this version? historian's method, NOT cynicism" },
+        { "name": "The Chronicler-of-the-Defeated", "role": "Stewardship lens — whose story doesn't survive in the winners' archive?" },
+        { "name": "The Translator", "role": "Cross-language + cross-meaning lens — how do concepts travel between cultures?" },
+        { "name": "The Question-Asker", "role": "Meta-inquiry lens — what question are we actually asking? late-arriving capstone guide" }
+      ]
+    },
     "implementing": true,
     "standards": [
       "ISTE",
@@ -875,6 +911,18 @@ export const apps: AppData[] = [
     "iconPath": "/apps/civicforge/icon-sm.webp",
     "mascotPath": "/apps/civicforge/mascot.webp",
     "mentor": "Mayor Reed",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CivicForge's 6-character virtue-archetype cast embodies six civic virtues — justice, liberty, equity, civility, participation, stewardship — via gender/culture-neutral animal personas (NO real political figures or political-tradition mascotizing). UNIQUE TO CIVICFORGE: the cast DELIBERATELY FADES across kits — Strong Presence (kits 1-6) → Reduced Recurrence as silent visual cameos (kits 7-11) → Guest Cameo Only at kit celebrations (kits 12-16). The methodology only does its job if the learner takes over the civic-reasoning role by mid-progression; a non-fading cast would compete with the Paul-Elder Socratic mentor's role. Critical design: NO character is named for its virtue (no 'Justice', no 'Liberty') — names are coined / archaic / Latin-root tokens so learners can encode the virtue on its own terms. Per `civicforge-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` (Wave 3, shipped 2026-05-21 — site backfill 2026-05-22 Wave 32a). Pre-mascot-generation playtest required with learners from differing political-family backgrounds. NOTE: code-side mentor is 'Liberty'; site mentor 'Mayor Reed' is a separate flagged reconciliation item (not part of this backfill).",
+      "members": [
+        { "name": "Verdis", "role": "Justice — the patient listener who weighs sides; bear with wooden scale + spectacles" },
+        { "name": "Aera", "role": "Liberty (open-window) — keeper of open windows; snowy owl on shuttered window frame" },
+        { "name": "Span", "role": "Equity — the bridge-builder; heron with mismatched planks for mismatched riverbanks" },
+        { "name": "Cordis", "role": "Civility — disagreement-without-disrespect host; striped badger with mismatched cups + bow tie" },
+        { "name": "Kindle", "role": "Participation — the door-opener; prairie dog at a half-open door pointing outward" },
+        { "name": "Tellus", "role": "Stewardship — the long-view caretaker; ancient tortoise planting trees they will never sit under" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CCSS ELA",
@@ -1994,6 +2042,17 @@ export const apps: AppData[] = [
     "iconPath": "/apps/ethosforge/icon-sm.webp",
     "mascotPath": "/apps/ethosforge/mascot.webp",
     "mentor": "Lyceum",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "EthosForge's 5-character framework-advocate cast embodies the canonical ethical-reasoning traditions — consequentialism, deontology, virtue ethics, care ethics, contractualism — via a FLIPPED METHODOLOGY: characters are *interlocutors*, not *answer-keys*. UNIQUE DESIGN CONSTRAINT (UNIQUE in the entire Wave 3 retrofit cluster): equal screen time / equal speaking quality / equal visual sophistication / no mentor-student framing within the cast / no 'right answer' framing / equal humor distribution / no gendered cultural stereotypes / animal-headed framing. Solo-advocate scenes BANNED; every kit surfaces at least 2 advocates so the kid stays in the *judge* seat. Per `ethosforge-app/Docs/HANDOFF_FROM_LABSMITH_DISTRIBUTED_NARRATIVE_RETROFIT.md` (Wave 3, shipped 2026-05-21 — site backfill 2026-05-22 Wave 32a). Catchphrases ~6-8 words each, simple grade-4 vocabulary, template-locked — no advocate gets a 'wittier' line. Mentor (code-side 'Ethos' / site 'Lyceum' — flagged reconciliation item separate from this backfill) is the only voice that scaffolds reasoning quality; NEVER endorses a framework. Pre-existing sage_*.webp mascot re-slugged to ethos_*.webp (Phase A rename — visual unchanged).",
+      "members": [
+        { "name": "Consequence", "role": "Consequentialism / Utilitarianism — calm, methodical; weighs trade-offs; capybara at a balance-scale" },
+        { "name": "Duty", "role": "Deontology / Kantian — upright, principled; sticks to rules even when costly; heron in vest on one leg" },
+        { "name": "Virtue", "role": "Virtue Ethics / Aristotelian — steady, earnest; 'what kind of person do I want to be?'; badger tending a plant" },
+        { "name": "Care", "role": "Care Ethics / Noddings + Gilligan — attentive, present; 'ethics begins in relationship'; otter listening beside empty spot" },
+        { "name": "Contract", "role": "Contractualism / Scanlon + Rawls — collaborative; 'what could we ALL agree to?'; beaver drawing a fair-rules table" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "CCSS ELA",
