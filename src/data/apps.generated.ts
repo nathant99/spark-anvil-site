@@ -1285,7 +1285,18 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/curiosityquest/icon-sm.webp",
     "mascotPath": "/apps/curiosityquest/mascot.webp",
-    "mentor": "Wonder",
+    "mentor": "Lumen",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CuriosityQuest's 5-character cast embodies the foundational inquiry primitives — observation (Notice, slow-looking-before-naming), intuition (Inkling, courageous-first-guesses), question-deepening (Ponder, 'what does that even mean?'), uncertainty-tolerance (Linger, Negative-Capability patience), and intellectual humility (Revise, changing-your-mind-as-the-proudest-move). Lumen (mentor; renamed from legacy 'Sage' which collided with MindForge + from site 'Wonder' which collided with ResearchQuest Wave 21 cast + Wave 23 brief pre-reserved-AVOID) frames each primitive; cast embodies them at school-science-club / kitchen-table-experimenter scale (NEVER 'real scientist' / 'natural curiosity' / credentialism / 'you should know this already' gatekeeping). 'Stupid question' anxiety gate enforced: cast normalizes ALL questions as legitimate; Ponder's 'what does that even mean?' is structurally the MOST useful question in every kit; static-response gating for 'I'm not smart enough to ask' anxiety signals; practice-not-talent framing throughout.",
+      "members": [
+        { "name": "Notice", "role": "Observation / slow looking — name what you SEE before why; most wonder lives in the noticing" },
+        { "name": "Inkling", "role": "Intuition / first-guess hunch — your guess is INFORMATION, not a final answer" },
+        { "name": "Ponder", "role": "Deepening the question — 'what does that even mean?' is the foundation, never the failure" },
+        { "name": "Linger", "role": "Staying with uncertainty — Negative Capability; some good questions take days, the best take years" },
+        { "name": "Revise", "role": "Changing your mind — intellectual humility; being wrong is how knowledge MOVES" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -4274,7 +4285,18 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/nexusforge/icon-sm.webp",
     "mascotPath": "/apps/nexusforge/mascot.webp",
-    "mentor": "Node",
+    "mentor": "Mesh",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "NexusForge's 5-character cast embodies the foundational systems-thinking primitives — connection (Tie, 'what EXACTLY does this one do to that one?'), reinforcing feedback (Spiral, runaway and virtuous cycles asking 'what stops it?'), balancing feedback (Damp, self-correcting loops protecting what the system is trying to keep stable), emergence (Emerge, 'the pattern isn't in the rules — it comes FROM the rules'), and leverage points (Steer, 'where could a small change do a lot? probably not where you're looking' per Donella Meadows). Mesh (mentor; renamed from placeholder 'Mentor' and from site 'Node' which collided with NexusForge's own curriculum primitive + Wave 23 brief pre-reserved-AVOID) frames each primitive; cast embodies them at urban-planner / ecosystem-restorer / community-modeler scale (NEVER conspiracy-theorist / 'everything is connected' / overgeneralizing-systems-guru gatekeeping). 'Everything connects' overgeneralization gate enforced: cast NEVER accepts vague correlation-as-causation; Tie's 'what EXACTLY does this one do to that one?' is structurally load-bearing across every cast appearance; static-response gating for spurious-connection / conspiracy-adjacent prompts; specific-mechanism-required-before-link-drawing throughout.",
+      "members": [
+        { "name": "Tie", "role": "Connection / link — name the MECHANISM before drawing the line; refuse vague-correlation framings" },
+        { "name": "Spiral", "role": "Reinforcing feedback — spirals grow good OR bad until something stops them; always ask 'what stops it?'" },
+        { "name": "Damp", "role": "Balancing feedback — this loop is PROTECTING what the system tries to keep stable; what is it protecting?" },
+        { "name": "Emerge", "role": "Emergence — the pattern isn't in any single rule; it appears FROM the rules running together" },
+        { "name": "Steer", "role": "Leverage points — the biggest leverage is usually the LEAST obvious place to push (Meadows)" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -4387,7 +4409,18 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/originforge/icon-sm.webp",
     "mascotPath": "/apps/originforge/mascot.webp",
-    "mentor": "Roots",
+    "mentor": "Waykeeper",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "OriginForge's 5-character cast embodies the foundational origins-thinking + cultural-knowledge respect primitives — listening-before-claiming (Listen, the foundational respect move), trail-following (Trail, the wayfinding move that respects the path), carrying-forward (Carry, stewardship of knowledge passed hand-to-hand), honoring-multiple-truths (Honor, 'both are true; they answer different questions'), and greeting (Greet, the permission-protocol move). Waykeeper (mentor; preserved code-side; site mentor field renamed from 'Roots' → 'Waykeeper' for code/site alignment) frames each primitive; cast embodies them at community-elder + apprenticeship + intergenerational-storyteller scale (NEVER colonial-explorer / 'discoverer' / 'Indiana-Jones' / cultural-extractor gatekeeping). Origin-myth-vs-science gate enforced as STRONGEST in Wave 23: cast NEVER frames cultural knowledge as 'primitive science' or 'myth as wrong'; Honor's 'both are true; they answer different questions' is structurally load-bearing across every cast appearance; cultural-representation discipline absolute — species-not-human + abstract artifacts only (NO specific cultural items / textiles / dress / religious symbols / named ancestors); external Indigenous-knowledge sensitivity reviewers STRONGLY RECOMMENDED before cast art generation OR any kit framing-content authoring.",
+      "members": [
+        { "name": "Listen", "role": "Listening before claiming — hear how a tradition says it first, on its own terms" },
+        { "name": "Trail", "role": "Trail-following — every origin is also a journey; honor the path itself" },
+        { "name": "Carry", "role": "Carrying-forward — knowledge wasn't found, it was given; honor the hands that passed it" },
+        { "name": "Honor", "role": "Honoring multiple truths — science and story answer different questions; both can be true" },
+        { "name": "Greet", "role": "Greeting — knock before you enter; wait to be invited; ask permission before listening" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
@@ -6233,7 +6266,18 @@ export const apps: AppData[] = [
     "heroColor": "#FFA726",
     "iconPath": "/apps/wonderforge/icon-sm.webp",
     "mascotPath": "/apps/wonderforge/mascot.webp",
-    "mentor": "Spark",
+    "mentor": "Marvel",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "WonderForge's 5-character cast embodies the foundational discrepant-events / science-magic pedagogy primitives — surprise-noticing (Gasp, expectation-violation as the wonder-moment), hypothesis-from-surprise (Mull, the wonder-pedagogy inversion where guesses FOLLOW surprise), mechanism-detection (Spy, 'every wonder has a HOW'), explanatory-click (Crack, 'the wonder GROWS when you understand'), and perform-it-yourself (Encore, teaching-someone-else as the test of understanding). Marvel (mentor; renamed from 'Spark' which collided with the Spark & Anvil studio brand) frames each primitive; cast embodies them at school-science-fair / community-makerspace scale (NEVER stage-illusionist / 'I-can-do-magic-you-can't' gatekeeping). Mystification gate enforced: cast NEVER frames anything as 'magical and unknowable'; awe + investigation are structurally COMPATIBLE; Spy's 'every wonder has a HOW' is load-bearing across every cast appearance; Crack's 'the wonder doesn't die when you understand — it GROWS' counter-codes any anti-science framing; static-response gating for 'maybe it's just magic' / 'we'll never know' surrender signals throughout.",
+      "members": [
+        { "name": "Gasp", "role": "Discrepant-event noticing — expectation-violation as the wonder-moment that opens inquiry" },
+        { "name": "Mull", "role": "Hypothesis-from-surprise — sit with the puzzle, then say what you think MIGHT be happening" },
+        { "name": "Spy", "role": "Mechanism detection — every wonder has a HOW; look for the hidden variables" },
+        { "name": "Crack", "role": "Explanatory click — the wonder doesn't die when you understand; it GROWS" },
+        { "name": "Encore", "role": "Perform it yourself — if you can DO the trick knowing how it works, you've understood" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "ISTE",
