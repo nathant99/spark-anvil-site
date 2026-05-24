@@ -63,6 +63,55 @@ export interface AppData {
    * geometryforge / jestforge / numberverse / witquest.
    */
   playTogether?: boolean;
+
+  /**
+   * Neurodivergent-supportive design flag. When true, the app ships
+   * documented design choices that make it more accessible / effective
+   * for neurodivergent learners (autistic / ADHD / OCD / dyslexic /
+   * dyspraxic / dyscalculic / Tourette's / 2e kids). Per queue #310 +
+   * `labsmith/Docs/PLAN_NEURODIVERGENT_SITE_PAGE.md`.
+   *
+   * Used by `/neurodivergent` aggregate page + per-app card badge.
+   *
+   * NOT a clinical claim. NOT a diagnostic tool. NOT a treatment.
+   */
+  neurodivergentSupport?: boolean;
+
+  /**
+   * Per-app evidence base for the ND-support claim. Surfaces on the
+   * `/neurodivergent` page as the "what specifically does this app do"
+   * expansion. Each entry is { aspect, basis } where:
+   * - `aspect` is the design property (e.g., "Autism-aware sensory
+   *   overrides")
+   * - `basis` is the citation / source (e.g., "Wave-7 dual-palette +
+   *   0.3s crossfade per app DN handoff" OR "SAMHSA TIP 57 + NCTSN
+   *   trauma-informed gates" OR "CHADD-affiliated reviewer envelope
+   *   $800-$1,200 pre-launch")
+   */
+  neurodivergentEvidence?: Array<{ aspect: string; basis: string }>;
+
+  /**
+   * Design-trait pills displayed on the app card on `/neurodivergent`.
+   * Short kid-and-parent-readable tags. Recommended vocabulary:
+   *   "Sensory-aware"
+   *   "Low-stimulus mode"
+   *   "Explicit instructions"
+   *   "Predictable flow"
+   *   "Focus-supportive"
+   *   "Co-regulation"
+   *   "Identity-affirming"
+   *   "Strength-based"
+   *   "Trauma-informed"
+   *   "ADHD-supportive"
+   *   "Autism-supportive"
+   *   "OCD-aware"
+   *   "Dyslexia-aware"
+   *   "2e-friendly"
+   *   "Communication-scaffolding"
+   *   "Interoception"
+   * Apps may carry 2-5 traits typically.
+   */
+  neurodivergentDesignTraits?: string[];
 }
 
 export const apps: AppData[] = [
@@ -2320,6 +2369,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "focusforge",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["ADHD-supportive", "Focus-supportive", "Strength-based", "Identity-affirming", "Predictable flow"],
+    "neurodivergentEvidence": [
+      { "aspect": "EF cast as capacities-not-gaps", "basis": "Wave 28 DN retrofit; Mautone 2024 + Hai 2025 + CHADD 2024 alignment" },
+      { "aspect": "ADHD-shame static-response gating", "basis": "Neurodivergent-affirming voice baseline; FoundationModels surface filter routes shame-signals to Anchor mentor" },
+      { "aspect": "CHADD-affiliated or pediatric-ADHD-clinician sensitivity reviewer", "basis": "$800-$1,200 envelope pre-launch (recommended)" },
+      { "aspect": "No second-person imperative catchphrases", "basis": "All first-person modeling per ADHD-affirming voice convention" }
+    ],
     "name": "FocusForge",
     "tagline": "A gamified executive function training adventure for students ages 9-14, with specific design for ADHD and other neurodivergent learners. Players build study skills through six EF domains: working memory, inhibitory control, cognitive flexibility, planning/organization, task initiation, and time awareness.",
     "vertical": "dir-fedc",
@@ -3061,6 +3118,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "harmonyforge",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Autism-supportive", "Sensory-aware", "Low-stimulus mode", "Strength-based", "Identity-affirming"],
+    "neurodivergentEvidence": [
+      { "aspect": "Visual-pattern-to-music translation", "basis": "Leverages autistic pattern-thinking strengths per app tagline" },
+      { "aspect": "Sensory-safe environments", "basis": "Sensory overrides per Wave-7 DN handoff" },
+      { "aspect": "Emotion vocabulary tools", "basis": "Interoception scaffolding" },
+      { "aspect": "Therapist observer mode", "basis": "Clinical-collaboration affordance (deferred to v2)" }
+    ],
     "name": "HarmonyForge",
     "tagline": "A music creation app that leverages neurodivergent (especially autistic) pattern-thinking strengths by translating visual patterns into music. Players arrange colors, shapes, and positions on a grid -- the pattern IS the music. Includes sensory-safe environments, emotion vocabulary tools, and therapist observer mode.",
     "vertical": "steam",
@@ -3361,6 +3426,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "inclusionforge",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Identity-affirming", "2e-friendly", "Communication-scaffolding", "Sensory-aware", "Strength-based"],
+    "neurodivergentEvidence": [
+      { "aspect": "Universal Design curriculum", "basis": "Disability-rights movement history; Justin Dart Jr. / Judy Heumann / Ed Roberts / Haben Girma identity representation" },
+      { "aspect": "DisCrit + ASAN-affirming voice baseline", "basis": "Annamma 2024 + Sayman 2025 + ASAN 2024 alignment" },
+      { "aspect": "Multidimensional identity representation", "basis": "Crenshaw 1991 intersectionality across cast + kits" },
+      { "aspect": "Disability-community + intersectional-identity sensitivity reviewer", "basis": "$800-$1,500 envelope (recommended)" }
+    ],
     "name": "InclusionForge",
     "tagline": "Experience daily life through different abilities, explore the history of disability rights, then design solutions that work for everyone — using Universal Design principles to build a more accessible world. Ages 9-14.",
     "vertical": "academics",
@@ -4378,6 +4451,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "mindforge",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Trauma-informed", "Co-regulation", "Identity-affirming", "Strength-based", "Communication-scaffolding"],
+    "neurodivergentEvidence": [
+      { "aspect": "CASEL 5-competency cast capacities-to-build framing", "basis": "Wave 32b DN retrofit; SAMHSA TIP 57 + NCTSN gold-standard reference" },
+      { "aspect": "Cast NEVER says 'calm down'", "basis": "Explicit anti-pattern enforcement" },
+      { "aspect": "Crisis-resource static-response surfacing", "basis": "988 + Crisis Text Line + Childhelp routing for acute signals" },
+      { "aspect": "CASEL-affiliated + pediatric-mental-health-clinician sensitivity reviewer REQUIRED", "basis": "$1,000-$1,500 envelope (not optional)" }
+    ],
     "name": "MindForge",
     "tagline": "Adventure RPG where players navigate social scenarios, manage stress through mini-games, and build emotional intelligence by helping NPCs resolve conflicts. Combines CASEL's 5 core competencies with SHAPE America's National Health Education Standards in a quest-based format. AI-driven NPCs respond to player choices with realistic emotional reactions.",
     "vertical": "dir-fedc",
@@ -5921,6 +6002,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "spectrumcanvas",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Autism-supportive", "Sensory-aware", "Low-stimulus mode", "Identity-affirming", "Strength-based"],
+    "neurodivergentEvidence": [
+      { "aspect": "Wave-8 dual-palette + 0.3s crossfade sensory overrides", "basis": "Autism-aware sensory regulation; per app DN handoff" },
+      { "aspect": "Sensory-soften gesture as cast member (Soften)", "basis": "Explicitly modeled regulation move" },
+      { "aspect": "Emotion palette mapping", "basis": "Interoception scaffolding; ASAN-affirming" },
+      { "aspect": "Therapist observer mode", "basis": "Clinical-collaboration affordance (deferred to v2)" }
+    ],
     "name": "SpectrumCanvas",
     "tagline": "A digital art studio designed for autistic and other neurodivergent visual thinkers where every art material is simulated without the sensory challenges of the physical version. Watercolor, charcoal, clay, and collage -- all with adjustable texture feedback, sound, and visual intensity. Includes social story illustration tools and an emotion palette that maps feelings to colors.",
     "vertical": "dir-fedc",
@@ -6727,6 +6816,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "wellnessforge",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Strength-based", "Co-regulation", "Communication-scaffolding", "Trauma-informed"],
+    "neurodivergentEvidence": [
+      { "aspect": "Botvin Life Skills Training (LST) framework", "basis": "Evidence-based, not fear-based" },
+      { "aspect": "Stress-regulation primitives cast member (Steady)", "basis": "Breath / ground / reframe before deciding" },
+      { "aspect": "Crisis-resource awareness cast member (Ask)", "basis": "Trusted-adult identification" },
+      { "aspect": "External sensitivity reviewer for substance-use kits", "basis": "Adolescent-mental-health envelope (recommended)" }
+    ],
     "name": "WellnessForge",
     "tagline": "Build health literacy through nutrition analysis, evidence-based substance abuse prevention, first aid simulations, and social-emotional learning — using the research-proven Life Skills Training model rather than fear-based approaches. Ages 9-14.",
     "vertical": "academics",
@@ -6975,6 +7072,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "coregrealm",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Co-regulation", "Interoception", "Strength-based", "Communication-scaffolding", "Trauma-informed"],
+    "neurodivergentEvidence": [
+      { "aspect": "ForgeKit 0.86 CoRegulationEngine 6-move palette as cast", "basis": "Match / Hum / Sway / Beside / Word / Patient" },
+      { "aspect": "DIR-Floortime-certified sensitivity reviewer REQUIRED", "basis": "$1,000-$1,500 envelope" },
+      { "aspect": "Inverse-semantic-pair with MindForge cast", "basis": "Capacity-to-build + move-to-perform load-bearing cross-cluster" },
+      { "aspect": "Cyan companion creature (not coach)", "basis": "Role-reversal scaffolding; teaching-role mastery" }
+    ],
     "name": "CoRegRealm",
     "tagline": "Co-Regulation Role-Reversal RPG — kid co-regulates a smaller creature companion through dysregulation cycles, learning the regulation primitive through the teacher role (Cyan).",
     "vertical": "dir-fedc",
@@ -7014,6 +7119,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "rupturerepair",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Trauma-informed", "Co-regulation", "Communication-scaffolding", "Identity-affirming", "Strength-based"],
+    "neurodivergentEvidence": [
+      { "aspect": "5-step repair-protocol cast", "basis": "See-It / Sorry / Felt / Offer / Together; Wave 30 heart-harbor cluster" },
+      { "aspect": "Power-difference kit-9 trusted-adult-first", "basis": "When power-asymmetry detected, FIRST move is RAINN + Childhelp, NOT offer-repair" },
+      { "aspect": "Mandatory-reporter kit-11 static-response gating", "basis": "988 + Childhelp + RAINN + Crisis Text Line surfacing" },
+      { "aspect": "Cross-cultural-repair sensitivity reviewer envelope", "basis": "$1.8K-$3.1K cumulative; honors ho'oponopono / Lakota + Diné restorative circles / kintsugi / teshuvah / Restorative Justice / NVC" }
+    ],
     "name": "RuptureRepair",
     "tagline": "Misattunement → Repair Cycle as the Curriculum — two-player relational-craft scaffolding the 5-step repair protocol (Mend). Trauma-informed; no scoring; off-ramps every scenario.",
     "vertical": "dir-fedc",
@@ -7050,6 +7163,15 @@ export const apps: AppData[] = [
   },
   {
     "slug": "tempcheck",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Co-regulation", "Interoception", "Strength-based", "Identity-affirming", "Sensory-aware"],
+    "neurodivergentEvidence": [
+      { "aspect": "Streak-shame prevention", "basis": "Pattern-over-time framing; no daily-streak counter UI; Wave 30 codified" },
+      { "aspect": "Multi-caregiver isolation", "basis": "Per-dyad SwiftData partitioning; multiple-trusted-adult normalizing" },
+      { "aspect": "Acute-risk static-response surfacing", "basis": "988 + Crisis Text Line + Childhelp routing" },
+      { "aspect": "Adolescent-mental-health reviewer", "basis": "$500-$800 envelope pre-launch (recommended)" },
+      { "aspect": "Body-image / appearance gate", "basis": "No body-shape / weight / food-quantity affect-cards" }
+    ],
     "name": "TempCheck",
     "tagline": "Daily Attunement Temp-Checks — 15-second bidirectional affect check-in with caregiver; surfaces overlaps + differences; growth chart over weeks (Pulse).",
     "vertical": "dir-fedc",
@@ -7256,6 +7378,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "motiflab",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Autism-supportive", "Strength-based", "Predictable flow", "Sensory-aware"],
+    "neurodivergentEvidence": [
+      { "aspect": "Motif-as-protagonist 6-stage arc", "basis": "Predictable, repeatable structure" },
+      { "aspect": "Trill songbird mascot (sibling to LyricForge's Pip)", "basis": "Pattern B hero-mascot-led DN methodology" },
+      { "aspect": "Visual-pattern recognition strengths", "basis": "Autism-aware design property" },
+      { "aspect": "Composition pacing matches DIR-FEDC attention duration", "basis": "Cluster-coherence with FocusForge" }
+    ],
     "name": "MotifLab",
     "tagline": "Composition-as-Narrative-Arc for Tweens — motif IS the protagonist; 6-stage arc (intro → motif statement → development → contrast → recapitulation → resolution). Trill songbird mascot (sibling to LyricForge's Pip).",
     "vertical": "steam",
@@ -7646,6 +7776,14 @@ export const apps: AppData[] = [
   },
   {
     "slug": "microbelab",
+    "neurodivergentSupport": true,
+    "neurodivergentDesignTraits": ["Trauma-informed", "Strength-based", "Predictable flow", "Identity-affirming"],
+    "neurodivergentEvidence": [
+      { "aspect": "Beneficial microbes foregrounded; pathogens opt-in gated", "basis": "COVID-trauma-aware design property" },
+      { "aspect": "No COVID-specific scenarios", "basis": "Explicit anti-pattern" },
+      { "aspect": "Pediatric-microbiology-pedagogy + COVID-trauma-aware sensitivity reviewer", "basis": "$500-$800 envelope (recommended)" },
+      { "aspect": "Cilia mentor + 6 microbe-archetype cast", "basis": "Strength-based framing (microbes-as-friends, not microbes-as-threat)" }
+    ],
     "name": "MicrobeLab",
     "tagline": "Microbiology Adventure for Tweens — microscope-zoom core loop, microbiome simulator, named microbe characters (Lacto, Bif), immune-response minigame. Beneficial microbes foregrounded; COVID-trauma-sensitive (Vee).",
     "vertical": "stem",

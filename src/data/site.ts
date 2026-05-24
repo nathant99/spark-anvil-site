@@ -33,6 +33,7 @@ export const nav = [
   { href: '/apps', label: 'Apps' },
   { href: '/cast', label: 'Cast' },
   { href: '/play-together', label: 'Play Together' },
+  { href: '/neurodivergent', label: 'Neurodivergent' },
   { href: '/for-parents', label: 'For Parents' },
   { href: '/for-educators', label: 'For Educators' },
   { href: '/teach', label: 'Teach', badge: 'Recruiting' },
