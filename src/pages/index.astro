@@ -29,7 +29,26 @@ const mascotApps = apps.filter(a => a.mascotPath).slice(0, 12);
 
 // Distributed-narrative methodology: apps using the character-pattern teaching approach
 const dnApps = apps.filter(a => a.distributedNarrative);
-const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
+
+// FIX (queue #349 follow-up): the DN section should show CAST PORTRAITS (cast members
+// who embody the curriculum), NOT mentor mascots. Pull the first cast member from each
+// of the most-canonical DN apps where a portrait actually exists in cast-manifest.json.
+import castManifest from '~/data/cast-manifest.json';
+const castSet = new Set(castManifest as string[]);
+
+const dnFeaturedCast = ['gambittales', 'proofquest', 'functionforge', 'ratiorealm', 'motiflab']
+  .map(slug => {
+    const app = apps.find(a => a.slug === slug);
+    if (!app?.dnCast?.members?.length) return null;
+    const firstMember = app.dnCast.members[0];
+    const charSlug = firstMember.name.toLowerCase()
+      .replace(/&/g, '-and-')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'char';
+    const key = `${slug}/${charSlug}.webp`;
+    return castSet.has(key) ? { app, char: firstMember, portraitPath: `/cast/${key}` } : null;
+  })
+  .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
 ---
 
 <BaseLayout>
@@ -264,27 +283,30 @@ const dnFeaturedMascots = dnApps.filter(a => a.mascotPath).slice(0, 5);
         </p>
       </div>
 
-      {dnFeaturedMascots.length > 0 && (
+      {dnFeaturedCast.length > 0 && (
         <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 mb-12">
-          {dnFeaturedMascots.map(app => (
+          {dnFeaturedCast.map(entry => (
             <a
-              href={`/apps/${app.slug}`}
+              href={`/apps/${entry.app.slug}`}
               class="group flex flex-col items-center"
-              aria-label={`${app.name} — uses distributed-narrative methodology`}
+              aria-label={`${entry.char.name} from ${entry.app.name} — embodies the curriculum via distributed-narrative methodology`}
             >
               <div
                 class="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center overflow-hidden border-4 border-warm shadow-md group-hover:scale-110 transition-transform"
-                style={`background-color: ${app.heroColor}`}
+                style={`background-color: ${entry.app.heroColor}`}
               >
                 <img
-                  src={app.mascotPath!}
-                  alt={`${app.name} mascot`}
-                  class="w-full h-full object-contain"
+                  src={entry.portraitPath}
+                  alt={`${entry.char.name} (cast member of ${entry.app.name})`}
+                  class="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
-              <span class="mt-2 text-xs font-brand font-bold text-anvil/80 dark:text-warm/80 group-hover:text-forge transition-colors">
-                {app.name}
+              <span class="mt-2 text-xs font-brand font-bold text-anvil/90 dark:text-warm/90 group-hover:text-forge transition-colors text-center">
+                {entry.char.name}
+              </span>
+              <span class="text-[10px] text-anvil/55 dark:text-warm/55 text-center">
+                {entry.app.name}
               </span>
             </a>
           ))}
