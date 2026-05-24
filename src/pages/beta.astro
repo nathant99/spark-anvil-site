@@ -1,0 +1,337 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps } from '~/data/apps.generated';
+import BetaAppCard from '~/components/BetaAppCard.astro';
+import EmailForm from '~/components/EmailForm.astro';
+import { isBetaEligible } from '~/lib/beta';
+
+const betaEligible = apps.filter(a => isBetaEligible(a.betaPhase));
+const openBeta = betaEligible.filter(a => a.betaPhase === 'open-beta');
+const closedBeta = betaEligible.filter(a => a.betaPhase === 'closed-beta');
+const inDev = betaEligible.filter(a => a.betaPhase === 'in-development');
+const submitted = betaEligible.filter(a => a.betaPhase === 'submitted');
+const totalTesters = apps.reduce(
+  (sum, a) => sum + (a.betaTesterCount ?? 0),
+  0
+);
+const totalApps = apps.length;
+---
+
+<BaseLayout
+  title="Join the Beta"
+  description={`Help shape the apps your kids will use. Try Spark & Anvil apps before App Store launch. ${totalApps} apps in development. Adult-only signup. COPPA compliant.`}
+>
+  <!-- Hero -->
+  <section class="py-16 md:py-24 bg-forge text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span class="inline-block px-3 py-1 mb-6 bg-white/20 backdrop-blur text-white text-xs font-bold uppercase tracking-wider rounded-full">
+        Beta program
+      </span>
+      <h1 class="font-brand font-bold text-4xl md:text-6xl mb-6">
+        Help shape the apps your kids will use
+      </h1>
+      <p class="text-xl mb-8 max-w-3xl mx-auto text-white/90 leading-relaxed">
+        Spark &amp; Anvil's {totalApps}-app portfolio is in active development.
+        We're a 501(c)(3) non-profit (pending) and the apps will be free forever.
+        Join our beta program to try apps before App Store launch, give feedback,
+        and help us shape what we build.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a
+          href="#beta-apps"
+          class="inline-block px-6 py-3 bg-white text-forge font-brand font-bold rounded-lg hover:bg-warm transition-colors shadow-sm"
+        >
+          Browse beta apps
+        </a>
+        <a
+          href="#newsletter"
+          class="inline-block px-6 py-3 border-2 border-white text-white font-brand font-bold rounded-lg hover:bg-white hover:text-forge transition-colors"
+        >
+          Join beta newsletter
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-white/80">
+        Free forever · No marketing emails · One-shot launch notices · COPPA compliant
+      </p>
+    </div>
+  </section>
+
+  <!-- Trust signals strip -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-6 border-b border-anvil/10 dark:border-warm/10">
+    <div class="max-w-4xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+      <span class="text-anvil/80 dark:text-warm/80">501(c)(3) non-profit (pending)</span>
+      <span class="text-anvil/30 dark:text-warm/30">·</span>
+      <span class="text-anvil/80 dark:text-warm/80">Adult-only signup</span>
+      <span class="text-anvil/30 dark:text-warm/30">·</span>
+      <span class="text-anvil/80 dark:text-warm/80">No kid data ever collected</span>
+      <span class="text-anvil/30 dark:text-warm/30">·</span>
+      <span class="text-anvil/80 dark:text-warm/80">No third-party SDKs</span>
+    </div>
+  </section>
+
+  <!-- Stats strip -->
+  <section class="py-10 border-b border-anvil/10 dark:border-warm/10">
+    <div class="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div>
+        <div class="text-3xl md:text-4xl font-brand font-bold text-forge">{openBeta.length}</div>
+        <div class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 mt-1">Open TestFlight</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-brand font-bold text-forge">{closedBeta.length}</div>
+        <div class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 mt-1">Closed beta</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-brand font-bold text-forge">{inDev.length}</div>
+        <div class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 mt-1">In development</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-brand font-bold text-forge">{totalTesters || '—'}</div>
+        <div class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 mt-1">Beta testers</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Per-app grid -->
+  <section id="beta-apps" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil dark:text-warm mb-3">
+      Apps in beta
+    </h2>
+    <p class="text-anvil/70 dark:text-warm/70 mb-8 leading-relaxed max-w-2xl">
+      Each app moves through six phases: development → closed beta → open
+      TestFlight → submitted → live. Tap any app for status + a CTA matched to
+      that phase.
+    </p>
+
+    {betaEligible.length === 0 ? (
+      <div class="text-center py-12 bg-anvil/5 dark:bg-warm/5 rounded-2xl">
+        <p class="text-anvil/70 dark:text-warm/70 mb-4 max-w-prose mx-auto leading-relaxed">
+          No apps are in beta yet. The first TestFlight builds are expected in
+          2026 Q4. Join the newsletter below and we'll email you the moment
+          the first beta opens.
+        </p>
+        <a href="/apps" class="btn-secondary">
+          Browse all {totalApps} apps in development →
+        </a>
+      </div>
+    ) : (
+      <>
+        {openBeta.length > 0 && (
+          <div class="mb-12">
+            <h3 class="font-brand font-bold text-xl text-anvil dark:text-warm mb-4">
+              Open TestFlight beta
+            </h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {openBeta.map(app => <BetaAppCard app={app} />)}
+            </div>
+          </div>
+        )}
+        {closedBeta.length > 0 && (
+          <div class="mb-12">
+            <h3 class="font-brand font-bold text-xl text-anvil dark:text-warm mb-4">
+              Closed beta
+            </h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {closedBeta.map(app => <BetaAppCard app={app} />)}
+            </div>
+          </div>
+        )}
+        {submitted.length > 0 && (
+          <div class="mb-12">
+            <h3 class="font-brand font-bold text-xl text-anvil dark:text-warm mb-4">
+              Submitted to App Store
+            </h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {submitted.map(app => <BetaAppCard app={app} />)}
+            </div>
+          </div>
+        )}
+        {inDev.length > 0 && (
+          <div class="mb-12">
+            <h3 class="font-brand font-bold text-xl text-anvil dark:text-warm mb-4">
+              In development
+            </h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {inDev.map(app => <BetaAppCard app={app} />)}
+            </div>
+          </div>
+        )}
+      </>
+    )}
+  </section>
+
+  <!-- Beta-tester guide -->
+  <section class="bg-anvil/5 dark:bg-warm/5 py-16">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-6">
+        What to expect as a beta tester
+      </h2>
+      <div class="space-y-5 text-anvil/80 dark:text-warm/80 leading-relaxed">
+        <p>
+          You don't need to be a professional tester. You just need to be willing
+          to try apps with your kid (or yourself, if you're an educator), notice
+          what works, and tell us what doesn't.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex gap-3">
+            <span class="text-forge font-bold flex-shrink-0">1.</span>
+            <span>
+              <strong>Install TestFlight</strong> (free Apple app) from the App
+              Store. Tap our TestFlight link to install the beta build.
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-forge font-bold flex-shrink-0">2.</span>
+            <span>
+              <strong>Try the app with your kid</strong> for a few sessions.
+              Notice what feels confusing, fun, broken, or surprising.
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-forge font-bold flex-shrink-0">3.</span>
+            <span>
+              <strong>Send feedback</strong> via the in-app "Send feedback" link
+              (goes directly to our founder) or reply to any beta email.
+              Screenshots welcome; recordings welcome.
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-forge font-bold flex-shrink-0">4.</span>
+            <span>
+              <strong>Hear back</strong>. We read every report. We'll tell you
+              what we changed in the next beta build. Your name goes in the
+              app's credits (with permission) when it ships.
+            </span>
+          </li>
+        </ul>
+        <p class="pt-4 border-t border-anvil/15 dark:border-warm/15">
+          <strong>Cadence:</strong> roughly one beta email per app per month,
+          plus a portfolio-wide newsletter every 6 weeks. Drop out anytime.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-8">
+      Frequently asked questions
+    </h2>
+    <dl class="space-y-6">
+      <div>
+        <dt class="font-bold text-anvil dark:text-warm mb-2">
+          How long will beta last?
+        </dt>
+        <dd class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+          Each app's beta runs ~3-6 months on average. Some apps will be in
+          beta longer because we want to get them right. Apps may stay in
+          closed beta for ~2-3 months before opening to public TestFlight.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-bold text-anvil dark:text-warm mb-2">
+          Will I get the App Store version too?
+        </dt>
+        <dd class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+          Yes. When an app launches publicly, you can install the App Store
+          version (free) and uninstall the TestFlight build. We'll send a
+          one-shot launch email; no further marketing.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-bold text-anvil dark:text-warm mb-2">
+          What's expected of me?
+        </dt>
+        <dd class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+          Nothing required. Try the app when convenient. Send notes when
+          something's broken or noteworthy. We'd rather have honest 2-line
+          reports ("crashed when I tapped X") than feel obliged to write
+          essays.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-bold text-anvil dark:text-warm mb-2">
+          Can I drop out?
+        </dt>
+        <dd class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+          Anytime. Uninstall the TestFlight build, or reply STOP to any
+          email. No questions asked.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-bold text-anvil dark:text-warm mb-2">
+          Will you contact my child?
+        </dt>
+        <dd class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+          No. We never collect or contact children. All communication is
+          parent-to-parent (or educator-to-developer). The apps themselves
+          run fully on-device — your kid's data never leaves their device.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-bold text-anvil dark:text-warm mb-2">
+          Is the beta build safe for my kid?
+        </dt>
+        <dd class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+          Yes. Beta builds have the same COPPA compliance and on-device-AI
+          architecture as the App Store version. The only difference is the
+          build is newer, so it may have bugs we haven't caught yet.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-bold text-anvil dark:text-warm mb-2">
+          Will it cost money?
+        </dt>
+        <dd class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+          No. Spark &amp; Anvil apps are free forever. No in-app purchases.
+          No ads. The non-profit pivot makes this durable beyond any single
+          funding cycle.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-bold text-anvil dark:text-warm mb-2">
+          What if it crashes or has serious bugs?
+        </dt>
+        <dd class="text-anvil/80 dark:text-warm/80 leading-relaxed">
+          That's exactly what beta is for. Every beta app has an in-app
+          feedback channel that goes directly to our founder. Your reports
+          literally shape what ships.
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- Global newsletter -->
+  <section id="newsletter" class="bg-anvil/5 dark:bg-warm/5 py-16">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-brand font-bold text-3xl text-anvil dark:text-warm mb-4">
+        Join the beta newsletter
+      </h2>
+      <p class="text-anvil/80 dark:text-warm/80 mb-6 leading-relaxed">
+        Get notified when new apps enter beta. Roughly one email every 6 weeks.
+        No marketing fluff. Unsubscribe anytime.
+      </p>
+      <EmailForm
+        action="mailto:hello+beta@spark-and-anvil.com"
+        label="Email address (adults only)"
+        cta="Join the beta newsletter"
+        subject="Beta newsletter — sign me up"
+      />
+    </div>
+  </section>
+
+  <!-- Donor cross-link -->
+  <section class="bg-forge text-white py-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-white/90 mb-4 leading-relaxed">
+        Spark &amp; Anvil is a 501(c)(3) non-profit (pending). Your beta
+        feedback shapes apps that will reach millions of tween learners.
+      </p>
+      <a
+        href="/donate"
+        class="inline-block px-6 py-3 bg-white text-forge font-brand font-bold rounded-lg hover:bg-warm transition-colors shadow-sm"
+      >
+        Want to help fund it? →
+      </a>
+    </div>
+  </section>
+</BaseLayout>

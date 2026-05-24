@@ -1,0 +1,96 @@
+---
+import type { AppData } from '~/data/apps.generated';
+import { betaPhaseLabel, betaPillStyle, betaPhaseCTA } from '~/lib/beta';
+
+interface Props {
+  app: AppData;
+}
+
+const { app } = Astro.props;
+const phase = app.betaPhase ?? 'not-started';
+const label = betaPhaseLabel(phase);
+const pillStyle = betaPillStyle(phase);
+const isOpenBeta = phase === 'open-beta' && !!app.testflightUrl;
+const isLive = phase === 'live' && !!app.appStoreUrl;
+---
+
+<article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/10 dark:border-warm/10 hover:border-forge/40 transition-colors flex flex-col">
+  <header class="flex items-center gap-3 mb-3">
+    {app.mascotPath ? (
+      <div
+        class="w-12 h-12 rounded-xl overflow-hidden border-2 border-warm flex-shrink-0"
+        style={`background-color: ${app.heroColor}`}
+      >
+        <img
+          src={app.mascotPath}
+          alt=""
+          class="w-full h-full object-contain"
+          loading="lazy"
+        />
+      </div>
+    ) : (
+      <div
+        class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center font-brand font-bold text-white text-xl"
+        style={`background-color: ${app.heroColor}`}
+      >
+        {app.name.charAt(0)}
+      </div>
+    )}
+    <div class="min-w-0 flex-1">
+      <a
+        href={`/apps/${app.slug}`}
+        class="block font-brand font-bold text-anvil dark:text-warm hover:text-forge transition-colors truncate"
+      >
+        {app.name}
+      </a>
+      <p class="text-xs text-anvil/60 dark:text-warm/60 truncate uppercase tracking-wider">
+        {app.vertical.replace('-', ' ')}
+      </p>
+    </div>
+  </header>
+
+  <span
+    class="inline-block self-start px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3"
+    style={pillStyle}
+    aria-label={`Beta phase: ${label}`}
+  >
+    {label}
+  </span>
+
+  <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug line-clamp-3 mb-4 flex-1">
+    {app.tagline}
+  </p>
+
+  {app.betaTesterCount && app.betaTesterCount > 0 && (
+    <p class="text-xs text-anvil/60 dark:text-warm/60 mb-3">
+      {app.betaTesterCount} families testing
+    </p>
+  )}
+
+  <div class="mt-auto">
+    {isOpenBeta ? (
+      <a
+        href={app.testflightUrl}
+        class="btn-primary w-full text-center text-sm"
+        aria-label={`Install ${app.name} via TestFlight`}
+      >
+        Install via TestFlight
+      </a>
+    ) : isLive ? (
+      <a
+        href={app.appStoreUrl}
+        class="btn-primary w-full text-center text-sm"
+        aria-label={`Install ${app.name} from the App Store`}
+      >
+        Install free
+      </a>
+    ) : (
+      <a
+        href={`/apps/${app.slug}#beta-status`}
+        class="btn-secondary w-full text-center text-sm"
+      >
+        {betaPhaseCTA(phase)} →
+      </a>
+    )}
+  </div>
+</article>

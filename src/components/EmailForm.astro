@@ -1,0 +1,103 @@
+---
+// Adult-only email opt-in form. V1 uses mailto: action (forwards to
+// hello+beta-<slug>@spark-and-anvil.com). When Mailchimp account is
+// funded post-fiscal-sponsorship, swap the form `action` + `method`
+// to the Mailchimp embed endpoint in a single PR — interface stable.
+//
+// COPPA: NO kid data EVER. Adult-only checkbox required per
+// labsmith/.claude/rules/spark-anvil-website.md +
+// labsmith/.claude/rules/age-assurance.md.
+
+interface Props {
+  /** mailto: URL (v1) or Mailchimp action URL (v2+). */
+  action: string;
+  /** Visible label above the input. */
+  label?: string;
+  /** Submit button text. */
+  cta?: string;
+  /** Adult-only checkbox required — defaults to true. Should NEVER be false. */
+  adultOnly?: boolean;
+  /** Optional app slug for subject-line tagging on mailto fallback. */
+  appSlug?: string;
+  /** Subject line for mailto fallback. */
+  subject?: string;
+}
+
+const {
+  action,
+  label = 'Email address',
+  cta = 'Notify me',
+  adultOnly = true,
+  appSlug,
+  subject,
+} = Astro.props;
+
+// For mailto fallback, encode subject into the action URL so the user's mail
+// client pre-fills it. This is how we route inbound interest before Mailchimp.
+const isMailto = action.startsWith('mailto:');
+const defaultSubject = appSlug
+  ? `Beta waitlist — ${appSlug}`
+  : 'Beta newsletter signup';
+const resolvedSubject = subject ?? defaultSubject;
+const resolvedAction = isMailto
+  ? `${action}?subject=${encodeURIComponent(resolvedSubject)}`
+  : action;
+const inputId = `email-${appSlug ?? 'global'}-${Math.random().toString(36).slice(2, 8)}`;
+const checkboxId = `adult-${appSlug ?? 'global'}-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<form
+  action={resolvedAction}
+  method={isMailto ? 'get' : 'post'}
+  class="space-y-3 w-full max-w-md"
+>
+  <div>
+    <label
+      for={inputId}
+      class="block text-sm font-bold text-anvil dark:text-warm mb-1.5"
+    >
+      {label}
+    </label>
+    <input
+      type="email"
+      id={inputId}
+      name="email"
+      required
+      placeholder="you@example.com"
+      class="w-full px-4 py-2.5 rounded-lg border-2 border-anvil/20 dark:border-warm/20 bg-white dark:bg-anvil/30 text-anvil dark:text-warm placeholder:text-anvil/40 dark:placeholder:text-warm/40 focus:outline-none focus:border-forge transition-colors"
+      aria-required="true"
+    />
+  </div>
+
+  {adultOnly && (
+    <div class="flex items-start gap-2">
+      <input
+        type="checkbox"
+        id={checkboxId}
+        name="adult-confirmation"
+        required
+        class="mt-1 w-4 h-4 accent-forge cursor-pointer"
+        aria-required="true"
+      />
+      <label
+        for={checkboxId}
+        class="text-sm text-anvil/80 dark:text-warm/80 leading-snug cursor-pointer select-none"
+      >
+        I confirm I am 18 or older. We never collect emails from children.
+      </label>
+    </div>
+  )}
+
+  <button
+    type="submit"
+    class="btn-primary w-full sm:w-auto"
+  >
+    {cta}
+  </button>
+
+  <p class="text-xs text-anvil/60 dark:text-warm/60 leading-snug">
+    Adult-only list. No marketing emails. One-shot launch notifications.
+    Unsubscribe anytime by replying STOP. Read our
+    <a href="/privacy" class="underline hover:text-forge">privacy policy</a>.
+  </p>
+</form>

@@ -31,6 +31,7 @@ export const trustSignals = [
 export const nav = [
   { href: '/', label: 'Home' },
   { href: '/apps', label: 'Apps' },
+  { href: '/beta', label: 'Beta', badge: 'Beta' },
   { href: '/cast', label: 'Cast' },
   { href: '/play-together', label: 'Play Together' },
   { href: '/neurodivergent', label: 'Neurodivergent' },
