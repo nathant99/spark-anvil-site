@@ -1,0 +1,30 @@
+{
+  "cubesensei": [
+    "coloring",
+    "puzzle_sampler",
+    "cast_poster",
+    "parent_letter"
+  ],
+  "curiosityquest": [
+    "coloring",
+    "puzzle_sampler",
+    "cast_poster",
+    "parent_letter"
+  ],
+  "gambittales": [
+    "coloring",
+    "cast_poster",
+    "parent_letter"
+  ],
+  "motiflab": [
+    "coloring",
+    "cast_poster",
+    "parent_letter"
+  ],
+  "quillspell": [
+    "coloring",
+    "puzzle_sampler",
+    "cast_poster",
+    "parent_letter"
+  ]
+}
