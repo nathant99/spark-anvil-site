@@ -168,20 +168,20 @@ const dnFeaturedCast = ['gambittales', 'proofquest', 'functionforge', 'ratioreal
     </div>
   </section>
 
-  <!-- Learn / Play / Create — cross-cutting engagement modes -->
+  <!-- Learn / Play / Create / Reflect — cross-cutting engagement modes -->
   <section class="py-20 border-y border-anvil/10 dark:border-warm/15">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-12">
-        <p class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 font-bold mb-3">Three ways your kid engages</p>
+        <p class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 font-bold mb-3">Four ways your kid engages</p>
         <h2 class="font-brand font-bold text-3xl md:text-4xl text-anvil dark:text-warm mb-4">
-          Built around <span style="color: #E8652B;">Learn</span>, <span style="color: #FFBE2E;">Play</span>, and <span style="color: #4A6FA5;">Create</span>
+          Built around <span style="color: #E8652B;">Learn</span>, <span style="color: #FFBE2E;">Play</span>, <span style="color: #4A6FA5;">Create</span>, and <span style="color: #3D5266;">Reflect</span>
         </h2>
         <p class="text-anvil/70 dark:text-warm/70 max-w-2xl mx-auto leading-relaxed">
-          Every app maps to one or more of three engagement modes. Most apps blend two or three — Learn pairs the AI mentor, Play wraps the game shell, Create gives kids something to ship.
+          Every app maps to one or more of four engagement modes. Most apps blend two or three — Learn pairs the AI mentor, Play wraps the game shell, Create gives kids something to ship, and Reflect gives them a calm space to think about their own thinking.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {modeMetas.map(m => {
           const exemplars = modeExemplars[m.key] ?? [];
           const anchorApps = modeAnchorApps[m.key] ?? [];
