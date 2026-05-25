@@ -113,6 +113,50 @@ export interface AppData {
    * Apps may carry 2-5 traits typically.
    */
   neurodivergentDesignTraits?: string[];
+
+  /**
+   * Beta-phase lifecycle state. Default 'not-started' when undefined.
+   * Drives the per-app beta-status section + /beta page filtering.
+   * Per `labsmith/Docs/PLAN_BETA_TESTING_SURFACE.md` (queue #299).
+   */
+  betaPhase?:
+    | 'not-started'
+    | 'in-development'
+    | 'closed-beta'
+    | 'open-beta'
+    | 'submitted'
+    | 'live';
+
+  /**
+   * TestFlight invite URL — primary CTA when betaPhase === 'open-beta'.
+   * Format: https://testflight.apple.com/join/XXXXXXXX (8-char code).
+   */
+  testflightUrl?: string;
+
+  /**
+   * App Store URL — surfaced when betaPhase === 'live'. Format:
+   * https://apps.apple.com/us/app/<name>/id<numeric-id>
+   */
+  appStoreUrl?: string;
+
+  /**
+   * Beta-tester count, manually updated. Surfaced as social proof
+   * ("N families testing"). Optional — undefined → generic copy.
+   */
+  betaTesterCount?: number;
+
+  /**
+   * Screenshot paths in `public/apps/<slug>/screenshots/`. Authored
+   * per-app by the app's CC session, NOT labsmith. 1290×2796 WebP,
+   * quality 80. Empty array → no screenshot section rendered.
+   */
+  screenshots?: string[];
+
+  /**
+   * Demo video URL — Cloudflare Stream embed URL OR YouTube unlisted.
+   * Cloudflare Stream preferred (COPPA-safe, no third-party JS).
+   */
+  demoVideoUrl?: string;
 }
 
 export const apps: AppData[] = [
