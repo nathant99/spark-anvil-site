@@ -1,0 +1,174 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { apps } from '~/data/apps.generated';
+import { modeByKey, appsScoringAtLeast } from '~/data/modes';
+
+const meta = modeByKey.reflect;
+const primaryApps = apps
+  .filter(a => a.modes?.reflect === 3)
+  .sort((a, b) => a.name.localeCompare(b.name));
+const secondaryApps = apps
+  .filter(a => a.modes?.reflect === 2)
+  .sort((a, b) => a.name.localeCompare(b.name));
+const totalReflect = primaryApps.length + secondaryApps.length;
+---
+
+<BaseLayout
+  title="Reflect — pillar"
+  description={`${meta.tagline} ${totalReflect} of our ${apps.length} apps are built around reflection.`}
+>
+  <!-- Hero -->
+  <section class="max-w-4xl mx-auto px-6 pt-16 pb-8">
+    <span
+      class="inline-block px-3 py-1 mb-4 text-warm text-xs font-bold uppercase tracking-wider rounded-full"
+      style={`background-color: ${meta.hex};`}
+    >Pillar · Reflect</span>
+    <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
+      A calm space to think
+      <span class="block" style={`color: ${meta.hex};`}>about your own thinking.</span>
+    </h1>
+    <p class="text-xl text-anvil/70 dark:text-warm/70 max-w-2xl leading-relaxed">
+      {meta.tagline}
+    </p>
+    <p class="mt-4 text-anvil/60 dark:text-warm/60 leading-relaxed max-w-2xl">
+      {totalReflect} of our {apps.length} apps make reflection a primary or secondary mode —
+      identity work, metacognition, mood + body awareness, ethical reasoning, and structured
+      perspective-taking. Every Reflect-mode app pairs your kid with named recurring cast members
+      who model the practice without lecturing.
+    </p>
+  </section>
+
+  <!-- Why this pillar essay -->
+  <section class="max-w-3xl mx-auto px-6 pb-12">
+    <div class="rounded-2xl p-6 md:p-8 border-2" style={`border-color: ${meta.hex}66; background-color: ${meta.hex}0A;`}>
+      <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-4" style={`color: ${meta.hex};`}>
+        Why Reflect is a pillar, not a feature
+      </h2>
+      <div class="prose-tight text-anvil/85 dark:text-warm/85 leading-relaxed space-y-4">
+        <p>
+          For most of K-12 education, reflection is treated as the closing minute of a lesson:
+          a journal prompt, a five-finger check, a quick check-in. It's afterthought, not
+          curriculum. We think that's backwards.
+        </p>
+        <p>
+          John Hattie's meta-analysis of 800+ education research syntheses puts metacognitive
+          strategies at <strong>d = 0.69</strong> effect size — among the most consequential
+          interventions a learner can practice. Self-reported grades — kids accurately predicting
+          their own performance — sits at <strong>d = 1.44</strong>, the single most powerful
+          effect in the entire corpus. Both are reflection skills. Both are teachable. Both are
+          tragically under-built across the K-12 app market.
+        </p>
+        <p>
+          So we built a fourth pillar around it. Apps in this pillar give your kid a structured,
+          repeated, low-stakes opportunity to notice what they're thinking, name what they're
+          feeling, take someone else's perspective, weigh consequences, and decide what's next.
+          The cast members are the scaffolding — they model the move so your kid sees how it
+          looks before doing it themselves.
+        </p>
+        <p class="text-sm text-anvil/65 dark:text-warm/65 italic">
+          Full research grounding: <a href="/method" class="underline hover:opacity-80" style={`color: ${meta.hex};`}>our method page</a> · or read the
+          deep <a href="https://github.com/nathant99/labsmith/blob/main/Docs/RESEARCH_REFLECT_PILLAR.md" class="underline hover:opacity-80" style={`color: ${meta.hex};`}>research artifact</a> we published when picking the pillar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anchor: META cast across the portfolio -->
+  <section class="max-w-4xl mx-auto px-6 pb-12">
+    <div class="rounded-2xl p-6 md:p-8 border bg-white dark:bg-anvil/40" style={`border-color: ${meta.hex}33;`}>
+      <p class="text-xs uppercase tracking-wider font-bold mb-2" style={`color: ${meta.hex};`}>
+        Concrete anchor
+      </p>
+      <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-3">
+        {meta.anchor.label}
+      </h2>
+      <p class="text-anvil/75 dark:text-warm/75 leading-relaxed">
+        {meta.anchor.description}
+      </p>
+    </div>
+  </section>
+
+  <!-- Primary apps -->
+  <section class="max-w-6xl mx-auto px-6 pb-12">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-2">
+      Primary Reflect apps
+    </h2>
+    <p class="text-sm text-anvil/65 dark:text-warm/65 mb-6">
+      {primaryApps.length} apps where reflection is the central mode — the cast, the kit, the loop,
+      and the cadence are all built around it.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {primaryApps.map(app => (
+        <a
+          href={`/apps/${app.slug}`}
+          class="block rounded-2xl border-2 p-4 bg-white dark:bg-anvil/40 hover:shadow-md transition-shadow"
+          style={`border-color: ${meta.hex}33;`}
+        >
+          <header class="flex items-start gap-3 mb-2">
+            {app.iconPath && (
+              <img src={app.iconPath} alt="" class="w-12 h-12 rounded-xl flex-shrink-0" loading="lazy" />
+            )}
+            <div class="min-w-0">
+              <h3 class="font-brand font-bold text-anvil dark:text-warm leading-tight">{app.name}</h3>
+              <p class="text-xs uppercase tracking-wider font-bold mt-0.5" style={`color: ${meta.hex};`}>
+                Reflect · primary
+              </p>
+            </div>
+          </header>
+          <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug line-clamp-3">
+            {app.tagline}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Secondary apps -->
+  <section class="max-w-6xl mx-auto px-6 pb-12">
+    <h2 class="font-brand font-bold text-2xl text-anvil dark:text-warm mb-2">
+      Reflect as a secondary mode
+    </h2>
+    <p class="text-sm text-anvil/65 dark:text-warm/65 mb-6">
+      {secondaryApps.length} apps where reflection plays a load-bearing supporting role —
+      reflective-craft pairings (a poem you wrote, an argument you defended) or ethical-reasoning
+      gates inside a different primary mode.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {secondaryApps.map(app => (
+        <a
+          href={`/apps/${app.slug}`}
+          class="block rounded-xl border p-4 bg-white dark:bg-anvil/40 hover:shadow-md transition-shadow"
+          style={`border-color: ${meta.hex}22;`}
+        >
+          <header class="flex items-start gap-3 mb-2">
+            {app.iconPath && (
+              <img src={app.iconPath} alt="" class="w-10 h-10 rounded-lg flex-shrink-0" loading="lazy" />
+            )}
+            <div class="min-w-0">
+              <h3 class="font-brand font-bold text-sm text-anvil dark:text-warm leading-tight">{app.name}</h3>
+              <p class="text-xs font-medium" style={`color: ${meta.hex};`}>Reflect · secondary</p>
+            </div>
+          </header>
+          <p class="text-xs text-anvil/65 dark:text-warm/65 leading-snug line-clamp-2">
+            {app.tagline}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Cross-pillar nav -->
+  <section class="max-w-4xl mx-auto px-6 pb-20">
+    <div class="rounded-xl p-5 border border-anvil/15 dark:border-warm/20 bg-warm/40 dark:bg-anvil/40">
+      <p class="text-xs uppercase tracking-wider text-anvil/60 dark:text-warm/60 font-bold mb-3">
+        Browse other pillars
+      </p>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <a href="/apps?mode=learn" class="px-3 py-1 rounded-full border-2 hover:opacity-80" style="border-color: #E8652B66; color: #C0481F;">Learn</a>
+        <a href="/apps?mode=play" class="px-3 py-1 rounded-full border-2 hover:opacity-80" style="border-color: #FFBE2E66; color: #B88819;">Play</a>
+        <a href="/apps?mode=create" class="px-3 py-1 rounded-full border-2 hover:opacity-80" style="border-color: #4A6FA566; color: #4A6FA5;">Create</a>
+        <a href="/apps" class="px-3 py-1 rounded-full border-2 border-anvil/30 hover:opacity-80">All apps</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
