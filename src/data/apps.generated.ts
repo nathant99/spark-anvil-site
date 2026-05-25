@@ -53,6 +53,7 @@ export interface AppData {
     learn: 0 | 1 | 2 | 3;
     play: 0 | 1 | 2 | 3;
     create: 0 | 1 | 2 | 3;
+    reflect: 0 | 1 | 2 | 3;
   };
   /**
    * Pass-and-play / face-to-face mode flag. When true, the app ships at least
@@ -162,7 +163,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -196,7 +198,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -241,7 +244,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -311,7 +315,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -381,7 +386,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -430,7 +436,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -481,7 +488,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -569,7 +577,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -639,7 +648,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -705,7 +715,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -762,7 +773,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -843,7 +855,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -888,7 +901,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -957,7 +971,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -1013,7 +1028,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 2
     }
   },
   {
@@ -1068,7 +1084,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 2
+      "create": 2,
+      "reflect": 2
     }
   },
   {
@@ -1138,7 +1155,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -1183,7 +1201,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -1253,7 +1272,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -1278,7 +1298,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     },
     "distributedNarrative": true,
     "dnCast": {
@@ -1359,7 +1380,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -1415,7 +1437,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 3,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -1450,7 +1473,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -1505,7 +1529,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -1560,7 +1585,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -1597,7 +1623,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 2
     }
   },
   {
@@ -1653,7 +1680,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -1707,7 +1735,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -1781,7 +1810,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -1851,7 +1881,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -1906,7 +1937,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -1961,7 +1993,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -2031,7 +2064,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -2088,8 +2122,9 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 3,
-      "create": 1
-        },
+      "create": 1,
+      "reflect": 0
+    },
     "playTogether": true
   },
   {
@@ -2144,7 +2179,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 3
     }
   },
   {
@@ -2198,7 +2234,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -2255,7 +2292,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -2309,7 +2347,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -2364,7 +2403,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -2428,7 +2468,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 3
     }
   },
   {
@@ -2482,7 +2523,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 3,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -2521,7 +2563,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 1,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -2558,7 +2601,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 0,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -2612,7 +2656,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -2682,7 +2727,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -2738,8 +2784,9 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 1,
-      "create": 3
-        },
+      "create": 3,
+      "reflect": 0
+    },
     "playTogether": true
   },
   {
@@ -2809,7 +2856,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -2879,7 +2927,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -2961,8 +3010,9 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
-        },
+      "create": 1,
+      "reflect": 0
+    },
     "playTogether": true
   },
   {
@@ -3059,7 +3109,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -3113,7 +3164,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -3191,7 +3243,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -3245,7 +3298,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -3315,7 +3369,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -3366,7 +3421,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -3421,7 +3477,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -3483,7 +3540,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 3
     }
   },
   {
@@ -3538,7 +3596,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -3593,8 +3652,9 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 3
-        },
+      "create": 3,
+      "reflect": 0
+    },
     "playTogether": true
   },
   {
@@ -3648,7 +3708,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -3702,7 +3763,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 2,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -3758,7 +3820,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 2
     }
   },
   {
@@ -3828,7 +3891,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -3941,7 +4005,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -4011,7 +4076,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -4056,7 +4122,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -4100,7 +4167,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     },
     "distributedNarrative": true,
     "dnCast": {
@@ -4162,7 +4230,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -4212,7 +4281,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -4267,7 +4337,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -4322,7 +4393,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -4392,7 +4464,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -4446,7 +4519,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -4511,7 +4585,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 3
     }
   },
   {
@@ -4565,7 +4640,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -4670,7 +4746,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -4740,7 +4817,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -4795,7 +4873,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 2
     }
   },
   {
@@ -4849,7 +4928,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -4919,8 +4999,9 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
-        },
+      "create": 0,
+      "reflect": 0
+    },
     "playTogether": true
   },
   {
@@ -4974,7 +5055,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -5044,7 +5126,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -5114,7 +5197,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -5184,7 +5268,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -5265,7 +5350,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 2
     }
   },
   {
@@ -5361,7 +5447,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -5431,7 +5518,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -5505,7 +5593,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -5562,7 +5651,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -5617,7 +5707,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -5672,7 +5763,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -5717,7 +5809,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -5771,7 +5864,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 2
     }
   },
   {
@@ -5814,7 +5908,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     },
     "distributedNarrative": true,
     "dnCast": {
@@ -5875,7 +5970,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 2
     }
   },
   {
@@ -5941,7 +6037,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -5997,7 +6094,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -6076,7 +6174,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 1,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 2
     }
   },
   {
@@ -6131,7 +6230,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -6201,7 +6301,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -6255,7 +6356,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -6281,7 +6383,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     },
     "distributedNarrative": true,
     "dnCast": {
@@ -6351,7 +6454,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -6387,7 +6491,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -6424,7 +6529,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -6479,7 +6585,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -6530,7 +6637,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -6581,7 +6689,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -6617,7 +6726,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -6654,7 +6764,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 2
     }
   },
   {
@@ -6690,7 +6801,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -6760,7 +6872,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -6811,7 +6924,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -6855,7 +6969,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 3
     }
   },
   {
@@ -6906,7 +7021,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -6960,7 +7076,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -6996,7 +7113,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 2
     }
   },
   {
@@ -7031,7 +7149,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 2
     }
   },
   {
@@ -7067,7 +7186,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -7114,7 +7234,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 3
     }
   },
   {
@@ -7158,7 +7279,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 3
     }
   },
   {
@@ -7203,7 +7325,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 0,
-      "create": 0
+      "create": 0,
+      "reflect": 3
     }
   },
   {
@@ -7281,7 +7404,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 3,
-      "create": 0
+      "create": 0,
+      "reflect": 2
     }
   },
   {
@@ -7327,7 +7451,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -7373,7 +7498,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -7414,7 +7540,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -7452,7 +7579,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -7499,7 +7627,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -7532,7 +7661,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -7565,7 +7695,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 0
     }
   },
   {
@@ -7599,7 +7730,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 2,
-      "create": 2
+      "create": 2,
+      "reflect": 0
     }
   },
   {
@@ -7633,7 +7765,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 0
+      "create": 0,
+      "reflect": 3
     }
   },
   {
@@ -7667,7 +7800,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -7700,7 +7834,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 1,
-      "create": 1
+      "create": 1,
+      "reflect": 0
     }
   },
   {
@@ -7735,7 +7870,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -7771,7 +7907,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 1,
-      "create": 3
+      "create": 3,
+      "reflect": 0
     }
   },
   {
@@ -7818,7 +7955,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 3,
       "play": 2,
-      "create": 1
+      "create": 1,
+      "reflect": 3
     }
   },
   {
@@ -7867,7 +8005,8 @@ export const apps: AppData[] = [
     "modes": {
       "learn": 2,
       "play": 3,
-      "create": 1
+      "create": 1,
+      "reflect": 2
     },
     "playTogether": true
   }

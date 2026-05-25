@@ -1,15 +1,19 @@
 /**
- * Engagement modality metadata for the Learn / Play / Create cross-cutting axis.
+ * Engagement modality metadata for the Learn / Play / Create / Reflect cross-cutting axis.
  * Orthogonal to subject `vertical`. Each app's `modes` field scores 0-3 per mode.
  *
  * Palette anchors:
- *   learn  — Forge Orange (#E8652B) — active instruction, the literal "forge" energy
- *   play   — Spark Gold   (#FFBE2E) — energy + delight
- *   create — Slate Blue   (#4A6FA5) — focus + craft
+ *   learn   — Forge Orange    (#E8652B) — active instruction, the literal "forge" energy
+ *   play    — Spark Gold      (#FFBE2E) — energy + delight
+ *   create  — Slate Blue      (#4A6FA5) — focus + craft
+ *   reflect — Slate Charcoal  (#3D5266) — cool / grounded / inward
+ *
+ * Reflect pillar added 2026-05-25 per labsmith/Docs/PLAN_REFLECT_PILLAR_ADOPTION.md
+ * (Round 74 #386). Trademark cleared YELLOW per RESEARCH_REFLECT_TRADEMARK_SCAN.md.
  */
 import { apps, type AppData } from './apps.generated';
 
-export type ModeKey = 'learn' | 'play' | 'create';
+export type ModeKey = 'learn' | 'play' | 'create' | 'reflect';
 
 export interface ModeMeta {
   key: ModeKey;
@@ -104,6 +108,27 @@ export const modes: ModeMeta[] = [
       ],
     },
   },
+  {
+    key: 'reflect',
+    label: 'Reflect',
+    hex: '#3D5266',
+    textClass: 'text-slateCharcoal',
+    bgClass: 'bg-slateCharcoal',
+    ringClass: 'ring-slateCharcoal',
+    tagline: "Look inward — notice what you're thinking and feeling, name it, and decide what's next.",
+    blurb: "Identity work, metacognition, mood + body awareness, and structured perspective-taking. Every Reflect-mode app gives your kid a calm space to think about their own thinking — supported by recurring cast members who model the practice.",
+    anchor: {
+      label: 'META cast across the portfolio',
+      description: "Notice, Reflect, Settle, Counsel, Coach, Vet, Guard, Credit-Keeper — the kid-readable mentors who help your kid review their own work, choices, and feelings across every app.",
+      href: '/apps?mode=reflect',
+      appSlugs: [
+        // Reflect-PRIMARY (10 apps per AUDIT_PORTFOLIO_PILLAR_TAGGING.md § 3)
+        'mindforge', 'focusforge', 'wellnessforge', 'tempcheck',
+        'coregrealm', 'rupturerepair', 'inclusionforge', 'microbelab',
+        'ethosforge', 'huggyhabits',
+      ],
+    },
+  },
 ];
 
 export const modeByKey: Record<ModeKey, ModeMeta> = Object.fromEntries(
@@ -153,14 +178,15 @@ export function anchorAppsFor(mode: ModeKey): AppData[] {
 
 /** Per-mode counts at each score (for diagnostics / counters on UI) */
 export function modeCounts(): Record<ModeKey, { primary: number; secondary: number; minor: number }> {
-  const out = {
+  const out: Record<ModeKey, { primary: number; secondary: number; minor: number }> = {
     learn: { primary: 0, secondary: 0, minor: 0 },
     play: { primary: 0, secondary: 0, minor: 0 },
     create: { primary: 0, secondary: 0, minor: 0 },
+    reflect: { primary: 0, secondary: 0, minor: 0 },
   };
   for (const a of apps) {
     if (!a.modes) continue;
-    for (const key of ['learn', 'play', 'create'] as ModeKey[]) {
+    for (const key of ['learn', 'play', 'create', 'reflect'] as ModeKey[]) {
       const s = a.modes[key];
       if (s === 3) out[key].primary++;
       else if (s === 2) out[key].secondary++;

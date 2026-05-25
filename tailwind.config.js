@@ -26,6 +26,11 @@ export default {
           DEFAULT: '#4A6FA5',   // Slate Blue — links, secondary
           light: '#6B8FC4',
         },
+        slateCharcoal: {
+          DEFAULT: '#3D5266',   // Slate Charcoal — Reflect pillar anchor
+          light: '#5A7188',     // Dark-mode variant (~20% lighter)
+          text: '#314253',      // Darker shade for body text on Warm White (WCAG AA Normal 7.4:1)
+        },
         // Outline color — matches portfolio chunky-cartoon aesthetic
         outline: '#2A1F1A',
       },
