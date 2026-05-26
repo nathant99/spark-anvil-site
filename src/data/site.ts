@@ -8,7 +8,7 @@ export const site = {
   email: 'hello@spark-and-anvil.com',
   press: 'press@spark-and-anvil.com',
   ages: '5–14',
-  appCount: 141,
+  appCount: 140,
 };
 
 export const trustSignals = [
