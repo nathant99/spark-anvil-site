@@ -1,19 +1,27 @@
 /**
- * Engagement modality metadata for the Learn / Play / Create / Reflect cross-cutting axis.
- * Orthogonal to subject `vertical`. Each app's `modes` field scores 0-3 per mode.
+ * Engagement modality metadata for the Learn / Play / Create / Reflect / Together
+ * cross-cutting axis. Orthogonal to subject `vertical`. Each app's `modes` field
+ * scores 0-3 per mode.
  *
  * Palette anchors:
- *   learn   — Forge Orange    (#E8652B) — active instruction, the literal "forge" energy
- *   play    — Spark Gold      (#FFBE2E) — energy + delight
- *   create  — Slate Blue      (#4A6FA5) — focus + craft
- *   reflect — Slate Charcoal  (#3D5266) — cool / grounded / inward
+ *   learn    — Forge Orange    (#E8652B) — active instruction, the literal "forge" energy
+ *   play     — Spark Gold      (#FFBE2E) — energy + delight
+ *   create   — Slate Blue      (#4A6FA5) — focus + craft
+ *   reflect  — Slate Charcoal  (#3D5266) — cool / grounded / inward
+ *   together — Sage Green      (#6B8E5A) — warm-grounded community / garden / family
  *
  * Reflect pillar added 2026-05-25 per labsmith/Docs/PLAN_REFLECT_PILLAR_ADOPTION.md
  * (Round 74 #386). Trademark cleared YELLOW per RESEARCH_REFLECT_TRADEMARK_SCAN.md.
+ *
+ * Together pillar added 2026-05-24 per labsmith/Docs/RESEARCH_TOGETHER_5TH_PILLAR.md
+ * (Round 78 #397). Closes schema-vs-audit inconsistency where AUDIT_PORTFOLIO_PILLAR_
+ * TAGGING.md already classified 10 PRIMARY + 24 SECONDARY apps but the schema only
+ * tracked a sidecar `playTogether: boolean`. Aligns site IA with Hirsh-Pasek's 4-pillar
+ * Science-of-Learning framework (Social Interaction = Together).
  */
 import { apps, type AppData } from './apps.generated';
 
-export type ModeKey = 'learn' | 'play' | 'create' | 'reflect';
+export type ModeKey = 'learn' | 'play' | 'create' | 'reflect' | 'together';
 
 export interface ModeMeta {
   key: ModeKey;
@@ -129,6 +137,27 @@ export const modes: ModeMeta[] = [
       ],
     },
   },
+  {
+    key: 'together',
+    label: 'Together',
+    hex: '#6B8E5A',
+    textClass: 'text-sage',
+    bgClass: 'bg-sage',
+    ringClass: 'ring-sage',
+    tagline: 'Play side-by-side — pass the device, share the screen, build the round together.',
+    blurb: "Pass-and-play modes, family-cooperative rounds, dyadic co-regulation pairs, and aggregator hubs where the gameplay IS the shared moment. Every Together-mode app is designed for two-or-more humans on one device — couch-coop, dinner table, classroom group, rainy Saturday afternoon.",
+    anchor: {
+      label: 'Pass-and-play differentiator',
+      description: 'Apps designed for face-to-face play — couch-coop, hot-seat, parent-child pass-the-device, family cooperative rounds. The research is clear: kids learn faster, and feel safer, when an adult is co-present in the play moment.',
+      href: '/play-together',
+      appSlugs: [
+        // Together-PRIMARY (10 apps per AUDIT_PORTFOLIO_PILLAR_TAGGING.md § 3.6)
+        'adventurehub', 'dealtales', 'ensemblequest', 'forgearena',
+        'forgeclassroom', 'forgeportal', 'improvquest', 'jestforge',
+        'numberverse', 'taleforge',
+      ],
+    },
+  },
 ];
 
 export const modeByKey: Record<ModeKey, ModeMeta> = Object.fromEntries(
@@ -183,10 +212,11 @@ export function modeCounts(): Record<ModeKey, { primary: number; secondary: numb
     play: { primary: 0, secondary: 0, minor: 0 },
     create: { primary: 0, secondary: 0, minor: 0 },
     reflect: { primary: 0, secondary: 0, minor: 0 },
+    together: { primary: 0, secondary: 0, minor: 0 },
   };
   for (const a of apps) {
     if (!a.modes) continue;
-    for (const key of ['learn', 'play', 'create', 'reflect'] as ModeKey[]) {
+    for (const key of ['learn', 'play', 'create', 'reflect', 'together'] as ModeKey[]) {
       const s = a.modes[key];
       if (s === 3) out[key].primary++;
       else if (s === 2) out[key].secondary++;

@@ -31,6 +31,11 @@ export default {
           light: '#5A7188',     // Dark-mode variant (~20% lighter)
           text: '#314253',      // Darker shade for body text on Warm White (WCAG AA Normal 7.4:1)
         },
+        sage: {
+          DEFAULT: '#6B8E5A',   // Sage Green — Together pillar anchor (Round 78 #397, 2026-05-24)
+          light: '#8AAB78',     // Dark-mode variant (~20% lighter)
+          text: '#556F47',      // Darker shade for body text on Warm White (WCAG AA Normal)
+        },
         // Outline color — matches portfolio chunky-cartoon aesthetic
         outline: '#2A1F1A',
       },
