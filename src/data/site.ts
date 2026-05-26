@@ -28,6 +28,9 @@ export const trustSignals = [
 // educators and S&A teachers are not families). Flattened to audience-specific top-level links.
 // Phase 3 of `labsmith/Docs/PLAN_TEACHER_NETWORK_PROMINENCE.md` promotes /teach with "Recruiting" badge.
 // Demoted to footer-only: /about (Round 79), /classes, /news, /mascots, /method, /mission, /impact, /board, /annual-report, /press, /privacy, /terms.
+// /play-together demoted to footer-only 2026-05-24 (Round 80 #417) — Together is now the 5th pillar
+// in the homepage modality strip + accessible via /apps?mode=together filter chip; same Hick's-law
+// discipline that kept Reflect off top-nav (Reflect lives at /reflect via homepage modality strip + footer).
 // Items with `overflow: true` collapse into the "More ▾" popover at the right of the desktop bar
 // (Move 5 of `labsmith/Docs/WORK_QUEUE_NAV_CROWDING_2026-05-26.md`). Mobile drawer shows them inline.
 export const nav = [
@@ -35,7 +38,6 @@ export const nav = [
   { href: '/apps', label: 'Apps' },
   { href: '/beta', label: 'Beta', badge: 'Beta' },
   { href: '/cast', label: 'Cast' },
-  { href: '/play-together', label: 'Play Together' },
   { href: '/neurodivergent', label: 'Neurodivergent' },
   { href: '/for-parents', label: 'For Parents' },
   { href: '/for-educators', label: 'For Educators' },
