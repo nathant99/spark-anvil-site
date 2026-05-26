@@ -1,8 +1,8 @@
 export const site = {
   name: 'Spark & Anvil',
-  tagline: 'Free forever. Educational iOS apps, forged for curiosity.',
+  tagline: 'Free forever. Educational apps for Apple platforms, forged for curiosity.',
   description:
-    'Spark & Anvil makes thoughtfully-crafted educational iOS apps for kids ages 9–14 — all free, forever. No ads, no in-app purchases, no tracking. Built with Swift 6 and SwiftUI, running on-device AI.',
+    'Spark & Anvil makes thoughtfully-crafted educational apps for kids ages 9–14 — running on iPhone, iPad, Mac, and Apple Vision Pro. All free, forever. No ads, no in-app purchases, no tracking. Built with Swift 6 and SwiftUI, running on-device AI.',
   url: 'https://spark-and-anvil.com',
   ogImage: '/brand/og-image.png',
   email: 'hello@spark-and-anvil.com',
