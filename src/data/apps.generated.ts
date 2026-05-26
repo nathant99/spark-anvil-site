@@ -256,6 +256,16 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/aiforge/mascot.webp",
     "mentor": "Bit",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "AIForge's 5-character cast embodies AI-literacy primitives — explicitly designed to defuse cultural AI anxieties through honest framing. No sci-fi robot tropes; no 'AI as sentient'; no 'AI as scary'. Cast is non-human + non-gendered + non-cultural-coded. Bit (mentor) introduces them.",
+      "members": [
+        { "name": "Sort", "role": "Classifier — the simplest ML; putting things in categories" },
+        { "name": "Feed", "role": "Training data — the examples a model learns from; garbage-in-garbage-out" },
+        { "name": "Skew", "role": "Bias — where AI systems go wrong when training examples lean" },
+        { "name": "Edge", "role": "Model limitations — what a model can't do; modeling 'I don't know' as a good answer" },
+        { "name": "Stake", "role": "Ethics — what's at stake in deploying AI; people choosing, not rules-from-the-sky" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NGSS",
@@ -1213,6 +1223,17 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/coderealm/mascot.webp",
     "mentor": "Loop",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "CodeRealm's 6-character cast embodies coding primitives — each character IS a programming primitive Bit (the robot the learner programs) uses. Cast is non-human + non-gendered (avoids the tech-genius-hagiography pitfall). Loop is the mentor introducing them.",
+      "members": [
+        { "name": "Stash", "role": "Variable / storage — the labeled box that holds a value until you call for it" },
+        { "name": "Fork", "role": "Conditional / branching — chooses a path based on what's true right now" },
+        { "name": "Trek", "role": "Loop / iteration — keeps going around until the work is done" },
+        { "name": "Module", "role": "Function / encapsulation — does one job well and can be called anywhere" },
+        { "name": "Glitch", "role": "Debugging / inspection — finds bugs gently, never shaming; 'there's always a reason'" },
+        { "name": "Order", "role": "Sequence / syntax — reminds you that order matters in code" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NGSS",
@@ -4134,6 +4155,17 @@ export const apps: AppData[] = [
     "mascotPath": "/apps/machineforge/mascot.webp",
     "mentor": "Cog",
     "distributedNarrative": true,
+    "dnCast": {
+      "intro": "MachineForge's 6-character cast embodies the canonical simple machines — each character IS one mechanism made friendly. Cast is non-human + non-gendered. Cog (mentor) frames the engineering-mindset and introduces them.",
+      "members": [
+        { "name": "Pry", "role": "Lever — push longer to lift heavier; the trade between force and distance" },
+        { "name": "Hoist", "role": "Pulley — pull down here and watch it go up there; redirecting force" },
+        { "name": "Ramp", "role": "Inclined plane — climb the long slow way; less force, same work" },
+        { "name": "Spoke", "role": "Wheel-and-axle — one turn of the hub, many turns of the rim" },
+        { "name": "Auger", "role": "Screw — round and round becomes step and step; spiral inclined plane" },
+        { "name": "Cleave", "role": "Wedge — push forward and split it apart; force concentrated to a sharp edge" }
+      ]
+    },
     "implementing": false,
     "standards": [
       "NGSS",
@@ -5399,6 +5431,43 @@ export const apps: AppData[] = [
     }
   },
   {
+    "slug": "questforge",
+    "name": "QuestForge",
+    "tagline": "Tabletop RPG adventure creation toolkit for ages 9-14 — point-buy character math, dice probability, branching narratives, hex-grid encounter maps, and resource economics, guided by Lorekeeper (the AI mentor) and a 5-character cast of TTRPG-design practitioners.",
+    "vertical": "academics",
+    "heroColor": "#C9954A",
+    "iconPath": "/apps/questforge/icon-sm.webp",
+    "mascotPath": "/apps/questforge/mascot.webp",
+    "mentor": "Lorekeeper",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "QuestForge's cast is 5 TTRPG-design practitioners — Sheet (character-build math), Roll (dice probability), Fork (branching stories), Hex (encounter maps), Hoard (resource economy). Each embodies one design primitive; together they show that running a tabletop adventure is many small crafts working together. Lorekeeper is the mentor who introduces them.",
+      "members": [
+        { "name": "Sheet", "role": "Point-buy character creation + stat optimization — every build is a legitimate story" },
+        { "name": "Roll", "role": "Dice probability + distribution — dice don't remember; every roll is its own universe" },
+        { "name": "Fork", "role": "Branching narrative + decision design — two paths, both real, both lead somewhere" },
+        { "name": "Hex", "role": "Encounter map grid + range/AOE geometry — math you can SEE" },
+        { "name": "Hoard", "role": "Resource economics + budget — tools-not-trophies; counter-tropic friendly dragon" }
+      ]
+    },
+    "implementing": false,
+    "standards": [
+      "CCSS Math",
+      "CCSS ELA",
+      "ISTE"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "iconHeroPath": "/apps/questforge/icon.webp",
+    "hasUserGuide": false,
+    "modes": {
+      "learn": 2,
+      "play": 2,
+      "create": 3,
+      "reflect": 1
+    }
+  },
+  {
     "slug": "quillspell",
     "name": "QuillSpell",
     "tagline": "Spelling and vocabulary mastery through pattern recognition and play.",
@@ -5965,6 +6034,43 @@ export const apps: AppData[] = [
         { "name": "Crisp", "role": "Maillard + caramelization — the focused fox-tween who treats browning as the flavor-creating frontier ('sugar meets heat, protein meets heat — new flavors are born')" },
         { "name": "Brine", "role": "Preservation + food safety — the careful axolotl-tween who treats food safety as care-for-the-eater, foregrounding cross-cultural preservation traditions ('salt remembers, vinegar remembers, cold remembers — food keeps if it's kept right')" }
       ]
+    }
+  },
+  {
+    "slug": "scienceforge",
+    "name": "ScienceForge",
+    "tagline": "Virtual Science Lab & Experiment Builder — kids design real experiments, run virtual simulations, collect data, and build science fair presentations, guided by Prism (the AI mentor) at every step of the scientific method. Ages 9-14.",
+    "vertical": "stem",
+    "heroColor": "#26C6DA",
+    "iconPath": "/apps/scienceforge/icon-sm.webp",
+    "mascotPath": "/apps/scienceforge/mascot.webp",
+    "mentor": "Prism",
+    "distributedNarrative": true,
+    "dnCast": {
+      "intro": "ScienceForge's 5-character LESSONS cast embodies the scientific method — each stage is a tween-mentor character. Question (a wren who asks), Predict (a fox who hypothesizes), Setup (a beaver who designs the experiment), Sample (a cat who collects data), Conclude (an owl who interprets evidence). Prism is the mentor — splitting inquiry into observable wavelengths. The cluster-shared WORLD anchor (Look / Wonder / Probe / Again) is generated here first.",
+      "members": [
+        { "name": "Question", "role": "Question-formation — 'what do we want to find out?' (curious wren-tween)" },
+        { "name": "Predict", "role": "Hypothesis-formation — 'I think... because... so we should see...' (steady fox-tween)" },
+        { "name": "Setup", "role": "Experiment-design — 'one thing changes, everything else stays' (methodical beaver-tween)" },
+        { "name": "Sample", "role": "Data-collection + measurement — 'many measurements; then we see the shape' (patient cat-tween)" },
+        { "name": "Conclude", "role": "Data-interpretation + revision — 'the data shows... but maybe... let's check' (thoughtful owl-tween)" }
+      ]
+    },
+    "implementing": false,
+    "standards": [
+      "NGSS",
+      "CCSS Math",
+      "ISTE"
+    ],
+    "hasM9Accessories": false,
+    "wave": null,
+    "iconHeroPath": "/apps/scienceforge/icon.webp",
+    "hasUserGuide": false,
+    "modes": {
+      "learn": 3,
+      "play": 1,
+      "create": 2,
+      "reflect": 2
     }
   },
   {
