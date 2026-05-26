@@ -23,11 +23,13 @@ export const trustSignals = [
   'Designed for face-to-face play',
 ];
 
-// Top-level nav — flattened 2026-05-23 (queue #322 IA fix).
+// Top-level nav — flattened 2026-05-23 (queue #322 IA fix), de-crowded 2026-05-24 (Round 79 #407).
 // "For Families" dropdown previously nested /for-educators + /teach (semantic mismatch —
-// educators and S&A teachers are not families). Flattened to 3 audience-specific top-level links.
+// educators and S&A teachers are not families). Flattened to audience-specific top-level links.
 // Phase 3 of `labsmith/Docs/PLAN_TEACHER_NETWORK_PROMINENCE.md` promotes /teach with "Recruiting" badge.
-// Demoted to footer-only: /classes, /news, /mascots, /method, /mission, /impact, /board, /annual-report, /press, /privacy, /terms.
+// Demoted to footer-only: /about (Round 79), /classes, /news, /mascots, /method, /mission, /impact, /board, /annual-report, /press, /privacy, /terms.
+// Items with `overflow: true` collapse into the "More ▾" popover at the right of the desktop bar
+// (Move 5 of `labsmith/Docs/WORK_QUEUE_NAV_CROWDING_2026-05-26.md`). Mobile drawer shows them inline.
 export const nav = [
   { href: '/', label: 'Home' },
   { href: '/apps', label: 'Apps' },
@@ -37,8 +39,7 @@ export const nav = [
   { href: '/neurodivergent', label: 'Neurodivergent' },
   { href: '/for-parents', label: 'For Parents' },
   { href: '/for-educators', label: 'For Educators' },
-  { href: '/teach', label: 'Teach', badge: 'Recruiting' },
-  { href: '/about', label: 'About' },
+  { href: '/teach', label: 'Teach', badge: 'Recruiting', overflow: true },
   { href: '/donate', label: 'Donate', cta: true },
 ];
 

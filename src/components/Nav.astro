@@ -5,7 +5,22 @@ const { pathname } = Astro.url;
 const items = nav.slice(1);  // skip "Home" — logo links there
 
 type NavChild = { href: string; label: string };
-type NavItem = { href: string; label: string; cta?: boolean; badge?: string; children?: NavChild[] };
+type NavItem = { href: string; label: string; cta?: boolean; badge?: string; overflow?: boolean; children?: NavChild[] };
+
+// Active matching — supports prefix (e.g., /apps/<slug> activates /apps) but not "/" alone.
+// "/" must match exactly to avoid every route activating the Home link.
+function isActive(href: string, current: string): boolean {
+  if (href === '/') return current === '/';
+  if (current === href) return true;
+  return current.startsWith(href + '/');
+}
+
+// Desktop render order: visible non-CTA links → "More ▾" overflow popover → CTA at the right edge.
+const visibleNonCta = (items as NavItem[]).filter(item => !item.overflow && !item.cta);
+const overflowItems = (items as NavItem[]).filter(item => !!item.overflow);
+const ctaItems = (items as NavItem[]).filter(item => !!item.cta);
+const hasOverflow = overflowItems.length > 0;
+const overflowActive = overflowItems.some(item => isActive(item.href, pathname));
 ---
 
 <header class="border-b border-anvil/10 dark:border-warm/15 bg-warm/80 dark:bg-anvil/80 backdrop-blur sticky top-0 z-50">
@@ -16,25 +31,17 @@ type NavItem = { href: string; label: string; cta?: boolean; badge?: string; chi
 
     <!-- Desktop nav -->
     <nav class="hidden md:flex items-center gap-5" aria-label="Primary">
-      {(items as NavItem[]).map(item => {
-        const active = pathname === item.href || (item.children?.some(c => c.href === pathname));
-        if (item.cta) {
-          return (
-            <a
-              href={item.href}
-              class="px-4 py-2 bg-forge hover:bg-forge/90 text-warm text-sm font-bold rounded-full transition-colors"
-            >
-              {item.label}
-            </a>
-          );
-        }
+      {visibleNonCta.map(item => {
+        const active = isActive(item.href, pathname) || (item.children?.some(c => isActive(c.href, pathname)));
         if (item.children) {
           return (
             <div class="relative group">
               <button
                 type="button"
-                class={`flex items-center gap-1 text-sm font-medium hover:text-forge dark:hover:text-forge-light transition-colors ${
-                  active ? 'text-forge dark:text-forge-light' : 'text-anvil dark:text-warm'
+                class={`flex items-center gap-1 text-sm transition-colors ${
+                  active
+                    ? 'text-forge dark:text-forge-light font-bold border-b-2 border-forge pb-0.5'
+                    : 'text-anvil dark:text-warm font-medium border-b-2 border-transparent pb-0.5 hover:text-forge dark:hover:text-forge-light'
                 }`}
                 aria-haspopup="true"
               >
@@ -47,9 +54,10 @@ type NavItem = { href: string; label: string; cta?: boolean; badge?: string; chi
                 {item.children.map(child => (
                   <a
                     href={child.href}
+                    aria-current={isActive(child.href, pathname) ? 'page' : undefined}
                     class={`block px-3 py-2 rounded text-sm font-medium ${
-                      pathname === child.href
-                        ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light'
+                      isActive(child.href, pathname)
+                        ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light font-bold'
                         : 'text-anvil dark:text-warm hover:bg-anvil/5 dark:hover:bg-warm/10'
                     }`}
                   >
@@ -63,8 +71,11 @@ type NavItem = { href: string; label: string; cta?: boolean; badge?: string; chi
         return (
           <a
             href={item.href}
-            class={`inline-flex items-center gap-1.5 text-sm font-medium hover:text-forge dark:hover:text-forge-light transition-colors ${
-              active ? 'text-forge dark:text-forge-light' : 'text-anvil dark:text-warm'
+            aria-current={active ? 'page' : undefined}
+            class={`inline-flex items-center gap-1.5 text-sm transition-colors ${
+              active
+                ? 'text-forge dark:text-forge-light font-bold border-b-2 border-forge pb-0.5'
+                : 'text-anvil dark:text-warm font-medium border-b-2 border-transparent pb-0.5 hover:text-forge dark:hover:text-forge-light'
             }`}
           >
             {item.label}
@@ -76,6 +87,56 @@ type NavItem = { href: string; label: string; cta?: boolean; badge?: string; chi
           </a>
         );
       })}
+
+      {hasOverflow && (
+        <div class="relative group">
+          <button
+            type="button"
+            class={`flex items-center gap-1 text-sm transition-colors ${
+              overflowActive
+                ? 'text-forge dark:text-forge-light font-bold border-b-2 border-forge pb-0.5'
+                : 'text-anvil dark:text-warm font-medium border-b-2 border-transparent pb-0.5 hover:text-forge dark:hover:text-forge-light'
+            }`}
+            aria-haspopup="true"
+            aria-label="More navigation links"
+          >
+            More
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full mt-1 min-w-[180px] bg-warm dark:bg-anvil border border-anvil/10 dark:border-warm/15 rounded-lg shadow-md p-1 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity">
+            {overflowItems.map(item => (
+              <a
+                href={item.href}
+                aria-current={isActive(item.href, pathname) ? 'page' : undefined}
+                class={`flex items-center gap-1.5 px-3 py-2 rounded text-sm ${
+                  isActive(item.href, pathname)
+                    ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light font-bold'
+                    : 'text-anvil dark:text-warm font-medium hover:bg-anvil/5 dark:hover:bg-warm/10'
+                }`}
+              >
+                {item.label}
+                {item.badge && (
+                  <span class="px-1.5 py-0.5 bg-forge text-warm text-[10px] font-bold uppercase tracking-wider rounded-full leading-none">
+                    {item.badge}
+                  </span>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {ctaItems.map(item => (
+        <a
+          href={item.href}
+          class="px-4 py-2 bg-forge hover:bg-forge/90 text-warm text-sm font-bold rounded-full transition-colors"
+          aria-current={isActive(item.href, pathname) ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
     </nav>
 
     <!-- Mobile hamburger button -->
@@ -99,6 +160,7 @@ type NavItem = { href: string; label: string; cta?: boolean; badge?: string; chi
   </div>
 
   <!-- Mobile drawer (slides down below the sticky header) -->
+  <!-- Mobile shows ALL nav items inline (no overflow popover) — hamburger menu is already a disclosure. -->
   <nav
     id="mobile-nav-drawer"
     class="md:hidden hidden border-t border-anvil/10 dark:border-warm/15 bg-warm dark:bg-anvil"
@@ -111,7 +173,7 @@ type NavItem = { href: string; label: string; cta?: boolean; badge?: string; chi
             <li>
               <details class="group">
                 <summary class={`flex items-center justify-between px-3 py-3 rounded-lg font-brand font-bold text-lg cursor-pointer ${
-                  item.children.some(c => c.href === pathname)
+                  item.children.some(c => isActive(c.href, pathname))
                     ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light'
                     : 'text-anvil dark:text-warm'
                 }`}>
@@ -125,8 +187,9 @@ type NavItem = { href: string; label: string; cta?: boolean; badge?: string; chi
                     <li>
                       <a
                         href={child.href}
+                        aria-current={isActive(child.href, pathname) ? 'page' : undefined}
                         class={`block px-3 py-2 rounded-lg text-base ${
-                          pathname === child.href
+                          isActive(child.href, pathname)
                             ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light font-bold'
                             : 'text-anvil/80 dark:text-warm/80 hover:bg-anvil/5 dark:hover:bg-warm/10'
                         }`}
@@ -140,15 +203,17 @@ type NavItem = { href: string; label: string; cta?: boolean; badge?: string; chi
             </li>
           );
         }
+        const active = isActive(item.href, pathname);
         return (
           <li>
             <a
               href={item.href}
+              aria-current={active ? 'page' : undefined}
               class={`flex items-center gap-2 px-3 py-3 rounded-lg font-brand font-bold text-lg ${
                 item.cta
                   ? 'bg-forge text-warm hover:bg-forge/90'
-                  : pathname === item.href
-                  ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light'
+                  : active
+                  ? 'bg-forge/10 dark:bg-forge-light/15 text-forge dark:text-forge-light border-l-4 border-forge -ml-1 pl-2'
                   : 'text-anvil dark:text-warm hover:bg-anvil/5 dark:bg-warm/5 dark:hover:bg-warm/10'
               }`}
             >
