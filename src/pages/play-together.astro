@@ -3,13 +3,20 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import { apps } from '~/data/apps.generated';
 import { verticals } from '~/data/site';
 
-// Apps that ship pass-and-play / face-to-face modes today
+// Together-pillar members: apps with modes.together >= 2 (PRIMARY or SECONDARY).
+// Per `labsmith/Docs/RESEARCH_TOGETHER_5TH_PILLAR.md` (Round 78 #397).
+const pillarApps = apps.filter(a => a.modes?.together && a.modes.together >= 2);
+const primaryApps = apps.filter(a => a.modes?.together === 3);
+const secondaryApps = apps.filter(a => a.modes?.together === 2);
+
+// Apps that ship pass-and-play / face-to-face modes TODAY (sidecar boolean).
+// Subset of pillarApps; surfaced as "shipping today" indicator.
 const liveApps = apps.filter(a => a.playTogether === true);
+const liveSlugSet = new Set(liveApps.map(a => a.slug));
 const liveCount = liveApps.length;
-const byVerticalLive = verticals.map(v => ({
-  ...v,
-  apps: liveApps.filter(a => a.vertical === v.id),
-})).filter(v => v.apps.length > 0);
+const pillarCount = pillarApps.length;
+const primaryCount = primaryApps.length;
+const secondaryCount = secondaryApps.length;
 
 // Ceiling per research §4: ~111 apps (~80%) are good-fit candidates
 const ceiling = 111;
@@ -17,26 +24,23 @@ const totalApps = apps.length;
 ---
 
 <BaseLayout
-  title="Play Together"
-  description={`Designed for face-to-face play. ${liveCount} of our ${totalApps} apps ship pass-and-play modes so you can hand the device back and forth with your kid, sibling, or grandparent.`}
+  title="Together"
+  description={`Together is the 5th Spark & Anvil pillar — apps designed for face-to-face play. ${primaryCount} apps where partnership IS the curriculum, ${secondaryCount} with strong Together-mode surfaces, and ${liveCount} shipping pass-and-play today.`}
 >
   <!-- Hero -->
   <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
     <div class="flex items-start gap-6 flex-wrap">
       <div class="flex-1 min-w-[280px]">
-        <span class="inline-block px-3 py-1 mb-4 bg-forge text-warm text-xs font-bold uppercase tracking-wider rounded-full">Face-to-face mode</span>
+        <span class="inline-block px-3 py-1 mb-4 bg-sage text-warm text-xs font-bold uppercase tracking-wider rounded-full">5th pillar · Together</span>
         <h1 class="font-brand font-bold text-4xl md:text-5xl text-anvil dark:text-warm mb-4">
-          Play together.
-          <span class="block text-forge">Pass the device.</span>
+          Play side-by-side.
+          <span class="block text-sage">Pass the device.</span>
         </h1>
         <p class="text-xl text-anvil/70 dark:text-warm/70 max-w-2xl leading-relaxed">
-          Some of our apps are designed for two-or-more humans on one device. Take turns. Pass the
-          device between rounds. Sit on the couch with your kid, sibling, or grandparent. Build
-          vocabulary, beat the puzzle, share the moment.
+          Together is the engagement modality where two-or-more humans share one device. Pass-and-play modes, family-cooperative rounds, dyadic co-regulation pairs, aggregator hubs. Couch-coop, dinner table, classroom group, rainy Saturday afternoon.
         </p>
         <p class="mt-4 text-anvil/60 dark:text-warm/60 leading-relaxed max-w-2xl">
-          The research is clear: face-to-face play — even device-mediated — builds family cohesion,
-          co-regulation, and shared meaning in ways solo-play can't. <a href="/for-parents" class="underline hover:text-forge">More for parents →</a>
+          The research is clear — Vygotsky's zone of proximal development, Tronick's dyadic co-regulation, Hirsh-Pasek's Social Interaction pillar, and Johnson &amp; Johnson's cooperative-learning meta-analyses (d ≈ 0.42-0.47 on K-12 academic outcomes) all converge on co-located play as a productive learning context. <a href="/for-parents" class="underline hover:text-sage">More for parents →</a>
         </p>
       </div>
       <img
@@ -52,77 +56,92 @@ const totalApps = apps.length;
   <section class="max-w-4xl mx-auto px-6 pb-12">
     <div class="flex flex-wrap gap-6 text-sm">
       <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">{primaryCount}</strong>
+        Together-<strong class="text-sage">primary</strong> <span class="text-xs">apps</span>
+      </span>
+      <span class="text-anvil/70 dark:text-warm/70">
+        <strong class="text-anvil dark:text-warm text-2xl font-brand block">{secondaryCount}</strong>
+        Together-secondary <span class="text-xs">apps</span>
+      </span>
+      <span class="text-anvil/70 dark:text-warm/70">
         <strong class="text-anvil dark:text-warm text-2xl font-brand block">{liveCount}</strong>
-        apps with pass-and-play <span class="text-xs">today</span>
+        shipping pass-and-play <span class="text-xs">today</span>
       </span>
       <span class="text-anvil/70 dark:text-warm/70">
         <strong class="text-anvil dark:text-warm text-2xl font-brand block">~{ceiling}</strong>
-        more <span class="text-xs">on the roadmap</span>
+        ceiling <span class="text-xs">(~80% of portfolio)</span>
       </span>
       <span class="text-anvil/70 dark:text-warm/70">
         <strong class="text-anvil dark:text-warm text-2xl font-brand block">1</strong>
         device per game <span class="text-xs">(no extra hardware)</span>
       </span>
-      <span class="text-anvil/70 dark:text-warm/70">
-        <strong class="text-anvil dark:text-warm text-2xl font-brand block">2-6</strong>
-        players per session
-      </span>
     </div>
   </section>
 
-  <!-- Live apps -->
+  <!-- Pillar members -->
   <section class="py-12">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil dark:text-warm mb-2">
-        Available today
+        Together-pillar apps
       </h2>
       <p class="text-anvil/60 dark:text-warm/60 mb-8">
-        {liveCount} apps ship at least one pass-and-play / hot-seat / cooperative mode designed
-        for two or more humans on one device.
+        {pillarCount} apps where co-located play is part of the proposition — {primaryCount} where partnership IS the curriculum (the gameplay only works with two-or-more humans together) plus {secondaryCount} with strong Together-mode surfaces alongside their primary modality. The {liveCount} with the "Shipping today" badge ship pass-and-play modes right now.
       </p>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {liveApps.map(app => (
-          <article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/10 dark:border-warm/10 hover:border-forge/40 transition-colors">
-            <header class="flex items-center gap-3 mb-3">
-              {app.mascotPath ? (
-                <div
-                  class="w-12 h-12 rounded-xl overflow-hidden border-2 border-warm flex-shrink-0"
-                  style={`background-color: ${app.heroColor}`}
-                >
-                  <img
-                    src={app.mascotPath}
-                    alt=""
-                    class="w-full h-full object-contain"
-                    loading="lazy"
-                  />
+        {pillarApps.map(app => {
+          const isLive = liveSlugSet.has(app.slug);
+          const isPrimary = app.modes?.together === 3;
+          return (
+            <article class="bg-white dark:bg-anvil/40 rounded-2xl p-5 border-2 border-anvil/10 dark:border-warm/10 hover:border-sage/40 transition-colors">
+              <header class="flex items-center gap-3 mb-3">
+                {app.mascotPath ? (
+                  <div
+                    class="w-12 h-12 rounded-xl overflow-hidden border-2 border-warm flex-shrink-0"
+                    style={`background-color: ${app.heroColor}`}
+                  >
+                    <img
+                      src={app.mascotPath}
+                      alt=""
+                      class="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center font-brand font-bold text-white text-xl"
+                    style={`background-color: ${app.heroColor}`}
+                  >
+                    {app.name.charAt(0)}
+                  </div>
+                )}
+                <div class="min-w-0 flex-1">
+                  <a href={`/apps/${app.slug}`} class="block font-brand font-bold text-anvil dark:text-warm hover:text-sage transition-colors truncate">
+                    {app.name}
+                  </a>
+                  <p class="text-xs text-anvil/60 dark:text-warm/60 truncate">
+                    {app.vertical.toUpperCase()}
+                  </p>
                 </div>
-              ) : (
-                <div
-                  class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center font-brand font-bold text-white text-xl"
-                  style={`background-color: ${app.heroColor}`}
-                >
-                  {app.name.charAt(0)}
-                </div>
-              )}
-              <div class="min-w-0 flex-1">
-                <a href={`/apps/${app.slug}`} class="block font-brand font-bold text-anvil dark:text-warm hover:text-forge transition-colors truncate">
-                  {app.name}
-                </a>
-                <p class="text-xs text-anvil/60 dark:text-warm/60 truncate">
-                  {app.vertical.toUpperCase()}
-                </p>
+              </header>
+              <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug line-clamp-3">
+                {app.tagline}
+              </p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium ${isPrimary ? 'bg-sage/15 text-sage-text dark:text-sage-light' : 'bg-sage/10 text-sage-text dark:text-sage-light'}`}>
+                  <span>{isPrimary ? '⭐' : '👥'}</span>
+                  <span>{isPrimary ? 'Together-primary' : 'Together-secondary'}</span>
+                </span>
+                {isLive && (
+                  <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-forge/10 dark:bg-forge/20 rounded text-xs font-medium text-forge">
+                    <span>✓</span>
+                    <span>Shipping today</span>
+                  </span>
+                )}
               </div>
-            </header>
-            <p class="text-sm text-anvil/70 dark:text-warm/70 leading-snug line-clamp-3">
-              {app.tagline}
-            </p>
-            <div class="mt-3 inline-flex items-center gap-1 px-2 py-0.5 bg-forge/10 dark:bg-forge/20 rounded text-xs font-medium text-forge">
-              <span>👥</span>
-              <span>Pass-and-play available</span>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
     </div>
   </section>
@@ -131,7 +150,7 @@ const totalApps = apps.length;
   <section class="bg-anvil/5 dark:bg-warm/5 py-16">
     <div class="max-w-3xl mx-auto px-6">
       <h2 class="font-brand font-bold text-2xl md:text-3xl text-anvil dark:text-warm mb-6">
-        Why pass-and-play matters
+        Why the Together pillar matters
       </h2>
       <div class="space-y-4 text-anvil/80 dark:text-warm/80 leading-relaxed">
         <p>
@@ -139,21 +158,25 @@ const totalApps = apps.length;
           when apps add multiplayer, it's usually networked — two devices, two rooms.
         </p>
         <p>
-          Pass-and-play is different. It collapses the device-as-isolator into a shared object.
+          Together is different. It collapses the device-as-isolator into a shared object.
           You're on the couch. You hand the device back and forth. You watch your kid think.
           They watch you think. You laugh together. You argue. You restart the round.
         </p>
         <p>
-          The SEL and family-cohesion research — Riley & Gaspar's <em>Connected by Play</em>,
-          CASEL's family-engagement framework, the 2024 Common Sense data on device-mediated
-          face-time — all point the same direction: <strong>kids learn faster, and feel safer,
-          when an adult is co-present in the play moment</strong>.
+          The learning science converges on co-located play as a productive context:
         </p>
+        <ul class="list-disc pl-6 space-y-2 text-anvil/80 dark:text-warm/80">
+          <li><strong>Vygotsky's zone of proximal development</strong> — the child's emerging abilities are activated specifically through the More Knowledgeable Other (parent, sibling, peer) in co-play settings.</li>
+          <li><strong>Tronick's still-face research</strong> — 70% of caregiver-infant interactions are mismatched; <em>repair</em> through dyadic co-regulation is "the key developmental force."</li>
+          <li><strong>Hirsh-Pasek's 4 Pillars of Learning</strong> — Social Interaction is one of the four canonical pillars of educational-app quality.</li>
+          <li><strong>Johnson &amp; Johnson / Slavin cooperative-learning meta-analyses</strong> — cooperative-learning interventions show d ≈ 0.42-0.47 on K-12 academic outcomes; Learning Together (LT) produces the strongest effect across methods.</li>
+          <li><strong>K-State 2024 family-cohesion research</strong> — families with weekly co-play show 30% higher cohesion scores and 25% less reported loneliness after six months.</li>
+          <li><strong>AAP 2026 screen-time guidance</strong> — pivoted from hour-based limits to quality-over-time, with co-viewing-with-active-participation explicitly named as a quality marker for ages 2-5+.</li>
+        </ul>
         <p>
-          Our apps that ship pass-and-play modes use Apple's MultipeerConnectivity and our own
-          ForgePassAndPlay framework to make the handoff feel natural: privacy curtain between
-          turns, no peeking at hidden hands, gentle round-end cues, no leaderboards that
-          embarrass anyone.
+          Our Together-pillar apps use Apple's MultipeerConnectivity and our own ForgePassAndPlay
+          framework to make the handoff feel natural: privacy curtain between turns, no peeking at
+          hidden hands, gentle round-end cues, no leaderboards that embarrass anyone.
         </p>
       </div>
     </div>
