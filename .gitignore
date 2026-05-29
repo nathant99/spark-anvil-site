@@ -32,3 +32,7 @@ pnpm-debug.log*
 dist/
 .astro/
 
+
+.dev.vars*
+!.dev.vars.example
+!.env.example
