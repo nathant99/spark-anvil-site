@@ -181,7 +181,7 @@ const dnFeaturedCast = ['gambittales', 'proofquest', 'functionforge', 'ratioreal
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
         {modeMetas.map(m => {
           const exemplars = modeExemplars[m.key] ?? [];
           const anchorApps = modeAnchorApps[m.key] ?? [];
@@ -439,7 +439,7 @@ const dnFeaturedCast = ['gambittales', 'proofquest', 'functionforge', 'ratioreal
       <p class="text-anvil/70 dark:text-warm/70 text-center max-w-2xl mx-auto mb-12">
         Every app maps to one of five learning areas. Browse the portfolio by what interests your kid most.
       </p>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {verticals.map(v => (
           <a
             href={`/apps?vertical=${v.id}`}
