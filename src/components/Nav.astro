@@ -23,7 +23,13 @@ const hasOverflow = overflowItems.length > 0;
 const overflowActive = overflowItems.some(item => isActive(item.href, pathname));
 ---
 
-<header class="border-b border-anvil/10 dark:border-warm/15 bg-warm/80 dark:bg-anvil/80 backdrop-blur sticky top-0 z-50">
+<!--
+  Liquid-Glass-inspired sticky nav (ADR-014, Round 149 #580, 2026-05-29).
+  Pattern: semi-opaque brand background + medium backdrop blur + thin bottom border + subtle saturate.
+  Falls back to solid `bg-warm` / `bg-anvil` under `prefers-reduced-transparency` via `nav-glass` class in global.css.
+  Hybrid policy: chunky-cartoon brand register stays primary; this is the only always-on glass surface.
+-->
+<header class="nav-glass border-b border-anvil/10 dark:border-warm/15 bg-warm/85 dark:bg-anvil/85 backdrop-blur-md backdrop-saturate-150 sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-3" aria-label={`${site.name} home`}>
       <img src="/brand/lockup.png" alt={site.name} class="h-20 md:h-24 w-auto" />

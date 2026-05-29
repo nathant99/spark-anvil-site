@@ -53,4 +53,85 @@
   .container-prose {
     @apply max-w-prose mx-auto px-6;
   }
+
+  /*
+   * Liquid-Glass-inspired hybrid accent utilities (ADR-014, Round 149 #580, 2026-05-29).
+   * Pattern: Glassmorphism 2.0 (semi-opaque overlay + backdrop-blur + thin border + saturate).
+   * Hard constraints (see Docs/ADR-014_HYBRID_LIQUID_GLASS_WEBSITE.md):
+   *   1. ≤ 3 concurrent active glass panels per page
+   *   2. Body text NEVER on glass — text sits on solid surfaces within the card
+   *   3. WCAG AA contrast verified at light + dark + scroll
+   *   4. prefers-reduced-transparency MUST collapse to solid brand colors (below)
+   *   5. prefers-reduced-motion MUST drop glass-morph transitions (below)
+   *   6. NO SVG-displacement refraction — Chromium-only, broken in mobile Safari
+   */
+  .btn-glass {
+    @apply inline-block px-6 py-3 bg-white/25 dark:bg-warm/20 text-anvil dark:text-warm font-brand font-bold rounded-lg
+           border border-white/40 dark:border-warm/30 backdrop-blur-md backdrop-saturate-150
+           hover:bg-white/35 dark:hover:bg-warm/30 transition-colors shadow-sm;
+  }
+  .card-glass {
+    @apply bg-warm/70 dark:bg-anvil/65 border border-warm/40 dark:border-warm/15 backdrop-blur-lg backdrop-saturate-150
+           rounded-2xl shadow-sm;
+  }
+  .chip-glass {
+    @apply inline-flex items-center gap-1 px-3 py-1 bg-white/30 dark:bg-anvil/40 text-anvil dark:text-warm
+           text-sm font-medium rounded-full border border-white/40 dark:border-warm/25 backdrop-blur-sm;
+  }
+}
+
+/*
+ * Accessibility fallbacks for the hybrid Liquid-Glass accent layer (ADR-014).
+ * `prefers-reduced-transparency` users (vestibular sensitivity, low-vision, school-managed devices)
+ * get solid brand-palette surfaces instead of any blur or translucency.
+ */
+@media (prefers-reduced-transparency: reduce) {
+  .nav-glass {
+    background-color: theme('colors.warm') !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .dark .nav-glass {
+    background-color: theme('colors.anvil.DEFAULT') !important;
+  }
+  .btn-glass {
+    background-color: theme('colors.warm') !important;
+    border-color: theme('colors.anvil.DEFAULT') !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .dark .btn-glass {
+    background-color: theme('colors.anvil.DEFAULT') !important;
+    border-color: theme('colors.warm') !important;
+  }
+  .card-glass {
+    background-color: theme('colors.warm') !important;
+    border-color: theme('colors.anvil.DEFAULT / 10%') !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .dark .card-glass {
+    background-color: theme('colors.anvil.DEFAULT') !important;
+  }
+  .chip-glass {
+    background-color: theme('colors.anvil.DEFAULT / 5%') !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .dark .chip-glass {
+    background-color: theme('colors.warm / 10%') !important;
+  }
+}
+
+/*
+ * Reduced motion also disables glass-morph transitions where they exist.
+ * (Current implementation has no glass-specific transitions — this block is forward-compat.)
+ */
+@media (prefers-reduced-motion: reduce) {
+  .btn-glass,
+  .card-glass,
+  .chip-glass,
+  .nav-glass {
+    transition: none !important;
+  }
 }
