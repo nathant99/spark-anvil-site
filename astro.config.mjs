@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
+import cloudflare from "@astrojs/cloudflare";
+
 // Sitemap integration removed for v0.1 — sitemap dependency has a known
 // crash on Astro 4.16 with no buildOutput; will be re-added once deploy
 // pipeline is configured (Cloudflare Pages can also generate sitemap externally).
@@ -12,12 +14,16 @@ import tailwind from '@astrojs/tailwind';
 // (prebuild hook) and produce static JSON imported by .astro pages.
 export default defineConfig({
   site: 'https://spark-and-anvil.com',
-  output: 'static',
+  output: "hybrid",
+
   integrations: [
     tailwind(),
   ],
+
   build: {
     inlineStylesheets: 'auto',
   },
+
   compressHTML: true,
+  adapter: cloudflare()
 });

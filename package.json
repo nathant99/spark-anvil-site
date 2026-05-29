@@ -8,13 +8,16 @@
     "start": "astro dev",
     "prebuild": "bash scripts/lint-ios-caps.sh && node scripts/build-cast-manifest.mjs && node scripts/build-companion-pack-manifest.mjs",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "npm run build && wrangler dev",
     "astro": "astro",
     "build-apps-data": "node scripts/build-apps-data.mjs",
     "build-cast-manifest": "node scripts/build-cast-manifest.mjs",
-    "build-companion-pack-manifest": "node scripts/build-companion-pack-manifest.mjs"
+    "build-companion-pack-manifest": "node scripts/build-companion-pack-manifest.mjs",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "11",
     "@astrojs/tailwind": "^5.1.4",
     "astro": "^4.16.18",
     "marked": "^18.0.4",
@@ -22,5 +25,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.95.0"
   }
 }
